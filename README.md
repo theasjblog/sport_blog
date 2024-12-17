@@ -9,3 +9,4 @@ upcoming
 * gear
 * road to australia
 * planning: season, week techniques, etc.
+* injuries, strength
