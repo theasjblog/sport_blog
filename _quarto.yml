@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "The busy triathlete"
+  site-url: https://theasjblog.github.io/sport_blog/
+  description: "The busy triatlhete blog"
+  navbar:
+    right:
+      - about.qmd
+      - icon: strava
+        href: https://www.strava.com/athletes/7974168
+      - icon: rss
+        href: index.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css

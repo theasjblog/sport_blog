@@ -1,0 +1,19 @@
+{
+  "hash": "72bbe2fd3439881794e2a63649e206fc",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Piovene Rocchette - Torneo Di Pallavolo Mista\"\ndate: \"2000\"\nauthor: \"Adrian Joseph\"\ncategories: [race report, random race]\nformat: html\nlightbox:\n  match: auto\n  effect: fade\n  desc-position: right\n  loop: false\n---\n\n\nFor a few years, a group of volunteers organized a volleyball tournament in my home town. I t was a fairly competitive one, and although I have never really liked playing the sport, I always enjoyed watching it.\n\nFor some reason, one year they convinced me to play in a team. We did not go very far, but I got a little MVP medal out of one game. Not sure who decided on this prize and how, as I do not think it was deserved at all. My guess is that it was supposed to be someone from my team as we won that particular match, and the guy that really deserved it already got the MVP in a couple of other matches, so they decided to give it to someone else, and that someone else happened to be me.\n\nAnyway, here is the little medal, part of my collection of sport memorabilia.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"datatables html-widget html-fill-item\" id=\"htmlwidget-6f174dca63f950c192fd\" style=\"width:100%;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-6f174dca63f950c192fd\">{\"x\":{\"filter\":\"none\",\"vertical\":false,\"data\":[[\"race\",\"type\"],[\"TORNEO PALLAVOLO PIOVENE ROCCHETTE\",\"volleyball\"]],\"container\":\"<table class=\\\"display\\\">\\n  <thead>\\n    <tr>\\n      <th><\\/th>\\n    <\\/tr>\\n  <\\/thead>\\n<\\/table>\",\"options\":{\"paging\":true,\"pageLength\":20,\"columnDefs\":[{\"name\":null,\"targets\":0},{\"name\":null,\"targets\":1}],\"order\":[],\"autoWidth\":false,\"orderClasses\":false,\"lengthMenu\":[10,20,25,50,100]}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n\n\n\n\n\n\n\n::: {layout-ncol=4}\n![](img_modal/01.png){ width=\"100\" group=\"hi\" }\n\n![](img_modal/02.png){ width=\"100\" group=\"hi\" }\n\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/datatables-binding-0.33/datatables.js\"></script>\n<script src=\"../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css\" rel=\"stylesheet\" />\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js\"></script>\n<link href=\"../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

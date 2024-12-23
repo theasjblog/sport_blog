@@ -1,0 +1,15 @@
+---
+title: "The busy triathlete"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+feed: true
+---
+
+The journey to the 2025 Age Group World Championship of an ordinary triathlete.

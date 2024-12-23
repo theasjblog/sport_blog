@@ -1,0 +1,69 @@
+---
+title: "Sheffield Varsity 10K"
+date: "2012-03-25"
+author: "Adrian Joseph"
+categories: [race report, run]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+The Varsity was the competition between the two universities of Sheffield: Sheffield University (the one I attended), and Sheffield Hallam. The strong guys had their own "private" events, but there were a few more open to everyone.
+
+I remember it was pretty cold, and there freezing rain earlier in the morning. I went to this event with my friend Denis, but we each did our own race. Which was good, because Denis got the number of laps wrong. It was a 4 laps race, but he thought it was only 3 laps, so he went out way too fast.
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.jpg){ width="100" group="hi" }
+
+
+:::

@@ -1,0 +1,17 @@
+[
+  {
+    "race": "BEDFORDSHIRE SPRINT TRIATHLON",
+    "type": "sprint triathlon",
+    "distance": "750m/20K/5K",
+    "time": "1h 17m 45s",
+    "date": "2018-07-22",
+    "details": "https://connect.garmin.com/modern/activity/2870624727",
+    "breakdown":{
+      "swim":"15m 22s",
+      "t1": "2m 9s",
+      "bike": "33m 15s",
+      "t2": "1m 43s",
+      "run": "25m 18s"
+    }
+  }
+]

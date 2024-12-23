@@ -1,0 +1,19 @@
+[
+  {
+    "race": "BIRMINGHAM TRIATHLON",
+    "type": "standard triathlon",
+    "distance": "1500m/40K/10K",
+    "time": "2h 54m 44s",
+    "date": "2014-07-20",
+    "details": ["https://connect.garmin.com/modern/activity/545993401",
+    "https://connect.garmin.com/modern/activity/545993405",
+    "https://connect.garmin.com/modern/activity/545993413"],
+    "breakdown":{
+      "swim":"35m 6s",
+      "t1": "2m 40s",
+      "bike": "1h 22m 28s",
+      "t2": "10s",
+      "run": "54m 20s"
+    }
+  }
+]

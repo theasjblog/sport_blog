@@ -1,0 +1,79 @@
+---
+title: "Lakeside Sprint Triathlon"
+date: "2023-09-09"
+author: "Adrian Joseph"
+categories: [race report]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+This was the second triathlon after the Covid break. It was part of the Multisport Canada series, the same as Bracebridge, which I won a few months earlier. I walked into it with some good hope.
+
+Turns out, it was. a lot more competitive that Bracebridge. I still finished faster than Bracebridge, but i was nowhere near the top 3.
+
+The swim was on calm, warm water, so no problem there.
+
+The bike and the run routes had a couple of minor hills, but overall a quite fast race.
+
+As always, the post race was great. Multisport Canada really knows how to put together an after race party. Plenty of choices between pizza, energy bars, fruit, etc.
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.png){ width="100" group="hi" }
+
+![](img_modal/02.png){ width="100" group="hi" }
+
+![](img_modal/03.png){ width="100" group="hi" }
+
+
+:::

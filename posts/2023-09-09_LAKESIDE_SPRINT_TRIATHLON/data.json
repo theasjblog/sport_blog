@@ -1,0 +1,19 @@
+[
+  {
+    "race": "LAKESIDE SPRINT TRIATHLON",
+    "type": "sprint triathlon",
+    "distance": "750m/20K/5K",
+    "position_overall": "37/370",
+    "position_category": "8/40",
+    "time": "1h 15m 19s",
+    "date": "2023-09-09",
+    "details": "https://connect.garmin.com/modern/activity/11985865446",
+    "breakdown":{
+      "swim":"14m 27s",
+      "t1": "1m 28s",
+      "bike": "36m 17s",
+      "t2": "47s",
+      "run": "22m 20s"
+    }
+  }
+]

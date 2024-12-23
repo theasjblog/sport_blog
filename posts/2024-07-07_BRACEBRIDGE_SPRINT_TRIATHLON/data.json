@@ -1,0 +1,19 @@
+[
+  {
+    "race": "BRACEBRIDGE SPRINT TRIATHLON",
+    "type": "sprint triathlon",
+    "distance": "750m/20K/5K",
+    "position_overall": "6/213",
+    "position_category": "2/14",
+    "time": "1h 15m 54s",
+    "date": "2024-07-07",
+    "details": "https://connect.garmin.com/modern/activity/16288710730",
+    "breakdown": {
+      "swim": "15m 41s",
+      "t1": "1m 9s",
+      "bike": "36m 6s",
+      "t2": "52m",
+      "run": "22m 6s"
+    }
+  }
+]

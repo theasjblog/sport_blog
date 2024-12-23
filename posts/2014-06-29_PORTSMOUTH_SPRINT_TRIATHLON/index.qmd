@@ -1,0 +1,85 @@
+---
+title: "Portsmouth Sprint Triathlon"
+date: "2014-06-29"
+author: "Adrian Joseph"
+categories: [race report]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+Denis and I went down to Portsmouth with his car, bikes loaded on the roof. We stayed in a pub. At some point late in the evening we heard some commotion coming from downstairs, we looked out of the window and we saw a few drunk people triyng to climb on the car to get on the bike. Denis was not pleased. We moved the car to another car park, and we took the bikes into the room.
+
+The race was interesting. The start of the race was delayed because of strong currents potentially pushing swimmers against the pier. Once we finally started, it took me forever to finish the swim: the current on the last 250m parallel to the coast was constantly pushing me back.
+
+Once out of the water, I finally got on my bike. I did pretty good there. The route was a bit boring, just a few back and forth by the coastline, but the tarmac was perfect.
+
+Once the bike was done, I immediately felt cramps. I managed them OK, and after a few hundreds meters I amanged to get going, albeit quite slowly. 
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.png){ width="100" group="hi" }
+
+![](img_modal/01a.png){ width="100" group="hi" }
+
+![](img_modal/01b.png){ width="100" group="hi" }
+
+![](img_modal/02.jpg){ width="100" group="hi" }
+
+![](img_modal/03.jpg){ width="100" group="hi" }
+
+![](img_modal/04.jpg){ width="100" group="hi" }
+
+![](img_modal/05.jpg){ width="100" group="hi" }
+
+
+:::

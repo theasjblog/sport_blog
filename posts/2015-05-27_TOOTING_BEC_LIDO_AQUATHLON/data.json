@@ -1,0 +1,15 @@
+[
+  {
+    "race": "TOOTING BEC LIDO AQUATHLON",
+    "type": "aquathlon",
+    "distance": "1K/7.5K",
+    "time": "53m 26s",
+    "date": "2015-05-27",
+    "details": "https://connect.garmin.com/modern/activity/786822659",
+    "breakdown":{
+      "swim":"21m 42s",
+      "t1": "41s",
+      "run": "31m 3s"
+    }
+  }
+]

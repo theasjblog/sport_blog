@@ -1,0 +1,19 @@
+{
+  "hash": "9da47983f15b182fd8d4b552853a230c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Sheffield TenTenTen\"\ndate: \"2012-09-23\"\nauthor: \"Adrian Joseph\"\ncategories: [race report, run]\nformat: html\nlightbox:\n  match: auto\n  effect: fade\n  desc-position: right\n  loop: false\n---\n\n\n\nAnother home race in Sheffield, UK. This one was in the Endcliff area. It rained the day before, which was not great for a race run almost entirely on woods. I did not like this at all, as I did not like running on slippery mud.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"datatables html-widget html-fill-item\" id=\"htmlwidget-a0ce6fb936e425ed3059\" style=\"width:100%;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-a0ce6fb936e425ed3059\">{\"x\":{\"filter\":\"none\",\"vertical\":false,\"data\":[[\"race\",\"type\",\"distance\",\"time\",\"date\",\"details_1\"],[\"SHEFFIELD TENTENTEN\",\"run\",\"10K\",\"50m 33s\",\"2012-09-23\",\"<a href=\\\"https://connect.garmin.com/modern/activity/225969243\\\">Link to activity file<\\/a>\"]],\"container\":\"<table class=\\\"display\\\">\\n  <thead>\\n    <tr>\\n      <th><\\/th>\\n    <\\/tr>\\n  <\\/thead>\\n<\\/table>\",\"options\":{\"paging\":true,\"pageLength\":20,\"columnDefs\":[{\"name\":null,\"targets\":0},{\"name\":null,\"targets\":1}],\"order\":[],\"autoWidth\":false,\"orderClasses\":false,\"lengthMenu\":[10,20,25,50,100]}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n\n\n\n\n\n\n\n::: {layout-ncol=4}\n![](img_modal/00.png){ width=\"100\" group=\"hi\" }\n\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/datatables-binding-0.33/datatables.js\"></script>\n<script src=\"../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css\" rel=\"stylesheet\" />\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js\"></script>\n<link href=\"../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

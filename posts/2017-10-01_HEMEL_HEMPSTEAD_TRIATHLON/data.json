@@ -1,0 +1,17 @@
+[
+  {
+    "race": "HEMEL HEMPSTEAD TRIATHLON",
+    "type": "sprint triathlon",
+    "distance": "420m/16K/5K",
+    "position_overall": "6/92",
+    "position_category": "2/9",
+    "time": "1h 4m 45s",
+    "date": "2017-10-01",
+    "details": "https://connect.garmin.com/modern/activity/2026553464",
+    "breakdown":{
+      "swim":"7m 29s",
+      "bike": "34m 38s",
+      "run": "20m 46s"
+    }
+  }
+]

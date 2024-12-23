@@ -1,0 +1,19 @@
+{
+  "hash": "79706a22abbc267bf05c3fd334a5a470",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Sheffield Graves Park 10K\"\ndate: \"2011-07-15\"\nauthor: \"Adrian Joseph\"\ncategories: [race report, run]\nformat: html\nlightbox:\n  match: auto\n  effect: fade\n  desc-position: right\n  loop: false\n---\n\n\nGraves park is a park in Sheffield, UK. As the names suggests, it is near an old cemetery, which s a bit of an odd venue for a race. Regardless, the event is a nice one. The park is pretty, and race is a hilly one, ran on a mix of grass and gravel.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"datatables html-widget html-fill-item\" id=\"htmlwidget-23ee033e79e21c817828\" style=\"width:100%;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-23ee033e79e21c817828\">{\"x\":{\"filter\":\"none\",\"vertical\":false,\"data\":[[\"race\",\"type\",\"distance\",\"time\",\"date\"],[\"SHEFFIELD GRAVES PARK\",\"run\",\"10K\",\"51m 58s\",\"2011-07-15\"]],\"container\":\"<table class=\\\"display\\\">\\n  <thead>\\n    <tr>\\n      <th><\\/th>\\n    <\\/tr>\\n  <\\/thead>\\n<\\/table>\",\"options\":{\"paging\":true,\"pageLength\":20,\"columnDefs\":[{\"name\":null,\"targets\":0},{\"name\":null,\"targets\":1}],\"order\":[],\"autoWidth\":false,\"orderClasses\":false,\"lengthMenu\":[10,20,25,50,100]}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n\n\n\n\n\n\n\n::: {layout-ncol=4}\n![](img_modal/00.png){ width=\"100\" group=\"hi\" }\n\n![](img_modal/01.jpg){ width=\"100\" group=\"hi\" }\n\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/datatables-binding-0.33/datatables.js\"></script>\n<script src=\"../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css\" rel=\"stylesheet\" />\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js\"></script>\n<link href=\"../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

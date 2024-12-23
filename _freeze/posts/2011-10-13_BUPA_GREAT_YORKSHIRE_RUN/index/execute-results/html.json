@@ -1,0 +1,19 @@
+{
+  "hash": "92d8028cd52111d70b0a010d7b67147c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Bupa Great Yorkshire Run\"\ndate: \"2011-10-13\"\nauthor: \"Adrian Joseph\"\ncategories: [race report, run]\nformat: html\nlightbox:\n  match: auto\n  effect: fade\n  desc-position: right\n  loop: false\n---\n\n\n\nThis was another one of my home races, in Sheffield, UK. The starting line was in city center, near the Crucible.The race was the biggest one I have ever done to this time, with thousands of people taking part. It was an almost flat route, except for a downhill start, and an uphill finish.\n\nThe added bit of fun was that participants could choose to participate for the White Rose or the Red Rose, a reminiscence of the War of the Roses.\n\nBecause the race was run reasonably close to city center, it was full of people cheering and bands, which was very motivational.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"datatables html-widget html-fill-item\" id=\"htmlwidget-5040285d91cbf4f13f08\" style=\"width:100%;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-5040285d91cbf4f13f08\">{\"x\":{\"filter\":\"none\",\"vertical\":false,\"data\":[[\"race\",\"type\",\"distance\",\"position_overall\",\"time\",\"date\"],[\"BUPA GREAT YORKSHIRE RUN\",\"run\",\"10K\",\"877\",\"48m 46s\",\"2011-10-13\"]],\"container\":\"<table class=\\\"display\\\">\\n  <thead>\\n    <tr>\\n      <th><\\/th>\\n    <\\/tr>\\n  <\\/thead>\\n<\\/table>\",\"options\":{\"paging\":true,\"pageLength\":20,\"columnDefs\":[{\"name\":null,\"targets\":0},{\"name\":null,\"targets\":1}],\"order\":[],\"autoWidth\":false,\"orderClasses\":false,\"lengthMenu\":[10,20,25,50,100]}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n\n\n\n\n\n\n\n::: {layout-ncol=4}\n![](img_modal/01.png){ width=\"100\" group=\"hi\" }\n\n![](img_modal/02.png){ width=\"100\" group=\"hi\" }\n\n![](img_modal/03.png){ width=\"100\" group=\"hi\" }\n\n![](img_modal/orig-chaa1267.jpg){ width=\"100\" group=\"hi\" }\n\n![](img_modal/orig-chag0783.jpg){ width=\"100\" group=\"hi\" }\n\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/datatables-binding-0.33/datatables.js\"></script>\n<script src=\"../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css\" rel=\"stylesheet\" />\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js\"></script>\n<link href=\"../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

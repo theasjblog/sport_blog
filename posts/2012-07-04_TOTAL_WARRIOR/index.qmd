@@ -1,0 +1,75 @@
+---
+title: "Total Warrior"
+date: "2012-07-04"
+author: "Adrian Joseph"
+categories: [race report, obstacle race]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+A challenging and fun obstacle race in the Yorkshire. Denis and I drove up there and ran the course together. Personally I think that the Sheffield Man Of Steel was a better event, but there is nothing wrong with this. They definitely make use of the larger budget by building larger obstacles over a wider field.
+
+At the end there was beer and to shower we had to use freezing cold water coming out of a pipe they used to get drinking water for the horses.
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.jpg){ width="100" group="hi" }
+
+![](img_modal/02.jpg){ width="100" group="hi" }
+
+![](img_modal/03.jpg){ width="100" group="hi" }
+
+![](img_modal/04.jpg){ width="100" group="hi" }
+
+
+:::

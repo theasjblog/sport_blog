@@ -1,0 +1,19 @@
+{
+  "hash": "ed78e9341a56e6fcb23215356eaadff4",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Bradford 10K\"\ndate: \"2011-03-19\"\nauthor: \"Adrian Joseph\"\ncategories: [race report, run]\nformat: html\nlightbox:\n  match: auto\n  effect: fade\n  desc-position: right\n  loop: false\n---\n\n\nMy first solo 10K. Bradford is a town in Yorkshire, UK. I rode my motorbike there since there was a big car park near the race start, and it always easy to park a motorbike anyway. There was no real changing room, so it was a good thing that I was wearing my running gear under motorbike outfit. On the plus side, the baggage area was inside the town hall, a stereotypical old English large building fully carpeted, with a grand wooden and marble staircase, and old portraits of distinguished gentlemen everywhere.\n\nThe race itself was flat and fast, with a long stretch to the finish, even a bit downhill. I remember gathering all my renaming strength and sprinting to the finish line, a move that became an hallmark of my races later on and that I was using all the time to try to get past someone I was trying to chase down for the whole race.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"datatables html-widget html-fill-item\" id=\"htmlwidget-9b0fb8f33c2ca7350395\" style=\"width:100%;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-9b0fb8f33c2ca7350395\">{\"x\":{\"filter\":\"none\",\"vertical\":false,\"data\":[[\"race\",\"type\",\"distance\",\"time\",\"date\"],[\"BRADFORD 10K\",\"run\",\"10K\",\"45m 19s\",\"2011-03-19\"]],\"container\":\"<table class=\\\"display\\\">\\n  <thead>\\n    <tr>\\n      <th><\\/th>\\n    <\\/tr>\\n  <\\/thead>\\n<\\/table>\",\"options\":{\"paging\":true,\"pageLength\":20,\"columnDefs\":[{\"name\":null,\"targets\":0},{\"name\":null,\"targets\":1}],\"order\":[],\"autoWidth\":false,\"orderClasses\":false,\"lengthMenu\":[10,20,25,50,100]}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n\n\n\n\n\n\n\n::: {layout-ncol=4}\n![](img_modal/00.png){ width=\"100\" group=\"hi\" }\n\n![](img_modal/02.jpg){ width=\"100\" group=\"hi\" }\n\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/datatables-binding-0.33/datatables.js\"></script>\n<script src=\"../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css\" rel=\"stylesheet\" />\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js\"></script>\n<link href=\"../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,102 @@
+---
+title: "Bracebridge Sprint Triathlon"
+date: "2023-07-09"
+author: "Adrian Joseph"
+categories: [race report]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+This was the first triathlon in quite some time, something around 3 years since the COVID19 shutdown. I walked into it hoping to do reasonably well, but without any big expectation.
+
+The swim was in nice, warm, and calm waters. Also very civilized, with every participant starting alone, with about 5s between each.
+
+Race numbers and starting time were allocated based on the predicted swim time. As. slow swimmer, I started at the back.
+
+I choose to swim without wetsuit. Probably I should have used it, just to try to be a bit faster.
+
+Then we went into to bike. Again, a fairly flat out and back, with just one major but short hill. And that is when I started to notice I was passing a lot of people. Sure, it is hard to know if the person you are passing is doing the same race (the duathlon started at the same time), or if they are in your age group, but still it is good to see numbers even in the low 20s when you started 120th.
+
+From there, on the run. As always, not a great performance on the run. A flat out and back (except for the first 100m with a steep rump to get out of the park). I was still catching people, and a few young (duathletes?) came fly past me.
+
+At the end, I did not check the final results. At the time I did not know that in Canada it is normal to have live results you can check on your phone. I just hang around for a while because it was a nice day and to enjoy the atmosphere. I had a feeling maybe I did not so poorly, since I passed so many people, but no way to confirm that. Until the award ceremony. The announcer called in the 3rd guy. Not me. OK I thought, that is it then, I did not do better than 3rd. The announcer called the 2nd. Still not me. But then: "..and in first place, Adrian Joseph!". That was quite unexpected. I walked up the podium and got my "gold" medal. The award picture shows some inexperience in getting awards: sunglasses were left on, I was wearing my backpack...
+
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.png){ width="100" group="hi" }
+
+![](img_modal/02.png){ width="100" group="hi" }
+
+![](img_modal/03.png){ width="100" group="hi" }
+
+![](img_modal/04.png){ width="100" group="hi" }
+
+![](img_modal/04a.png){ width="100" group="hi" }
+
+![](img_modal/04b.png){ width="100" group="hi" }
+
+![](img_modal/05.jpg){ width="100" group="hi" }
+
+![](img_modal/06.jpg){ width="100" group="hi" }
+
+![](img_modal/09.jpg){ width="100" group="hi" }
+
+![](img_modal/12.jpg){ width="100" group="hi" }
+
+![](img_modal/16.jpg){ width="100" group="hi" }
+
+![](img_modal/19.jpg){ width="100" group="hi" }
+
+
+:::

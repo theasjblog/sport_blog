@@ -1,0 +1,78 @@
+---
+title: "Beneva Mississauga"
+date: "2024-04-28"
+author: "Adrian Joseph"
+categories: [race report]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+This a race Ali picked. On paper, a flat and fast 10K, good as a test event. In reality, there ware a couple of "hills". Nothing major, but for sure  something that could affect people hunting for a PB. But that was not me. My focus was simply to see what I could. No main goal, except maybe at least stay under 45min.
+
+This was also the first official outing of my first ever pair of racing shoes with carbon plate. Those shoes are indeed quite fast, they feel very light and springy.
+
+The main event of the race was probably me kicking a young child, maybe 5yro. I was on my KM8, and a family (spectators) crossed the road in front of me to cheer on someone. I moved to the right a bit to avoid them, and it would have been enough if the little girl did not panic and stop right in front of me. So she got a knee on the back. She was OK, just scared.
+
+The annoying thing on the prize giving was that they only recognized the first 3 in some category they made up, and mot the standard divisions. I finished 3rd in my division, but 4th in the category they made up...
+
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.png){ width="100" group="hi" }
+
+![](img_modal/02.png){ width="100" group="hi" }
+
+![](img_modal/06.png){ width="100" group="hi" }
+
+
+:::
