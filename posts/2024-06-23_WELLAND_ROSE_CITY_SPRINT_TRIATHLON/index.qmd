@@ -1,0 +1,111 @@
+---
+title: "Welland Rose City Sprint Triathlon"
+date: "2024-06-23"
+author: "Adrian Joseph"
+categories: [race report]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+Another qualifying event. On paper, the route profile for the bike and the run were much easier than Guelph. An almost flat course.
+
+The swim was in a canal used for boat racing. I only learnt about this after the race, but something to keep in mind for the next time: the long sides were following the race buoy guides. So, to swim the shortest route possible, just follow the submerged guides. Like swimming in a pool.
+
+As I said, I did not know that. I managed to swim fairly straight with a GPS swim distance of 780m, so 30m more than the official distance. At a 2min/100m pace, this would have cost me roughly 25s. We will come back to this later.
+
+It was an odd swim. It was swimsuit optional, but for those trying to qualify swimsuits were not allowed. As a result, there was a mixed field of people with and without wetsuit, make it a bit unfair. Also, for those qualifying, the "non westuit" policy will be enforced on a honorary base...
+
+Anyway, I my swim felt OK. I was controlling my breathing better than in Guelph, and it felt like the water was moving fast next to me. Except, when I got of the water and looked at my watch, I saw a swim time of 17min. WTF! How did that happen?!?
+
+But it was no time to think about it. A short run to T1, and off for the bike leg. And here I had a small problem with the pedals. I did attach my shoes with elastics, but the elastics came off too soon, and the shoes did not want to stay up straight. To put them on I had to stop, take them off the pedal, put them on, and start cycling again. It felt like an eternity.
+
+Then the reality of the bike course hit. It was flat, yes, but very windy. Every second half of each of the 5 laps felt like going uphill. I was catching up a lot of people, but when I was looking at the fast looking guys as a reference it did not look like I was gaining anything on them. Truth be told, most of them were probably under 30, but still...
+
+Finally, on the run. The route was flat, but made slow but a few sharp corners. And as always, my legs refused to collaborate. In fairness, probably I did push a bit too much on the bike. In places, my watch was telling I was going as slow as 5:05min/Km.
+
+Total race time: 1h18m. My slowest sprint triathlon ever.
+
+After some time, I decided to look at the results online. 2nd on the age group! I guess it was a tough race for everyone. And also a reminder to not compare triathlon races with each other: each race is completely different.
+
+So that was good. The annoying bit was that I finished 22s behind the first. So close to having a chance to qualify. Makes me wonder what if I swam closer to the 750m? Or what if I did a better T1? Or I pushed just a bit more on the run? Too late know, cannot win races with "what ifs.
+
+The last annoying bit of the day was the very long delay for the award: almost 3h between the end of the race and the awards ceremony. An eternity.
+
+But I made a friend: the guy who finished 3rd: Robert Eso. We'll meet again later this year in Berrie.
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.png){ width="100" group="hi" }
+
+![](img_modal/02.png){ width="100" group="hi" }
+
+![](img_modal/03.png){ width="100" group="hi" }
+
+![](img_modal/04.png){ width="100" group="hi" }
+
+![](img_modal/05.png){ width="100" group="hi" }
+
+![](img_modal/06.png){ width="100" group="hi" }
+
+![](img_modal/07.png){ width="100" group="hi" }
+
+![](img_modal/08.jpg){ width="100" group="hi" }
+
+![](img_modal/09.jpg){ width="100" group="hi" }
+
+![](img_modal/11.jpg){ width="100" group="hi" }
+
+![](img_modal/12.jpg){ width="100" group="hi" }
+
+
+:::

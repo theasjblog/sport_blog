@@ -1,0 +1,68 @@
+---
+title: "Giochi Della Gioventú"
+date: "1998"
+author: "Adrian Joseph"
+categories: [race report, random race]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+"Giochi della gioventú" was (is?) an athletic high-school competition open to anyone. You could participate in many different events: 100m, 110m hurdles, 4X100m relay, high jump, long jump, put throw, etc. 
+
+The first round was within the school. The winners in each event qualified for the next round and competed against kids from other schools. I remember I qualified one year, but I do not remember if it was this one.
+
+At the time my main sport was basketball, and in this competition I was going for the 100m and the high jump, maybe once I did the 110m hurdles. I do not know exacly what I did in this event. Apparently my records says that I did the 100m in this event, and I finished 2$^{nd}$, but I cannot gurantee that's accurate. Also I am not 100% sure this happened in 1998.
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/01.png){ width="100" group="hi" }
+
+
+:::

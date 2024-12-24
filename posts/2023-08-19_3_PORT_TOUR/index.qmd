@@ -1,0 +1,83 @@
+---
+title: "3 Port Tour"
+date: "2023-08-19"
+author: "Adrian Joseph"
+categories: [race report]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+This was a tough one. I prepared for it by progressively hitting 100K to 120K rides, but 160K is something different.
+
+The route was very flat, except for two short but brutal uphill. I started off on my own, and around the 40K marker I caught a small group. We took turns in front, but it was a bit of a mistake. That made me push a bit too hard too early.
+
+At around 100K there was a lunch break. The stands were very well stocked with plenty of options. Past, pizza, fruit, etc. I was not planning to stop for long, so I was mostly worried about avoiding getting my legs to seize up, and overeating. I did not overeat, in hindsight, I should have another serving of pasta.
+
+A bit after lunch there was the worst part. A long stretch of road on the sun, no shade, slightly uphill. That cooked me good.
+
+The last 20K or so were also pretty hard, between the heath and the accumulated tiredness, it was hard to bring the bike home.
+
+But I did. Overall a fun day out, even if not my favourite kind of sporting challenge. The only major downside is that cycling events like this are more like a parkrun that a competition. There is plenty of time to chat, but no official timing, ranking, or medal.
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.png){ width="100" group="hi" }
+
+![](img_modal/02.png){ width="100" group="hi" }
+
+![](img_modal/04.png){ width="100" group="hi" }
+
+![](img_modal/05.png){ width="100" group="hi" }
+
+
+:::

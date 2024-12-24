@@ -1,0 +1,86 @@
+---
+title: "Edinburgh Marathon"
+date: "2019-05-26"
+author: "Adrian Joseph"
+categories: [race report]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+I entered this as I did not go into the London Marathon. Ali and I rented a car and drove up to Edinburgh. We stayed in a small B&B near the city center.
+
+On race day, it rained in the morning, but not much and it stopped shortly after we started. The race started in city center, and my designated changing space was in a school. I did not drop y bag to the organizers, but I gave to Ali instead. In hindsight, I should have dropped it to the organizers.
+
+I started off reasonably well, and I stayed strong up until ~30K. But then I had to stop for a wee. And after I stopped, my legs refused to start again. I had to walk for 5K or so. Closer to the end, I managed to get the legs moving again, and at least I finished the day running.
+
+The end of the race was in field in the middle of nowhere. Ali was not there, as she was waiting for me in city center, so I did not have my bag. I remember sitting down on the grass for a while, then starting the long walk to the bus shuttle.
+
+The day after my legs were quite stiff. Ali had to do the drive back home.
+
+A tough day, but it was fun. I'm just not sure I want to do another one, and that long stuff is for me. Single sport events in articular, like this one, are boring to prepare, and for months before this race I only did runs, with little to no swimming or cycling.
+
+Also, I had to do such a high volume at low intensity, that for years I felt like the marathon training killed my race speed.
+
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.png){ width="100" group="hi" }
+
+![](img_modal/02.png){ width="100" group="hi" }
+
+![](img_modal/03.png){ width="100" group="hi" }
+
+![](img_modal/04.png){ width="100" group="hi" }
+
+
+:::

@@ -1,0 +1,102 @@
+---
+title: "Guelph Lake 1 Subaru Triathlon"
+date: "2024-06-16"
+author: "Adrian Joseph"
+categories: [race report]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+This was the first time I tried to qualify for the Age Group. It did not happen. Also, slightly annoying finishing 6th, when the first 5 were called up to the podium...
+
+Anyway, I managed the swim fairly well. A bit slower maybe than I would have liked, but the mass start did no help. I was not used to that anymore.
+
+After the swim we had a long hike to transition. A small fight with the wetsuit, and I was off on the bike.
+
+Mounting was smoother than the previous race (Milton): using the  elastic to keep the shoes in place was a good idea.
+
+The bike was uneventful, just a lot of inexperienced riders on the road to overtake. Maybe a bit too hilly for my likening. Not big hills, just. a lot of up and downs.
+The main issue I had on the bike was that about 1KM in I realized I had lost my water bottle straw because of the bumpy road surface. So I just got thirsty from there on.
+
+On the last kilometer or so of the bike I caught up with the guy in front on on my age group. I opted to pass him, spending a few extra energy.
+
+I did not stay ahead for long. He was a much stronger runner. He finished the run in something around 19min.
+
+Overall the race was not bad. I set a new PB for the distance, improving the old one by around 2min, and I finished less than 4min behind the age category winner, so much closer than in the past.
+
+As a qualifying event, I would have liked to finish higher up, but I cannot control who show up to a race. I just need to focus on how I executed the race plan.
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.png){ width="100" group="hi" }
+
+![](img_modal/01a.png){ width="100" group="hi" }
+
+![](img_modal/01b.png){ width="100" group="hi" }
+
+![](img_modal/01c.png){ width="100" group="hi" }
+
+![](img_modal/03.png){ width="100" group="hi" }
+
+![](img_modal/10.png){ width="100" group="hi" }
+
+![](img_modal/14.png){ width="100" group="hi" }
+
+![](img_modal/22.png){ width="100" group="hi" }
+
+![](img_modal/24.png){ width="100" group="hi" }
+
+![](img_modal/28.png){ width="100" group="hi" }
+
+
+:::

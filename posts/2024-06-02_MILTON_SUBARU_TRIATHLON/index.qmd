@@ -1,0 +1,97 @@
+---
+title: "Milton Subaru Triathlon"
+date: "2024-06-02"
+author: "Adrian Joseph"
+categories: [race report]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+This was a wet one. It rained all the time. Before the race, during, and after. Everything got drenched (pro tip: bring a change to leave in the car, so that it stays dry).
+
+This was a race done in preparation of the qualifying ones I will be doing later in the year. The distance was a bit odd (30K bike, 7.5K run), halfway between a sprint and a standard.
+
+I did a course rec a week before the race, and I knew there was a long and pretty steep raod. That will be interesting to do with wet conditions.
+
+My main concern going in was the water temperature. Luckily, the water was perfect. Around 20C. It was a mass start, but a civilized one, so not much fighting at all.
+
+I just kept telling myself to swim relaxed, don't go in the red. And I did come out of the water feeling quite good, maybe too good for a race, but still I swam at 1:46/100m, which is better than any other swim race I have ever done.
+
+The the bike leg started. The first issue was that I decided to try to keep my shoes attached to the bike this time, but I did not use elastic bands to secure them horizontally. Putting the shoes one while riding was challenging, because they were constantly rotating the wrong way around. Next time, I'll use elastics. From there, it was again a matter of managing effort. Knowing the challenging course profile and that this was a longer race than a sprint triathlon, I just gauged the effort.
+
+I was surprised by the grip my Continental tires have. Not a single time on the bike course I felt like the bike could send me off.
+
+Finally, the run. My legs were not into it at all, and the few hills along the course did not helped. On top of it, a portion of about 2.5K was turned into a mud fest by the rain. Not my preferred running conditions. It was not an horrible run looking at the clock, but for sure it was not a pleasant one.
+
+Also, turns out that my fancy carbon plated running shoes can give me blisters wif my feet are wet and there is grit inside the shoes. Not great.
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.png){ width="100" group="hi" }
+
+![](img_modal/01a.png){ width="100" group="hi" }
+
+![](img_modal/01b.png){ width="100" group="hi" }
+
+![](img_modal/01c.png){ width="100" group="hi" }
+
+![](img_modal/02.jpg){ width="100" group="hi" }
+
+![](img_modal/07.jpg){ width="100" group="hi" }
+
+![](img_modal/11.jpg){ width="100" group="hi" }
+
+![](img_modal/18.jpg){ width="100" group="hi" }
+
+
+:::

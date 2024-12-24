@@ -1,0 +1,96 @@
+---
+title: "Bracebridge Sprint Triathlon"
+date: "2024-07-07"
+author: "Adrian Joseph"
+categories: [race report]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+Back racing in Bracebridge after the 2023 Age Group victory. However, defending the title would have not been easy, as a quick look at the people around me in transition was suggesting a much more competitive field than the 2023 race.
+
+I was given the number 22, as opposed to the 120 i had last year. This means I could not get the moral boost of catching people. I mostly had the pressure to not be caught.
+
+The swim felt OK. I opted to swim with the wetsuit (in 2023 I did not use it). It turns out my swim was almost 1m slower this year. It could be because of a stronger current on the second half of the swim, but maybe I just need to get better at swimming with a wetsuit, and to push harder for the 750m of the swim.
+
+In T1 I opted to leave the shoes on the ground, not on the bike. I did this because I struggled with a running mount on my last race, and I knew that the bike leg started uphill, immediately followed by a 90deg corner and a 180 deg corner, leaving little time to fiddle with shoes. So I decided to not put the shoes on the bike, and just do a run dismount into T2. I think it worked out OK.
+
+Then the bike. As always, I felt strong on the bike, and I was catching people up, although I did not know their age group or even if they were racing in the triathlon or the duathlon.
+
+Finally, the run. I knew the run started with a 200 uphill, so I took it easy there. I then went steady, focusing on keeping ~340W, which felt manageable. At around the 3K marker I caught up with a guy that had 43 written on his calf. He was in my age group. I passed him  and I heard him trying to stay with me. I was hoping he gave up, because I did not have much more left to react to a defensive move. Luckily, he did not have anything left. He was the guy that ended up 3rd in the age group, about 1m behind me.
+
+At the end I finished in 1h15m54s. About 1.5m faster than last year. of this 90s, about 60came form the bike and 30 came from the run. In the swim I lost time. Both transitions were also faster.
+
+As for the ranking, I could not defend my 2023 title. The guy who finished first, and Australian, was way faster in every discipline. He was about 3min faster on the swim, 2min faster on the bike, and 1m faster on the run. I might be able to get to run at that pace, and with a similarly spech'ed bike I might be able to post the same time, but the swim was just way too fast for me. I really need to find a way to work on my swim if I want to step up the game.
+
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.png){ width="100" group="hi" }
+
+![](img_modal/02.png){ width="100" group="hi" }
+
+![](img_modal/03.png){ width="100" group="hi" }
+
+![](img_modal/04.png){ width="100" group="hi" }
+
+![](img_modal/05.jpg){ width="100" group="hi" }
+
+![](img_modal/08.jpg){ width="100" group="hi" }
+
+![](img_modal/13.jpg){ width="100" group="hi" }
+
+![](img_modal/15.jpg){ width="100" group="hi" }
+
+
+:::
