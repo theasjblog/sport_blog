@@ -2,7 +2,7 @@
 title: "End Of Year"
 date: "2023-12-31"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, virtual]
 format: html
 lightbox:
   match: auto

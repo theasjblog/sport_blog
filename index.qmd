@@ -1,5 +1,6 @@
 ---
-title: "The busy triathlete"
+title: "ASJ Tri"
+
 listing:
   contents: posts
   sort: "date desc"
@@ -11,5 +12,18 @@ page-layout: full
 title-block-banner: true
 feed: true
 ---
+![](/img/logo.png)
 
-The journey to the 2025 Age Group World Championship of an ordinary triathlete.
+**Welcome to my blog!**
+
+I'm a 40-year-old amateur triathlete with a passion for swimming, cycling, and running. By day, I navigate the corporate world in a 9-to-5 office job, but my heart truly comes alive when I'm training for my next race.
+
+**What You'll Find Here**
+
+Here, I share my experiences of balancing a full-time career with the demanding world of triathlon training. From early morning swims to lunch-break runs and weekend cycling adventures, I'll take you through the ups and downs of pursuing athletic goals while maintaining a professional career and personal life. I will include race reports, lessons learnt from the trenches, stories about balancing family time, work responsibilities, and training, and challenges and victories of amateur triathlon.
+
+**Join Me!**
+
+Whether you're a fellow age-group triathlete, someone curious about the sport, or just interested in how to balance multiple passions with daily life, I hope you'll find value in my experiences and insights. Follow along as I share my journey of swimming, biking, and running through life!
+
+---

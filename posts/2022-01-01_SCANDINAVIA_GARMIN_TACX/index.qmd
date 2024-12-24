@@ -2,7 +2,7 @@
 title: "Scandinavia Garmin Tacx"
 date: "2022-01-01"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, virtual]
 format: html
 lightbox:
   match: auto

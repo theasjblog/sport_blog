@@ -2,7 +2,7 @@
 title: "The English Channel"
 date: "2023-01-01"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, virtual]
 format: html
 lightbox:
   match: auto

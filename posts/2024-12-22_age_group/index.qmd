@@ -5,12 +5,8 @@ date: "2024-12-22"
 categories: [news]
 ---
 
-![](register.png)
+![](register.png){ width="500"}
 
-
-Here’s an improved version of your blog post, keeping the tone informal and engaging while refining grammar, flow, and readability:  
-
----
 
 I’m writing this post a few months after the dust has settled. Back in early 2024, I set a big goal for myself: qualify for the Age Group World Championship for Sprint Triathlon. This decision was fueled partly by the ego boost of winning the [Bracebridge](../2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/index.qmd) race last year (let’s be honest, who doesn’t love a little ego boost?). On top of that, I dug into the winning times from qualifying races over the past 3–4 years. While I wasn’t quite there yet, I figured that with a bit of luck—and maybe some roll-down magic—I might just make it happen.  
 

@@ -7,9 +7,10 @@ website:
   description: "The busy triatlhete blog"
   navbar:
     right:
-      - about.qmd
       - icon: strava
         href: https://www.strava.com/athletes/7974168
+      - text: "{{< iconify cib:garmin >}}"
+        href: https://connect.garmin.com/modern/profile/adrianstevejoseph
       - icon: rss
         href: index.qmd
 

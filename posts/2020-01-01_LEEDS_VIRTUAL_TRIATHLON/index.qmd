@@ -2,7 +2,7 @@
 title: "Leeds Virtual Triathlon"
 date: "2020-01-01"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, virtual]
 format: html
 lightbox:
   match: auto
@@ -11,6 +11,7 @@ lightbox:
   loop: false
 ---
 
+This was a "real life" race I entered, but COVID-19 had other plans. The race was cancelled, but participants were given the option to "compete" virtually by completing the bike and run distance over the week end. I guess it was two events over two days to comply with the UK government rule that onl allowed us to go out of the house to exercise once a day.
 
 ```{r, echo=FALSE}
 library(DT)

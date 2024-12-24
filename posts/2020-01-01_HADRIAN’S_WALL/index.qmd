@@ -2,7 +2,7 @@
 title: "Hadrian’s Wall"
 date: "2020-01-01"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, virtual]
 format: html
 lightbox:
   match: auto
