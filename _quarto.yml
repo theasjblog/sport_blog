@@ -5,6 +5,8 @@ website:
   title: "The busy triathlete"
   site-url: https://theasjblog.github.io/sport_blog/
   description: "The busy triatlhete blog"
+  cookie-consent: true
+  google-analytics: "G-53CD66TT4Z"
   navbar:
     right:
       - icon: strava
