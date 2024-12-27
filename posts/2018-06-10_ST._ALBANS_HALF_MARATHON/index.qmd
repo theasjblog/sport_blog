@@ -2,7 +2,7 @@
 title: "St. Albans Half Marathon"
 date: "2018-06-10"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, run]
 format: html
 lightbox:
   match: auto

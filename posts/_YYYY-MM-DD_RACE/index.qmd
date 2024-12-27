@@ -1,8 +1,8 @@
 ---
-title: "Centurion Triathlon"
-date: "2019-06-30"
+title: "Race Name"
+date: "YYYY-MM-DD"
 author: "Adrian Joseph"
-categories: [race report, triathlon]
+categories: [race report, triathlon, run, parkrun, random race, obstacle, bike, swim, bike TT, aquathlon, duathlon]
 format: html
 lightbox:
   match: auto
@@ -11,15 +11,7 @@ lightbox:
   loop: false
 ---
 
-This was the first attempt at a long-ish distance, with the added difficulties of not being really trained for it.
-
-The swim was OK. Nothing special, but I managed. The main issue I had was that I could not really see. My googles were leaking pretty badly. As a result, I crushed against another competitor, which a few days later I discovered be Simon, a fellow TriForce club member.
-
-The bike was pretty hilly, but nice.
-
-The problems started on the run. From very early on, it was clear I had nothing left. I ended up having to walk part of it, with just the occasional jog so that the TriForce photographer could take some action-looking pictures. Good thing I picked the metric and not the imperial Centurion.
-
-At the end I stayed on the venue for a bit under the TriForce tent.
+Some text.
 
 ```{r, echo=FALSE}
 library(DT)
@@ -68,10 +60,6 @@ if(file.exists(file.path('data.json'))){
 
 ::: {layout-ncol=4}
 ![](img_modal/00.png){ width="100" group="hi" }
-
-![](img_modal/01.png){ width="100" group="hi" }
-
-![](img_modal/02.png){ width="100" group="hi" }
 
 
 :::

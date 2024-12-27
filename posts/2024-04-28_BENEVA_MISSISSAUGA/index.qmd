@@ -2,7 +2,7 @@
 title: "Beneva Mississauga"
 date: "2024-04-28"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, run]
 format: html
 lightbox:
   match: auto

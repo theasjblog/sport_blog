@@ -2,7 +2,7 @@
 title: "Swimathon"
 date: "2017-04-09"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, swim]
 format: html
 lightbox:
   match: auto

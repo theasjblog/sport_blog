@@ -10,3 +10,8 @@ upcoming
 * road to australia
 * planning: season, week techniques, etc.
 * injuries, strength
+
+
+* Script to create the slower res images
+* Page with the DT table to find races
+* Add a map preview, or a preview of the Garmin site

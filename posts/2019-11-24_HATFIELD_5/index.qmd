@@ -2,7 +2,7 @@
 title: "Hatfield 5"
 date: "2019-11-24"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, run]
 format: html
 lightbox:
   match: auto

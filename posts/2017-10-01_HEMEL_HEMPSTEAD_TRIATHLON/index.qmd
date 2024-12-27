@@ -2,7 +2,7 @@
 title: "Hemel Hempstead Triathlon"
 date: "2017-10-01"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, triathlon]
 format: html
 lightbox:
   match: auto
