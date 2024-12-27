@@ -2,7 +2,7 @@
 title: "Bike Oxford"
 date: "2018-05-20"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, bike]
 format: html
 lightbox:
   match: auto

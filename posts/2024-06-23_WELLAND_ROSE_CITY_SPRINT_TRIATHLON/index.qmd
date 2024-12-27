@@ -2,7 +2,7 @@
 title: "Welland Rose City Sprint Triathlon"
 date: "2024-06-23"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, triathlon]
 format: html
 lightbox:
   match: auto

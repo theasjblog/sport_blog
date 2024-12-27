@@ -2,7 +2,7 @@
 title: "Love Luton"
 date: "2019-10-27"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, run]
 format: html
 lightbox:
   match: auto

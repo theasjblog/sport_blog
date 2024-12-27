@@ -2,7 +2,7 @@
 title: "Lakeside Sprint Triathlon"
 date: "2023-09-09"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, triathlon]
 format: html
 lightbox:
   match: auto

@@ -2,7 +2,7 @@
 title: "Milton Subaru Triathlon"
 date: "2024-06-02"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, triathlon]
 format: html
 lightbox:
   match: auto

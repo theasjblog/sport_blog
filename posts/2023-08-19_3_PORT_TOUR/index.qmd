@@ -2,7 +2,7 @@
 title: "3 Port Tour"
 date: "2023-08-19"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, bike]
 format: html
 lightbox:
   match: auto
