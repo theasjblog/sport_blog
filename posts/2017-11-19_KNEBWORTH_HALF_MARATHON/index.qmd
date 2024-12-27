@@ -2,7 +2,7 @@
 title: "Knebworth Half Marathon"
 date: "2017-11-19"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, run]
 format: html
 lightbox:
   match: auto

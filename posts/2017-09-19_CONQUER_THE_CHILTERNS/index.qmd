@@ -2,7 +2,7 @@
 title: "Conquer The Chilterns"
 date: "2017-09-19"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, swim]
 format: html
 lightbox:
   match: auto
@@ -11,6 +11,9 @@ lightbox:
   loop: false
 ---
 
+A long swim in the Chiltern Hills, UK. This was a side event of a long course triathlon competition, and I decided to just test myself on a longer swim: 3K. 
+
+It went as planned. And by as planned I mean that I was one of the last of the water. I think just 2 or 3 older ladies in their 60s or 70s were still swimming once I finished...Also, when I got out I got a massive cramp to a leg. Never felt a cramp so painful before, I struggled to move for a good 5 minutes. Definitely swimming is not my cup of tea.
 
 ```{r, echo=FALSE}
 library(DT)

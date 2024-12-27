@@ -1,8 +1,8 @@
 ---
 title: "Triforce Triathlon"
-date: "2017"
+date: "2017-07-01"
 author: "Adrian Joseph"
-categories: [race report, random race]
+categories: [race report, triathlon]
 format: html
 lightbox:
   match: auto

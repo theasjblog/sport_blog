@@ -2,7 +2,7 @@
 title: "Bedford Autodrome Sprint Duathlon"
 date: "2017-03-12"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, duathlon]
 format: html
 lightbox:
   match: auto
