@@ -2,7 +2,7 @@
 title: "Ajbell London Triathlon"
 date: "2015-08-09"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, triathlon]
 format: html
 lightbox:
   match: auto

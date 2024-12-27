@@ -2,7 +2,7 @@
 title: "Self Transcendence"
 date: "2015-11-21"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, run]
 format: html
 lightbox:
   match: auto

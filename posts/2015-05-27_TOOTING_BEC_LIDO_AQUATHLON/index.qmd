@@ -2,7 +2,7 @@
 title: "Tooting Bec Lido Aquathlon"
 date: "2015-05-27"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, aquathlon]
 format: html
 lightbox:
   match: auto

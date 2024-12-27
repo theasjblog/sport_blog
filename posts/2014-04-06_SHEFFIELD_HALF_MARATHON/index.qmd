@@ -2,7 +2,7 @@
 title: "Sheffield Half Marathon"
 date: "2014-04-06"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, run]
 format: html
 lightbox:
   match: auto

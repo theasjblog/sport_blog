@@ -8,6 +8,9 @@ website:
   cookie-consent: false
   google-analytics: "G-53CD66TT4Z"
   navbar:
+    left:
+      - href: race_finder.qmd
+        text: "Race finder"
     right:
       - icon: strava
         href: https://www.strava.com/athletes/7974168

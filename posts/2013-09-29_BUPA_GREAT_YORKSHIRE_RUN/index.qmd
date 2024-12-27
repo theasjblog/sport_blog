@@ -2,7 +2,7 @@
 title: "Bupa Great Yorkshire Run"
 date: "2013-09-29"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, run]
 format: html
 lightbox:
   match: auto

@@ -1,0 +1,45 @@
+---
+title: "Race finder"
+image: profile.png
+about:
+  template: jolla
+---
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(dplyr)
+library(DT)
+
+allJSON <- list.files(file.path('posts'),
+                      pattern = 'data.json',
+                      full.names = TRUE, recursive = TRUE)
+
+
+allRaces <<- lapply(allJSON, function(d){
+  d <- jsonlite::fromJSON(d)
+  d$breakdown <- NULL
+  d$details <- NULL
+  d <- as.data.frame(d)
+  d
+}) %>%
+  dplyr::bind_rows() %>%
+  mutate(race_dir = dirname(allJSON),
+         url = paste0('<a href="', race_dir, '/index.html">', race, '</a>')) %>%
+  filter(race != 'RACE NAME')
+
+DT::datatable(allRaces %>%
+                select(c('url', 'type', 'distance', 'time', 'date')) %>%
+                rename('Race' = 'url',
+                       'Race type' = 'type',
+                       'Race distance' = 'distance',
+                       'Race time' = 'time',
+                       'Race date' = 'date'),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
