@@ -62,7 +62,9 @@ if(file.exists(file.path('data.json'))){
 
 ![](img_modal/01.png){ width="100" group="hi" }
 
-![](img_modal/02.jpg){ width="100" group="hi" }
+![](img_modal/02.png){ width="100" group="hi" }
+
+![](img_modal/03.jpg){ width="100" group="hi" }
 
 
 :::
