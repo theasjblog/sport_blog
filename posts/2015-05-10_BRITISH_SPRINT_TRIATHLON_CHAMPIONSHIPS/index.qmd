@@ -2,7 +2,7 @@
 title: "British Sprint Triathlon Championships"
 date: "2015-05-10"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, triathlon]
 format: html
 lightbox:
   match: auto

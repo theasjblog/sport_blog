@@ -2,7 +2,7 @@
 title: "Richmond Park"
 date: "2015-02-28"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, run]
 format: html
 lightbox:
   match: auto

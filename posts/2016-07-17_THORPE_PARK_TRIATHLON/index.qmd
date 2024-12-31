@@ -2,7 +2,7 @@
 title: "Thorpe Park Triathlon"
 date: "2016-07-17"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, triathlon]
 format: html
 lightbox:
   match: auto

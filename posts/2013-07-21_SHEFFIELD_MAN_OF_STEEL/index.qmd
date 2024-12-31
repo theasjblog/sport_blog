@@ -2,7 +2,7 @@
 title: "Sheffield Man Of Steel"
 date: "2013-07-21"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, obstacle race]
 format: html
 lightbox:
   match: auto

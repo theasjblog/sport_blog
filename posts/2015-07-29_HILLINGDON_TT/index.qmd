@@ -2,7 +2,7 @@
 title: "Hillingdon Tt"
 date: "2015-07-29"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, bike TT]
 format: html
 lightbox:
   match: auto

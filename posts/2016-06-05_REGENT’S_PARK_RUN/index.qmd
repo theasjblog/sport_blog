@@ -2,7 +2,7 @@
 title: "Regent’s Park Run"
 date: "2016-06-05"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, run]
 format: html
 lightbox:
   match: auto

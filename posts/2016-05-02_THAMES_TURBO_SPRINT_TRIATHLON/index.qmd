@@ -2,7 +2,7 @@
 title: "Thames Turbo Sprint Triathlon"
 date: "2016-05-02"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, triathlon]
 format: html
 lightbox:
   match: auto

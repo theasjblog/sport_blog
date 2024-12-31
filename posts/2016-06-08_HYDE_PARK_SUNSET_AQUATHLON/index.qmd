@@ -2,7 +2,7 @@
 title: "Hyde Park Sunset Aquathlon"
 date: "2016-06-08"
 author: "Adrian Joseph"
-categories: [race report]
+categories: [race report, aquathlon]
 format: html
 lightbox:
   match: auto
