@@ -1,5 +1,5 @@
 ---
-title: "![](/img/logo.png){width=\"300\"}"
+title: "![ASJ TRI](/img/logo.png){width=\"300\"}"
 
 listing:
   contents: posts
