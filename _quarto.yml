@@ -5,6 +5,7 @@ website:
   title: "ASJ TRI"
   site-url: https://theasjblog.github.io/sport_blog/
   description: "The busy triatlhete blog"
+  favicon: /img/logo.png
   search: 
     location: navbar
     type: overlay

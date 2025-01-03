@@ -16,7 +16,7 @@ feed: true
 
 **Welcome to my blog!**
 
-I'm a 40-year-old amateur triathlete with a passion for swimming, cycling, and running. By day, I navigate the corporate world in a 9-to-5 office job, but my heart truly comes alive when I'm training for my next race.
+I'm a 40-year-old amateur triathlete. As we all do, by day I navigate the corporate world in a 9-to-5 office job, but my heart truly comes alive when I'm training for my next race.
 
 **What You'll Find Here**
 
