@@ -7,40 +7,13 @@ categories: [news]
 
 ![MultiSport Canada Champions plaque.](img/cover.png)
 
-At the end of November last year I received an e-mail from MultiSport Canada saying that I finished first in their race seriaes for the Sprint Triathlon, in my age group!
+What an incredible surprise to cap off an amazing year of racing! When that email from MultiSport Canada landed in my inbox announcing my first-place finish in the Sprint Triathlon series, I was genuinely shocked. I hadn't even realized I was competing in a series – talk about a pleasant surprise!
 
-I did not even know they were running a race! I thought it was just a number of isoalted events organized by the same company. They asked me if I wanted to recive an e-certificate, or a physical plaque. I do have a thing for physical media, so I asked for a plaque.
+Looking at those point totals now – 90 ([Welland](/posts/2024-06-23_WELLAND_ROSE_CITY_SPRINT_TRIATHLON/index.qmd)), 90 ([Bracebridge](/posts/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/index.qmd)), and 75 ([Barrie](/posts/2024-08-11_BARRIE_SPRINT_TRIATHLON/index.qmd)) – each number represents a story, a race where I pushed my limits and competed against not just others, but myself. That second-place finishe in Welland is particularly special: that was the race that gave the slot for the Age Group World Championship.
 
-Fast forward nearly 2 months, and here it is, fresh from the mail. For a while I was afraid it got lost ion all that mess that was the month long Canada Post strike, but no, it eventually made it to my home.
+But beyond the points and placements, what really makes this achievement special is what it represents: consistency, dedication, and the pure joy of competing. To think that my performance across these three races was strong enough to clinch the series title – it's honestly still sinking in!
 
-Meanwhile, I had the time to look at how the series work:
+And now, as I hold this plaque in my hands (after its adventure through the Canada Post strike!), I can't help but feel even more motivated for what's ahead. This isn't just a recognition of past achievements; it's fuel for future goals, especially as I prepare for the Age Group World Championship.
 
--   You need to complete at least three events organized by MultiSport Canada
--   If you compete in more than three events, only the best three placements will count
--   Points are awarded as follow:
+![Top M40-44 in the series.](img/top3.png)
 
-|             |            |
-|-------------|:----------:|
-| **Placing** | **Points** |
-| 1           |    100     |
-| 2           |     90     |
-| 3           |     85     |
-| 4           |     80     |
-| 5           |     75     |
-| 6           |     70     |
-| 7           |     65     |
-| 8           |     60     |
-| 9           |     55     |
-| 10          |     50     |
-
--   There are a lot of rules to break ties
-
-Here is a screenshot of the top three M40-44 from [SportStats](https://sportstats.one/series/multisport-canada/points/6047):
-
-![](img/top3.png)
-
-I collected 255 points from 3 races:
-
-* 90 points from a 2$^{nd}$ place in [Welland](/posts/2024-06-23_WELLAND_ROSE_CITY_SPRINT_TRIATHLON/index.qmd)
-* 90 points from a 2$^{nd}$ place in [Bracebridge](/posts/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/index.qmd)
-* 75 points from a 5$^{th}$ place in [Barrie](/posts/2024-08-11_BARRIE_SPRINT_TRIATHLON/index.qmd)
