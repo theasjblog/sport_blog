@@ -1,0 +1,46 @@
+---
+title: "2024 MultiSpor Canada Series Champion!"
+author: "Adrian Joseph"
+date: "2025-01-31"
+categories: [news]
+---
+
+![MultiSport Canada Champions plaque.](img/cover.png)
+
+At the end of November last year I received an e-mail from MultiSport Canada saying that I finished first in their race seriaes for the Sprint Triathlon, in my age group!
+
+I did not even know they were running a race! I thought it was just a number of isoalted events organized by the same company. They asked me if I wanted to recive an e-certificate, or a physical plaque. I do have a thing for physical media, so I asked for a plaque.
+
+Fast forward nearly 2 months, and here it is, fresh from the mail. For a while I was afraid it got lost ion all that mess that was the month long Canada Post strike, but no, it eventually made it to my home.
+
+Meanwhile, I had the time to look at how the series work:
+
+-   You need to complete at least three events organized by MultiSport Canada
+-   If you compete in more than three events, only the best three placements will count
+-   Points are awarded as follow:
+
+|             |            |
+|-------------|:----------:|
+| **Placing** | **Points** |
+| 1           |    100     |
+| 2           |     90     |
+| 3           |     85     |
+| 4           |     80     |
+| 5           |     75     |
+| 6           |     70     |
+| 7           |     65     |
+| 8           |     60     |
+| 9           |     55     |
+| 10          |     50     |
+
+-   There are a lot of rules to break ties
+
+Here is a screenshot of the top three M40-44 from [SportStats](https://sportstats.one/series/multisport-canada/points/6047):
+
+![](img/top3.png)
+
+I collected 255 points from 3 races:
+
+* 90 points from a 2$^{nd}$ place in [Welland](/posts/2024-06-23_WELLAND_ROSE_CITY_SPRINT_TRIATHLON/index.qmd)
+* 90 points from a 2$^{nd}$ place in [Bracebridge](/posts/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/index.qmd)
+* 75 points from a 5$^{th}$ place in [Barrie](/posts/2024-08-11_BARRIE_SPRINT_TRIATHLON/index.qmd)
