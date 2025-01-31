@@ -1,5 +1,5 @@
 ---
-title: "2024 MultiSpor Canada Series Champion!"
+title: "2024 MultiSport Canada Series Champion!"
 author: "Adrian Joseph"
 date: "2025-01-31"
 categories: [news]
