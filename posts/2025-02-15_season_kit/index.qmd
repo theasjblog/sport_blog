@@ -1,7 +1,7 @@
 ---
 title: "2025 Gear"
 author: "Adrian Joseph"
-date: "2025-01-31"
+date: "2025-02-09"
 categories: [news]
 ---
 
