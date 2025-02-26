@@ -1,0 +1,160 @@
+---
+title: "Indoor Triathlon Provincial Championship Series - Race 1"
+date: "2025-02-22"
+author: "Adrian Joseph"
+categories: [race report, triathlon, indoor]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](img/00.png)
+
+# Overview
+
+Well, that was a weird one! This was my first indoor race, and honestly, it felt like my first race ever. I had no idea what was going to happen when, and the whole thing felt like an experiment in organized chaos. 
+
+The goal? Go as far as you can in 15 minutes—three times. First, swim your heart out for 15 minutes. Then, bike like you're being chased for 15 minutes. Finally, run like you stole something for 15 minutes. Between each round, there was a 10-minute break to catch your breath (and question your life choices).
+
+## Scoring
+
+The scoring was simple:
+
+* **Swim:** 10 points per 25m
+* **Bike:** 25 points per 500m
+* **Run:** 25 points per 200m (or 13 points per 100m on the last lap)
+
+Competitors were ranked in 10-year age groups, but only the **overall** ranking counted for the Indoor Provincial Championship. 
+
+Now, let's rewind to where it all began.
+
+The race took place at **Toronto Pan Am**, a venue that hosts international-level competitions. Going from my local Brampton pool to this place? Yeah, it felt like I had been called up to the big leagues.
+
+# Swim
+
+The swim was in a **50m pool**, with each lane shared by two swimmers. My lane mate? A 10-year-old. Not exactly someone I could pace myself against.
+
+I felt pretty good in the water, which should have been my first clue that I wasn't pushing hard enough. I covered **about 850m in 15 minutes**, though even that was up for debate. The lap counter marked **17 laps**, but the referee decided on **16.5 laps** due to a misunderstanding of the rules. The actual count should have been either 17 or even 17.5 laps. Turns out, in a race where **half a lap can change your ranking**, consistent scoring would be nice.
+
+To add to the mess, my **Garmin fail** of the day: I forgot to set the pool length to 50m. This meant my recorded distance was **half of what I actually swam**, and all my pacing data was completely off. Solid start!
+
+# Bike
+
+After a quick **10-minute transition**, I dried off, grabbed my bike and run gear, and made my way upstairs.
+
+The bike leg was on a **spin bike with a Stages power meter** and a display showing power, cadence, speed, and distance. I clipped in, set up my bike, and waited for the go-ahead. 
+
+And waited. 
+
+And waited.
+
+A referee reset the bike's distance counter but never actually **said** I could start. Two minutes later, someone finally gave me the signal. By then, I had lost **2 whole minutes**—roughly **1 km or 50 points** in the final ranking. Which, considering I won my age group by just **5 points**, was a pretty big deal! 
+
+To make up for lost time, I **pushed hard**—maybe a little **too hard**. And that would come back to haunt me on the run. 
+
+Oh, and another **Garmin fail**: I started and stopped my watch at totally random times. Not that it mattered much, since the only thing I could track with the Garmin was my heart rate.
+
+# Run
+
+After another **10-minute break**, I swapped into my running shoes and headed to the start line. The run was on a **soft 200m indoor track**.
+
+I found a referee to count my laps, took off like a rocket... and immediately **regretted everything**. 
+
+I clocked **just over 3 km in 15 minutes**—or **3.3 km** according to my foot-pod. Either way, not great. My **pacing was a mess**, and somewhere along the way, I developed an **annoying pain between my shoulders** that made things even worse. 
+
+# Results
+
+As for the **Provincial Championship**, let's be real—I never had a chance. It wasn't divided by age group, and keeping up with the younger competitors was impossible.
+
+But in my **age group**? I **won**! Though, to be fair, it wasn't the most competitive field.
+
+Breaking it down:
+
+* **Swim:** Decent, but I really should have hit a **sub-1:45 min/100m pace**. I probably started around **1:35 min/100m**, which wasn't sustainable.
+* **Bike:** Given my lack of preparation (and those lost **2 minutes**), I actually held my own. I only lost **500m to the top cyclist**, which I could have made up if I had started on time.
+* **Run:** A **disaster**. I need to figure out what went wrong, aside from **terrible pacing** and **spending too much energy on the bike**.
+
+# Review
+
+As an event, it was **okay**. No t-shirts, no medals, no keepsakes—just a straightforward race. But given that it was organized by **Triathlon Ontario** (not a private company), and was fairly inexpensive, I can't really complain.
+
+That said, the **organization could use some work**:
+
+1. A **louder, clearer** start/stop system would be great.
+2. **More consistent scoring** would make things fairer.
+3. Better **communication on race flow** would help everyone stay on track.
+
+# Lessons Learned
+
+1. **Keep an eye on the clock**—don't assume organizers will tell you when to start.
+2. **Set your Garmin correctly**:\n   - Pool: **50m**\n   - Run: **Indoor/treadmill mode**
+3. **Bike clips are SPD clips**—don't waste time figuring it out mid-race.
+4. **Pace the run properly**—aim for **52s per lap**, not an all-out sprint that destroys you.
+
+All in all, it was a **wild, slightly frustrating, but fun** experience. Next time? I'll be better prepared—and I won't let anything or anyone steal my 2 minutes!
+
+
+
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](img_modal/00.png){ width="100" group="hi" }
+
+![](img_modal/01.png){ width="100" group="hi" }
+
+![](img_modal/02.png){ width="100" group="hi" }
+
+![](img_modal/03.png){ width="100" group="hi" }
+
+![](img_modal/04.png){ width="100" group="hi" }
+
+![](img_modal/05.png){ width="100" group="hi" }
+
+:::
