@@ -154,7 +154,7 @@ I have done three swims so far, each between 45min and 1h, and I've lost 35% of 
 
 The swim data is neatly laid out in the app.
 
-![Swim timeline](img/swim_1.png){ width="200" }
+![Swim timeline](img/swim_1.png){ width="500" }
 
 The first thing you'll see if your timeline, with the main times on top of it.
 
