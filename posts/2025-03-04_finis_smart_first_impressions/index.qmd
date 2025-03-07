@@ -1,0 +1,193 @@
+---
+title: "New kit: Finis Swim Smart goggles"
+date: "2025-03-04"
+author: "Adrian Joseph"
+categories: [kit review,]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![Finis Smart Swim Goggles](img/goggles.png)
+
+I have been using the Finis Smart Goggles for a bit over a week. This is a first impressions review. If something significant will come up, I'll keep you posted.
+
+> Disclaimer: This is not an affilietd or sponsored review. I paid for the googles in full.
+
+# Smart swim googles
+
+I have been interested in smart swim goggles for a while now. Not a tough goal to reach for a company: everything that promises to make me swim faster gets my attention pretty easily.
+
+But what are smart swim goggles? They are swim goggles, but they have a way to present to you swim metric in your field of view while you swim. So you can always know your pace, lap time, etc, as you go, without having to look at your watch. This might not seem much, but sometimes it is hard to glance at your watch during a hard set, and even harder while swimming open water.
+
+# The contenders
+
+The first pair I saw advertised was the Form Goggles. They seems to be pretty advanced, but honestly the price tag was a bit too high. And on top of that, they require a subscription even for basic stuff like using the compass in open water. I understand paying a subscription for analytics platforms, but I do not want to pay a subscription to use hardware. It would be like Garmin charging you a monthly fee to use the GPS in their watches. No, thank you.
+
+The second alternative was Holoswim with their Smart Swim. Cheaper and no subscription. Good. What I did not like was mostly the design. The lens with displaying the swim metrics is pretty bulky and ugly. You can see from the other side of the pool that they are not "normal" goggles. Surely in the future they will manage to miniaturize the technology, but for now it just does not work for me.
+
+This leads us to the third contender, and the one I actually bought. The Finis Smart Goggles. These goggles have a different design concept -more on that later-, which makes them significantly smaller: they look like normal swim goggles. On top of that they do not require a subscription and they are reasonably cheap. Finis had a sale when I bought them, and I paid 160CAD including import from US, and a 2 days delivery.
+
+# Unboxing
+
+![The goggles and the Ciye pod.](img/boxed.png)
+
+The unboxing is actually 2 boxes, and this gives away the different design of the Finis Smart Goggles, which I really liked.
+
+One box contained the swim goggles, four extra nose pieces to adjust the fit, and one of those soft bags to put them in. That's it no electronics at all.
+
+The electronics are in the other, smaller box. In there you can find the proprietary charging cable, a quick start guide, and what you actually paid for. A small pod that clicks into the goggles. The pod contains a small display and it sits on the outer side of the left lens. You do not normally see it, unless you actively look at your left.
+
+I liked this modular design because it means that if the goggles gets old, they start to leak, they break, or you simply want a pair with shaded lenses and one with clear lenses, you can just but separate goggles and move the pod around. Finish charges 35US for the goggles only, which is in line with the cost of other high end, normal swim goggles.
+
+Note that the goggles are made by Finis, while the electronics -and the companion app- by a partner company: Ciye. This was a smart move: it opened up to Finis the smart goggle market allowing them to leverage Ciye expertise, and the same time it gave Ciye the backing of a reputable swimming brand such as Finis, with plenty of experience in designing good swimming goggles.
+
+![The Ciye pod in the left lens.](img/chip_in.png)
+# Set up
+
+
+Honestly, the easiest set up ever. Coming from Garmin stuff, I am used to failed sync, reset, retry, and overall just miserable pairing experiences. Here, just flawless.
+
+The goggles do not pair with any watch. Just with your phone. Create an account with Ciye and start the sync process following the on-screen instructions.
+
+I do not think I have ever seen such details instructions. A very impressive work. For reference, I used an iPhone 13, but the process should be identical on Android.
+
+The set up includes moving the pixels around in the little screen to center them as you like in your field of view, and a selection of the swim mode -more on this later-. Of course, all of these can be changed later in the settings.
+
+# The app UI
+When I was shopping around for swim smart goggles I could not find many good reviews of the Finis ones. Most reviewers focus on the Form goggles. So, if you are interested in the Finis, I hope I can give you some useful information.
+
+## News
+
+The first tab is the "News" tab. Here you'll find an overview of your latest swim, notifications from the community, if you've added any friend to the app, and a look at your achievements.
+
+![News tab](img/news.png)
+
+We'll look at a swim analysis later. I do not have any friend connected to my profile, so I cannot show you that one, but here is how the Achievements looks like.
+
+![Achievements](img/achievements.png)
+These are a bit like the Garmin's Badges. You do not set them up, you just get achievements as you go.
+
+## History
+
+![Swim history](img/history.png)
+
+Here you just see a list of your swims and how you track against swim goals that you set yourself. The workout listed can be filtered, but for now the filtering is fairly limited: You can only search for workouts that you tagged as "favourites".
+
+## Pool
+
+Here you can register your pools. The main use is to make sure you set the pool length correctly, but if you like to know how much you swim at different pools, you can use satisfy your curiosity here.
+
+![Pools](img/pools.png)
+
+
+## Settings
+
+When it comes to settings, there is a limited but adequate numbers of things you can change. We saw already you can register a pool. Of course, you can then tell the goggles which pool you will be swimming in. Other settings include the appearance of the screen and the fields you see when you swim. Let's have a look.
+
+![Main settings screen](img/settings.png)
+
+### Screen adjustments
+
+![Screen adjustments](img/adjust_screen.png)
+You can change two things: the screen brightness and the writing position. Being able to change the writing position can help you if you find that the screen is a bit too much far off the left.
+
+As for the demo mode, I am not sure what it does since when I tried to toggle it I did not really see anything happening, but I guess it is nothing important.
+
+### Screen fields
+
+![Swim screen fields](img/fields.png)
+
+This part is a bit confusing. You can choose between 4 different preset:
+
+* Standard swim
+* I swim laps
+* I swim for times
+* I swim sets
+* I swim stroke sets
+
+Each preset will show you three fields, which will alternate between when you turn, when you rest, and when you are actually swimming. What makes it challenging is that many fields are shared between the presets, making for very small different differences between them. On top of that, it is not very clear what each option actually mean until you try it. For example, is the timer a lap timer, or a set timer? You will need to go for a swim and find out.
+
+To simplify, I think that most triathlete will use two presets:
+
+* Standard swim or I swim laps (they are virtually identical) for pool swims.
+* I swim for time for open water swims.
+
+In essence, with these settings you will see:
+
+* Lap swim time
+* Set swim time
+* A lap counter for the set
+* Rest time
+* Total swim time
+
+Interestingly, the goggles will never show you the pace, even if they know the lap time and the pool length. So a bit of math is required. If you target 1:40min/100m and you swim a 25m pools, you will need to clock 25s/lap.
+
+Finally, you will see that there is a toggle to enable "short hand display". If you like to make the UI more confusing, that option will remove all English writing, so instead of seeing "Clock 5:40" you will see "5:40". You will just need to guess/remember if what you are looking at is rest time, clock time, swim time, set time...
+
+
+# Swimming with the googles
+
+Once you've figure out the fields you want, comes the easy part: actually swim. All you have to do is press the button on top of the lenses. The screen will say "Start swim" and you are good to go. The only slightly annoying thing is that the button is quite hard to press.
+
+The fit is pretty individual, but the Finis have enough customization that they should work for the vast majority of people. So far I have not had any problem with leaking or fogging.
+
+The goggles are a nice change from the normal watch. You can easily see your stats by glancing at your left, and you do not have to press any button ever. The goggles automatically detect if you are swimming, if you are resting, and even if you are doing a kick drill. If any mistake happen, we'll see later that we can correct that.
+
+Finally, when you are done swimming, press the button again. The goggles will tell you "Great swim", and they will start to look for your phone. If they find they'll sync immediately, otherwise you can always trigger a manual sync by pressing the button for three seconds.
+
+# Battery life
+
+I have done three swims so far, each between 45min and 1h, and I've lost 35% of battery charge. If we extrapolate linearly, the goggles should give you approximately 7 hours of swim time. The official Finis declared battery life is 4 to 6 hours. In any case, that that should plenty even for bottom of the pack 10K marathon swimmers.
+
+# Post swim analysis
+
+The swim data is neatly laid out in the app.
+
+![Swim timeline](img/swim_1.png)
+The first thing you'll see if your timeline, with the main times on top of it.
+
+![Laps detials](img/swim_2.png)
+The next group of information is about specific sets and laps. For each set you can see every lap time, you can edit/cancel laps and sets, and the chart will show how constant you times were in each set.
+
+## 3D Video analysis
+
+A feature that sets the Finis goggles apart from other offerings is the 3D video analysis. Naturally the goggles track your head position for the whole swim, that's how they know if you are swimming, resting, turning, etc. But Finis takes this data a step further. They use it to reconstruct a 3D video of your head movements for the entire length of the swim.
+
+You can interact with the video and rotate it as much as you like, and you can see things like how still you head is, if you move too much to the left or to the right when you breath, if you keep it level or if you "look up" too much, etc.
+ 
+{{< video img/head.mov >}}
+
+
+# Summary
+
+So, are the Finis Swim Smart Goggles worth it? In short, I think they are. I would not say they are essentials, your current watch can do the same things, but they are a great addition to the swim bag.
+
+And very important to me, as a competitive triathlete, they have made me swim faster. That is unlikely due to improve technique -at least for now, I'll need more time to work on the head position-, but because they made me swim at a more consistent pace, without going out too hard at the beginning.
+
+## The good
+
+Those goggles have a lot to go for them. They are cheaper than the competition. They are modular, so you can simply replace the goggles, and not the whole thing. They are accurate. In all my swims they have not under- or over- counted laps once, and they never failed to detect a swim set as opposed to a kick set. Some other reviewers criticized that the screen is way to off to the left and you have to make an effort to see it, but I find that it is not that bad, and I like that if I do not want to see my metric, I can just ignore the screen.
+
+The app is simple, but it offers enough functionality, and it syncs without issues with the goggles. Finally, the 3D video is a nice feature.
+
+## What can be improved
+
+For as much as I like them, the goggles are not perfect. To start with, I wish that the button was a bit easier to press. But maybe it will jest get a bit softer with time.
+
+Then there is the data displayed itself. It works, but I would like if it was better documented. Also, I would love to see the pace displayed as well as just timers.
+
+I said earlier that I like the 3D video. And it is true it is a really neat feature. However, it does feel half baked. I think it would be much more powerful if they could give you some feedback. I think that combining this with some AI analysis would enhance the experience, although I am afraid that will also open the doors to a subscription model.
+
+I have not used the goggles in open water yet (March in Canada...), but I will let you know if anything drastically different comes up. However, I do know that I would like to see the addition of a GPS chipset to give pace feedback in open water. Easier said than down, as GPS signal does not work underwater, and your face is underwater most of the time while you swim. Other companies have enabled a sync with GSP watches to provide the functionality.
+
+Another open water feature that is missing but present in the Form goggles is the "swim straight" feature. This features helps you swim in. straight line in open water, and it does not require GPS. However, it will be challenging to implement in the Finis goggles as they do not have a HUD always displayed in front of you, but a smaller one tucked away on the side.
+
+The final criticism I have for the Finis is their limited third party sync support. They can only share data with Strava, Swim.com, and Apple Healthkit. For now, this works for me since I still wear my watch anyway while I swim, but otherwise not being able to directly load my data to TrainingPeaks or Humango would be a major pain point. Hopefully they will expand their partnerships in the future. At the very least, being able to download the raw `.fit` file would allow to re-upload it to any other platform.
+
+# Note on race usage
+
+As far as I know, the Finis Smart goggles are not FINA approved, but they are USA, PTO, and World Triathlon approved. So make your choice accordingly if you plan to use them in races, and if doubt contact your race director. As for me, I don't know yet if I'll be using them in races. For a while I though I will not, since they were not approved, but now that they are race legal I might give them a go.
