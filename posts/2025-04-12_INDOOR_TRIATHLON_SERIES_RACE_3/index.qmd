@@ -71,7 +71,7 @@ kableExtra::kable(ranking)
 ```
 
 
-This table now tells a few things:
+This table tells a few things:
 
 * If Paul Shortins does not show up at the next race, I have a shot at the championship. Unlikely, but possible. Otherwise, no way I can close that gap of 395 points.
 * For the Age Group championship, it is tight. I have a 53 points lead, and it does not take much to rack up more than 53 points: Swim 25m more, bike 500m more, run and 200m more, and you have collected 60 extra points. What gives me hope is that until now I always managed to outperform Nick in every sport -well, except the bike on the first race, but there he only covered 500m more, and I cycled for 2min less-. But you've never won until you crossed the finish line first!
