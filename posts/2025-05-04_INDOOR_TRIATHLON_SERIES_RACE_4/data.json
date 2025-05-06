@@ -1,0 +1,19 @@
+[
+  {
+    "race": "INDOOR TRIATHLON PROVINCIAL CHAMPIONSHIP - RACE 4",
+    "type": "indoor triathlon",
+    "distance": "15min/15min/15min",
+    "position_overall": "X/Y",
+    "position_category": "X/Y",
+    "time": "0:45:00",
+    "date": "2025-05-04",
+    "details": "https://connect.garmin.com/modern/activity/19026964535",
+    "breakdown": {
+      "swim": "875m",
+      "t1": "10:00",
+      "bike": "10.6Km",
+      "t2": "10:00",
+      "run": "3.4Km"
+    }
+  }
+]
