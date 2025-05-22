@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png)
+
 A long swim in the Chiltern Hills, UK. This was a side event of a long course triathlon competition, and I decided to just test myself on a longer swim: 3K. 
 
 It went as planned. And by as planned I mean that I was one of the last of the water. I think just 2 or 3 older ladies in their 60s or 70s were still swimming once I finished...Also, when I got out I got a massive cramp to a leg. Never felt a cramp so painful before, I struggled to move for a good 5 minutes. Definitely swimming is not my cup of tea.
@@ -61,9 +63,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2017-09-19_CONQUER_THE_CHILTERNS/img/01.png){ width="100" group="hi" }
 
 
 :::

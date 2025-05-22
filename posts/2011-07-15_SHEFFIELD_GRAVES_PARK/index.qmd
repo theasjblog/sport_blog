@@ -10,6 +10,9 @@ lightbox:
   desc-position: right
   loop: false
 ---
+
+![](https://storage.googleapis.com/blogs_josa/sport/2011-07-15_SHEFFIELD_GRAVES_PARK/img/00.png)
+
 Graves park is a park in Sheffield, UK. As the names suggests, it is near an old cemetery, which s a bit of an odd venue for a race. Regardless, the event is a nice one. The park is pretty, and race is a hilly one, ran on a mix of grass and gravel.
 
 ```{r, echo=FALSE}
@@ -58,9 +61,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2011-07-15_SHEFFIELD_GRAVES_PARK/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2011-07-15_SHEFFIELD_GRAVES_PARK/img/01.jpg){ width="100" group="hi" }
 
 
 :::

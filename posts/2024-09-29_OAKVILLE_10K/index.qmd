@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2024-09-29_OAKVILLE_10K/img/00.png)
 
 Last race of the year. One of the worst 10K ever time wise, but the last month was not great for training. Moving from Burlington to Brampton completely destroyed the training routine.
 
@@ -59,19 +60,19 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-09-29_OAKVILLE_10K/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-09-29_OAKVILLE_10K/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-09-29_OAKVILLE_10K/img/02.png){ width="100" group="hi" }
 
-![](img_modal/03.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-09-29_OAKVILLE_10K/img/03.png){ width="100" group="hi" }
 
-![](img_modal/04.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-09-29_OAKVILLE_10K/img/04.jpg){ width="100" group="hi" }
 
-![](img_modal/05.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-09-29_OAKVILLE_10K/img/05.jpg){ width="100" group="hi" }
 
-![](img_modal/06.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-09-29_OAKVILLE_10K/img/06.jpg){ width="100" group="hi" }
 
 
 :::

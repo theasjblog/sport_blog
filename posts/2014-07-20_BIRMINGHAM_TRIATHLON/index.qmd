@@ -10,7 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-
+![](https://storage.googleapis.com/blogs_josa/sport/2014-07-20_BIRMINGHAM_TRIATHLON/img/00.png)
 
 ```{r, echo=FALSE}
 library(DT)
@@ -58,21 +58,21 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2014-07-20_BIRMINGHAM_TRIATHLON/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2014-07-20_BIRMINGHAM_TRIATHLON/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2014-07-20_BIRMINGHAM_TRIATHLON/img/02.png){ width="100" group="hi" }
 
-![](img_modal/03.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2014-07-20_BIRMINGHAM_TRIATHLON/img/03.jpg){ width="100" group="hi" }
 
-![](img_modal/04.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2014-07-20_BIRMINGHAM_TRIATHLON/img/04.jpg){ width="100" group="hi" }
 
-![](img_modal/07.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2014-07-20_BIRMINGHAM_TRIATHLON/img/07.jpg){ width="100" group="hi" }
 
-![](img_modal/08.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2014-07-20_BIRMINGHAM_TRIATHLON/img/08.jpg){ width="100" group="hi" }
 
-![](img_modal/10.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2014-07-20_BIRMINGHAM_TRIATHLON/img/10.jpg){ width="100" group="hi" }
 
 
 :::

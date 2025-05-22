@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_GRAVES_PARK/img/00.png)
+
 Second time I ran this race. Nothing really changed from the first edition, and that was good, as it was a good race, well organized and fun to run.
 
 ```{r, echo=FALSE}
@@ -59,7 +61,7 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_GRAVES_PARK/img/00.png){ width="100" group="hi" }
 
 
 :::

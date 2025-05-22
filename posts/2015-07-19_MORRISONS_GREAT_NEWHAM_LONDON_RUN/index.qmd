@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2015-07-19_MORRISONS_GREAT_NEWHAM_LONDON_RUN/img/00.png)
 
 
 ```{r, echo=FALSE}
@@ -58,13 +59,13 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2015-07-19_MORRISONS_GREAT_NEWHAM_LONDON_RUN/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2015-07-19_MORRISONS_GREAT_NEWHAM_LONDON_RUN/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2015-07-19_MORRISONS_GREAT_NEWHAM_LONDON_RUN/img/02.png){ width="100" group="hi" }
 
-![](img_modal/06.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2015-07-19_MORRISONS_GREAT_NEWHAM_LONDON_RUN/img/06.jpg){ width="100" group="hi" }
 
 
 :::

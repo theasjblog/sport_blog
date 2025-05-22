@@ -10,7 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-
+![](https://storage.googleapis.com/blogs_josa/sport/2023-12-31_END_OF_YEAR/img/img_1208.png)
 
 ```{r, echo=FALSE}
 library(DT)
@@ -58,9 +58,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/img_1208.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-12-31_END_OF_YEAR/img/img_1208.png){ width="100" group="hi" }
 
-![](img_modal/img_1209.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-12-31_END_OF_YEAR/img/img_1209.png){ width="100" group="hi" }
 
 
 :::

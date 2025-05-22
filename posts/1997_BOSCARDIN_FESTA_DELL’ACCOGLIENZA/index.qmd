@@ -10,6 +10,9 @@ lightbox:
   desc-position: right
   loop: false
 ---
+
+![](https://storage.googleapis.com/blogs_josa/sport/1997_BOSCARDIN_FESTA_DELL_ACCOGLIENZA/img/01.png)
+
 This was an assortment of random events organized for every fresh(wo)man of my high-school. I do not recall much, only that I won. If I won overall, or some category only (or if there were categories in the first place), I do not know. I was probably too busy looking at a red head that got my attention, hoping she ended up in my class. Spoiler alert, she did, and we also dated for a while, and that was a much better achievement.
 
 ```{r, echo=FALSE}
@@ -58,9 +61,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/1997_BOSCARDIN_FESTA_DELL_ACCOGLIENZA/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/1997_BOSCARDIN_FESTA_DELL_ACCOGLIENZA/img/02.png){ width="100" group="hi" }
 
 
 :::

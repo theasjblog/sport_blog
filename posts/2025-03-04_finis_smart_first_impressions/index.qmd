@@ -11,7 +11,7 @@ lightbox:
   loop: false
 ---
 
-![Finis Smart Swim Goggles](img/goggles.png)
+![Finis Smart Swim Goggles](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/goggles.png)
 
 
 I have been using the Finis Smart Goggles for a bit over a week. This is a first impressions review. If something significant will come up, I'll keep you posted.
@@ -34,7 +34,7 @@ This leads us to the third contender, and the one I actually bought. The Finis S
 
 # Unboxing
 
-![The goggles and the Ciye pod.](img/boxed.png)
+![The goggles and the Ciye pod.](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/boxed.png)
 
 
 The unboxing is actually 2 boxes, and this gives away the different design of the Finis Smart Goggles, which I really liked.
@@ -47,7 +47,7 @@ I liked this modular design because it means that if the goggles gets old, they 
 
 Note that the goggles are made by Finis, while the electronics -and the companion app- by a partner company: Ciye. This was a smart move: it opened up to Finis the smart goggle market allowing them to leverage Ciye expertise, and the same time it gave Ciye the backing of a reputable swimming brand such as Finis, with plenty of experience in designing good swimming goggles.
 
-![The Ciye pod in the left lens.](img/chip_in.png)
+![The Ciye pod in the left lens.](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/chip_in.png)
 
 # Set up
 
@@ -67,17 +67,17 @@ When I was shopping around for swim smart goggles I could not find many good rev
 
 The first tab is the "News" tab. Here you'll find an overview of your latest swim, notifications from the community, if you've added any friend to the app, and a look at your achievements.
 
-![News tab](img/news.png){ width="200" }
+![News tab](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/news.png){ width="200" }
 
 We'll look at a swim analysis later. I do not have any friend connected to my profile, so I cannot show you that one, but here is how the Achievements looks like.
 
-![Achievements](img/achievements.png){ width="200" }
+![Achievements](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/achievements.png){ width="200" }
 
 These are a bit like the Garmin's Badges. You do not set them up, you just get achievements as you go.
 
 ## History
 
-![Swim history](img/history.png){ width="200" }
+![Swim history](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/history.png){ width="200" }
 
 
 Here you just see a list of your swims and how you track against swim goals that you set yourself. The workout listed can be filtered, but for now the filtering is fairly limited: You can only search for workouts that you tagged as "favourites".
@@ -86,7 +86,7 @@ Here you just see a list of your swims and how you track against swim goals that
 
 Here you can register your pools. The main use is to make sure you set the pool length correctly, but if you like to know how much you swim at different pools, you can use satisfy your curiosity here.
 
-![Pools](img/pools.png){ width="200" }
+![Pools](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/pools.png){ width="200" }
 
 
 
@@ -94,11 +94,11 @@ Here you can register your pools. The main use is to make sure you set the pool 
 
 When it comes to settings, there is a limited but adequate numbers of things you can change. We saw already you can register a pool. Of course, you can then tell the goggles which pool you will be swimming in. Other settings include the appearance of the screen and the fields you see when you swim. Let's have a look.
 
-![Main settings screen](img/settings.png){ width="200" }
+![Main settings screen](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/settings.png){ width="200" }
 
 ### Screen adjustments
 
-![Screen adjustments](img/adjust_screen.png){ width="200" }
+![Screen adjustments](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/adjust_screen.png){ width="200" }
 
 You can change two things: the screen brightness and the writing position. Being able to change the writing position can help you if you find that the screen is a bit too much far off the left.
 
@@ -106,7 +106,7 @@ As for the demo mode, I am not sure what it does since when I tried to toggle it
 
 ### Screen fields
 
-![Swim screen fields](img/fields.png){ width="200" }
+![Swim screen fields](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/fields.png){ width="200" }
 
 This part is a bit confusing. You can choose between 4 different preset:
 
@@ -154,11 +154,11 @@ I have done three swims so far, each between 45min and 1h, and I've lost 35% of 
 
 The swim data is neatly laid out in the app.
 
-![Swim timeline](img/swim_1.png){ width="500" }
+![Swim timeline](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/swim_1.png){ width="500" }
 
 The first thing you'll see if your timeline, with the main times on top of it.
 
-![Laps detials](img/swim_2.png){ width="200" }
+![Laps detials](https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/swim_2.png){ width="200" }
 
 The next group of information is about specific sets and laps. For each set you can see every lap time, you can edit/cancel laps and sets, and the chart will show how constant you times were in each set.
 
@@ -168,7 +168,7 @@ A feature that sets the Finis goggles apart from other offerings is the 3D video
 
 You can interact with the video and rotate it as much as you like, and you can see things like how still you head is, if you move too much to the left or to the right when you breath, if you keep it level or if you "look up" too much, etc.
  
-{{< video img/head.mov >}}
+{{< video https://storage.googleapis.com/blogs_josa/sport/2025-03-04_finis_smart_first_impressions/img/head.mov >}}
 
 
 # Summary

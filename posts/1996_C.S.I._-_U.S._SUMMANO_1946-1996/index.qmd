@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/1996_C.S.I._-_U.S._SUMMANO_1946-1996/img/01.png)
+
 This event was organized by the local branch of the Centro Sportivo Italiano (C.S.I.). It was a day of athletic competition for kids to honour the 50$^{th}$ anniversary of the local stadium.
 
 
@@ -64,9 +66,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/1996_C.S.I._-_U.S._SUMMANO_1946-1996/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/1996_C.S.I._-_U.S._SUMMANO_1946-1996/img/02.png){ width="100" group="hi" }
 
 
 :::

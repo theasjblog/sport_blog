@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/01.png)
+
 This was one of my last years playing basketball competitively. This particular team has always been one of high expectation, and the first team, the "adults", were playing in B1 (Italy's third division).
 
 I cannot say I was contributing all that much to this team. The approach I had when I was younger (just run faster and jump higher than the others) was starting to fail when confronted with organized teams. nevertheless, I did play, I scored my points, and I put in my hours for the team, so I'll happily share this Provincial Juniors Champions with the rest of the team!
@@ -62,9 +64,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/02.png){ width="100" group="hi" }
 
 
 :::

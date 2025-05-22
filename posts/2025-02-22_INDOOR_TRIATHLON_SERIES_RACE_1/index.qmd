@@ -11,7 +11,7 @@ lightbox:
   loop: false
 ---
 
-![](img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png)
 
 # Overview
 
@@ -143,16 +143,16 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/02.png){ width="100" group="hi" }
 
-![](img_modal/03.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/03.png){ width="100" group="hi" }
 
-![](img_modal/04.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/04.png){ width="100" group="hi" }
 
-![](img_modal/05.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/05.png){ width="100" group="hi" }
 
 :::

@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/2013-04-14_ROTHER_VALLEY_10K/img/00.png)
+
 Another race I do not really remember anything about, only that it was in Rotheram, UK, in a nice little park.
 
 ```{r, echo=FALSE}
@@ -59,7 +61,7 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2013-04-14_ROTHER_VALLEY_10K/img/00.png){ width="100" group="hi" }
 
 
 :::

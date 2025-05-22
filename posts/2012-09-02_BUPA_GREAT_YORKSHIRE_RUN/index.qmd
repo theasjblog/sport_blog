@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/00.png)
+
 Another edition of my home race in Sheffield, UK. Always the same race going from the Crucible towards the Morrisons in Hillsborough Park area, and back. As always, a lot of runners, and a lot of cheering people and bands. Great atmosphere.
 
 
@@ -60,11 +62,11 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/02.png){ width="100" group="hi" }
 
 
 :::

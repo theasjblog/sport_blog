@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg)
 
 Back racing in Bracebridge after the 2023 Age Group victory. However, defending the title would have not been easy, as a quick look at the people around me in transition was suggesting a much more competitive field than the 2023 race.
 
@@ -74,23 +75,23 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/02.png){ width="100" group="hi" }
 
-![](img_modal/03.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/03.png){ width="100" group="hi" }
 
-![](img_modal/04.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/04.png){ width="100" group="hi" }
 
-![](img_modal/05.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/05.jpg){ width="100" group="hi" }
 
-![](img_modal/08.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/08.jpg){ width="100" group="hi" }
 
-![](img_modal/13.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/13.jpg){ width="100" group="hi" }
 
-![](img_modal/15.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg){ width="100" group="hi" }
 
 
 :::

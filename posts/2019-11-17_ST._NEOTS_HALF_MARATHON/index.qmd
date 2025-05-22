@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png)
 
 Not much memories on this. Just that I got there way too early, it was raining, and I had to wait in the car while they opened registration. Also, there was no changing rooms, everybody was getting ready in a gym hall.
 
@@ -59,13 +60,13 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2019-11-17_ST._NEOTS_HALF_MARATHON/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2019-11-17_ST._NEOTS_HALF_MARATHON/img/02.png){ width="100" group="hi" }
 
-![](img_modal/03.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2019-11-17_ST._NEOTS_HALF_MARATHON/img/03.png){ width="100" group="hi" }
 
 
 :::
