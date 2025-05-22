@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/19.jpg)
 
 This was the first triathlon in quite some time, something around 3 years since the COVID19 shutdown. I walked into it hoping to do reasonably well, but without any big expectation.
 
@@ -72,31 +73,31 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/02.png){ width="100" group="hi" }
 
-![](img_modal/03.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/03.png){ width="100" group="hi" }
 
-![](img_modal/04.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/04.png){ width="100" group="hi" }
 
-![](img_modal/04a.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/04a.png){ width="100" group="hi" }
 
-![](img_modal/04b.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/04b.png){ width="100" group="hi" }
 
-![](img_modal/05.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/05.jpg){ width="100" group="hi" }
 
-![](img_modal/06.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/06.jpg){ width="100" group="hi" }
 
-![](img_modal/09.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/09.jpg){ width="100" group="hi" }
 
-![](img_modal/12.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/12.jpg){ width="100" group="hi" }
 
-![](img_modal/16.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/16.jpg){ width="100" group="hi" }
 
-![](img_modal/19.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/19.jpg){ width="100" group="hi" }
 
 
 :::

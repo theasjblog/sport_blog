@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2019-06-30_CENTURION_TRIATHLON/img/00.png)
 
 This was the first attempt at a long-ish distance, with the added difficulties of not being really trained for it.
 
@@ -67,11 +68,11 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2019-06-30_CENTURION_TRIATHLON/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2019-06-30_CENTURION_TRIATHLON/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2019-06-30_CENTURION_TRIATHLON/img/02.png){ width="100" group="hi" }
 
 
 :::

@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/00.png)
 
 This was the first time I tried to qualify for the Age Group. It did not happen. Also, slightly annoying finishing 6th, when the first 5 were called up to the podium...
 
@@ -76,27 +77,27 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/01.png){ width="100" group="hi" }
 
-![](img_modal/01a.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/01a.png){ width="100" group="hi" }
 
-![](img_modal/01b.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/01b.png){ width="100" group="hi" }
 
-![](img_modal/01c.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/01c.png){ width="100" group="hi" }
 
-![](img_modal/03.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/03.png){ width="100" group="hi" }
 
-![](img_modal/10.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/10.png){ width="100" group="hi" }
 
-![](img_modal/14.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/14.png){ width="100" group="hi" }
 
-![](img_modal/22.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/22.png){ width="100" group="hi" }
 
-![](img_modal/24.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/24.png){ width="100" group="hi" }
 
-![](img_modal/28.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/28.png){ width="100" group="hi" }
 
 
 :::

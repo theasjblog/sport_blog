@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/00.png)
 
 This was the last qualifying event of the season. It was an early start. To be in Barrie at 6am, I left at 4am from Burlington.
 
@@ -83,25 +84,25 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/02.png){ width="100" group="hi" }
 
-![](img_modal/03.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/03.png){ width="100" group="hi" }
 
-![](img_modal/04.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/04.png){ width="100" group="hi" }
 
-![](img_modal/05.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/05.png){ width="100" group="hi" }
 
-![](img_modal/06.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/06.png){ width="100" group="hi" }
 
-![](img_modal/07.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/07.jpg){ width="100" group="hi" }
 
-![](img_modal/11.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/11.jpg){ width="100" group="hi" }
 
-![](img_modal/14.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/14.jpg){ width="100" group="hi" }
 
 
 :::

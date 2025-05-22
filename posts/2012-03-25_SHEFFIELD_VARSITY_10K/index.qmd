@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png)
+
 The Varsity was the competition between the two universities of Sheffield: Sheffield University (the one I attended), and Sheffield Hallam. The strong guys had their own "private" events, but there were a few more open to everyone.
 
 I remember it was pretty cold, and there freezing rain earlier in the morning. I went to this event with my friend Denis, but we each did our own race. Which was good, because Denis got the number of laps wrong. It was a 4 laps race, but he thought it was only 3 laps, so he went out way too fast.
@@ -61,9 +63,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2012-03-25_SHEFFIELD_VARSITY_10K/img/01.jpg){ width="100" group="hi" }
 
 
 :::

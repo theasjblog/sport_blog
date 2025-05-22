@@ -10,6 +10,8 @@ lightbox:
   desc-position: right
   loop: false
 ---
+
+![](https://storage.googleapis.com/blogs_josa/sport/2011-03-19_BRADFORD_10K/img/00.png)
 My first solo 10K. Bradford is a town in Yorkshire, UK. I rode my motorbike there since there was a big car park near the race start, and it always easy to park a motorbike anyway. There was no real changing room, so it was a good thing that I was wearing my running gear under motorbike outfit. On the plus side, the baggage area was inside the town hall, a stereotypical old English large building fully carpeted, with a grand wooden and marble staircase, and old portraits of distinguished gentlemen everywhere.
 
 The race itself was flat and fast, with a long stretch to the finish, even a bit downhill. I remember gathering all my renaming strength and sprinting to the finish line, a move that became an hallmark of my races later on and that I was using all the time to try to get past someone I was trying to chase down for the whole race.
@@ -60,9 +62,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2011-03-19_BRADFORD_10K/img/00.png){ width="100" group="hi" }
 
-![](img_modal/02.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2011-03-19_BRADFORD_10K/img/02.jpg){ width="100" group="hi" }
 
 
 :::

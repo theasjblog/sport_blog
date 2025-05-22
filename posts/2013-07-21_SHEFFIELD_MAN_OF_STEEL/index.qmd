@@ -11,6 +11,7 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/01.png)
 
 ```{r, echo=FALSE}
 library(DT)
@@ -58,9 +59,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/01.png){ width="100" group="hi" }
 
 
 :::

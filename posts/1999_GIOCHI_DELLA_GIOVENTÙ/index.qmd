@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/1999_GIOCHI_DELLA_GIOVENTU%CC%80/img/01.png)
+
 "Giochi della gioventú" was (is?) an athletic high-school competition open to anyone. You could participate in many different events: 100m, 110m hurdles, 4X100m relay, high jump, long jump, put throw, etc. 
 
 The first round was within the school. The winners in each event qualified for the next round and competed against kids from other schools. I remember I qualified one year, but I do not remember if it was this one.
@@ -63,7 +65,7 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/1999_GIOCHI_DELLA_GIOVENTU%CC%80/img/01.png){ width="100" group="hi" }
 
 
 :::

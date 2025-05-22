@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2023-08-19_3_PORT_TOUR/img/01.png)
 
 This was a tough one. I prepared for it by progressively hitting 100K to 120K rides, but 160K is something different.
 
@@ -69,15 +70,15 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-08-19_3_PORT_TOUR/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-08-19_3_PORT_TOUR/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-08-19_3_PORT_TOUR/img/02.png){ width="100" group="hi" }
 
-![](img_modal/04.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-08-19_3_PORT_TOUR/img/04.png){ width="100" group="hi" }
 
-![](img_modal/05.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2023-08-19_3_PORT_TOUR/img/05.png){ width="100" group="hi" }
 
 
 :::

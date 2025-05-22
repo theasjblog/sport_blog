@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/2017_triforce/img/01.jpg)
+
 While I was living in Hemel Hemsptead, UK, I was part of the triathlon club Triforce. Every year, we organized the club champs. Pretty unofficial and on run on a honest based system, which is fair, since the main point of the day was to build some camaraderie and just have some fun.
 
 ```{r, echo=FALSE}
@@ -59,11 +61,11 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/01.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2017_triforce/img/01.jpg){ width="100" group="hi" }
 
-![](img_modal/02.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2017_triforce/img/02.jpg){ width="100" group="hi" }
 
-![](img_modal/03.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2017_triforce/img/03.jpg){ width="100" group="hi" }
 
 
 :::

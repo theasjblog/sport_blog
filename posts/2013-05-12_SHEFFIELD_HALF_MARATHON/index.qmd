@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/2013-05-12_SHEFFIELD_HALF_MARATHON/img/00.png)
+
 Another home half marathon. My second ever, and I do not remember much about it, since all Sheffield Half Marathon are pretty similar. And that was a good thing, becuse it was a nice city route with a lot of cheering spectators.
 
 ```{r, echo=FALSE}
@@ -59,11 +61,11 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2013-05-12_SHEFFIELD_HALF_MARATHON/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2013-05-12_SHEFFIELD_HALF_MARATHON/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2013-05-12_SHEFFIELD_HALF_MARATHON/img/02.png){ width="100" group="hi" }
 
 
 :::

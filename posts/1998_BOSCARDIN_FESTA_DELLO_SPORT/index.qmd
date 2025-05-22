@@ -10,6 +10,9 @@ lightbox:
   desc-position: right
   loop: false
 ---
+
+![](https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/01.png)
+
 I do not recall much about this event. It was an athletic competition organized by my high-school: S. Bertilla Boscardin. It must have been around 1998, and my records says that I took part in the 100m and I won it.
 
 ```{r, echo=FALSE}
@@ -58,9 +61,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/02.png){ width="100" group="hi" }
 
 
 :::

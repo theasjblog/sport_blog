@@ -11,7 +11,7 @@ lightbox:
   loop: false
 ---
 
-
+![](https://storage.googleapis.com/blogs_josa/sport/2017-04-09_SWIMATHON/img/00.png)
 ```{r, echo=FALSE}
 library(DT)
 if(file.exists(file.path('data.json'))){
@@ -58,15 +58,15 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2017-04-09_SWIMATHON/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2017-04-09_SWIMATHON/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2017-04-09_SWIMATHON/img/02.png){ width="100" group="hi" }
 
-![](img_modal/03.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2017-04-09_SWIMATHON/img/03.jpg){ width="100" group="hi" }
 
-![](img_modal/04.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2017-04-09_SWIMATHON/img/04.jpg){ width="100" group="hi" }
 
 
 :::

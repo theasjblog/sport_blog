@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2019-10-27_LOVE_LUTON/img/00.png)
 
 The only thing I remember of this race is that the start was not anywere near to the finish. I had to walk quite a bit to go back to the car.
 
@@ -59,9 +60,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2019-10-27_LOVE_LUTON/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2019-10-27_LOVE_LUTON/img/01.png){ width="100" group="hi" }
 
 
 :::

@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/1999_TORNEO_BASKET_BOSCARDIN/img/01.png)
+
 Here I was in my element: a basketball tournament. This was organized by my high-school, and each class was competing against the each other. It was a complete obliteration of the competition. there were not really many other guys used to play at the level I was playing at the time, and even then I could count on another super strong girl in my class. At the end, we just destroyed everyone. It almost wasn't even fun at then end. Almost...
 
 I particularly remember two matches.
@@ -67,9 +69,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/1999_TORNEO_BASKET_BOSCARDIN/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/1999_TORNEO_BASKET_BOSCARDIN/img/02.png){ width="100" group="hi" }
 
 
 :::

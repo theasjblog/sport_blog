@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-02_MILTON_SUBARU_TRIATHLON/img/00.png)
 
 This was a wet one. It rained all the time. Before the race, during, and after. Everything got drenched (pro tip: bring a change to leave in the car, so that it stays dry).
 
@@ -75,23 +76,23 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-02_MILTON_SUBARU_TRIATHLON/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-02_MILTON_SUBARU_TRIATHLON/img/01.png){ width="100" group="hi" }
 
-![](img_modal/01a.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-02_MILTON_SUBARU_TRIATHLON/img/01a.png){ width="100" group="hi" }
 
-![](img_modal/01b.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-02_MILTON_SUBARU_TRIATHLON/img/01b.png){ width="100" group="hi" }
 
-![](img_modal/01c.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-02_MILTON_SUBARU_TRIATHLON/img/01c.png){ width="100" group="hi" }
 
-![](img_modal/02.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-02_MILTON_SUBARU_TRIATHLON/img/02.jpg){ width="100" group="hi" }
 
-![](img_modal/07.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-02_MILTON_SUBARU_TRIATHLON/img/07.jpg){ width="100" group="hi" }
 
-![](img_modal/11.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-02_MILTON_SUBARU_TRIATHLON/img/11.jpg){ width="100" group="hi" }
 
-![](img_modal/18.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-06-02_MILTON_SUBARU_TRIATHLON/img/18.jpg){ width="100" group="hi" }
 
 
 :::

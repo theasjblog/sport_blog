@@ -11,6 +11,8 @@ lightbox:
   loop: false
 ---
 
+![](https://storage.googleapis.com/blogs_josa/sport/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/01.png)
+
 This was my first competitive 10K. It was ran in and around the now demolished old athletic stadium in the outskirt of Sheffield (UK), the town I was living at the time. I do not remember much from this race, just the my housemate Olesya and trained together for a few months for this, and we went there by tram. I think we run it together, and I run at a pretty conservative pace.
 
 
@@ -56,15 +58,38 @@ if(file.exists(file.path('data.json'))){
 ```
 
 
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+library(arrow)
+library(dplyr)
+library(hms)
+datatable(arrow::read_parquet(file.path('full_results.parquet')) |>
+            mutate(time_hms = hms::as_hms(time_hms)) |>
+            select(all_of(c(
+              'names',
+              'category',
+              'time_hms',
+              'overall_ranking',
+              'gender_ranking',
+              'category_ranking'
+            ))),
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+
+```
 
 
 
 ::: {layout-ncol=4}
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/02.jpg){ width="100" group="hi" }
 
-![](img_modal/03.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/03.jpg){ width="100" group="hi" }
 
 
 :::

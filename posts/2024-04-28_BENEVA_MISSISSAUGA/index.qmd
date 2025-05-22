@@ -10,6 +10,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
+![](https://storage.googleapis.com/blogs_josa/sport/2024-04-28_BENEVA_MISSISSAUGA/img/00.png)
 
 This a race Ali picked. On paper, a flat and fast 10K, good as a test event. In reality, there ware a couple of "hills". Nothing major, but for sure  something that could affect people hunting for a PB. But that was not me. My focus was simply to see what I could. No main goal, except maybe at least stay under 45min.
 
@@ -66,13 +67,13 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](img_modal/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-04-28_BENEVA_MISSISSAUGA/img/00.png){ width="100" group="hi" }
 
-![](img_modal/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-04-28_BENEVA_MISSISSAUGA/img/01.png){ width="100" group="hi" }
 
-![](img_modal/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-04-28_BENEVA_MISSISSAUGA/img/02.png){ width="100" group="hi" }
 
-![](img_modal/06.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport/2024-04-28_BENEVA_MISSISSAUGA/img/06.png){ width="100" group="hi" }
 
 
 :::
