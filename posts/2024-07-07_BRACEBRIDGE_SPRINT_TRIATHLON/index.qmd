@@ -2,6 +2,7 @@
 title: "Bracebridge Sprint Triathlon"
 date: "2024-07-07"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg
 categories: [race report, triathlon]
 format: html
 lightbox:

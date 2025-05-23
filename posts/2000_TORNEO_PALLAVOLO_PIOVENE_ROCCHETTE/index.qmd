@@ -2,6 +2,7 @@
 title: "Piovene Rocchette - Torneo Di Pallavolo Mista"
 date: "2000"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:

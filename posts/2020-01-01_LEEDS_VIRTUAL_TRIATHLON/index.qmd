@@ -2,6 +2,7 @@
 title: "Leeds Virtual Triathlon"
 date: "2020-01-01"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/img/01.png
 categories: [race report, virtual]
 format: html
 lightbox:

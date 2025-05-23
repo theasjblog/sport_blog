@@ -2,6 +2,7 @@
 title: "Bedford Autodrome Sprint Duathlon"
 date: "2017-03-12"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/00.png
 categories: [race report, duathlon]
 format: html
 lightbox:

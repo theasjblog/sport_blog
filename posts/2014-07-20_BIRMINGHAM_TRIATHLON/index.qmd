@@ -2,6 +2,7 @@
 title: "Birmingham Triathlon"
 date: "2014-07-20"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2014-07-20_BIRMINGHAM_TRIATHLON/img/00.png
 categories: [race report, triathlon]
 format: html
 lightbox:

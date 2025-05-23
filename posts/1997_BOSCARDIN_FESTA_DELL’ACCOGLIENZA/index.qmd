@@ -2,6 +2,7 @@
 title: "S. Bertilla Boscardin - Festa Dell'Accoglienza"
 date: "1997"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/1997_BOSCARDIN_FESTA_DELL_ACCOGLIENZA/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:

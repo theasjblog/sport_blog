@@ -2,6 +2,7 @@
 title: "Bike Oxford"
 date: "2018-05-20"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2018-05-20_BIKE_OXFORD/img/00.png
 categories: [race report, bike]
 format: html
 lightbox:

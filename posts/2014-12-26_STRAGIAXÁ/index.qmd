@@ -2,6 +2,7 @@
 title: "Stragiaxá"
 date: "2014-12-26"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2014-12-26_STRAGIAX%C3%81/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

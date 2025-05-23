@@ -2,6 +2,7 @@
 title: "Piovene Rocchette - 50 anniversarion Stadio Ferruccio Bertoldi"
 date: "1996"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/1996_C.S.I._-_U.S._SUMMANO_1946-1996/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:

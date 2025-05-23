@@ -2,6 +2,7 @@
 title: "Total Motion Aquathlon"
 date: "2017-04-29"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2017-04-29_TOTAL_MOTION_AQUATHLON/img/00.png
 categories: [race report, aquathlon]
 format: html
 lightbox:

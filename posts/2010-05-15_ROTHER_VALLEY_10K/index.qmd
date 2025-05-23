@@ -2,6 +2,7 @@
 title: "Rother Valley 10K"
 date: "2010-05-15"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2010-05-15_ROTHER_VALLEY_10K/img/01.png
 categories: [race report, run]
 format: html
 lightbox:

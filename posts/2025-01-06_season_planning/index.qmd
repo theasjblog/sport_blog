@@ -2,6 +2,7 @@
 title: "2025 Season Planning"
 author: "Adrian Joseph"
 date: "2025-01-06"
+image: https://storage.googleapis.com/blogs_josa/sport/2025-01-06_season_planning/img/cover.png
 categories: [news]
 ---
 

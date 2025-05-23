@@ -2,6 +2,7 @@
 title: "Triforce Triathlon"
 date: "2017-07-01"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2017_triforce/img/01.jpg
 categories: [race report, triathlon]
 format: html
 lightbox:

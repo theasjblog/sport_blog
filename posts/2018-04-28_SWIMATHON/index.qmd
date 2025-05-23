@@ -2,6 +2,7 @@
 title: "Swimathon"
 date: "2018-04-28"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2018-04-28_SWIMATHON/img/00.png
 categories: [race report, swim]
 format: html
 lightbox:

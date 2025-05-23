@@ -2,6 +2,7 @@
 title: "Hatfield 5"
 date: "2018-11-25"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2018-11-25_HATFIELD_5/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

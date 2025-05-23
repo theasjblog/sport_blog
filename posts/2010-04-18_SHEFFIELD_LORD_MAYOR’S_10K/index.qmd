@@ -2,6 +2,7 @@
 title: "Sheffield Lord Mayor's 10K"
 date: "2010-04-18"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/01.png
 categories: [race report, run]
 format: html
 lightbox:

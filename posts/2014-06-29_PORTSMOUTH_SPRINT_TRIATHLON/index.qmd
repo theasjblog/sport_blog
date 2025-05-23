@@ -2,6 +2,7 @@
 title: "Portsmouth Sprint Triathlon"
 date: "2014-06-29"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/00.png
 categories: [race report, triathlon]
 format: html
 lightbox:

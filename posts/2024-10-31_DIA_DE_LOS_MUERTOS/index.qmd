@@ -2,6 +2,7 @@
 title: "Dia De Los Muertos"
 date: "2024-10-31"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2024-10-31_DIA_DE_LOS_MUERTOS/img/00.png
 categories: [race report, virtual]
 format: html
 lightbox:

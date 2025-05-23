@@ -2,6 +2,7 @@
 title: "Milton Subaru Triathlon"
 date: "2024-06-02"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2024-06-02_MILTON_SUBARU_TRIATHLON/img/00.png
 categories: [race report, triathlon]
 format: html
 lightbox:

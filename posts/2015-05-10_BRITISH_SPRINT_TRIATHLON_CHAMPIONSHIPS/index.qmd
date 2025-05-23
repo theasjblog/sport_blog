@@ -2,6 +2,7 @@
 title: "British Sprint Triathlon Championships"
 date: "2015-05-10"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/00.png
 categories: [race report, triathlon]
 format: html
 lightbox:

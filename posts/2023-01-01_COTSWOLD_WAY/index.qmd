@@ -2,6 +2,7 @@
 title: "Cotswold Way"
 date: "2023-01-01"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2023-01-01_COTSWOLD_WAY/img/00.png
 categories: [race report, virtual]
 format: html
 lightbox:

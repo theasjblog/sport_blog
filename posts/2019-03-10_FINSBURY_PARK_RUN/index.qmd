@@ -2,6 +2,7 @@
 title: "Finsbury Park Run"
 date: "2019-03-10"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2019-03-10_FINSBURY_PARK_RUN/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

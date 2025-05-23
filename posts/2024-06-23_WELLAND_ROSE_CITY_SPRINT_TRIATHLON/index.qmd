@@ -2,6 +2,7 @@
 title: "Welland Rose City Sprint Triathlon"
 date: "2024-06-23"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2024-06-23_WELLAND_ROSE_CITY_SPRINT_TRIATHLON/img/12.jpg
 categories: [race report, triathlon]
 format: html
 lightbox:

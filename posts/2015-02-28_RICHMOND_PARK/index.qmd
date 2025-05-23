@@ -2,6 +2,7 @@
 title: "Richmond Park"
 date: "2015-02-28"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2015-02-28_RICHMOND_PARK/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

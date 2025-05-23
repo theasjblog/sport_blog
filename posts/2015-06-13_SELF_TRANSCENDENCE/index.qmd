@@ -2,6 +2,7 @@
 title: "Self Transcendence"
 date: "2015-06-13"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2015-06-13_SELF_TRANSCENDENCE/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

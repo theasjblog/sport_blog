@@ -2,6 +2,7 @@
 title: "Centurion Triathlon"
 date: "2019-06-30"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2019-06-30_CENTURION_TRIATHLON/img/00.png
 categories: [race report, triathlon]
 format: html
 lightbox:

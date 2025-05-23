@@ -2,6 +2,7 @@
 title: "Sheffield Graves Park 10K"
 date: "2012-07-15"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_GRAVES_PARK/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

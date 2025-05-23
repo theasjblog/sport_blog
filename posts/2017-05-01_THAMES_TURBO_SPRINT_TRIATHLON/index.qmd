@@ -2,6 +2,7 @@
 title: "Thames Turbo Sprint Triathlon"
 date: "2017-05-01"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2017-05-01_THAMES_TURBO_SPRINT_TRIATHLON/img/00.png
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -10,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-
+![](https://storage.googleapis.com/blogs_josa/sport/2017-05-01_THAMES_TURBO_SPRINT_TRIATHLON/img/00.png)
 
 ```{r, echo=FALSE}
 library(DT)

@@ -2,6 +2,7 @@
 title: "Lands End To John O’groats"
 date: "2020-01-01"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2020-01-01_LANDS_END_TO_JOHN_O%E2%80%99GROATS/img/01.png
 categories: [race report, virtual]
 format: html
 lightbox:

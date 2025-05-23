@@ -2,6 +2,7 @@
 title: "Torneo Di Calcio S. Martino Di Castrozza"
 date: "1993"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/1993_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:

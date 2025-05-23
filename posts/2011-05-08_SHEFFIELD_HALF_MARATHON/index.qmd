@@ -2,6 +2,7 @@
 title: "Sheffield Half Marathon"
 date: "2011-05-08"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2011-05-08_SHEFFIELD_HALF_MARATHON/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

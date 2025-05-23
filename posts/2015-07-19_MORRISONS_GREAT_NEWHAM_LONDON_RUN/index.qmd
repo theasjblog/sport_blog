@@ -2,6 +2,7 @@
 title: "Morrisons Great Newham London Run"
 date: "2015-07-19"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2015-07-19_MORRISONS_GREAT_NEWHAM_LONDON_RUN/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

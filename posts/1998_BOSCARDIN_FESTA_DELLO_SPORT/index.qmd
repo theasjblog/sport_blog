@@ -2,6 +2,7 @@
 title: "S. Bertilla Boscardin - Festa Dello Sport"
 date: "1998"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:

@@ -2,6 +2,7 @@
 title: "Bupa Great London Swim"
 date: "2015-07-18"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2015-07-18_BUPA_GREAT_LONDON_SWIM/img/00.png
 categories: [race report, swim]
 format: html
 lightbox:

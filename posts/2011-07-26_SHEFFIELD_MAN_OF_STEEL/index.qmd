@@ -2,6 +2,7 @@
 title: "Sheffield Man Of Steel"
 date: "2011-07-26"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2011-07-26_SHEFFIELD_MAN_OF_STEEL/img/01.png
 categories: [race report, obstacle race]
 format: html
 lightbox:

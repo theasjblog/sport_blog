@@ -2,6 +2,7 @@
 title: "Conquer The Chilterns"
 date: "2017-09-19"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png
 categories: [race report, swim]
 format: html
 lightbox:

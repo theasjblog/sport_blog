@@ -2,6 +2,7 @@
 title: "Bupa Great Yorkshire Run"
 date: "2011-10-13"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/01.png
 categories: [race report, run]
 format: html
 lightbox:
