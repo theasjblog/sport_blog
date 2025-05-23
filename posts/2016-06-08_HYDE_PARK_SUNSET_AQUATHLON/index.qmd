@@ -2,6 +2,7 @@
 title: "Hyde Park Sunset Aquathlon"
 date: "2016-06-08"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2016-06-08_HYDE_PARK_SUNSET_AQUATHLON/img/00.png
 categories: [race report, aquathlon]
 format: html
 lightbox:

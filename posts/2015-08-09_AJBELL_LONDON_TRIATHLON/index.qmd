@@ -2,6 +2,7 @@
 title: "Ajbell London Triathlon"
 date: "2015-08-09"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2015-08-09_AJBELL_LONDON_TRIATHLON/img/00.png
 categories: [race report, triathlon]
 format: html
 lightbox:

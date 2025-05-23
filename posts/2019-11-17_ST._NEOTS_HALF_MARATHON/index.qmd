@@ -2,6 +2,7 @@
 title: "St. Neots Half Marathon"
 date: "2019-11-17"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

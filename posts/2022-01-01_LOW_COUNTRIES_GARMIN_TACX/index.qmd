@@ -2,6 +2,7 @@
 title: "Low Countries Garmin Tacx"
 date: "2022-01-01"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/img/00.png
 categories: [race report, virtual]
 format: html
 lightbox:

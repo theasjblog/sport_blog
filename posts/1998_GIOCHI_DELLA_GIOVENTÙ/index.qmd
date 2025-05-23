@@ -2,6 +2,7 @@
 title: "Giochi Della Gioventú"
 date: "1998"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/1998_GIOCHI_DELLA_GIOVENT%C3%99/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:

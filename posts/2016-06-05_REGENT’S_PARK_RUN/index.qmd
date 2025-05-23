@@ -2,6 +2,7 @@
 title: "Regent’s Park Run"
 date: "2016-06-05"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2016-06-05_REGENT_S_PARK_RUN/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

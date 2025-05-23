@@ -2,6 +2,7 @@
 title: "Lee Valley Velopark"
 date: "2019-09-28"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2019-09-28_LEE_VALLEY_VELOPARK/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

@@ -2,6 +2,7 @@
 title: "Stanborough Aquathlon"
 date: "2019-07-20"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2019-07-20_STANBOROUGH_AQUATHLON/img/00.png
 categories: [race report, aquathlon]
 format: html
 lightbox:

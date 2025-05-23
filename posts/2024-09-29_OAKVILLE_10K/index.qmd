@@ -2,6 +2,7 @@
 title: "Oakville 10k"
 date: "2024-09-29"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2024-09-29_OAKVILLE_10K/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

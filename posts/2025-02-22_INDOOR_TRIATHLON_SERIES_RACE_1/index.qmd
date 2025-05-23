@@ -2,6 +2,7 @@
 title: "Indoor Triathlon Provincial Championship Series - Race 1"
 date: "2025-02-22"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png
 categories: [race report, triathlon, indoor]
 format: html
 lightbox:
@@ -10,7 +11,6 @@ lightbox:
   desc-position: right
   loop: false
 ---
-
 ![](https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png)
 
 # Overview

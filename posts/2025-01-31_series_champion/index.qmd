@@ -2,6 +2,7 @@
 title: "2024 MultiSport Canada Series Champion!"
 author: "Adrian Joseph"
 date: "2025-01-31"
+image: https://storage.googleapis.com/blogs_josa/sport/2025-01-31_series_champion/img/cover.png
 categories: [news]
 ---
 

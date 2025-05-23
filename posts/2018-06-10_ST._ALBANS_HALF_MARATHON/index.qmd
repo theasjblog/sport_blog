@@ -2,6 +2,7 @@
 title: "St. Albans Half Marathon"
 date: "2018-06-10"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2018-06-10_ST._ALBANS_HALF_MARATHON/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

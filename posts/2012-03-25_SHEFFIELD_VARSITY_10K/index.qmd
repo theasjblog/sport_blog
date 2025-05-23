@@ -2,6 +2,7 @@
 title: "Sheffield Varsity 10K"
 date: "2012-03-25"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

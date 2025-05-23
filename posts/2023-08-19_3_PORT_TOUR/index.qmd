@@ -2,6 +2,7 @@
 title: "3 Port Tour"
 date: "2023-08-19"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2023-08-19_3_PORT_TOUR/img/01.png
 categories: [race report, bike]
 format: html
 lightbox:

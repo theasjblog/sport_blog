@@ -2,6 +2,7 @@
 title: "Edinburgh Marathon"
 date: "2019-05-26"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2019-05-26_EDINBURGH_MARATHON/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

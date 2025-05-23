@@ -2,6 +2,7 @@
 title: "Niagara Falls"
 date: "2023-01-01"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2023-01-01_NIAGARA_FALLS/img/00.png
 categories: [race report, virtual]
 format: html
 lightbox:

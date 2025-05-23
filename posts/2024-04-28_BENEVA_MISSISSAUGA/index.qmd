@@ -2,6 +2,7 @@
 title: "Beneva Mississauga"
 date: "2024-04-28"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2024-04-28_BENEVA_MISSISSAUGA/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

@@ -2,6 +2,7 @@
 title: "Basket Dueville - Campioni Provinciali Juniores"
 date: "2000"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:

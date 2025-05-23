@@ -2,6 +2,7 @@
 title: "Total Motion Ickle Pickle Aquathlon"
 date: "2015-05-16"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/00.png
 categories: [race report, aquathlon]
 format: html
 lightbox:

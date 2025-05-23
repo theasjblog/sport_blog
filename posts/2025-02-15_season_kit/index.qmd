@@ -2,6 +2,7 @@
 title: "2025 Gear"
 author: "Adrian Joseph"
 date: "2025-02-09"
+image: https://storage.googleapis.com/blogs_josa/sport/2025-02-15_season_kit/img/cover.png
 categories: [news]
 ---
 

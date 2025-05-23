@@ -2,6 +2,7 @@
 title: "Hyde Park Run"
 date: "2016-04-17"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2016-04-17_HYDE_PARK_RUN/img/00.png
 categories: [race report, run]
 format: html
 lightbox:

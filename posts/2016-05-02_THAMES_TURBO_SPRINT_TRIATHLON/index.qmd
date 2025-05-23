@@ -2,6 +2,7 @@
 title: "Thames Turbo Sprint Triathlon"
 date: "2016-05-02"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2016-05-02_THAMES_TURBO_SPRINT_TRIATHLON/img/00.png
 categories: [race report, triathlon]
 format: html
 lightbox:

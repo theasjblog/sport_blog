@@ -2,6 +2,7 @@
 title: "S. Bertilla Boscardin - Torneo Di Basket"
 date: "1999"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/1999_TORNEO_BASKET_BOSCARDIN/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:
