@@ -1,0 +1,15 @@
+{
+  "hash": "8c8cf4d68d16f6689ca4006ee0fd5028",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"S. Bertilla Boscardin - Festa Dello Sport\"\ndate: \"1998-09-30\"\nauthor: \"Adrian Joseph\"\nimage: https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/01.png\ncategories: [race report, random race]\nformat: html\nlightbox:\n  match: auto\n  effect: fade\n  desc-position: right\n  loop: false\n---\n\n\n\n![](https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/01.png)\n\nI do not recall much about this event. It was an athletic competition organized by my high-school: S. Bertilla Boscardin. It must have been around 1998, and my records says that I took part in the 100m and I won it.\n\n\n\n::: {.cell}\n\n:::\n\n\n\n## Summary\n\n\n\n```{=html}\n<div class=\"row g-4\">\n\n  <div class=\"col-md-4\">\n    <div class=\"card h-100 bg-info text-white\">\n      <div class=\"card-body\">\n        <h5 class=\"card-title\"><b>Position overall: 1</b></h5>\n        <p class=\"card-text\"></p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"col-md-4\">\n    <div class=\"card h-100 bg-primary text-white\">\n      <div class=\"card-body\">\n        <h5 class=\"card-title\"><b>Position gender: 1</b></h5>\n        <p class=\"card-text\"></p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"col-md-4\">\n    <div class=\"card h-100 bg-success text-white\">\n      <div class=\"card-body\">\n        <h5 class=\"card-title\"><b>Position category: 1</b></h5>\n        <p class=\"card-text\"></p>\n      </div>\n    </div>\n  </div>\n\n</div>\n\n```\n\n\n\n\n\n\n::: {layout-ncol=4}\n![](https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/01.png){ width=\"100\" group=\"hi\" }\n\n![](https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/02.png){ width=\"100\" group=\"hi\" }\n\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

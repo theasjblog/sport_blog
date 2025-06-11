@@ -1,0 +1,72 @@
+---
+title: "Sheffield Graves Park 10K"
+date: "2012-07-16"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_GRAVES_PARK/img/00.png
+categories: [race report, run]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_GRAVES_PARK/img/00.png)
+
+Second time I ran this race. Nothing really changed from the first edition, and that was good, as it was a good race, well organized and fun to run.
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+library(DT)
+library(hms)
+library(dplyr)
+library(arrow)
+
+dateIs <- "2012-07-16"
+df <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(event_date == dateIs)
+
+final <- data.frame(
+  "Race type" = paste0(df$event_type, " ", df$event_distance),
+  "Final time" = hms::as_hms(df$result_total),
+  "Overall ranking" = paste0(df$ranking_overall, "/", df$participants_overall),
+  "Gender ranking" = paste0(df$ranking_gender, "/", df$participants_gender),
+  "Category ranking" = paste0(df$ranking_category, "/", df$participants_category)
+)
+
+final <- t(final)
+
+final <- data.frame(
+  col1 = gsub("\\.", " ", rownames(final)),
+  col2 = final[,1], 
+  row.names = NULL
+) |>
+  filter(!is.na(col2)) |>
+  filter(col2 != "NA/NA") |>
+  mutate(
+    col2 = gsub("NA", "-", col2)
+  )
+  
+
+colnames(final) <- c(df$event_name, final$col2[1])
+final <- final[-1,]
+
+datatable(
+  final,
+  rownames = FALSE,                 # Don't show row names
+  options = list(
+    #    dom = 't',                      # Show only the table body (no search, no pagination, no header)
+    ordering = FALSE                # Optional: disable sorting
+  )
+)
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_GRAVES_PARK/img/00.png){ width="100" group="hi" }
+
+
+:::

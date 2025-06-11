@@ -20,69 +20,49 @@ The added bit of fun was that participants could choose to participate for the W
 
 Because the race was run reasonably close to city center, it was full of people cheering and bands, which was very motivational.
 
-```{r, echo=FALSE}
-library(DT)
-if(file.exists(file.path('data.json'))){
-  tmp <- jsonlite::fromJSON(file.path('data.json'))
-    breakdown <- tmp$breakdown
-    tmp$breakdown <- NULL
-    tmp <- as.data.frame(tmp) %>%
-      dplyr::bind_cols(breakdown)
-
-    details <- unlist(tmp$details)
-    if(!is.null(details)){
-      details <- paste0('<a href="',
-                        details, '">Link to activity file</a>')
-      details_names <- paste0('details_', seq(1, length(details)))
-    } else {
-      details_names <- NULL
-    }
-
-    tmp$details <- NULL
-
-
-    df <- as.data.frame(t(tmp)) %>%
-      dplyr::bind_rows(data.frame(V1 = details))
-
-    df <- data.frame('  ' = c(colnames(tmp), details_names),
-                     ' ' = df,
-                     check.names = FALSE)
-    colnames(df) <- NULL
-
-
-    datatable(df,
-              rownames = FALSE,
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  20
-              ))
-}
-```
-
-
 ```{r, echo = FALSE, warning=FALSE, message=FALSE}
-library(arrow)
-library(dplyr)
+library(DT)
 library(hms)
-datatable(arrow::read_parquet(file.path('full_results.parquet')) |>
-            mutate(time_hms = hms::as_hms(time_hms)) |>
-            select(all_of(c(
-              'names',
-              'time_hms',
-              'overall_ranking',
-              'gender_ranking',
-              'category_ranking'
-            ))),
-              rownames = FALSE,
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  20
-              ))
+library(dplyr)
+library(arrow)
 
+dateIs <- "2011-10-13"
+df <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(event_date == dateIs)# |>
+
+final <- data.frame(
+  "Race type" = paste0(df$event_type, " ", df$event_distance),
+  "Final time" = hms::as_hms(df$result_total),
+  "Overall ranking" = paste0(df$ranking_overall, "/", df$participants_overall),
+  "Gender ranking" = paste0(df$ranking_gender, "/", df$participants_gender),
+  "Category ranking" = paste0(df$ranking_category, "/", df$participants_category)
+)
+
+final <- t(final)
+
+final <- data.frame(
+  col1 = gsub("\\.", " ", rownames(final)),
+  col2 = final[,1], 
+  row.names = NULL
+) |>
+  filter(!is.na(col2)) |>
+  filter(col2 != "NA/NA") |>
+  mutate(
+    col2 = gsub("NA", "-", col2)
+  )
+  
+
+colnames(final) <- c(df$event_name, final$col2[1])
+final <- final[-1,]
+
+datatable(
+  final,
+  rownames = FALSE,                 # Don't show row names
+  options = list(
+    #    dom = 't',                      # Show only the table body (no search, no pagination, no header)
+    ordering = FALSE                # Optional: disable sorting
+  )
+)
 ```
 
 

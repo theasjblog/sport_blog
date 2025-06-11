@@ -1,0 +1,31 @@
+---
+title: "Piovene Rocchette - 50 anniversarion Stadio Ferruccio Bertoldi"
+date: "1996-04-01"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/1996_C.S.I._-_U.S._SUMMANO_1946-1996/img/01.png
+categories: [race report, random race]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport/1996_C.S.I._-_U.S._SUMMANO_1946-1996/img/01.png)
+
+This event was organized by the local branch of the Centro Sportivo Italiano (C.S.I.). It was a day of athletic competition for kids to honour the 50$^{th}$ anniversary of the local stadium.
+
+
+I took part in the 400m, officially my first endurance events. I did pretty badly. I think I ended up last or next to last. I just was not used to "long" runs. I went all out for the first few meters, and then I just gave up. A very important lesson for the future.
+
+Still, I got my participation medal.
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport/1996_C.S.I._-_U.S._SUMMANO_1946-1996/img/01.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport/1996_C.S.I._-_U.S._SUMMANO_1946-1996/img/02.png){ width="100" group="hi" }
+
+
+:::

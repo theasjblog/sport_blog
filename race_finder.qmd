@@ -1,6 +1,6 @@
 ---
 title: "Race finder"
-image: profile.png
+image: img/profile.png
 about:
   template: jolla
 ---
@@ -9,31 +9,43 @@ about:
 
 library(dplyr)
 library(DT)
+library(arrow)
+library(hms)
 
-allJSON <- list.files(file.path('posts'),
-                      pattern = 'data.json',
-                      full.names = TRUE, recursive = TRUE)
+allRaces <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  select(all_of(c("event_date", "event_name", "event_type", "event_distance", "result_total"))) |>
+  mutate(Race = paste0('<a href="https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%22',
+       event_date,
+       "%20-%20",
+       gsub(' ', "%20", event_name),
+       "%20-%20",
+       gsub(' ', "%20", event_type),
+       '%22" target="_blank">',
+       event_name, 
+       '</a>'),
+         result_total = as.character(hms::as_hms(result_total)),
+         result_total = ifelse(result_total == "00:00:00", '', result_total)) |>
+  select(c('event_date', 'Race', 'event_type', 'event_distance', "result_total")) |>
+                rename('Race type' = 'event_type',
+                       'Race distance' = 'event_distance',
+                       'Race date' = 'event_date',
+                       'Time' = 'result_total')
 
 
-allRaces <<- lapply(allJSON, function(d){
-  d <- jsonlite::fromJSON(d)
-  d$breakdown <- NULL
-  d$details <- NULL
-  d <- as.data.frame(d)
-  d
-}) %>%
-  dplyr::bind_rows() %>%
-  mutate(race_dir = dirname(allJSON),
-         url = paste0('<a href="', race_dir, '/index.html">', race, '</a>')) %>%
-  filter(race != 'RACE NAME')
 
-DT::datatable(allRaces %>%
-                select(c('url', 'type', 'distance', 'time', 'date')) %>%
-                rename('Race' = 'url',
-                       'Race type' = 'type',
-                       'Race distance' = 'distance',
-                       'Race time' = 'time',
-                       'Race date' = 'date'),
+# allRaces <<- lapply(allJSON, function(d){
+#   d <- jsonlite::fromJSON(d)
+#   d$breakdown <- NULL
+#   d$details <- NULL
+#   d <- as.data.frame(d)
+#   d
+# }) %>%
+#   dplyr::bind_rows() %>%
+#   mutate(race_dir = dirname(allJSON),
+#          url = paste0('<a href="', race_dir, '/index.html">', race, '</a>')) %>%
+#   filter(race != 'RACE NAME')
+
+DT::datatable(allRaces,
               rownames = FALSE,
               filter = 'top',
               selection = 'single',

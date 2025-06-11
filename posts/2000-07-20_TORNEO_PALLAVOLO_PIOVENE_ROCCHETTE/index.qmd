@@ -1,0 +1,31 @@
+---
+title: "Piovene Rocchette - Torneo Di Pallavolo Mista"
+date: "2000-07-20"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/01.png
+categories: [race report, random race]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/01.png)
+
+For a few years, a group of volunteers organized a volleyball tournament in my home town. I t was a fairly competitive one, and although I have never really liked playing the sport, I always enjoyed watching it.
+
+For some reason, one year they convinced me to play in a team. We did not go very far, but I got a little MVP medal out of one game. Not sure who decided on this prize and how, as I do not think it was deserved at all. My guess is that it was supposed to be someone from my team as we won that particular match, and the guy that really deserved it already got the MVP in a couple of other matches, so they decided to give it to someone else, and that someone else happened to be me.
+
+Anyway, here is the little medal, part of my collection of sport memorabilia.
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/01.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/02.png){ width="100" group="hi" }
+
+
+:::
