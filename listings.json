@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/index.html",
+      "/posts/2025-05-04_INDOOR_TRIATHLON_SERIES_RACE_4/index.html",
       "/posts/2025-04-12_INDOOR_TRIATHLON_SERIES_RACE_3/index.html",
       "/posts/2025-03-04_finis_smart_first_impressions/index.html",
       "/posts/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/index.html",
@@ -111,8 +113,8 @@
       "/posts/2013-03-10_SHEFFIELD_VARSITY_10K/index.html",
       "/posts/2012-09-23_SHEFFIELD_TENTENTEN/index.html",
       "/posts/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/index.html",
+      "/posts/2012-07-16_SHEFFIELD_GRAVES_PARK/index.html",
       "/posts/2012-07-15_SHEFFIELD_MAN_OF_STEEL/index.html",
-      "/posts/2012-07-15_SHEFFIELD_GRAVES_PARK/index.html",
       "/posts/2012-07-04_TOTAL_WARRIOR/index.html",
       "/posts/2012-03-25_SHEFFIELD_VARSITY_10K/index.html",
       "/posts/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/index.html",
@@ -122,15 +124,15 @@
       "/posts/2011-03-19_BRADFORD_10K/index.html",
       "/posts/2010-05-15_ROTHER_VALLEY_10K/index.html",
       "/posts/2010-04-18_SHEFFIELD_LORD_MAYOR’S_10K/index.html",
-      "/posts/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/index.html",
-      "/posts/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/index.html",
-      "/posts/1999_TORNEO_BASKET_BOSCARDIN/index.html",
-      "/posts/1999_GIOCHI_DELLA_GIOVENTÙ/index.html",
-      "/posts/1998_GIOCHI_DELLA_GIOVENTÙ/index.html",
-      "/posts/1998_BOSCARDIN_FESTA_DELLO_SPORT/index.html",
-      "/posts/1997_BOSCARDIN_FESTA_DELL’ACCOGLIENZA/index.html",
-      "/posts/1996_C.S.I._-_U.S._SUMMANO_1946-1996/index.html",
-      "/posts/1993_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/index.html"
+      "/posts/2000-07-20_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/index.html",
+      "/posts/2000-01-01_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/index.html",
+      "/posts/1999-05-30_TORNEO_BASKET_BOSCARDIN/index.html",
+      "/posts/1999-05-01_GIOCHI_DELLA_GIOVENTÙ/index.html",
+      "/posts/1998-09-30_BOSCARDIN_FESTA_DELLO_SPORT/index.html",
+      "/posts/1998-05-01_GIOCHI_DELLA_GIOVENTÙ/index.html",
+      "/posts/1997-09-30_BOSCARDIN_FESTA_DELL’ACCOGLIENZA/index.html",
+      "/posts/1996-04-01_C.S.I._-_U.S._SUMMANO_1946-1996/index.html",
+      "/posts/1993-08-01_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/index.html"
     ]
   }
 ]

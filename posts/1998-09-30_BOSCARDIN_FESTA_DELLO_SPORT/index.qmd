@@ -1,0 +1,64 @@
+---
+title: "S. Bertilla Boscardin - Festa Dello Sport"
+date: "1998-09-30"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/01.png
+categories: [race report, random race]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/01.png)
+
+I do not recall much about this event. It was an athletic competition organized by my high-school: S. Bertilla Boscardin. It must have been around 1998, and my records says that I took part in the 100m and I won it.
+
+## Summary
+
+```{=html}
+<div class="row g-4">
+
+  <div class="col-md-4">
+    <div class="card h-100 bg-info text-white">
+      <div class="card-body">
+        <h5 class="card-title"><b>Position overall: 1</b></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100 bg-primary text-white">
+      <div class="card-body">
+        <h5 class="card-title"><b>Position gender: 1</b></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100 bg-success text-white">
+      <div class="card-body">
+        <h5 class="card-title"><b>Position category: 1</b></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+```
+
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/01.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport/1998_BOSCARDIN_FESTA_DELLO_SPORT/img/02.png){ width="100" group="hi" }
+
+
+:::

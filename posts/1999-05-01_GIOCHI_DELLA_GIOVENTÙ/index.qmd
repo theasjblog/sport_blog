@@ -1,0 +1,68 @@
+---
+title: "Giochi Della Gioventú"
+date: "1999-05-01"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/1999_GIOCHI_DELLA_GIOVENTU%CC%80/img/01.png
+categories: [race report, random race]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport/1999_GIOCHI_DELLA_GIOVENTU%CC%80/img/01.png)
+
+"Giochi della gioventú" was (is?) an athletic high-school competition open to anyone. You could participate in many different events: 100m, 110m hurdles, 4X100m relay, high jump, long jump, put throw, etc. 
+
+The first round was within the school. The winners in each event qualified for the next round and competed against kids from other schools. I remember I qualified one year, but I do not remember if it was this one.
+
+At the time my main sport was basketball, and in this competition I was going for the 100m and the high jump, maybe once I did the 110m hurdles. I do not know exactly what I did in this event. Apparently my records says that I did the 400m in this event, and I finished 3$^{rd}$, but I cannot gurantee that's accurate. Also I am not 100% sure this happened in 1999.
+
+
+## Summary
+
+```{=html}
+<div class="row g-4">
+
+  <div class="col-md-4">
+    <div class="card h-100 bg-info text-white">
+      <div class="card-body">
+        <h5 class="card-title"><b>Position overall: 3</b></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100 bg-primary text-white">
+      <div class="card-body">
+        <h5 class="card-title"><b>Position gender: 3</b></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100 bg-success text-white">
+      <div class="card-body">
+        <h5 class="card-title"><b>Position category: 3</b></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport/1999_GIOCHI_DELLA_GIOVENTU%CC%80/img/01.png){ width="100" group="hi" }
+
+
+:::

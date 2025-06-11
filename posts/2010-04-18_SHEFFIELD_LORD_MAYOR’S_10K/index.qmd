@@ -17,73 +17,41 @@ lightbox:
 This was my first competitive 10K. It was ran in and around the now demolished old athletic stadium in the outskirt of Sheffield (UK), the town I was living at the time. I do not remember much from this race, just the my housemate Olesya and trained together for a few months for this, and we went there by tram. I think we run it together, and I run at a pretty conservative pace.
 
 
-```{r, echo=FALSE}
-library(DT)
-if(file.exists(file.path('data.json'))){
-  tmp <- jsonlite::fromJSON(file.path('data.json'))
-    breakdown <- tmp$breakdown
-    tmp$breakdown <- NULL
-    tmp <- as.data.frame(tmp) %>%
-      dplyr::bind_cols(breakdown)
+## Summary
 
-    details <- unlist(tmp$details)
-    if(!is.null(details)){
-      details <- paste0('<a href="',
-                        details, '">Link to activity file</a>')
-      details_names <- paste0('details_', seq(1, length(details)))
-    } else {
-      details_names <- NULL
-    }
+```{=html}
+<div class="row g-4">
 
-    tmp$details <- NULL
+  <div class="col-md-4">
+    <div class="card h-100 bg-info text-white">
+      <div class="card-body">
+        <h5 class="card-title"><b>Position overall: 182/279</b></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
 
+  <div class="col-md-4">
+    <div class="card h-100 bg-primary text-white">
+      <div class="card-body">
+        <h5 class="card-title"><b>Position gender: 157/196</b></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
 
-    df <- as.data.frame(t(tmp)) %>%
-      dplyr::bind_rows(data.frame(V1 = details))
+  <div class="col-md-4">
+    <div class="card h-100 bg-success text-white">
+      <div class="card-body">
+        <h5 class="card-title"><b>Position category: 61/82</b></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
 
-    df <- data.frame('  ' = c(colnames(tmp), details_names),
-                     ' ' = df,
-                     check.names = FALSE)
-    colnames(df) <- NULL
-
-
-    datatable(df,
-              rownames = FALSE,
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  20
-              ))
-}
-```
-
-
-```{r, echo = FALSE, warning=FALSE, message=FALSE}
-library(arrow)
-library(dplyr)
-library(hms)
-datatable(arrow::read_parquet(file.path('full_results.parquet')) |>
-            mutate(time_hms = hms::as_hms(time_hms)) |>
-            select(all_of(c(
-              'names',
-              'category',
-              'time_hms',
-              'overall_ranking',
-              'gender_ranking',
-              'category_ranking'
-            ))),
-              rownames = FALSE,
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  20
-              ))
+</div>
 
 ```
-
-
 
 ::: {layout-ncol=4}
 ![](https://storage.googleapis.com/blogs_josa/sport/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/01.png){ width="100" group="hi" }

@@ -27,6 +27,7 @@ From there, on the run. As always, not a great performance on the run. A flat ou
 
 At the end, I did not check the final results. At the time I did not know that in Canada it is normal to have live results you can check on your phone. I just hang around for a while because it was a nice day and to enjoy the atmosphere. I had a feeling maybe I did not so poorly, since I passed so many people, but no way to confirm that. Until the award ceremony. The announcer called in the 3rd guy. Not me. OK I thought, that is it then, I did not do better than 3rd. The announcer called the 2nd. Still not me. But then: "..and in first place, Adrian Joseph!". That was quite unexpected. I walked up the podium and got my "gold" medal. The award picture shows some inexperience in getting awards: sunglasses were left on, I was wearing my backpack...
 
+[Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222023-07-09%20-%20BRACEBRIDGE%20SPRINT%20TRIATHLON%20-%20sprint%20triathlon%22){target="_blank"}.
 
 ```{r, echo=FALSE}
 library(DT)

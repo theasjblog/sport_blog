@@ -1,0 +1,46 @@
+---
+title: "S. Bertilla Boscardin - Festa Dell'Accoglienza"
+date: "1997"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/1997_BOSCARDIN_FESTA_DELL_ACCOGLIENZA/img/01.png
+categories: [race report, random race]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport/1997_BOSCARDIN_FESTA_DELL_ACCOGLIENZA/img/01.png)
+
+This was an assortment of random events organized for every fresh(wo)man of my high-school. I do not recall much, only that I won. If I won overall, or some category only (or if there were categories in the first place), I do not know. I was probably too busy looking at a red head that got my attention, hoping she ended up in my class. Spoiler alert, she did, and we also dated for a while, and that was a much better achievement.
+
+## Summary
+
+```{=html}
+<div class="row g-4">
+
+  <div class="col-md-4">
+    <div class="card h-100 bg-info text-white">
+      <div class="card-body">
+        <h5 class="card-title"><b>Position overall: 1</b></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport/1997_BOSCARDIN_FESTA_DELL_ACCOGLIENZA/img/01.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport/1997_BOSCARDIN_FESTA_DELL_ACCOGLIENZA/img/02.png){ width="100" group="hi" }
+
+
+:::

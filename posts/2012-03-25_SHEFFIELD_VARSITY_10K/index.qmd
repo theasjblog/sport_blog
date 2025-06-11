@@ -18,49 +18,50 @@ The Varsity was the competition between the two universities of Sheffield: Sheff
 
 I remember it was pretty cold, and there freezing rain earlier in the morning. I went to this event with my friend Denis, but we each did our own race. Which was good, because Denis got the number of laps wrong. It was a 4 laps race, but he thought it was only 3 laps, so he went out way too fast.
 
-```{r, echo=FALSE}
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
 library(DT)
-if(file.exists(file.path('data.json'))){
-  tmp <- jsonlite::fromJSON(file.path('data.json'))
-    breakdown <- tmp$breakdown
-    tmp$breakdown <- NULL
-    tmp <- as.data.frame(tmp) %>%
-      dplyr::bind_cols(breakdown)
+library(hms)
+library(dplyr)
+library(arrow)
 
-    details <- unlist(tmp$details)
-    if(!is.null(details)){
-      details <- paste0('<a href="',
-                        details, '">Link to activity file</a>')
-      details_names <- paste0('details_', seq(1, length(details)))
-    } else {
-      details_names <- NULL
-    }
+dateIs <- "2012-03-25"
+df <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(event_date == dateIs)# |>
 
-    tmp$details <- NULL
+final <- data.frame(
+  "Race type" = paste0(df$event_type, " ", df$event_distance),
+  "Final time" = hms::as_hms(df$result_total),
+  "Overall ranking" = paste0(df$ranking_overall, "/", df$participants_overall),
+  "Gender ranking" = paste0(df$ranking_gender, "/", df$participants_gender),
+  "Category ranking" = paste0(df$ranking_category, "/", df$participants_category)
+)
 
+final <- t(final)
 
-    df <- as.data.frame(t(tmp)) %>%
-      dplyr::bind_rows(data.frame(V1 = details))
+final <- data.frame(
+  col1 = gsub("\\.", " ", rownames(final)),
+  col2 = final[,1], 
+  row.names = NULL
+) |>
+  filter(!is.na(col2)) |>
+  filter(col2 != "NA/NA") |>
+  mutate(
+    col2 = gsub("NA", "-", col2)
+  )
+  
 
-    df <- data.frame('  ' = c(colnames(tmp), details_names),
-                     ' ' = df,
-                     check.names = FALSE)
-    colnames(df) <- NULL
+colnames(final) <- c(df$event_name, final$col2[1])
+final <- final[-1,]
 
-
-    datatable(df,
-              rownames = FALSE,
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  20
-              ))
-}
+datatable(
+  final,
+  rownames = FALSE,                 # Don't show row names
+  options = list(
+    #    dom = 't',                      # Show only the table body (no search, no pagination, no header)
+    ordering = FALSE                # Optional: disable sorting
+  )
+)
 ```
-
-
-
 
 
 ::: {layout-ncol=4}
