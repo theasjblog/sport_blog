@@ -1,0 +1,50 @@
+---
+title: "Records"
+image: img/profile.png
+about:
+  template: jolla
+---
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(dplyr)
+library(DT)
+library(arrow)
+library(hms)
+library(stringr)
+
+all_res <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet')
+
+bests <- all_res |>
+  mutate(typeIs = paste0(event_type, " - ", event_distance)) |>
+  filter(typeIs %in% c(
+    "aquathlon - 1K/7.5K", "aquathlon - 450m/5K", "aquathlon - 500m/5K",
+    "aquathlon - 750m/5K", "aquathlon - 810m/7.5K", "bike - 135K", "bike - 160K",
+    "bike - 16K", "run - 10K",
+    "run - 21.1K", "run - 42.2K", "run - 5K", "run - 5miles", 
+    "sprint duathlon - 5K/20K/2.5K", "sprint triathlon - 420m/16K/5K",
+    "sprint triathlon - 420m/20K/5K", "sprint triathlon - 750m/20K/5K",
+    "sprint triathlon - 750m/30K/7.5K", "standard triathlon - 1500m/40K/10K",
+    "swim - 1500m", "swim - 3K", "triathlon - 2000m/82K/16K")) |>
+  arrange(event_name, distance_sport_1) |>
+  group_by(event_type, event_distance) |>
+  summarize(
+    fastest_time = min(result_total, na.rm = TRUE)
+  ) |>
+  mutate(
+    fastest_time = hms::as_hms(fastest_time)
+  )
+
+colnames(bests) <- stringr::str_to_title(gsub("_", " ", colnames(bests)))
+
+
+DT::datatable(bests,
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  30
+              ))
+```

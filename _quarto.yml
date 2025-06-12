@@ -14,7 +14,9 @@ website:
   navbar:
     left:
     - href: race_finder.qmd
-    text: "Race finder"
+      text: "Race finder"
+    - href: records.qmd
+      text: "Records"
     right:
       - icon: strava
         href: https://www.strava.com/athletes/7974168
