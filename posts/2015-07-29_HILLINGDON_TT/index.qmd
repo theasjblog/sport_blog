@@ -2,7 +2,7 @@
 title: "Hillingdon Tt"
 date: "2015-07-29"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2015-07-29_HILLINGDON_TT/img/00.jpg
+image: https://storage.googleapis.com/blogs_josa/sport_small/2015-07-29_HILLINGDON_TT/img/00.jpg
 categories: [race report, bike TT]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2015-07-29_HILLINGDON_TT/img/00.jpg)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-07-29_HILLINGDON_TT/img/00.jpg)
 
 ```{r, echo=FALSE}
 library(DT)
@@ -60,9 +60,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2015-07-29_HILLINGDON_TT/img/00.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-07-29_HILLINGDON_TT/img/00.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2015-07-29_HILLINGDON_TT/img/01.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-07-29_HILLINGDON_TT/img/01.jpg){ width="100" group="hi" }
 
 
 :::

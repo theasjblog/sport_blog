@@ -2,7 +2,7 @@
 title: "Bupa Great Yorkshire Run"
 date: "2011-10-13"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/01.png
 categories: [race report, run]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/01.png)
 
 This was another one of my home races, in Sheffield, UK. The starting line was in city center, near the Crucible.The race was the biggest one I have ever done to this time, with thousands of people taking part. It was an almost flat route, except for a downhill start, and an uphill finish.
 
@@ -67,15 +67,15 @@ datatable(
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/02.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/03.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/03.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/orig-chaa1267.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/orig-chaa1267.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/orig-chag0783.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-10-13_BUPA_GREAT_YORKSHIRE_RUN/img/orig-chag0783.jpg){ width="100" group="hi" }
 
 
 :::

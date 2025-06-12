@@ -2,7 +2,7 @@
 title: "Sheffield Man Of Steel"
 date: "2011-07-26"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2011-07-26_SHEFFIELD_MAN_OF_STEEL/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2011-07-26_SHEFFIELD_MAN_OF_STEEL/img/01.png
 categories: [race report, obstacle race]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2011-07-26_SHEFFIELD_MAN_OF_STEEL/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-07-26_SHEFFIELD_MAN_OF_STEEL/img/01.png)
 
 This race was a precursor of times. Established well before things like Total Warriors, Spartan Race, or Tough Mudder became extremely popular and famous, it was an extremely well organized and fun race. A lot of fun and varied obstacles, this was the first edition of the race. The harder obstacle I remember was the one where we had to climb up an almost vertical drop with the aid of a rope. It must have been 50m, 80m top, but it was extremely slippery and challenging.
 
@@ -63,11 +63,11 @@ datatable(
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2011-07-26_SHEFFIELD_MAN_OF_STEEL/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-07-26_SHEFFIELD_MAN_OF_STEEL/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2011-07-26_SHEFFIELD_MAN_OF_STEEL/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-07-26_SHEFFIELD_MAN_OF_STEEL/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2011-07-26_SHEFFIELD_MAN_OF_STEEL/img/02.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-07-26_SHEFFIELD_MAN_OF_STEEL/img/02.jpg){ width="100" group="hi" }
 
 
 :::

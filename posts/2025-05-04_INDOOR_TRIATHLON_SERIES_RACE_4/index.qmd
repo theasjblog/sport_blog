@@ -2,7 +2,7 @@
 title: "Indoor Triathlon Provincial Championship Series - Race 4 And Series Recap"
 date: "2025-05-04"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png
 categories: [race report, triathlon, indoor]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png)
 
 # Overview
 

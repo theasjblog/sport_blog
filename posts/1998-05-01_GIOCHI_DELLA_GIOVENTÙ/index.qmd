@@ -2,7 +2,7 @@
 title: "Giochi Della Gioventú"
 date: "1998-05-01"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/1998_GIOCHI_DELLA_GIOVENT%C3%99/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/1998_GIOCHI_DELLA_GIOVENT%C3%99/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/1998_GIOCHI_DELLA_GIOVENT%C3%99/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/1998_GIOCHI_DELLA_GIOVENT%C3%99/img/01.png)
 
 "Giochi della gioventú" was (is?) an athletic high-school competition open to anyone. You could participate in many different events: 100m, 110m hurdles, 4X100m relay, high jump, long jump, put throw, etc. 
 
@@ -62,7 +62,7 @@ At the time my main sport was basketball, and in this competition I was going fo
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/1998_GIOCHI_DELLA_GIOVENT%C3%99/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/1998_GIOCHI_DELLA_GIOVENT%C3%99/img/01.png){ width="100" group="hi" }
 
 
 :::

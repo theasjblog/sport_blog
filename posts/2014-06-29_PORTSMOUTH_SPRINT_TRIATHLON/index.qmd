@@ -2,7 +2,7 @@
 title: "Portsmouth Sprint Triathlon"
 date: "2014-06-29"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/00.png
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/00.png)
 
 Denis and I went down to Portsmouth with his car, bikes loaded on the roof. We stayed in a pub. At some point late in the evening we heard some commotion coming from downstairs, we looked out of the window and we saw a few drunk people triyng to climb on the car to get on the bike. Denis was not pleased. We moved the car to another car park, and we took the bikes into the room.
 
@@ -67,21 +67,21 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/01a.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/01a.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/01b.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/01b.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/02.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/02.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/03.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/03.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/04.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/04.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/05.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2014-06-29_PORTSMOUTH_SPRINT_TRIATHLON/img/05.jpg){ width="100" group="hi" }
 
 
 :::

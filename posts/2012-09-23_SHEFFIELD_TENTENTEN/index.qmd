@@ -2,7 +2,7 @@
 title: "Sheffield TenTenTen"
 date: "2012-09-23"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2012-09-23_SHEFFIELD_TENTENTEN/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2012-09-23_SHEFFIELD_TENTENTEN/img/00.png
 categories: [race report, run]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2012-09-23_SHEFFIELD_TENTENTEN/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-23_SHEFFIELD_TENTENTEN/img/00.png)
 
 Another home race in Sheffield, UK. This one was in the Endcliff area. It rained the day before, which was not great for a race run almost entirely on woods. I did not like this at all, as I did not like running on slippery mud.
 
@@ -63,7 +63,7 @@ datatable(
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2012-09-23_SHEFFIELD_TENTENTEN/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-23_SHEFFIELD_TENTENTEN/img/00.png){ width="100" group="hi" }
 
 
 :::

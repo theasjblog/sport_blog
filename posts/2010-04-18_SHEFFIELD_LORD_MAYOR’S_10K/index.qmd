@@ -2,7 +2,7 @@
 title: "Sheffield Lord Mayor's 10K"
 date: "2010-04-18"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/01.png
 categories: [race report, run]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/01.png)
 
 This was my first competitive 10K. It was ran in and around the now demolished old athletic stadium in the outskirt of Sheffield (UK), the town I was living at the time. I do not remember much from this race, just the my housemate Olesya and trained together for a few months for this, and we went there by tram. I think we run it together, and I run at a pretty conservative pace.
 
@@ -54,11 +54,11 @@ This was my first competitive 10K. It was ran in and around the now demolished o
 ```
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/02.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/02.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/03.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/03.jpg){ width="100" group="hi" }
 
 
 :::

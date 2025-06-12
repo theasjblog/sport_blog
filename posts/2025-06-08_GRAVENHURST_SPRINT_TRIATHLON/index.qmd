@@ -2,7 +2,7 @@
 title: "Gravenhurst Sprint Triathlon"
 date: "2025-06-08"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0321.jpg
+image: https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0321.jpg
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0321.jpg)
+![Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0321.jpg)
 
 This race report comes from my experience at the Gravenhurst Triathlon, my first outdoor race of the season. While it was technically a "C" race (meaning lower priority), let's be honest - what athlete doesn't want to perform their best, regardless of the race's status? Even though my AI coach Hugo from HumanGo had me deep in base training (far from peak season, with my A-race coming in October), I was excited to test my fitness.
 
@@ -24,13 +24,13 @@ Still, I had some specific goals I was eager to tackle:
 3. Rock the official Team Canada racing kit (because looking fast counts, right?)
 4. Try out my shiny new Garmin Forerunner 965 (RIP trusty Fenix 5Plus)
 
-![Early morning view of the lake.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2017.png)
+![Early morning view of the lake.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2017.png)
 
 Let me paint you a picture of Gravenhurst - it's this charming village in Ontario's Muskoka region, not far from Bracebridge (where I've raced twice before) and my in-laws' cottage. The swim takes place in Muskoka Lake, and despite my early-June temperature concerns, we lucked out with a comfortable 18°C water temperature.
 
 Now, here's where things get interesting - this race has a unique twist. Instead of your typical beach start, you get to jump off a cruise boat in the middle of the lake. Cool, right? Well, the boat had other plans, causing a 20-minute delay. At this point, I was starting to wonder if someone had broken a mirror at race headquarters.
 
-![3-2-1 JUMP! Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0889.jpg)
+![3-2-1 JUMP! Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0889.jpg)
 
 When we finally got going, the swim was straightforward - a direct shot to the dock following a line of buoys. The first 100 meters felt like a washing machine with arms and legs everywhere, but things settled down after that. I focused on maintaining good form and staying "long" in the water. Despite these noble intentions, my 750m time of 15:41 (2:09/100m pace) was... let's just say it wasn't setting any records. My Garmin data showed some decent patches mixed with what looked like underwater sightseeing - clearly, there's still plenty of room for improvement in my swimming!
 
@@ -38,7 +38,7 @@ T1 featured a lengthy run-up (perfect for wetsuit stripping), but I made my firs
 
 The flying mount attempt was, well, less "flying" and more "controlled stumbling." While I managed to start with my feet clipped in, getting them into the actual shoes was like trying to solve a Rubik's cube while riding a bike. When the elastic holding your shoes upright gives up, you're in for an interesting game of "catch the spinning shoe". Mental note: more practice needed!
 
-![Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_1695.jpg)
+![Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_1695.jpg)
 
 The bike course, while not featuring any major climbs, threw 132m of elevation gain at us. I averaged 262W - decent but not my best. Combined with my nutrition oversight and the rising temperature (and my brilliant decision to skip hydration), I was setting myself up for an interesting run.
 
@@ -48,7 +48,7 @@ The run started with my legs performing an impromptu cramping routine, followed 
 
 Despite all this, I somehow managed to snag 2nd in my age group - though I'll admit this says more about the field than my performance-. The winner was in a different league altogether, so hats off to him!
 
-![2nd place M40-44. Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_3745.jpg)
+![2nd place M40-44. Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_3745.jpg)
 
 While this wasn't my finest showing, it's important to note that Multisport Canada put on a fantastic event - my struggles were entirely self-inflicted. Looking on the bright side, we now have a baseline for the season. And hey, there's nowhere to go but up from here... right?
 
@@ -73,33 +73,33 @@ DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.c
 
 
 ::: {layout-ncol=4}
-![Early morning view of Muskoka Lake.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2017.png){ width="100" group="hi" }
+![Early morning view of Muskoka Lake.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2017.png){ width="100" group="hi" }
 
-![The calm before the storm.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2018.png){ width="100" group="hi" }
+![The calm before the storm.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2018.png){ width="100" group="hi" }
 
-![View from the boat. Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0708.jpg){ width="100" group="hi" }
+![View from the boat. Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0708.jpg){ width="100" group="hi" }
 
-![Carefully listening to the race brief... Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0308.jpg){ width="100" group="hi" }
+![Carefully listening to the race brief... Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0308.jpg){ width="100" group="hi" }
 
-![Boarding. Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0614.jpg){ width="100" group="hi" }
+![Boarding. Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0614.jpg){ width="100" group="hi" }
 
-![3-2-1 JUMP! Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0889.jpg){ width="100" group="hi" }
+![3-2-1 JUMP! Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0889.jpg){ width="100" group="hi" }
 
-![Garmin ready. Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0920.jpg){ width="100" group="hi" }
+![Garmin ready. Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_0920.jpg){ width="100" group="hi" }
 
-![Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_1695.jpg){ width="100" group="hi" }
+![Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_1695.jpg){ width="100" group="hi" }
 
-![2nd place M40-44. Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_3745.jpg){ width="100" group="hi" }
+![2nd place M40-44. Photo by Chappell Digital.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/250608_Gravenhurst_3745.jpg){ width="100" group="hi" }
 
-![Swim hat.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2021.png){ width="100" group="hi" }
+![Swim hat.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2021.png){ width="100" group="hi" }
 
-![Swim hat.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2022.png){ width="100" group="hi" }
+![Swim hat.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2022.png){ width="100" group="hi" }
 
-![Finisher medal.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2025.png){ width="100" group="hi" }
+![Finisher medal.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2025.png){ width="100" group="hi" }
 
-![2nd place medal.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2027.png){ width="100" group="hi" }
+![2nd place medal.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2027.png){ width="100" group="hi" }
 
-![Bib and ribbons.](https://storage.googleapis.com/blogs_josa/sport/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2029.png){ width="100" group="hi" }
+![Bib and ribbons.](https://storage.googleapis.com/blogs_josa/sport_small/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/img/IMG_2029.png){ width="100" group="hi" }
 
 
 :::

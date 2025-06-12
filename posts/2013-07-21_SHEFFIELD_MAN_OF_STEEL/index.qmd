@@ -2,7 +2,7 @@
 title: "Sheffield Man Of Steel"
 date: "2013-07-21"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/01.png
 categories: [race report, obstacle race]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/01.png)
 
 ```{r, echo = FALSE, warning=FALSE, message=FALSE}
 library(DT)
@@ -61,9 +61,9 @@ datatable(
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/01.png){ width="100" group="hi" }
 
 
 :::

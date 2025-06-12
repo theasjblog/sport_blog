@@ -2,7 +2,7 @@
 title: "Total Motion Ickle Pickle Aquathlon"
 date: "2015-05-16"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/00.png
 categories: [race report, aquathlon]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/00.png)
 
 ```{r, echo=FALSE}
 library(DT)
@@ -60,13 +60,13 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/02.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/03.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-16_TOTAL_MOTION_ICKLE_PICKLE_AQUATHLON/img/03.jpg){ width="100" group="hi" }
 
 
 :::

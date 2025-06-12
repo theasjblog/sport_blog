@@ -2,7 +2,7 @@
 title: "Hsv Sprint Triathlon"
 date: "2019-09-08"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2019-09-08_HSV_SPRINT_TRIATHLON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2019-09-08_HSV_SPRINT_TRIATHLON/img/00.png
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport/2019-09-08_HSV_SPRINT_TRIATHLON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-09-08_HSV_SPRINT_TRIATHLON/img/00.png)
 
 A pool-based one, in the pool where I was training with the Tri-Force. I never particularly liked pool triathlon, and this was no exception. The race was flat and fast.
 
@@ -63,9 +63,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2019-09-08_HSV_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-09-08_HSV_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2019-09-08_HSV_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-09-08_HSV_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
 
 
 :::

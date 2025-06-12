@@ -2,7 +2,7 @@
 title: "Sheffield Graves Park 10K"
 date: "2011-07-15"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2011-07-15_SHEFFIELD_GRAVES_PARK/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2011-07-15_SHEFFIELD_GRAVES_PARK/img/00.png
 categories: [race report, run]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2011-07-15_SHEFFIELD_GRAVES_PARK/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-07-15_SHEFFIELD_GRAVES_PARK/img/00.png)
 
 Graves park is a park in Sheffield, UK. As the names suggests, it is near an old cemetery, which s a bit of an odd venue for a race. Regardless, the event is a nice one. The park is pretty, and race is a hilly one, ran on a mix of grass and gravel.
 
@@ -66,9 +66,9 @@ datatable(
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2011-07-15_SHEFFIELD_GRAVES_PARK/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-07-15_SHEFFIELD_GRAVES_PARK/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2011-07-15_SHEFFIELD_GRAVES_PARK/img/01.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-07-15_SHEFFIELD_GRAVES_PARK/img/01.jpg){ width="100" group="hi" }
 
 
 :::

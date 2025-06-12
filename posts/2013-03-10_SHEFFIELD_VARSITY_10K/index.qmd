@@ -2,7 +2,7 @@
 title: "Sheffield Varsity 10K"
 date: "2013-03-10"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2013-03-10_SHEFFIELD_VARSITY_10K/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2013-03-10_SHEFFIELD_VARSITY_10K/img/00.png
 categories: [race report, run]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-03-10_SHEFFIELD_VARSITY_10K/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-03-10_SHEFFIELD_VARSITY_10K/img/00.png)
 
 Varsity was the group of sporting challenges between Sheffield University (my uni) and Hallam. This 10K was one of those side events where everyone was allowed to participate, not only the representatives of the athletic clubs. I have no memory at all of this race. The only thing I know is tat is was run in the Don Valley area, and I know that because I can see it from the GPS track.
 
@@ -63,7 +63,7 @@ datatable(
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2013-03-10_SHEFFIELD_VARSITY_10K/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-03-10_SHEFFIELD_VARSITY_10K/img/00.png){ width="100" group="hi" }
 
 
 :::

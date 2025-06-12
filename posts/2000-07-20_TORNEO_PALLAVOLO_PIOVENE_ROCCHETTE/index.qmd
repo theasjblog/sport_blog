@@ -2,7 +2,7 @@
 title: "Piovene Rocchette - Torneo Di Pallavolo Mista"
 date: "2000-07-20"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/01.png)
 
 For a few years, a group of volunteers organized a volleyball tournament in my home town. I t was a fairly competitive one, and although I have never really liked playing the sport, I always enjoyed watching it.
 
@@ -23,9 +23,9 @@ Anyway, here is the little medal, part of my collection of sport memorabilia.
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2000_TORNEO_PALLAVOLO_PIOVENE_ROCCHETTE/img/02.png){ width="100" group="hi" }
 
 
 :::

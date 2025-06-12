@@ -2,7 +2,7 @@
 title: "Conquer The Chilterns"
 date: "2017-09-19"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png
 categories: [race report, swim]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png)
 
 A long swim in the Chiltern Hills, UK. This was a side event of a long course triathlon competition, and I decided to just test myself on a longer swim: 3K. 
 
@@ -64,9 +64,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2017-09-19_CONQUER_THE_CHILTERNS/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2017-09-19_CONQUER_THE_CHILTERNS/img/01.png){ width="100" group="hi" }
 
 
 :::

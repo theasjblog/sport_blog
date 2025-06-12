@@ -2,7 +2,7 @@
 title: "Lee Valley Velopark"
 date: "2019-09-28"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2019-09-28_LEE_VALLEY_VELOPARK/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2019-09-28_LEE_VALLEY_VELOPARK/img/00.png
 categories: [race report, run]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport/2019-09-28_LEE_VALLEY_VELOPARK/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-09-28_LEE_VALLEY_VELOPARK/img/00.png)
 
 This was one done at the lowest point of post-Oscar out-of-shape. And the timing shows. The route was nothing special, just a few sleep around the Lee Valley Velopark. Definitely not I am looking forward to do again.
 
@@ -61,9 +61,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2019-09-28_LEE_VALLEY_VELOPARK/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-09-28_LEE_VALLEY_VELOPARK/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2019-09-28_LEE_VALLEY_VELOPARK/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-09-28_LEE_VALLEY_VELOPARK/img/01.png){ width="100" group="hi" }
 
 
 :::
