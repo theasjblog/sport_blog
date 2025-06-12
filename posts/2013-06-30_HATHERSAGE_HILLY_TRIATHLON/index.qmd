@@ -2,7 +2,7 @@
 title: "Hathersage Hilly Triathlon"
 date: "2013-06-30"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a0.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a0.png
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a0.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a0.png)
 
 My first triathlon. Organized by the Sheffield Triathlon Club in Hathersage, in the middle of the Peak District. A great place. I do not remember the distances exactly, but they were a bit odd, somewhere in between a sprint and a standard, except for the swim that was a short one in a heated outdoor pool. The main "selling" point was that, has the name implies and because of the venue (the Peak District), it was "hilly". Very hilly...
 
@@ -72,37 +72,37 @@ datatable(
 )
 ```
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a0.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a0.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a1.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a1.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a2.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a2.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00c.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00c.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/01.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/01.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/04.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/04.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/06.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/06.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/14.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/14.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/19.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/19.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/20.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/20.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/21.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/21.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/24.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/24.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/25.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/25.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/28.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/28.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/29.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/29.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/31.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/31.jpg){ width="100" group="hi" }
 
 
 :::

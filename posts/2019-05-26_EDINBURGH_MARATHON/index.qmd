@@ -2,7 +2,7 @@
 title: "Edinburgh Marathon"
 date: "2019-05-26"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2019-05-26_EDINBURGH_MARATHON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/00.png
 categories: [race report, run]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport/2019-05-26_EDINBURGH_MARATHON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/00.png)
 
 I entered this as I did not go into the London Marathon. Ali and I rented a car and drove up to Edinburgh. We stayed in a small B&B near the city center.
 
@@ -70,15 +70,15 @@ if(file.exists(file.path('data.json'))){
 ```
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2019-05-26_EDINBURGH_MARATHON/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2019-05-26_EDINBURGH_MARATHON/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2019-05-26_EDINBURGH_MARATHON/img/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/02.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2019-05-26_EDINBURGH_MARATHON/img/03.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/03.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2019-05-26_EDINBURGH_MARATHON/img/04.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/04.png){ width="100" group="hi" }
 
 
 :::

@@ -2,11 +2,11 @@
 title: "Welcome To My Blog"
 author: "Adrian Joseph"
 date: "2024-12-16"
-image: https://storage.googleapis.com/blogs_josa/sport/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/19.jpg
+image: https://storage.googleapis.com/blogs_josa/sport_small/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/19.jpg
 categories: [news]
 ---
 
-![The first race: Heathersage Hilly Triathlon, UK, 2013](https://storage.googleapis.com/blogs_josa/sport/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/28.jpg)
+![The first race: Heathersage Hilly Triathlon, UK, 2013](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/28.jpg)
 
 **Welcome!** 
 

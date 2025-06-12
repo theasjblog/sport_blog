@@ -2,7 +2,7 @@
 title: "Hatfield 5"
 date: "2018-11-25"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2018-11-25_HATFIELD_5/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2018-11-25_HATFIELD_5/img/00.png
 categories: [race report, run]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport/2018-11-25_HATFIELD_5/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2018-11-25_HATFIELD_5/img/00.png)
 
 
 ```{r, echo=FALSE}
@@ -60,9 +60,9 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2018-11-25_HATFIELD_5/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2018-11-25_HATFIELD_5/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2018-11-25_HATFIELD_5/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2018-11-25_HATFIELD_5/img/01.png){ width="100" group="hi" }
 
 
 :::

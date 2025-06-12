@@ -2,7 +2,7 @@
 title: "Torneo Di Calcio S. Martino Di Castrozza"
 date: "1993-08-01"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/1993_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/1993_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![First place](https://storage.googleapis.com/blogs_josa/sport/1993_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/img/01.png)
+![First place](https://storage.googleapis.com/blogs_josa/sport_small/1993_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/img/01.png)
 
 When I was a kid I was going to summer and winter camps organized by some religious organisation. This particular one was a summer camp in the Alps, in S. Martino Di Castrozza. Within the summer camp, there was a soccer tournament between teams of different camps. I do not have too many memory about, I do not even remember if I was playing goalkeeper, defender, or striker. Most likely defender, but I could not guarantee it. But two things I do remember: it was a gravel football pitch behind a church, and, more importantly: we won the tournament!
 
@@ -19,9 +19,9 @@ When I was a kid I was going to summer and winter camps organized by some religi
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/1993_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/1993_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/1993_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/img/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/1993_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/img/02.png){ width="100" group="hi" }
 
 
 :::

@@ -2,7 +2,7 @@
 title: "Thorpe Park Triathlon"
 date: "2016-07-17"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2016-07-17_THORPE_PARK_TRIATHLON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2016-07-17_THORPE_PARK_TRIATHLON/img/00.png
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2016-07-17_THORPE_PARK_TRIATHLON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2016-07-17_THORPE_PARK_TRIATHLON/img/00.png)
 
 ```{r, echo=FALSE}
 library(DT)
@@ -60,23 +60,23 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2016-07-17_THORPE_PARK_TRIATHLON/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2016-07-17_THORPE_PARK_TRIATHLON/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2016-07-17_THORPE_PARK_TRIATHLON/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2016-07-17_THORPE_PARK_TRIATHLON/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2016-07-17_THORPE_PARK_TRIATHLON/img/02.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2016-07-17_THORPE_PARK_TRIATHLON/img/02.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2016-07-17_THORPE_PARK_TRIATHLON/img/02a.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2016-07-17_THORPE_PARK_TRIATHLON/img/02a.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2016-07-17_THORPE_PARK_TRIATHLON/img/03.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2016-07-17_THORPE_PARK_TRIATHLON/img/03.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2016-07-17_THORPE_PARK_TRIATHLON/img/06.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2016-07-17_THORPE_PARK_TRIATHLON/img/06.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2016-07-17_THORPE_PARK_TRIATHLON/img/07.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2016-07-17_THORPE_PARK_TRIATHLON/img/07.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2016-07-17_THORPE_PARK_TRIATHLON/img/10.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2016-07-17_THORPE_PARK_TRIATHLON/img/10.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2016-07-17_THORPE_PARK_TRIATHLON/img/11.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2016-07-17_THORPE_PARK_TRIATHLON/img/11.jpg){ width="100" group="hi" }
 
 
 :::

@@ -2,7 +2,7 @@
 title: "Sheffield Varsity 10K"
 date: "2012-03-25"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png
 categories: [race report, run]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png)
 
 The Varsity was the competition between the two universities of Sheffield: Sheffield University (the one I attended), and Sheffield Hallam. The strong guys had their own "private" events, but there were a few more open to everyone.
 
@@ -65,9 +65,9 @@ datatable(
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2012-03-25_SHEFFIELD_VARSITY_10K/img/01.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-03-25_SHEFFIELD_VARSITY_10K/img/01.jpg){ width="100" group="hi" }
 
 
 :::

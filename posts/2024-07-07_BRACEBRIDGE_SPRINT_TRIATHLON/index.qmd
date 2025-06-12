@@ -2,7 +2,7 @@
 title: "Bracebridge Sprint Triathlon"
 date: "2024-07-07"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg
+image: https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg)
 
 Back racing in Bracebridge after the 2023 Age Group victory. However, defending the title would have not been easy, as a quick look at the people around me in transition was suggesting a much more competitive field than the 2023 race.
 
@@ -76,23 +76,23 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/02.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/03.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/03.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/04.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/04.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/05.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/05.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/08.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/08.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/13.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/13.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg){ width="100" group="hi" }
 
 
 :::

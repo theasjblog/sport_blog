@@ -2,7 +2,7 @@
 title: "Rother Valley 10K"
 date: "2013-04-14"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2013-04-14_ROTHER_VALLEY_10K/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2013-04-14_ROTHER_VALLEY_10K/img/00.png
 categories: [race report, run]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2013-04-14_ROTHER_VALLEY_10K/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-04-14_ROTHER_VALLEY_10K/img/00.png)
 
 Another race I do not really remember anything about, only that it was in Rotheram, UK, in a nice little park.
 
@@ -62,7 +62,7 @@ datatable(
 ```
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2013-04-14_ROTHER_VALLEY_10K/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-04-14_ROTHER_VALLEY_10K/img/00.png){ width="100" group="hi" }
 
 
 :::

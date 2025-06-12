@@ -2,7 +2,7 @@
 title: "Greenwich Park Run"
 date: "2015-12-20"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2015-12-20_GREENWICH_PARK_RUN/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2015-12-20_GREENWICH_PARK_RUN/img/00.png
 categories: [race report, run]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport/2015-12-20_GREENWICH_PARK_RUN/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-12-20_GREENWICH_PARK_RUN/img/00.png)
 
 ```{r, echo=FALSE}
 library(DT)
@@ -59,13 +59,13 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2015-12-20_GREENWICH_PARK_RUN/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-12-20_GREENWICH_PARK_RUN/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2015-12-20_GREENWICH_PARK_RUN/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-12-20_GREENWICH_PARK_RUN/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2015-12-20_GREENWICH_PARK_RUN/img/06.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-12-20_GREENWICH_PARK_RUN/img/06.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2015-12-20_GREENWICH_PARK_RUN/img/09.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2015-12-20_GREENWICH_PARK_RUN/img/09.jpg){ width="100" group="hi" }
 
 
 :::

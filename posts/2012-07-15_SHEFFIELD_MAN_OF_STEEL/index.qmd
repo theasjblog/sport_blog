@@ -2,7 +2,7 @@
 title: "Sheffield Man Of Steel"
 date: "2012-07-15"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/01.png
 categories: [race report, obstacle race]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/01.png)
 
 Always a great race. A few more obstacles this time, Denis came along for the ride, and they added a fun challenge. At the end of the first lap, a group or rugby players was waiting on the runners with those large foamy bumper things that are used in training during tackles. That was pretty hard. They were tackling us, and you can imagine how it was going for the majority of the runners, getting there with tired legs and starting with a pretty significant weight deficit to a rugby player anyway...My strategy was to hide behind other people and throw them under the bus, so I could try to make it to the end without getting targeted. It almost worked. The last "defender" got me, and he bumped me back quite a few meters.
 
@@ -64,15 +64,15 @@ datatable(
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/00.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/02.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/02.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/03.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/03.jpg){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/04.jpg){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-15_SHEFFIELD_MAN_OF_STEEL/img/04.jpg){ width="100" group="hi" }
 
 
 :::

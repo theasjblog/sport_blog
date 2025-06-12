@@ -2,7 +2,7 @@
 title: "Basket Dueville - Campioni Provinciali Juniores"
 date: "2000-01-01"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/01.png
 categories: [race report, random race]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/01.png)
 
 This was one of my last years playing basketball competitively. This particular team has always been one of high expectation, and the first team, the "adults", were playing in B1 (Italy's third division).
 
@@ -43,9 +43,9 @@ I cannot say I was contributing all that much to this team. The approach I had w
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/01.png){ width="100" group="hi" }
 
-![](https://storage.googleapis.com/blogs_josa/sport/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/02.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2000_BASKET_DUEVILLE_CAMPIONATI_PROVINCIALI_JUNIORES/img/02.png){ width="100" group="hi" }
 
 
 :::

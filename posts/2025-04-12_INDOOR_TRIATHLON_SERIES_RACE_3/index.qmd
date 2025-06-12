@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png)
 
 # Overview
 
@@ -56,7 +56,7 @@ The run was my highlight of the day. I started easy. 3 guys went off immediately
 
 In this race I finished 7$^{th}$ overall and 2$^{nd}$ in the Age Group. The guy that finished first was incredible: 21 swim laps (1050m), 10.5Km on the bike, and 18.5 run laps (3.7Km). Just no way I can keep up with him, especially in the water.
 
-![Age group ranking for Race 3](https://storage.googleapis.com/blogs_josa/sport/2025-04-12_INDOOR_TRIATHLON_SERIES_RACE_3/img/02.png)
+![Age group ranking for Race 3](https://storage.googleapis.com/blogs_josa/sport_small/2025-04-12_INDOOR_TRIATHLON_SERIES_RACE_3/img/02.png)
 
 ### Series ranking
 

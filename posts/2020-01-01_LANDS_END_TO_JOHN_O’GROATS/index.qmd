@@ -2,7 +2,7 @@
 title: "Lands End To John O’groats"
 date: "2020-01-01"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport/2020-01-01_LANDS_END_TO_JOHN_O%E2%80%99GROATS/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_LANDS_END_TO_JOHN_O%E2%80%99GROATS/img/01.png
 categories: [race report, virtual]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport/2020-01-01_LANDS_END_TO_JOHN_O%E2%80%99GROATS/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_LANDS_END_TO_JOHN_O%E2%80%99GROATS/img/01.png)
 
 ```{r, echo=FALSE}
 library(DT)
@@ -59,7 +59,7 @@ if(file.exists(file.path('data.json'))){
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport/2020-01-01_LANDS_END_TO_JOHN_O%E2%80%99GROATS/img/01.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_LANDS_END_TO_JOHN_O%E2%80%99GROATS/img/01.png){ width="100" group="hi" }
 
 
 :::
