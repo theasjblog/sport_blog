@@ -1,0 +1,19 @@
+{
+  "hash": "a853f0c3e5f8471c2d7823e17d001b46",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"St. Neots Half Marathon\"\ndate: \"2019-11-17\"\nauthor: \"Adrian Joseph\"\nimage: https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png\ncategories: [race report, run]\nformat: html\nlightbox:\n  match: auto\n  effect: fade\n  desc-position: right\n  loop: false\n---\n\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png)\n\nNot much memories on this. Just that I got there way too early, it was raining, and I had to wait in the car while they opened registration. Also, there was no changing rooms, everybody was getting ready in a gym hall.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"datatables html-widget html-fill-item\" id=\"htmlwidget-9baf584dd8a387397576\" style=\"width:100%;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-9baf584dd8a387397576\">{\"x\":{\"filter\":\"none\",\"vertical\":false,\"data\":[[\"race\",\"type\",\"distance\",\"position_overall\",\"position_category\",\"time\",\"date\",\"details_1\"],[\"ST. NEOTS HALF MARATHON\",\"run\",\"21.1K\",\"725/1512\",\"175/238\",\"1h 51m 51s\",\"2019-11-17\",\"<a href=\\\"https://connect.garmin.com/modern/activity/4259799837\\\">Link to activity file<\\/a>\"]],\"container\":\"<table class=\\\"display\\\">\\n  <thead>\\n    <tr>\\n      <th><\\/th>\\n    <\\/tr>\\n  <\\/thead>\\n<\\/table>\",\"options\":{\"paging\":true,\"pageLength\":20,\"columnDefs\":[{\"name\":null,\"targets\":0},{\"name\":null,\"targets\":1}],\"order\":[],\"autoWidth\":false,\"orderClasses\":false,\"lengthMenu\":[10,20,25,50,100]}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n\n\n\n\n\n\n\n::: {layout-ncol=4}\n![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png){ width=\"100\" group=\"hi\" }\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/01.png){ width=\"100\" group=\"hi\" }\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/02.png){ width=\"100\" group=\"hi\" }\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/03.png){ width=\"100\" group=\"hi\" }\n\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"../../site_libs/htmltools-fill-0.5.8.1/fill.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/datatables-binding-0.33/datatables.js\"></script>\n<script src=\"../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css\" rel=\"stylesheet\" />\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js\"></script>\n<link href=\"../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,13 +1,5 @@
 ---
 title: "![ASJ TRI](/img/logo.png){width=\"300\"}"
-
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
 page-layout: full
 title-block-banner: false
 feed: true
@@ -26,6 +18,13 @@ Here, I share my experiences of balancing a full-time career with the demanding 
 
 Whether you're a fellow age-group triathlete, someone curious about the sport, or just interested in how to balance multiple passions with daily life, I hope you'll find value in my experiences and insights. Follow along as I share my journey of swimming, biking, and running through life!
 
-![My first triathlon win!](https://storage.googleapis.com/blogs_josa/sport_small/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/19.jpg)
 
 ---
+
+# Race reports
+
+[![](https://storage.googleapis.com/blogs_josa/sport_small/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/19.jpg){width="500"}](posts/race_reports.qmd)
+
+# Miscellaneous
+
+[![](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-15_season_kit/img/cover.png){width="500"}](posts/others.qmd)

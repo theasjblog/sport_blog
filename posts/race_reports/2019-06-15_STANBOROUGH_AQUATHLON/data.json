@@ -1,0 +1,15 @@
+[
+  {
+    "race": "STANBOROUGH AQUATHLON",
+    "type": "aquathlon",
+    "distance": "750m/5K",
+    "time": "39m 24s",
+    "date": "2019-06-15",
+    "details": "https://connect.garmin.com/modern/activity/3748667691",
+    "breakdown":{
+      "swim":"16m 2s",
+      "t1": "38s",
+      "run": "22m 42s"
+    }
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "race": "HYDE PARK SUNSET AQUATHLON",
+    "type": "aquathlon",
+    "distance": "500m/5K",
+    "time": "30m 6s",
+    "date": "2016-06-08",
+    "details": "https://connect.garmin.com/modern/activity/1204218988",
+    "breakdown":{
+      "swim":"9m 35s",
+      "t1": "36s",
+      "run": "19m 55s"
+    }
+  }
+]

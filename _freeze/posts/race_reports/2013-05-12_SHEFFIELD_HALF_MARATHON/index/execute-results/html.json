@@ -1,0 +1,19 @@
+{
+  "hash": "1702a385d27c8bc051419f021fd70ee4",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Sheffield Half Marathon\"\ndate: \"2013-05-12\"\nauthor: \"Adrian Joseph\"\nimage: https://storage.googleapis.com/blogs_josa/sport_small/2013-05-12_SHEFFIELD_HALF_MARATHON/img/00.png\ncategories: [race report, run]\nformat: html\nlightbox:\n  match: auto\n  effect: fade\n  desc-position: right\n  loop: false\n---\n\n\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2013-05-12_SHEFFIELD_HALF_MARATHON/img/00.png)\n\nAnother home half marathon. My second ever, and I do not remember much about it, since all Sheffield Half Marathon are pretty similar. And that was a good thing, becuse it was a nice city route with a lot of cheering spectators.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"datatables html-widget html-fill-item\" id=\"htmlwidget-35109c453c86e4108705\" style=\"width:100%;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-35109c453c86e4108705\">{\"x\":{\"filter\":\"none\",\"vertical\":false,\"data\":[[\"Final time\"],[\"01:51:54\"]],\"container\":\"<table class=\\\"display\\\">\\n  <thead>\\n    <tr>\\n      <th>SHEFFIELD HALF MARATHON<\\/th>\\n      <th>run 21.1K<\\/th>\\n    <\\/tr>\\n  <\\/thead>\\n<\\/table>\",\"options\":{\"ordering\":false,\"columnDefs\":[{\"name\":\"SHEFFIELD HALF MARATHON\",\"targets\":0},{\"name\":\"run 21.1K\",\"targets\":1}],\"order\":[],\"autoWidth\":false,\"orderClasses\":false}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n\n\n\n\n::: {layout-ncol=4}\n![](https://storage.googleapis.com/blogs_josa/sport_small/2013-05-12_SHEFFIELD_HALF_MARATHON/img/00.png){ width=\"100\" group=\"hi\" }\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2013-05-12_SHEFFIELD_HALF_MARATHON/img/01.png){ width=\"100\" group=\"hi\" }\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2013-05-12_SHEFFIELD_HALF_MARATHON/img/02.png){ width=\"100\" group=\"hi\" }\n\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"../../../site_libs/htmltools-fill-0.5.8.1/fill.css\" rel=\"stylesheet\" />\n<script src=\"../../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css\" rel=\"stylesheet\" />\n<script src=\"../../../site_libs/datatables-binding-0.33/datatables.js\"></script>\n<script src=\"../../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\n<link href=\"../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css\" rel=\"stylesheet\" />\n<link href=\"../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css\" rel=\"stylesheet\" />\n<script src=\"../../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js\"></script>\n<link href=\"../../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css\" rel=\"stylesheet\" />\n<script src=\"../../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
