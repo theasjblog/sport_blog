@@ -1,5 +1,11 @@
 project:
   type: website
+  resources:
+    - "*.json"
+    - "*.parquet"
+
+execute:
+  freeze: auto
 
 website:
   title: "ASJ TRI"

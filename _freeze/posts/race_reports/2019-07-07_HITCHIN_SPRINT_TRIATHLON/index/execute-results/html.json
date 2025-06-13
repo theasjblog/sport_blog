@@ -1,0 +1,19 @@
+{
+  "hash": "69847af61c09dfc1b6437dc5b4556d83",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Hitchin Sprint Triathlon\"\ndate: \"2019-07-07\"\nauthor: \"Adrian Joseph\"\nimage: https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/00.png\ncategories: [race report, triathlon]\nformat: html\nlightbox:\n  match: auto\n  effect: fade\n  desc-position: right\n  loop: false\n---\n\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/00.png)\n\nI remember that a colleague from Tessella came to this race: Ana. I acted a bit like \"the expert\". I remember she started quite a bit before me, and I caught her towards the end of the bike leg.\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"datatables html-widget html-fill-item\" id=\"htmlwidget-ece9f80c4b3249cb821c\" style=\"width:100%;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-ece9f80c4b3249cb821c\">{\"x\":{\"filter\":\"none\",\"vertical\":false,\"data\":[[\"race\",\"type\",\"distance\",\"position_overall\",\"position_category\",\"time\",\"date\",\"swim\",\"t1\",\"bike\",\"t2\",\"run\",\"details_1\"],[\"HITCHIN SPRINT TRIATHLON\",\"sprint triathlon\",\"420m/20K/5K\",\"34/209\",\"17/48\",\"1h 11m 56s\",\"2019-07-07\",\"7m 27s\",\"2m 10s\",\"38m 9s\",\"1m 25s\",\"22m 43s\",\"<a href=\\\"https://connect.garmin.com/modern/activity/3819993935\\\">Link to activity file<\\/a>\"]],\"container\":\"<table class=\\\"display\\\">\\n  <thead>\\n    <tr>\\n      <th><\\/th>\\n    <\\/tr>\\n  <\\/thead>\\n<\\/table>\",\"options\":{\"paging\":true,\"pageLength\":20,\"columnDefs\":[{\"name\":null,\"targets\":0},{\"name\":null,\"targets\":1}],\"order\":[],\"autoWidth\":false,\"orderClasses\":false,\"lengthMenu\":[10,20,25,50,100]}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n\n\n\n\n\n\n\n::: {layout-ncol=4}\n![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/00.png){ width=\"100\" group=\"hi\" }\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/01.png){ width=\"100\" group=\"hi\" }\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/02.png){ width=\"100\" group=\"hi\" }\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/03.png){ width=\"100\" group=\"hi\" }\n\n![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/04.png){ width=\"100\" group=\"hi\" }\n\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"../../../site_libs/htmltools-fill-0.5.8.1/fill.css\" rel=\"stylesheet\" />\n<script src=\"../../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css\" rel=\"stylesheet\" />\n<script src=\"../../../site_libs/datatables-binding-0.33/datatables.js\"></script>\n<script src=\"../../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\n<link href=\"../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css\" rel=\"stylesheet\" />\n<link href=\"../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css\" rel=\"stylesheet\" />\n<script src=\"../../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js\"></script>\n<link href=\"../../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css\" rel=\"stylesheet\" />\n<script src=\"../../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
