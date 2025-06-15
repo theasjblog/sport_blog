@@ -16,7 +16,7 @@ lightbox:
 
 # Overview
 
-This was the third race in the Ontario Indoor Triathlon Championship series. If you're not familiar with the format, I talked about it more in [this post](../2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/index.qmd) and [this one](../2025-04-12_INDOOR_TRIATHLON_SERIES_RACE_3/index.qmd).
+This was the third race in the Ontario Indoor Triathlon Championship series. If you're not familiar with the format, I talked about it more in [this post](../2025-02-22_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_1/index.qmd) and [this one](../2025-04-12_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_3/index.qmd).
 
 ## Quick Recap of the Format
 
