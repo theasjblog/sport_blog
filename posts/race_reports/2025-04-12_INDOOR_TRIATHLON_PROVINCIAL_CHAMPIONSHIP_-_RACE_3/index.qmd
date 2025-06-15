@@ -1,0 +1,131 @@
+---
+title: "Indoor Triathlon Provincial Championship Series - Race 3"
+date: "2025-04-12"
+author: "Adrian Joseph"
+image: "https://storage.googleapis.com/blogs_josa/sport/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png"
+categories: [race report, triathlon, indoor]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+![](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png)
+
+# Overview
+
+This was the third race in the Ontario Indoor Triathlon Championship series. I talked about the format in general in [this page](../2025-02-22_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_1/index.qmd).
+
+In summary, in this series you get points for how far you swim, bike, and run in 15 minutes. The further you go, the more points you get. The series is made by 4 races, but only the top 3 results count towards the final total. Whoever gets more points at then end of the series wins the championship and get the trophy. Age Grouper can still hope to win bragging rights -and a downloadable certificate- if they place at the top of their 10 years group.
+
+Going into this event I had 2 objective:
+
+* Maintain the age group leadership.
+* Do better (or at least not worse) that the previous event.
+
+I had no aspiration for the overall title because there is no way that at 40+ years of age I can compete with some 20years old in this type of events.
+
+So, how did it go?
+
+## Races comparison
+
+I'll do some more in depth analysis at the end of the series. For now, here is the overall official record.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(kableExtra)
+
+kable(data.frame(
+  'Race [#]' = c('Race 1', 'Race 3'),
+  'Swim [laps]' = c(16.5, 15.5) * 50,
+  'Bike [km]' = c(9, 10.6),
+  'Run [km]' = c(15, 16.5) * 0.2, 
+  check.names = FALSE
+))
+```
+
+The swim was disappointing. I felt like I was doing a good job. I swam the first few minutes trailing behind the other guy in my lane -which I think is the guy who finished second in the age group-, but then I passed him and kept the lead. Clearly I have been managing my energy too conservatively.
+
+On the bike I felt good. Again I tried to not get too tired out, and this time I actually cycled for the whole 15min, I did not start late. I do not recall exactly for how long I cycled in the first race, but probably around 13min. That would be an average speed of 41.5km/h. This time I did 10.6Km and I stopped at around 14:45, since I knew I could not do 400 more meters in 15seconds and get more points. That would be 43.1km/h. So about 1.5km/h faster.
+
+The run was my highlight of the day. I started easy. 3 guys went off immediately, but they stayed only about 20m ahead. I slowly caught them all. In the final minutes two of the three -two guys in their early twenties-, picked up the pace again and I just could not stay with them, but I did stay ahead of my rival for the Age Group first place. In the end I covered 300m more than in the previous race, which does not sound like much, but that is the difference between 5min/km and 4:30min/km. So still not where I want to be, but getting there.
+
+## Ranking
+
+### Race ranking
+
+In this race I finished 7$^{th}$ overall and 2$^{nd}$ in the Age Group. The guy that finished first was incredible: 21 swim laps (1050m), 10.5Km on the bike, and 18.5 run laps (3.7Km). Just no way I can keep up with him, especially in the water.
+
+![Age group ranking for Race 3](https://storage.googleapis.com/blogs_josa/sport_small/2025-04-12_INDOOR_TRIATHLON_SERIES_RACE_3/img/02.png)
+
+### Series ranking
+
+The good news for me is that Paul did not do race 1, so as long as I complete the next race at roughly the same level as this, he cannot catch me in the overall ranking. With that said, here is the ranking (male only).
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(readr)
+library(dplyr)
+library(kableExtra)
+
+ranking <- readr::read_csv(file.path('data', 'overall_lead.csv'), show_col_types = FALSE) |>
+  filter(grepl("M", Age)) |>
+  arrange(desc(points)) |>
+  head(10) |>
+  select(all_of(c('Name', 'points', 'Age', 'n_races'))) |>
+  rename('Points' = 'points')
+
+kableExtra::kable(ranking)
+```
+
+This table tells me a few things:
+
+* If Paul Shortis does not show up at the next race, I have a shot at the championship. Unlikely, but possible. Otherwise, no way I can close that gap of 395 points.
+* For the Age Group championship, it is tight. I have a 53 points lead, and it does not take much to rack up more than 53 points: Swim 25m more, bike 500m more, run 200m more, and you have collected 60 extra points. What gives me hope is that until now I always managed to outperform Nick in every sport -well, except the bike on the first race obviously-. But you've never won until you crossed the finish line first! I still need to show up and work for it.
+
+
+## Waiting for race 4
+
+Race 4 is coming soon: May 4$^{th}$. It is going to be an interesting one. All out to protect the Age Group lead!
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+

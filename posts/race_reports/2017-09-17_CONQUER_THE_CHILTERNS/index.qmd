@@ -1,0 +1,72 @@
+---
+title: "Conquer The Chilterns"
+date: "2017-09-17"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png
+categories: [race report, swim]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png)
+
+A long swim in the Chiltern Hills, UK. This was a side event of a long course triathlon competition, and I decided to just test myself on a longer swim: 3K. 
+
+It went as planned. And by as planned I mean that I was one of the last of the water. I think just 2 or 3 older ladies in their 60s or 70s were still swimming once I finished...Also, when I got out I got a massive cramp to a leg. Never felt a cramp so painful before, I struggled to move for a good 5 minutes. Definitely swimming is not my cup of tea.
+
+```{r, echo=FALSE}
+library(DT)
+if(file.exists(file.path('data.json'))){
+  tmp <- jsonlite::fromJSON(file.path('data.json'))
+    breakdown <- tmp$breakdown
+    tmp$breakdown <- NULL
+    tmp <- as.data.frame(tmp) %>%
+      dplyr::bind_cols(breakdown)
+
+    details <- unlist(tmp$details)
+    if(!is.null(details)){
+      details <- paste0('<a href="',
+                        details, '">Link to activity file</a>')
+      details_names <- paste0('details_', seq(1, length(details)))
+    } else {
+      details_names <- NULL
+    }
+
+    tmp$details <- NULL
+
+
+    df <- as.data.frame(t(tmp)) %>%
+      dplyr::bind_rows(data.frame(V1 = details))
+
+    df <- data.frame('  ' = c(colnames(tmp), details_names),
+                     ' ' = df,
+                     check.names = FALSE)
+    colnames(df) <- NULL
+
+
+    datatable(df,
+              rownames = FALSE,
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  20
+              ))
+}
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2017-09-19_CONQUER_THE_CHILTERNS/img/00.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2017-09-19_CONQUER_THE_CHILTERNS/img/01.png){ width="100" group="hi" }
+
+
+:::
