@@ -25,6 +25,7 @@ allRaces <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport
        '</a>'),
          result_total = as.character(hms::as_hms(result_total)),
          result_total = ifelse(result_total == "00:00:00", '', result_total)) |>
+  arrange(desc(event_date)) |>
   select(c('event_date', 'Race', 'event_type', 'event_distance', "result_total")) |>
                 rename('Race type' = 'event_type',
                        'Race distance' = 'event_distance',
