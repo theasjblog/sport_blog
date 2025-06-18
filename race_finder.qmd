@@ -33,12 +33,17 @@ allRaces <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport
   mutate(blog_path = paste0(event_date,'_',event_name),
          blog_path = gsub(' ','_', blog_path)) |>
   left_join(all_dirs, by = 'blog_path') |>
-  select(c('event_date', 'event_name',  'event_type', 'event_distance', "result_total", 'blog_path', 'Race_analysis',)) |>
-  mutate(blog_path = paste0(
+  mutate(blog_path = ifelse(event_type != 'virtual', paste0(
     '<a href="posts/race_reports/',
     blog_path,
     '">Link</a>'
-  )) |>
+  ),
+  paste0(
+    '<a href="posts/others/',
+    blog_path,
+    '">Link</a>'
+  ))) |>
+  select(c('event_date', 'event_name',  'event_type', 'event_distance', "result_total", 'blog_path', 'Race_analysis',)) |>
   rename('Race type' = 'event_type',
          'Race name' = 'event_name',
          'Race distance' = 'event_distance',
