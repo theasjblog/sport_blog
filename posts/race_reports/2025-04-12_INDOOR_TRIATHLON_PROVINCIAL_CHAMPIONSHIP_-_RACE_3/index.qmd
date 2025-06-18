@@ -54,27 +54,71 @@ The run was my highlight of the day. I started easy. 3 guys went off immediately
 
 ### Race ranking
 
-In this race I finished 7$^{th}$ overall and 2$^{nd}$ in the Age Group. The guy that finished first was incredible: 21 swim laps (1050m), 10.5Km on the bike, and 18.5 run laps (3.7Km). Just no way I can keep up with him, especially in the water.
+In this race I finished 7$^{th}$ overall and 2$^{nd}$ in the Age Group. The guy that finished first was incredible: 21 swim laps (1050m), 10.5Km on the bike, and 18.5 run laps (3.7Km). Just no way I can keep up with him, especially in the water. This is the whole ranking for my age group.
 
-![Age group ranking for Race 3](https://storage.googleapis.com/blogs_josa/sport_small/2025-04-12_INDOOR_TRIATHLON_SERIES_RACE_3/img/02.png)
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(dplyr)
+library(arrow)
+library(kableExtra)
+
+all_races <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet')
+
+summary_race <- all_races |>
+  filter(event_date == '2025-04-12') |>
+  arrange(desc(result_final)) |>
+  mutate(overall_ranking = seq(1, n())) |>
+  group_by(category) |>
+  arrange(desc(result_final)) |>
+  mutate(ag_ranking = seq(1, n())) |>
+  ungroup() |>
+  filter(category == 'MALE40-49') |>
+  select(all_of(c(
+    'names',
+    'result_sport_1',
+    'result_sport_2',
+    'result_sport_3',
+    'result_final',
+    'overall_ranking',
+    'ag_ranking'
+  ))) |>
+  rename(
+    'Name' = 'names',
+    'Swim score' = 'result_sport_1',
+    'Bike score' = 'result_sport_2',
+    'Run score' = 'result_sport_3',
+    'Final score' = 'result_final',
+    'Overall ranking' = 'overall_ranking',
+    'Age Grooup ranking' = 'ag_ranking',
+  )
+
+
+kableExtra::kable(summary_race) |>
+  row_spec(which(summary_race$Name == "ADRIAN JOSEPH"), bold = TRUE)
+```
 
 ### Series ranking
 
-The good news for me is that Paul did not do race 1, so as long as I complete the next race at roughly the same level as this, he cannot catch me in the overall ranking. With that said, here is the ranking (male only).
+#### Overall ranking
+
+The good news for me is that Paul Bregin did not do race 1, so as long as I complete the next race at roughly the same level as this, he cannot catch me in the overall ranking. With that said, here is the overall ranking (male only).
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-library(readr)
-library(dplyr)
-library(kableExtra)
 
-ranking <- readr::read_csv(file.path('data', 'overall_lead.csv'), show_col_types = FALSE) |>
-  filter(grepl("M", Age)) |>
-  arrange(desc(points)) |>
-  head(10) |>
-  select(all_of(c('Name', 'points', 'Age', 'n_races'))) |>
-  rename('Points' = 'points')
+overall_ranking <- all_races |>
+  filter(event_date %in% c('2025-04-12', '2025-02-22')) |>
+  filter(gender == 'M') |>
+  group_by(names) |>
+  summarise(Points = sum(result_final, rm.na = TRUE),
+            n_races = n()) |>
+  arrange(desc(Points)) |>
+  slice_head(n=10) |>
+  rename(
+    'Name' = 'names'
+  )
+           
+ kableExtra::kable(overall_ranking) |>
+  row_spec(which(overall_ranking$Name == "ADRIAN JOSEPH"), bold = TRUE) 
 
-kableExtra::kable(ranking)
 ```
 
 This table tells me a few things:
@@ -83,49 +127,48 @@ This table tells me a few things:
 * For the Age Group championship, it is tight. I have a 53 points lead, and it does not take much to rack up more than 53 points: Swim 25m more, bike 500m more, run 200m more, and you have collected 60 extra points. What gives me hope is that until now I always managed to outperform Nick in every sport -well, except the bike on the first race obviously-. But you've never won until you crossed the finish line first! I still need to show up and work for it.
 
 
+#### Gender ranking
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+gender_ranking <- all_races |>
+  filter(event_date %in% c('2025-04-12', '2025-02-22')) |>
+  filter(category== 'MALE40-49') |>
+  group_by(names) |>
+  summarise(Points = sum(result_final, rm.na = TRUE),
+            n_races = n()) |>
+  arrange(desc(Points)) |>
+  slice_head(n=5) |>
+  rename(
+    'Name' = 'names'
+  )
+           
+ kableExtra::kable(gender_ranking) |>
+  row_spec(which(gender_ranking$Name == "ADRIAN JOSEPH"), bold = TRUE) 
+
+```
+
+
+I do have some competition to keep an eye on. While I managed to outrace Nick every time we met, there is not a very big difference. A bad swim, a run injury, or another mistake on the bike and I can lose my lead to him.
+
 ## Waiting for race 4
 
 Race 4 is coming soon: May 4$^{th}$. It is going to be an interesting one. All out to protect the Age Group lead!
 
 ```{r, echo=FALSE}
-library(DT)
-if(file.exists(file.path('data.json'))){
-  tmp <- jsonlite::fromJSON(file.path('data.json'))
-    breakdown <- tmp$breakdown
-    tmp$breakdown <- NULL
-    tmp <- as.data.frame(tmp) %>%
-      dplyr::bind_cols(breakdown)
+race_date <- "2025-04-12"
 
-    details <- unlist(tmp$details)
-    if(!is.null(details)){
-      details <- paste0('<a href="',
-                        details, '">Link to activity file</a>')
-      details_names <- paste0('details_', seq(1, length(details)))
-    } else {
-      details_names <- NULL
-    }
+source('../../../inst/aux_functions.R')
 
-    tmp$details <- NULL
-
-
-    df <- as.data.frame(t(tmp)) %>%
-      dplyr::bind_rows(data.frame(V1 = details))
-
-    df <- data.frame('  ' = c(colnames(tmp), details_names),
-                     ' ' = df,
-                     check.names = FALSE)
-    colnames(df) <- NULL
-
-
-    datatable(df,
+DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(as.character(event_date) == race_date)),
               rownames = FALSE,
+              filter = 'top',
               selection = 'single',
               escape = FALSE,
               options = list(
                 paging =TRUE,
-                pageLength =  20
+                pageLength =  10
               ))
-}
 ```
 
 

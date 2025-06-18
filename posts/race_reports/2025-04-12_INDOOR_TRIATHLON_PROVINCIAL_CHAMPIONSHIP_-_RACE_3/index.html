@@ -81,6 +81,8 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 </script>
+<script src="../../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <link href="../../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
 <script src="../../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <link href="../../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
@@ -89,6 +91,10 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 <link href="../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
 <script src="../../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="../../../site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+<script src="../../../site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="../../../site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+<script src="../../../site_libs/selectize-0.12.0/selectize.min.js"></script>
 <link href="../../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
 <script src="../../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 
@@ -221,7 +227,7 @@ window.Quarto = {
 <p><a href="https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png" class="img-fluid"></a></p>
 <section id="overview" class="level1">
 <h1>Overview</h1>
-<p>This was the third race in the Ontario Indoor Triathlon Championship series. I talked about the format in general in <a href="../2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/index.qmd">this page</a>.</p>
+<p>This was the third race in the Ontario Indoor Triathlon Championship series. I talked about the format in general in <a href="../../../posts/race_reports/2025-02-22_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_1/index.html">this page</a>.</p>
 <p>In summary, in this series you get points for how far you swim, bike, and run in 15 minutes. The further you go, the more points you get. The series is made by 4 races, but only the top 3 results count towards the final total. Whoever gets more points at then end of the series wins the championship and get the trophy. Age Grouper can still hope to win bragging rights -and a downloadable certificate- if they place at the top of their 10 years group.</p>
 <p>Going into this event I had 2 objective:</p>
 <ul>
@@ -269,91 +275,171 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="ranking">Ranking</h2>
 <section id="race-ranking" class="level3">
 <h3 class="anchored" data-anchor-id="race-ranking">Race ranking</h3>
-<p>In this race I finished 7<span class="math inline">\(^{th}\)</span> overall and 2<span class="math inline">\(^{nd}\)</span> in the Age Group. The guy that finished first was incredible: 21 swim laps (1050m), 10.5Km on the bike, and 18.5 run laps (3.7Km). Just no way I can keep up with him, especially in the water.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://storage.googleapis.com/blogs_josa/sport_small/2025-04-12_INDOOR_TRIATHLON_SERIES_RACE_3/img/02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Age group ranking for Race 3"><img src="https://storage.googleapis.com/blogs_josa/sport_small/2025-04-12_INDOOR_TRIATHLON_SERIES_RACE_3/img/02.png" class="img-fluid figure-img" alt="Age group ranking for Race 3"></a></p>
-<figcaption>Age group ranking for Race 3</figcaption>
-</figure>
-</div>
-</section>
-<section id="series-ranking" class="level3">
-<h3 class="anchored" data-anchor-id="series-ranking">Series ranking</h3>
-<p>The good news for me is that Paul did not do race 1, so as long as I complete the next race at roughly the same level as this, he cannot catch me in the overall ranking. With that said, here is the ranking (male only).</p>
+<p>In this race I finished 7<span class="math inline">\(^{th}\)</span> overall and 2<span class="math inline">\(^{nd}\)</span> in the Age Group. The guy that finished first was incredible: 21 swim laps (1050m), 10.5Km on the bike, and 18.5 run laps (3.7Km). Just no way I can keep up with him, especially in the water. This is the whole ranking for my age group.</p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Name</th>
-<th style="text-align: right;">Points</th>
-<th style="text-align: left;">Age</th>
-<th style="text-align: right;">n_races</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Name</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Swim score</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Bike score</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Run score</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Final score</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Overall ranking</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Age Grooup ranking</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Paul Shortis</td>
-<td style="text-align: right;">2798</td>
-<td style="text-align: left;">M19&lt;</td>
+<td style="text-align: left;">PAUL BREGIN</td>
+<td style="text-align: right;">420</td>
+<td style="text-align: right;">525</td>
+<td style="text-align: right;">463</td>
+<td style="text-align: right;">1408</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">ADRIAN JOSEPH</td>
+<td style="text-align: right; font-weight: bold;">310</td>
+<td style="text-align: right; font-weight: bold;">530</td>
+<td style="text-align: right; font-weight: bold;">413</td>
+<td style="text-align: right; font-weight: bold;">1253</td>
+<td style="text-align: right; font-weight: bold;">7</td>
+<td style="text-align: right; font-weight: bold;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PAUL BOSHYK</td>
+<td style="text-align: right;">310</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">1210</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NICK KOVACS</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">1200</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SEAN TEVLIN</td>
+<td style="text-align: right;">290</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">1190</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CHRIS SWEETING</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">445</td>
+<td style="text-align: right;">325</td>
+<td style="text-align: right;">1070</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STEVE YOUNG</td>
+<td style="text-align: right;">320</td>
+<td style="text-align: right;">425</td>
+<td style="text-align: right;">325</td>
+<td style="text-align: right;">1070</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CHRISTOPHER LASZLO</td>
+<td style="text-align: right;">260</td>
+<td style="text-align: right;">465</td>
+<td style="text-align: right;">288</td>
+<td style="text-align: right;">1013</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">8</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="series-ranking" class="level3">
+<h3 class="anchored" data-anchor-id="series-ranking">Series ranking</h3>
+<section id="overall-ranking" class="level4">
+<h4 class="anchored" data-anchor-id="overall-ranking">Overall ranking</h4>
+<p>The good news for me is that Paul Bregin did not do race 1, so as long as I complete the next race at roughly the same level as this, he cannot catch me in the overall ranking. With that said, here is the overall ranking (male only).</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Name</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Points</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n_races</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">PAUL SHORTIS</td>
+<td style="text-align: right;">2829</td>
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Adrian Joseph</td>
-<td style="text-align: right;">2403</td>
-<td style="text-align: left;">M40-49</td>
+<td style="text-align: left; font-weight: bold;">ADRIAN JOSEPH</td>
+<td style="text-align: right; font-weight: bold;">2409</td>
+<td style="text-align: right; font-weight: bold;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LUCIEN PERON</td>
+<td style="text-align: right;">2359</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NICK KOVACS</td>
+<td style="text-align: right;">2351</td>
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Nick Kovacs</td>
-<td style="text-align: right;">2350</td>
-<td style="text-align: left;">M40-49</td>
+<td style="text-align: left;">KEITH BROWN</td>
+<td style="text-align: right;">2249</td>
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Lucien Peron</td>
-<td style="text-align: right;">2333</td>
-<td style="text-align: left;">M50+</td>
+<td style="text-align: left;">PAUL DUHAMEL</td>
+<td style="text-align: right;">2149</td>
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Keith Brown</td>
-<td style="text-align: right;">2238</td>
-<td style="text-align: left;">M50+</td>
+<td style="text-align: left;">ROBERT CAMPBELL</td>
+<td style="text-align: right;">2086</td>
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Paul Duhamel</td>
-<td style="text-align: right;">2133</td>
-<td style="text-align: left;">M50+</td>
+<td style="text-align: left;">CHRISTOPHER LASZLO</td>
+<td style="text-align: right;">2077</td>
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Steve Young</td>
-<td style="text-align: right;">2070</td>
-<td style="text-align: left;">M40-49</td>
+<td style="text-align: left;">STEVE YOUNG</td>
+<td style="text-align: right;">2071</td>
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Robert Campbell</td>
-<td style="text-align: right;">2060</td>
-<td style="text-align: left;">M50+</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Christopher Laszlo</td>
-<td style="text-align: right;">2051</td>
-<td style="text-align: left;">M40-49</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Julian Kenney</td>
-<td style="text-align: right;">1685</td>
-<td style="text-align: left;">M50+</td>
+<td style="text-align: left;">JULIAN KENNEY</td>
+<td style="text-align: right;">1706</td>
 <td style="text-align: right;">2</td>
 </tr>
 </tbody>
 </table>
+
+
 </div>
 </div>
 <p>This table tells me a few things:</p>
@@ -362,14 +448,61 @@ window.Quarto = {
 <li>For the Age Group championship, it is tight. I have a 53 points lead, and it does not take much to rack up more than 53 points: Swim 25m more, bike 500m more, run 200m more, and you have collected 60 extra points. What gives me hope is that until now I always managed to outperform Nick in every sport -well, except the bike on the first race obviously-. But you’ve never won until you crossed the finish line first! I still need to show up and work for it.</li>
 </ul>
 </section>
+<section id="gender-ranking" class="level4">
+<h4 class="anchored" data-anchor-id="gender-ranking">Gender ranking</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Name</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Points</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n_races</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">ADRIAN JOSEPH</td>
+<td style="text-align: right; font-weight: bold;">2409</td>
+<td style="text-align: right; font-weight: bold;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NICK KOVACS</td>
+<td style="text-align: right;">2351</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CHRISTOPHER LASZLO</td>
+<td style="text-align: right;">2077</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STEVE YOUNG</td>
+<td style="text-align: right;">2071</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PAUL BREGIN</td>
+<td style="text-align: right;">1409</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>I do have some competition to keep an eye on. While I managed to outrace Nick every time we met, there is not a very big difference. A bad swim, a run injury, or another mistake on the bike and I can lose my lead to him.</p>
+</section>
+</section>
 </section>
 <section id="waiting-for-race-4" class="level2">
 <h2 class="anchored" data-anchor-id="waiting-for-race-4">Waiting for race 4</h2>
 <p>Race 4 is coming soon: May 4<span class="math inline">\(^{th}\)</span>. It is going to be an interesting one. All out to protect the Age Group lead!</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-205be4c706c8dd521cb1" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-205be4c706c8dd521cb1">{"x":{"filter":"none","vertical":false,"data":[["race","type","distance","position_overall","position_category","time","date","swim","t1","bike","t2","run","details_1"],["INDOOR TRIATHLON PROVINCIAL CHAMPIONSHIP - RACE 3","indoor triathlon","15min/15min/15min","7/94","2/8","0:45:00","2025-04-12","775m","10:00","10.6Km","10:00","3.3Km","<a href=\"https://connect.garmin.com/modern/activity/18810070492\">Link to activity file<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"pageLength":20,"columnDefs":[{"name":null,"targets":0},{"name":null,"targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-13e7b38fa86628b65c54" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-13e7b38fa86628b65c54">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["Final time","Sport 1 time","Sport 2 time","Sport 3 Time","Overall ranking","Gender ranking","Category ranking","Recording device","Activity details"],["00:20:53","00:05:10","00:08:50","00:06:53","7/50","4/26","2/8","GARMIN FENIX5_PLUS","<a href=https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222025-04-12%20-%20INDOOR%20TRIATHLON%20PROVINCIAL%20CHAMPIONSHIP%20-%20RACE%203%20-%20indoor%20triathlon%22>Details<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>INDOOR TRIATHLON PROVINCIAL CHAMPIONSHIP - RACE 3<\/th>\n      <th>indoor triathlon 15min/15min/15min<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"pageLength":10,"columnDefs":[{"name":"INDOOR TRIATHLON PROVINCIAL CHAMPIONSHIP - RACE 3","targets":0},{"name":"indoor triathlon 15min/15min/15min","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
@@ -801,7 +934,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="theasjblog/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"right","openEffect":"fade","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"fade","descPosition":"right","selector":".lightbox","closeEffect":"fade","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
