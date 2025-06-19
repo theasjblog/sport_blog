@@ -30,45 +30,21 @@ At the end I finished in 1h15m54s. About 1.5m faster than last year. of this 90s
 As for the ranking, I could not defend my 2023 title. The guy who finished first, and Australian, was way faster in every discipline. He was about 3min faster on the swim, 2min faster on the bike, and 1m faster on the run. I might be able to get to run at that pace, and with a similarly spech'ed bike I might be able to post the same time, but the swim was just way too fast for me. I really need to find a way to work on my swim if I want to step up the game.
 
 
-```{r, echo=FALSE}
-library(DT)
-if(file.exists(file.path('data.json'))){
-  tmp <- jsonlite::fromJSON(file.path('data.json'))
-    breakdown <- tmp$breakdown
-    tmp$breakdown <- NULL
-    tmp <- as.data.frame(tmp) %>%
-      dplyr::bind_cols(breakdown)
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2024-07-07"
 
-    details <- unlist(tmp$details)
-    if(!is.null(details)){
-      details <- paste0('<a href="',
-                        details, '">Link to activity file</a>')
-      details_names <- paste0('details_', seq(1, length(details)))
-    } else {
-      details_names <- NULL
-    }
+source('../../../inst/aux_functions.R')
 
-    tmp$details <- NULL
-
-
-    df <- as.data.frame(t(tmp)) %>%
-      dplyr::bind_rows(data.frame(V1 = details))
-
-    df <- data.frame('  ' = c(colnames(tmp), details_names),
-                     ' ' = df,
-                     check.names = FALSE)
-    colnames(df) <- NULL
-
-
-    datatable(df,
+DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(as.character(event_date) == race_date)),
               rownames = FALSE,
+              filter = 'top',
               selection = 'single',
               escape = FALSE,
               options = list(
                 paging =TRUE,
-                pageLength =  20
+                pageLength =  10
               ))
-}
 ```
 
 
