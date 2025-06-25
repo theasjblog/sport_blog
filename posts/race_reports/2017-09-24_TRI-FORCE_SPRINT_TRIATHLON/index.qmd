@@ -1,0 +1,48 @@
+---
+title: "TriForce Sprint Triathlon"
+date: "2017-07-01"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2017_triforce/img/01.jpg
+categories: [race report, triathlon]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2017_triforce/img/01.jpg)
+
+While I was living in Hemel Hemsptead, UK, I was part of the triathlon club Triforce. Every year, we organized the club champs. Pretty unofficial and on run on a honest based system, which is fair, since the main point of the day was to build some camaraderie and just have some fun.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2017-09-24"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(as.character(event_date) == race_date)),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2017_triforce/img/01.jpg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2017_triforce/img/02.jpg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2017_triforce/img/03.jpg){ width="100" group="hi" }
+
+
+:::

@@ -32,6 +32,7 @@ Overall the race was not bad. I set a new PB for the distance, improving the old
 
 As a qualifying event, I would have liked to finish higher up, but I cannot control who show up to a race. I just need to focus on how I executed the race plan.
 
+[Full race details](http://127.0.0.1:6127/?_inputs_&selector=%222024-06-16%20-%20GUELPH%20LAKE%201%20SUBARU%20TRIATHLON%20-%20sprint%20triathlon%22){target="_blank"}.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2024-06-16"

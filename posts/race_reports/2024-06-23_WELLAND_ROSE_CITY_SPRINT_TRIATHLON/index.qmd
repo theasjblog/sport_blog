@@ -40,6 +40,8 @@ The last annoying bit of the day was the very long delay for the award: almost 3
 
 But I made a friend: the guy who finished 3rd: Robert Eso. We'll meet again later this year in Berrie.
 
+[Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222024-06-23%20-%20WELLAND%20ROSE%20CITY%20SPRINT%20TRIATHLON%20-%20sprint%20triathlon%22){target="_blank"}.
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2024-06-23"
 

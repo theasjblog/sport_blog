@@ -23,45 +23,23 @@ The bike and the run routes had a couple of minor hills, but overall a quite fas
 
 As always, the post race was great. Multisport Canada really knows how to put together an after race party. Plenty of choices between pizza, energy bars, fruit, etc.
 
-```{r, echo=FALSE}
-library(DT)
-if(file.exists(file.path('data.json'))){
-  tmp <- jsonlite::fromJSON(file.path('data.json'))
-    breakdown <- tmp$breakdown
-    tmp$breakdown <- NULL
-    tmp <- as.data.frame(tmp) %>%
-      dplyr::bind_cols(breakdown)
+[Full race details](http://127.0.0.1:6127/?_inputs_&selector=%222023-09-09%20-%20LAKESIDE%20SPRINT%20TRIATHLON%20-%20sprint%20triathlon%22){target="_blank"}.
 
-    details <- unlist(tmp$details)
-    if(!is.null(details)){
-      details <- paste0('<a href="',
-                        details, '">Link to activity file</a>')
-      details_names <- paste0('details_', seq(1, length(details)))
-    } else {
-      details_names <- NULL
-    }
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2023-09-09"
 
-    tmp$details <- NULL
+source('../../../inst/aux_functions.R')
 
-
-    df <- as.data.frame(t(tmp)) %>%
-      dplyr::bind_rows(data.frame(V1 = details))
-
-    df <- data.frame('  ' = c(colnames(tmp), details_names),
-                     ' ' = df,
-                     check.names = FALSE)
-    colnames(df) <- NULL
-
-
-    datatable(df,
+DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(as.character(event_date) == race_date)),
               rownames = FALSE,
+              filter = 'top',
               selection = 'single',
               escape = FALSE,
               options = list(
                 paging =TRUE,
-                pageLength =  20
+                pageLength =  10
               ))
-}
 ```
 
 

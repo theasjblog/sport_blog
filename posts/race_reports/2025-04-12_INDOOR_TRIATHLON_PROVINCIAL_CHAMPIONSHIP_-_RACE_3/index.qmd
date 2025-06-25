@@ -154,6 +154,8 @@ I do have some competition to keep an eye on. While I managed to outrace Nick ev
 
 Race 4 is coming soon: May 4$^{th}$. It is going to be an interesting one. All out to protect the Age Group lead!
 
+[Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222025-04-12%20-%20INDOOR%20TRIATHLON%20PROVINCIAL%20CHAMPIONSHIP%20-%20RACE%203%20-%20indoor%20triathlon%22){target="_blank"}.
+
 ```{r, echo=FALSE}
 race_date <- "2025-04-12"
 

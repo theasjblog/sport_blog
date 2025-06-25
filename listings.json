@@ -1,5 +1,31 @@
 [
   {
+    "listing": "/posts/others.html",
+    "items": [
+      "/posts/others/2025-03-04_finis_smart_first_impressions/index.html",
+      "/posts/others/2025-02-15_season_kit/index.html",
+      "/posts/others/2025-01-31_series_champion/index.html",
+      "/posts/others/2025-01-06_season_planning/index.html",
+      "/posts/others/2024-12-22_age_group/index.html",
+      "/posts/others/2024-12-16_welcome/index.html",
+      "/posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html",
+      "/posts/others/2023-12-31_END_OF_YEAR/index.html",
+      "/posts/others/2023-08-19_3_PORT_TOUR/index.html",
+      "/posts/others/2023-01-01_COTSWOLD_WAY/index.html",
+      "/posts/others/2023-01-01_THE_ENGLISH_CHANNEL/index.html",
+      "/posts/others/2023-01-01_NIAGARA_FALLS/index.html",
+      "/posts/others/2022-01-01_SCANDINAVIA_GARMIN_TACX/index.html",
+      "/posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html",
+      "/posts/others/2020-01-01_LANDS_END_TO_JOHN_O’GROATS/index.html",
+      "/posts/others/2020-01-01_HADRIAN’S_WALL/index.html",
+      "/posts/others/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/index.html",
+      "/posts/others/2019-03-31_SWIMATHON/index.html",
+      "/posts/others/2018-05-20_BIKE_OXFORD/index.html",
+      "/posts/others/2018-04-28_SWIMATHON/index.html",
+      "/posts/others/2017-04-09_SWIMATHON/index.html"
+    ]
+  },
+  {
     "listing": "/posts/race_reports.html",
     "items": [
       "/posts/race_reports/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/index.html",
@@ -14,7 +40,6 @@
       "/posts/race_reports/2024-06-02_MILTON_SUBARU_TRIATHLON/index.html",
       "/posts/race_reports/2024-04-28_BENEVA_MISSISSAUGA/index.html",
       "/posts/race_reports/2023-09-09_LAKESIDE_SPRINT_TRIATHLON/index.html",
-      "/posts/race_reports/2023-08-19_3_PORT_TOUR/index.html",
       "/posts/race_reports/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/index.html",
       "/posts/race_reports/2023-06-17_BEACH_STRIP_PARKRUN/index.html",
       "/posts/race_reports/2023-03-25_BEACH_STRIP_PARKRUN/index.html",
@@ -32,25 +57,21 @@
       "/posts/race_reports/2019-05-26_EDINBURGH_MARATHON/index.html",
       "/posts/race_reports/2019-05-18_STANBOROUGH_AQUATHLON/index.html",
       "/posts/race_reports/2019-04-14_REGENT’S_PARK_HALF_MARATHON/index.html",
-      "/posts/race_reports/2019-03-31_SWIMATHON/index.html",
       "/posts/race_reports/2019-03-10_FINSBURY_PARK_RUN/index.html",
       "/posts/race_reports/2018-11-25_HATFIELD_5/index.html",
       "/posts/race_reports/2018-07-22_BEDFORDSHIRE_SPRINT_TRIATHLON/index.html",
       "/posts/race_reports/2018-07-14_GADEBRIDGE_PARKRUN/index.html",
       "/posts/race_reports/2018-06-10_ST._ALBANS_HALF_MARATHON/index.html",
       "/posts/race_reports/2018-05-30_HILLINGDON_TT/index.html",
-      "/posts/race_reports/2018-05-20_BIKE_OXFORD/index.html",
-      "/posts/race_reports/2018-04-28_SWIMATHON/index.html",
       "/posts/race_reports/2017-12-26_STRAGIAXÁ/index.html",
       "/posts/race_reports/2017-11-19_KNEBWORTH_HALF_MARATHON/index.html",
       "/posts/race_reports/2017-10-28_GADEBRIDGE_PARKRUN/index.html",
       "/posts/race_reports/2017-10-01_HEMEL_HEMPSTEAD_TRIATHLON/index.html",
       "/posts/race_reports/2017-09-17_CONQUER_THE_CHILTERNS/index.html",
       "/posts/race_reports/2017-09-02_GADEBRIDGE_PARKRUN/index.html",
-      "/posts/race_reports/2017_triforce/index.html",
+      "/posts/race_reports/2017-09-24_TRI-FORCE_SPRINT_TRIATHLON/index.html",
       "/posts/race_reports/2017-05-01_THAMES_TURBO_SPRINT_TRIATHLON/index.html",
       "/posts/race_reports/2017-04-29_TOTAL_MOTION_AQUATHLON/index.html",
-      "/posts/race_reports/2017-04-09_SWIMATHON/index.html",
       "/posts/race_reports/2017-03-25_FULHAM_PALACE_PARKRUN/index.html",
       "/posts/race_reports/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/index.html",
       "/posts/race_reports/2017-02-25_FULHAM_PALACE_PARKRUN/index.html",
@@ -117,27 +138,6 @@
       "/posts/race_reports/1997-09-30_BOSCARDIN_FESTA_DELL’ACCOGLIENZA/index.html",
       "/posts/race_reports/1996-04-01_C.S.I._-_U.S._SUMMANO_1946-1996/index.html",
       "/posts/race_reports/1993-08-01_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/index.html"
-    ]
-  },
-  {
-    "listing": "/posts/others.html",
-    "items": [
-      "/posts/others/2025-03-04_finis_smart_first_impressions/index.html",
-      "/posts/others/2025-02-15_season_kit/index.html",
-      "/posts/others/2025-01-31_series_champion/index.html",
-      "/posts/others/2025-01-06_season_planning/index.html",
-      "/posts/others/2024-12-22_age_group/index.html",
-      "/posts/others/2024-12-16_welcome/index.html",
-      "/posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html",
-      "/posts/others/2023-12-31_END_OF_YEAR/index.html",
-      "/posts/others/2023-01-01_COTSWOLD_WAY/index.html",
-      "/posts/others/2023-01-01_THE_ENGLISH_CHANNEL/index.html",
-      "/posts/others/2023-01-01_NIAGARA_FALLS/index.html",
-      "/posts/others/2022-01-01_SCANDINAVIA_GARMIN_TACX/index.html",
-      "/posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html",
-      "/posts/others/2020-01-01_LANDS_END_TO_JOHN_O’GROATS/index.html",
-      "/posts/others/2020-01-01_HADRIAN’S_WALL/index.html",
-      "/posts/others/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/index.html"
     ]
   }
 ]

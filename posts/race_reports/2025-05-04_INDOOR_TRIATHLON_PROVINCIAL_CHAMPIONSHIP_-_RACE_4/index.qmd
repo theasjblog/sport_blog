@@ -311,6 +311,7 @@ kable(official_records)
 
 All in all, I’m happy with how things went. There’s clear improvement across the board, and more importantly, I felt stronger each time out. That’s a good sign as I head into the outdoor season. Let’s see what the next phase brings!
 
+[Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222025-05-04%20-%20INDOOR%20TRIATHLON%20PROVINCIAL%20CHAMPIONSHIP%20-%20RACE%204%20-%20indoor%20triathlon%22){target="_blank"}.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2025-05-04"
