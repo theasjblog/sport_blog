@@ -52,6 +52,7 @@ Despite all this, I somehow managed to snag 2nd in my age group - though I'll ad
 
 While this wasn't my finest showing, it's important to note that Multisport Canada put on a fantastic event - my struggles were entirely self-inflicted. Looking on the bright side, we now have a baseline for the season. And hey, there's nowhere to go but up from here... right?
 
+[Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222025-06-08%20-%20GRAVENHURST%20SPRINT%20TRIATHLON%20-%20sprint%20triathlon%22){target="_blank"}.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2025-06-08"

@@ -1,0 +1,60 @@
+---
+title: "3 Port Tour"
+date: "2023-08-19"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/01.png
+categories: [race report, bike]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/01.png)
+
+This was a tough one. I prepared for it by progressively hitting 100K to 120K rides, but 160K is something different.
+
+The route was very flat, except for two short but brutal uphill. I started off on my own, and around the 40K marker I caught a small group. We took turns in front, but it was a bit of a mistake. That made me push a bit too hard too early.
+
+At around 100K there was a lunch break. The stands were very well stocked with plenty of options. Past, pizza, fruit, etc. I was not planning to stop for long, so I was mostly worried about avoiding getting my legs to seize up, and overeating. I did not overeat, in hindsight, I should have another serving of pasta.
+
+A bit after lunch there was the worst part. A long stretch of road on the sun, no shade, slightly uphill. That cooked me good.
+
+The last 20K or so were also pretty hard, between the heath and the accumulated tiredness, it was hard to bring the bike home.
+
+But I did. Overall a fun day out, even if not my favourite kind of sporting challenge. The only major downside is that cycling events like this are more like a parkrun that a competition. There is plenty of time to chat, but no official timing, ranking, or medal.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2023-08-19"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(as.character(event_date) == race_date)),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/00.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/01.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/02.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/04.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/05.png){ width="100" group="hi" }
+
+
+:::

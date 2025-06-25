@@ -31,6 +31,8 @@ Finally, the run. My legs were not into it at all, and the few hills along the c
 
 Also, turns out that my fancy carbon plated running shoes can give me blisters wif my feet are wet and there is grit inside the shoes. Not great.
 
+[Full race details](http://127.0.0.1:6127/?_inputs_&selector=%222024-06-02%20-%20MILTON%20SUBARU%20TRIATHLON%20-%20sprint%20triathlon%22){target="_blank"}.
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2024-06-02"
 

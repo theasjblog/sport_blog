@@ -27,47 +27,23 @@ A tough day, but it was fun. I'm just not sure I want to do another one, and tha
 
 Also, I had to do such a high volume at low intensity, that for years I felt like the marathon training killed my race speed.
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2019-05-26"
 
-```{r, echo=FALSE}
-library(DT)
-if(file.exists(file.path('data.json'))){
-  tmp <- jsonlite::fromJSON(file.path('data.json'))
-    breakdown <- tmp$breakdown
-    tmp$breakdown <- NULL
-    tmp <- as.data.frame(tmp) %>%
-      dplyr::bind_cols(breakdown)
+source('../../../inst/aux_functions.R')
 
-    details <- unlist(tmp$details)
-    if(!is.null(details)){
-      details <- paste0('<a href="',
-                        details, '">Link to activity file</a>')
-      details_names <- paste0('details_', seq(1, length(details)))
-    } else {
-      details_names <- NULL
-    }
-
-    tmp$details <- NULL
-
-
-    df <- as.data.frame(t(tmp)) %>%
-      dplyr::bind_rows(data.frame(V1 = details))
-
-    df <- data.frame('  ' = c(colnames(tmp), details_names),
-                     ' ' = df,
-                     check.names = FALSE)
-    colnames(df) <- NULL
-
-
-    datatable(df,
+DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(as.character(event_date) == race_date)),
               rownames = FALSE,
+              filter = 'top',
               selection = 'single',
               escape = FALSE,
               options = list(
                 paging =TRUE,
-                pageLength =  20
+                pageLength =  10
               ))
-}
 ```
+
 
 ::: {layout-ncol=4}
 ![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/00.png){ width="100" group="hi" }

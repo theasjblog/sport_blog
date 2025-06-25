@@ -39,6 +39,8 @@ The official records also say I finished 6$^{th}$, not 5$^{th}$. But when I look
 
 Finally, back to Rob. Turns out he swam in 15min, so I won there, then he cycled at 36km/h (again, point for me), but he messed up because he did 5 laps instead of 4. That took some wind out of his sail and finished the run in 23min. That sucks. I did that mistake in Birmingham years ago, and I know it is infuriating.
 
+[Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222024-08-11%20-%20BARRIE%20SPRINT%20TRIATHLON%20-%20sprint%20triathlon%22){target="_blank"}.
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2024-08-11"
 

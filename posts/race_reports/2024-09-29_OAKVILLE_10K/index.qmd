@@ -15,6 +15,8 @@ lightbox:
 
 Last race of the year. One of the worst 10K ever time wise, but the last month was not great for training. Moving from Burlington to Brampton completely destroyed the training routine.
 
+[Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222024-09-29%20-%20OAKVILLE%2010K%20-%20run%22){target="_blank"}.
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2024-09-29"
 
