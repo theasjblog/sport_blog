@@ -1,8 +1,8 @@
 ---
-title: "Low Countries Garmin Tacx"
-date: "2022-01-01"
+title: "Niagara Falls"
+date: "2023-01-02"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_NIAGARA_FALLS/img/00.png
 categories: [race report, virtual]
 format: html
 lightbox:
@@ -11,10 +11,10 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_NIAGARA_FALLS/img/00.png)
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2022-01-01"
+race_date <- "2023-01-02"
 
 source('../../../inst/aux_functions.R')
 
@@ -35,7 +35,9 @@ DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.c
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/img/00.png){ width="100" group="hi" }
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_NIAGARA_FALLS/img/00.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_NIAGARA_FALLS/img/01.png){ width="100" group="hi" }
 
 
 :::

@@ -13,47 +13,22 @@ lightbox:
 ---
 ![](https://storage.googleapis.com/blogs_josa/sport_small/2014-07-20_BIRMINGHAM_TRIATHLON/img/00.png)
 
-```{r, echo=FALSE}
-library(DT)
-if(file.exists(file.path('data.json'))){
-  tmp <- jsonlite::fromJSON(file.path('data.json'))
-    breakdown <- tmp$breakdown
-    tmp$breakdown <- NULL
-    tmp <- as.data.frame(tmp) %>%
-      dplyr::bind_cols(breakdown)
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2014-07-20"
 
-    details <- unlist(tmp$details)
-    if(!is.null(details)){
-      details <- paste0('<a href="',
-                        details, '">Link to activity file</a>')
-      details_names <- paste0('details_', seq(1, length(details)))
-    } else {
-      details_names <- NULL
-    }
+source('../../../inst/aux_functions.R')
 
-    tmp$details <- NULL
-
-
-    df <- as.data.frame(t(tmp)) %>%
-      dplyr::bind_rows(data.frame(V1 = details))
-
-    df <- data.frame('  ' = c(colnames(tmp), details_names),
-                     ' ' = df,
-                     check.names = FALSE)
-    colnames(df) <- NULL
-
-
-    datatable(df,
+DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(as.character(event_date) == race_date)),
               rownames = FALSE,
+              filter = 'top',
               selection = 'single',
               escape = FALSE,
               options = list(
                 paging =TRUE,
-                pageLength =  20
+                pageLength =  10
               ))
-}
 ```
-
 
 
 
