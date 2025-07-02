@@ -1,0 +1,42 @@
+---
+title: "The English Channel"
+date: "2023-01-03"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_THE_ENGLISH_CHANNEL/img/00.png
+categories: [race report, virtual]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_THE_ENGLISH_CHANNEL/img/00.png)
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2023-01-03"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(as.character(event_date) == race_date)),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_THE_ENGLISH_CHANNEL/img/00.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_THE_ENGLISH_CHANNEL/img/01.png){ width="100" group="hi" }
+
+
+:::
