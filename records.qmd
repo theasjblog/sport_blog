@@ -29,7 +29,8 @@ bests <- all_res |>
   arrange(event_name, distance_sport_1) |>
   group_by(event_type, event_distance) |>
   summarize(
-    fastest_time = min(result_total, na.rm = TRUE)
+    fastest_time = min(result_total, na.rm = TRUE),
+    category_podiums = sum(ranking_category <= 3, na.rm = TRUE)
   ) |>
   mutate(
     fastest_time = hms::as_hms(fastest_time)
