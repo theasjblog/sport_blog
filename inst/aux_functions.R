@@ -46,7 +46,7 @@ get_summary_data <- function(df){
                       gsub(' ', "%20", df$event_name),
                       "%20-%20",
                       gsub(' ', "%20", df$event_type),
-                      '%22>',
+                      '%22 target="_blank">',
                       "Details", 
                       '</a>')
       )
