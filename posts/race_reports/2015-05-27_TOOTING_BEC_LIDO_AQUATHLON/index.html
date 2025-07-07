@@ -89,6 +89,10 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 <link href="../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
 <script src="../../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="../../../site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+<script src="../../../site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="../../../site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+<script src="../../../site_libs/selectize-0.12.0/selectize.min.js"></script>
 <link href="../../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
 <script src="../../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 
@@ -191,8 +195,8 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 <p><a href="https://storage.googleapis.com/blogs_josa/sport_small/2015-05-27_TOOTING_BEC_LIDO_AQUATHLON/img/00.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://storage.googleapis.com/blogs_josa/sport_small/2015-05-27_TOOTING_BEC_LIDO_AQUATHLON/img/00.png" class="img-fluid"></a></p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-117ba253f51fd1a7143f" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-117ba253f51fd1a7143f">{"x":{"filter":"none","vertical":false,"data":[["race","type","distance","time","date","swim","t1","run","details_1"],["TOOTING BEC LIDO AQUATHLON","aquathlon","1K/7.5K","53m 26s","2015-05-27","21m 42s","41s","31m 3s","<a href=\"https://connect.garmin.com/modern/activity/786822659\">Link to activity file<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"pageLength":20,"columnDefs":[{"name":null,"targets":0},{"name":null,"targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-d434f0874045b3739de8" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-d434f0874045b3739de8">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["Final time","Sport 1 time","T 1 time","Sport 2 time","Recording device","Activity details"],["00:53:26","00:21:42","00:00:41","00:31:03","GARMIN FR910XT","<a href=https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222015-05-27%20-%20TOOTING%20BEC%20LIDO%20AQUATHLON%20-%20aquathlon%22 target=\"_blank\">Details<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TOOTING BEC LIDO AQUATHLON<\/th>\n      <th>aquathlon 1K/7.5K<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"pageLength":10,"columnDefs":[{"name":"TOOTING BEC LIDO AQUATHLON","targets":0},{"name":"aquathlon 1K/7.5K","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div>
@@ -632,7 +636,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="theasjblog/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"right","loop":false,"openEffect":"fade","selector":".lightbox","closeEffect":"fade"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"fade","selector":".lightbox","openEffect":"fade","descPosition":"right"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

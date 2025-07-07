@@ -89,6 +89,10 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 <link href="../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
 <script src="../../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="../../../site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+<script src="../../../site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="../../../site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+<script src="../../../site_libs/selectize-0.12.0/selectize.min.js"></script>
 <link href="../../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
 <script src="../../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 
@@ -191,8 +195,8 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 <p><a href="https://storage.googleapis.com/blogs_josa/sport_small/2019-06-15_STANBOROUGH_AQUATHLON/img/00.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://storage.googleapis.com/blogs_josa/sport_small/2019-06-15_STANBOROUGH_AQUATHLON/img/00.png" class="img-fluid"></a></p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-4eea8346937c5591a514" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-4eea8346937c5591a514">{"x":{"filter":"none","vertical":false,"data":[["race","type","distance","time","date","swim","t1","run","details_1"],["STANBOROUGH AQUATHLON","aquathlon","750m/5K","39m 24s","2019-06-15","16m 2s","38s","22m 42s","<a href=\"https://connect.garmin.com/modern/activity/3748667691\">Link to activity file<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"pageLength":20,"columnDefs":[{"name":null,"targets":0},{"name":null,"targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-913671aa87b4e5078947" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-913671aa87b4e5078947">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["Final time","Sport 1 time","T 1 time","Sport 2 time","Recording device","Activity details"],["00:39:24","00:16:02","00:00:38","00:22:42","GARMIN FR735XT","<a href=https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222019-06-15%20-%20STANBOROUGH%20AQUATHLON%20-%20aquathlon%22 target=\"_blank\">Details<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>STANBOROUGH AQUATHLON<\/th>\n      <th>aquathlon 750m/5K<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"pageLength":10,"columnDefs":[{"name":"STANBOROUGH AQUATHLON","targets":0},{"name":"aquathlon 750m/5K","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div>
@@ -638,7 +642,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="theasjblog/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"fade","loop":false,"selector":".lightbox","closeEffect":"fade","descPosition":"right"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"right","loop":false,"openEffect":"fade","closeEffect":"fade"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

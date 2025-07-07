@@ -89,6 +89,10 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 <link href="../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="../../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
 <script src="../../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="../../../site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+<script src="../../../site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="../../../site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+<script src="../../../site_libs/selectize-0.12.0/selectize.min.js"></script>
 <link href="../../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
 <script src="../../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 
@@ -194,10 +198,11 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 <p>The swim was on calm, warm water, so no problem there.</p>
 <p>The bike and the run routes had a couple of minor hills, but overall a quite fast race.</p>
 <p>As always, the post race was great. Multisport Canada really knows how to put together an after race party. Plenty of choices between pizza, energy bars, fruit, etc.</p>
+<p><a href="http://127.0.0.1:6127/?_inputs_&amp;selector=%222023-09-09%20-%20LAKESIDE%20SPRINT%20TRIATHLON%20-%20sprint%20triathlon%22" target="_blank">Full race details</a>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-0a9a89c679c820d8571a" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-0a9a89c679c820d8571a">{"x":{"filter":"none","vertical":false,"data":[["race","type","distance","position_overall","position_category","time","date","swim","t1","bike","t2","run","details_1"],["LAKESIDE SPRINT TRIATHLON","sprint triathlon","750m/20K/5K","37/370","8/40","1h 15m 19s","2023-09-09","14m 27s","1m 28s","36m 17s","47s","22m 20s","<a href=\"https://connect.garmin.com/modern/activity/11985865446\">Link to activity file<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"pageLength":20,"columnDefs":[{"name":null,"targets":0},{"name":null,"targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-018e0d4a6fb5eb4afd38" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-018e0d4a6fb5eb4afd38">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["Final time","Sport 1 time","Sport 2 time","Sport 3 Time","Overall ranking","Gender ranking","Category ranking","Recording device","Activity details"],["01:15:19","00:14:27","00:36:17","00:22:20","36/360","32/194","8/36","GARMIN FENIX5_PLUS","<a href=https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222023-09-09%20-%20LAKESIDE%20SPRINT%20TRIATHLON%20-%20sprint%20triathlon%22 target=\"_blank\">Details<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>LAKESIDE SPRINT TRIATHLON<\/th>\n      <th>sprint triathlon 750m/20K/5K<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"pageLength":10,"columnDefs":[{"name":"LAKESIDE SPRINT TRIATHLON","targets":0},{"name":"sprint triathlon 750m/20K/5K","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div>
@@ -646,7 +651,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="theasjblog/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"right","closeEffect":"fade","selector":".lightbox","openEffect":"fade"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","openEffect":"fade","descPosition":"right","selector":".lightbox","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
