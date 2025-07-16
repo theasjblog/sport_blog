@@ -1,0 +1,129 @@
+---
+title: "Bracebridge Sprint Triathlon"
+date: "2025-07-13"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/DSC08931.jpg
+categories: [race report, triathlon]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+![M40-45 podium.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/DSC08931.jpg)
+
+**Bracebridge, Year Three: When the Race Says "Not Today"**
+
+Well, here we are again — back in beautiful Bracebridge for the third year running! This time it’s part of my lead-up to the Age Group World Championships. While this wasn’t meant to be an “A” race, I still showed up hoping to match — or beat — my performances from the last two years.
+
+*Spoiler alert: that didn’t happen.*
+
+## The build up to the race
+
+Let’s rewind a bit. Two weeks out from the race, things started going sideways. Sleep? Barely. I was averaging 5–6 hours a night, never more than two hours in a row. Basically, I was sleepwalking to the start line.
+
+Then the shoulder saga began. I did a 2,600m open water swim in Kennisis Lake and — boom — right shoulder pain. Bad enough that I had to stay out of the water for a week. And when I did get back in, every single open water swim was painfully slower — like 15–20 seconds per 100m slower than my pool pace. Sure, pools are faster (thanks, flip turns), but that kind of drop? Come on.
+
+As if that wasn’t enough, my wetsuit felt like it was trying to suffocate me. I might’ve gained a bit of muscle lately (thanks, strength training!), and the suit just wasn’t having it. It even gave me a couple of cuts near the shoulders, and I could feel water rushing into the sleeves. If wetsuits ended up being optional, I was 100% ditching it.
+
+Oh, and I did something really smart too — went kayaking for 30+ km over a few days at the cottage, just because I love it. My shoulder had just recovered and I figured, “Why not?” Turns out: because you have a race coming up is why not.
+
+## Race day. Let’s go.
+
+
+### Swim
+
+![Swim.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/DSC00993.jpg)
+
+My swim strategy was "don’t blow up." I stayed calm, maybe too calm. In hindsight, I think I could’ve gone faster even if I went into the red. My time? Over 17 minutes for 750m — easily one of my slowest swims ever. Not exactly the tone I wanted to set.
+
+### T1
+
+T1 was smooth — until the end. I made the ultimate rookie mistake: unracked the bike before putting my helmet on. Yep. That rule you literally can’t miss because your helmet is on the handlebars? Broke it. A referee saw me, said something ending in “5-second penalty” (should’ve been 15?), but didn’t point me to a penalty box. I never saw one either. So I just... kept going. Not ideal.
+
+### Bike 
+
+![Bike.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/DSC02883.jpg)
+
+Onto the bike. This is usually where I claw back some ground. Not today. Everyone around me had slick TT bikes and looked strong. I had my road bike, and recently removed the aero bars, so I was still adjusting to the new position. Oh, and my Garmin decided to nap through the whole ride — wouldn’t start, wouldn’t record, wouldn’t even pretend to work. I tried to fire up a new activity mid-race but gave up. So, I rode blind.
+
+And just when I thought things couldn’t get worse, twice I got stuck behind confused drivers on course who slowed me down to a crawl. Final time: 39:12 for 20k — that’s just over 30.6 km/h. Ouch. More than 2 minutes slower than my first year here. No power, no data, no juice.
+
+### T2
+
+T2? Fine. I didn’t trust my flying dismount, so I played it safe and stepped off. No drama. Still no sign of a penalty marker, so I just kept going.
+
+### Run
+
+![Run.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/DSC04228.jpg)
+
+The run. Oh boy. Let’s call it what it was: a *shuffle*. One of my slowest 5ks ever at 24:12 — 2 minutes off last year’s pace. It was 30°C by then, which didn’t help, but honestly? I just didn’t have the legs or the fire. My body was like, “Hard pass.”
+
+## Recap
+
+Final time: 1:22:19. Somehow, that was good enough for 3rd in my age group, which probably says more about the field than my performance. I stuck around for the award ceremony, constantly glancing over my shoulder wondering if I was going to get hit with a disqualification for that helmet snafu.
+
+All in all? Pretty rough day out. But also a much-needed wake-up call. Here’s what I’m taking away from this:
+
+* **Dial back the fatigue**. I think I was carrying too much neuromuscular load and wasn’t prepped for race-level intensity.
+* **More 5K practice**. I’ll hit up a few Parkruns to find my legs again.
+* **Recheck my zones**. I suspect my Humango high-intensity sessions aren’t quite hitting the right level — or lasting long enough.
+* **New wetsuit**. The current one’s officially fired.
+* **Push harder in the water**. I need to get used to real effort in open water without falling apart.
+* **More race-specific bricks**. Because nothing prepares you for race day like simulating race day.
+* **Prioritize recovery**. Like actually. Not just foam rolling and pretending that’s enough.
+
+Next up: Wasaga Beach in a bit over a month. With any luck — and a little smarter prep — I’ll be back on track.
+
+Stay tuned, and if you've ever unracked your bike before putting your helmet on... well, at least I’m not alone.
+
+
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2025-07-13"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  filter(as.character(event_date) == race_date)),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+
+
+
+
+::: {layout-ncol=4}
+![Third place medal.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/IMG_2064.png){ width="100" group="hi" }
+
+![Finisher medal.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/IMG_2065.png){ width="100" group="hi" }
+
+![Medal ribbons.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/IMG_2068.png){ width="100" group="hi" }
+
+![Race bib.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/IMG_2069.png){ width="100" group="hi" }
+
+![Swim cap.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/IMG_2066.png){ width="100" group="hi" }
+
+![Swim cap.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/IMG_2067.png){ width="100" group="hi" }
+
+![Ready to start the swim.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/DSC07947.jpg){ width="100" group="hi" }
+
+![Swim.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/DSC00993.jpg){ width="100" group="hi" }
+
+![Bike.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/DSC02883.jpg){ width="100" group="hi" }
+
+![Run.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/DSC04228.jpg){ width="100" group="hi" }
+
+![Finish line.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/DSC09152.jpg){ width="100" group="hi" }
+
+![M40-45 podium.](https://storage.googleapis.com/blogs_josa/sport_small/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/img/DSC08931.jpg){ width="100" group="hi" }
+:::
