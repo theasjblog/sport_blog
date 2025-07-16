@@ -1,10 +1,10 @@
 a_raw <- c(
-  list.files('../../../Downloads/gcs_down/sport', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpg'),
-  list.files('../../../Downloads/gcs_down/sport', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'png'))
+  list.files('../../../Downloads/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpg'),
+  list.files('../../../Downloads/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'png'))
 
 a_small <- c(
-  list.files('../../../Downloads/gcs_down/sport_small', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpg'),
-  list.files('../../../Downloads/gcs_down/sport_small', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'png'))
+  list.files('../../../Downloads/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON_small', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpg'),
+  list.files('../../../Downloads/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON_small', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'png'))
 
 a_small <- c(list.files('../../../Downloads/gcs_down/sport_small', full.names = TRUE, recursive = TRUE, include.dirs = FALSE))
 
@@ -58,13 +58,9 @@ file_info <- a_raw
 for(i in 1:nrow(file_info)){
   cat(i, "of", nrow(file_info), '\n')
   this_img_tmp <- file.path(tmp_path, 
-                        stringr:::str_split(file_info$name[i], "/")[[1]][7],
-                        stringr:::str_split(file_info$name[i], "/")[[1]][8],
-                        stringr:::str_split(file_info$name[i], "/")[[1]][9])
+                        basename(file_info$name[i]))
   this_img_final <- file.path(final_path, 
-                            stringr:::str_split(file_info$name[i], "/")[[1]][7],
-                            stringr:::str_split(file_info$name[i], "/")[[1]][8],
-                            stringr:::str_split(file_info$name[i], "/")[[1]][9])
+                              basename(file_info$name[i]))
   
   dir.create(dirname(this_img_tmp), recursive = TRUE)
   dir.create(dirname(this_img_final), recursive = TRUE)
@@ -79,7 +75,7 @@ for(i in 1:nrow(file_info)){
   }
   
   
-  for (q in seq(100, 10, by = -5)) {  # try quality 100 down to 10
+  for (q in seq(100, 5, by = -5)) {  # try quality 100 down to 10
     image_write(img_resized, path = this_img_tmp, quality = q)
     
     size_mb <- file.info(this_img_tmp)$size / (1024^2)

@@ -1,10 +1,26 @@
+---
+title: "Road to Wollongong: 2025 training season recap"
+author: "Adrian Joseph"
+date: "2025-10-19"
+#image: https://storage.googleapis.com/blogs_josa/sport_small/2025-01-31_series_champion/img/cover.png
+categories: [news]
+---
+
+![MultiSport Canada Champions plaque.](https://storage.googleapis.com/blogs_josa/sport_small/2025-01-31_series_champion/img/cover.png)
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
 library(arrow)
 library(readr)
 library(dplyr)
 library(stringr)
 library(hms)
+library(kableExtra)
+library(ggplot2)
 
-all_files <- lapply(list.files('2025_season', full.names = TRUE), function(d){
+all_files <- lapply(list.files(file.path(
+  '2025_season'
+  ),
+  full.names = TRUE), function(d){
   readr::read_csv(d, show_col_types = FALSE) |>
     mutate(week_n = as.numeric(substring(basename(d), nchar(basename(d))-5, nchar(basename(d))-4)))
 }) |>
@@ -100,31 +116,34 @@ all_files <- lapply(list.files('2025_season', full.names = TRUE), function(d){
     "avg_run_cadence",
     "avg_pace_min_km"
   ))
+```
+
+# Overall summary
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+df <- all_files |>
+  filter(activity_type != "Other") |>
+  summarise(tot_n_session = sum(n_activities, na.rm = TRUE),
+            avg_n_session_week = round(sum(n_activities, na.rm = TRUE)/max(week_n), 1),
+            tot_h = hms::as_hms(sum(moving_time, na.rm = TRUE)),
+            tot_distance = sum(total_distance_km, na.rm = TRUE))
+kableExtra::kable(df)
+```
 
 
-
-
-all_files |>
+# Summary by activity
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+df <- all_files |>
   filter(activity_type != "Other") |>
   group_by(activity_type) |>
-  summarise(less_than_3 = sum(n_activities < 3),
-            equal_or_more_than_3 = sum(n_activities >= 3),
-            mean_week = mean(n_activities, na.rm = TRUE),
-            tot_h = sum(moving_time, na.rm = TRUE)/3600,
+  summarise(tot_n_session = sum(n_activities, na.rm = TRUE),
+            avg_n_session_week = round(mean(n_activities, na.rm = TRUE), 1),
+            tot_h = hms::as_hms(sum(moving_time, na.rm = TRUE)),
             tot_distance = sum(total_distance_km, na.rm = TRUE))
+kableExtra::kable(df)
+```
 
-all_files |>
-  group_by(week_n) |>
-  summarise(tot_sessions = sum(n_activities, na.rm = TRUE))
-
-all_files |>
-  summarise(
-    tot_sessions = sum(n_activities),
-    tot_time = hms::as_hms(sum(moving_time)),
-    total_distance = sum(total_distance_km, na.rm = TRUE)
-  )
-
-library(ggplot2)
+# Paces
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 all_files|>
   filter(!(activity_type %in% c("Gym & Fitness Equipment", "Other"))) |>
   ggplot() +
@@ -132,4 +151,4 @@ all_files|>
   geom_smooth(se = TRUE, colour = "#112446") +
   theme_minimal() +
   facet_wrap(vars(activity_type), scales = "free_y")
-
+```
