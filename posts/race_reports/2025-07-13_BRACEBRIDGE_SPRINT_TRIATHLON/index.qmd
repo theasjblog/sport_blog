@@ -79,15 +79,20 @@ Next up: Wasaga Beach in a bit over a month. With any luck — and a little smar
 Stay tuned, and if you've ever unracked your bike before putting your helmet on... well, at least I’m not alone.
 
 
-
-
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2025-07-13"
 
 source('../../../inst/aux_functions.R')
+id <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  collect() |>
+  filter(as.character(EVENT_DATE) == race_date) |>
+  pull(ID)
 
-DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  filter(as.character(event_date) == race_date)),
+df <- get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
+  filter(ID == id) |>
+  filter(ATHLETE == "ADRIAN JOSEPH"))
+
+DT::datatable(df,
               rownames = FALSE,
               filter = 'top',
               selection = 'single',

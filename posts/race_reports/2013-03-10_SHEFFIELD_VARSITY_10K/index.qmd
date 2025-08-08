@@ -17,48 +17,28 @@ lightbox:
 Varsity was the group of sporting challenges between Sheffield University (my uni) and Hallam. This 10K was one of those side events where everyone was allowed to participate, not only the representatives of the athletic clubs. I have no memory at all of this race. The only thing I know is tat is was run in the Don Valley area, and I know that because I can see it from the GPS track.
 
 ```{r, echo = FALSE, warning=FALSE, message=FALSE}
-library(DT)
-library(hms)
-library(dplyr)
-library(arrow)
+race_date <- "2013-03-10"
 
-dateIs <- "2013-03-10"
-df <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  filter(event_date == dateIs)
+source('../../../inst/aux_functions.R')
 
-final <- data.frame(
-  "Race type" = paste0(df$event_type, " ", df$event_distance),
-  "Final time" = hms::as_hms(df$result_total),
-  "Overall ranking" = paste0(df$ranking_overall, "/", df$participants_overall),
-  "Gender ranking" = paste0(df$ranking_gender, "/", df$participants_gender),
-  "Category ranking" = paste0(df$ranking_category, "/", df$participants_category)
-)
+id <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  collect() |>
+  filter(as.character(EVENT_DATE) == race_date) |>
+  pull(ID)
 
-final <- t(final)
+df <- get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
+  filter(ID == id) |>
+  filter(ATHLETE == "ADRIAN JOSEPH"))
 
-final <- data.frame(
-  col1 = gsub("\\.", " ", rownames(final)),
-  col2 = final[,1], 
-  row.names = NULL
-) |>
-  filter(!is.na(col2)) |>
-  filter(col2 != "NA/NA") |>
-  mutate(
-    col2 = gsub("NA", "-", col2)
-  )
-  
-
-colnames(final) <- c(df$event_name, final$col2[1])
-final <- final[-1,]
-
-datatable(
-  final,
-  rownames = FALSE,                 # Don't show row names
-  options = list(
-    #    dom = 't',                      # Show only the table body (no search, no pagination, no header)
-    ordering = FALSE                # Optional: disable sorting
-  )
-)
+DT::datatable(df,
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
 ```
 
 

@@ -6,20 +6,18 @@ library(DT)
 
 get_summary_data <- function(df){
   final <- data.frame(
-    "Race type" = paste0(df$event_type, " ", df$event_distance),
-    "Final time" = hms::as_hms(df$result_total),
-    "Sport 1 time" = hms::as_hms(df$result_sport_1),
-    "T 1 time" = hms::as_hms(df$result_t_1),
-    "Sport 2 time" = hms::as_hms(df$result_sport_2),
-    "T 2 time" = hms::as_hms(df$result_t_2),
-    "Sport 3 Time" = hms::as_hms(df$result_sport_3),
+    "Race type" = paste0(df$EVENT_TYPE, " ", df$EVENT_DISTANCE),
+    "Final time" = hms::as_hms(df$RESULT_FINAL),
+    "Sport 1 time" = hms::as_hms(df$RESULT_SPORT_1),
+    "T 1 time" = hms::as_hms(df$RESULT_T_1),
+    "Sport 2 time" = hms::as_hms(df$RESULT_SPORT_2),
+    "T 2 time" = hms::as_hms(df$RESULT_T_2),
+    "Sport 3 Time" = hms::as_hms(df$RESULT_SPORT_3),
     
     
-    "Overall ranking" = paste0(df$ranking_overall, "/", df$participants_overall),
-    "Gender ranking" = paste0(df$ranking_gender, "/", df$participants_gender),
-    "Category ranking" = paste0(df$ranking_category, "/", df$participants_category),
-    
-    "Recording device" = df$watch
+    "Overall ranking" = df$RANKING_OVERALL,
+    "Gender ranking" = df$RANKING_GENDER,
+    "Category ranking" = df$RANKING_CATEGORY
   )
   
   final <- t(final)
@@ -40,19 +38,14 @@ get_summary_data <- function(df){
     dplyr::bind_rows(
       data.frame(
         col1 = 'Activity details',
-        col2 = paste0('<a href=https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%22',
-                      df$event_date,
-                      "%20-%20",
-                      gsub(' ', "%20", df$event_name),
-                      "%20-%20",
-                      gsub(' ', "%20", df$event_type),
-                      '%22 target="_blank">',
-                      "Details", 
+        col2 = paste0('<a href="https://asjblog.shinyapps.io/single_race_viewer/?_inputs_&selector=%22',
+                      gsub(" ", "%20", df$ID),
+                      '%22" target="_blank">Link</a>',
                       '</a>')
       )
     )
   
-  colnames(final) <- c(df$event_name, final$col2[1])
+  colnames(final) <- c(df$ID, final$col2[1])
   final <- final[-1,]
   
   

@@ -13,11 +13,9 @@ library(arrow)
 library(hms)
 library(stringr)
 
-all_res <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet')
-
-bests <- all_res |>
-  mutate(typeIs = paste0(event_type, " - ", event_distance)) |>
-  filter(typeIs %in% c(
+main <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  mutate(typeIs = paste0(EVENT_TYPE, " - ", EVENT_DISTANCE)) |>
+  filter(typeIs %in% toupper(c(
     "aquathlon - 1K/7.5K", "aquathlon - 450m/5K", "aquathlon - 500m/5K",
     "aquathlon - 750m/5K", "aquathlon - 810m/7.5K", "bike - 135K", "bike - 160K",
     "bike - 16K", "run - 10K",
@@ -25,21 +23,45 @@ bests <- all_res |>
     "sprint duathlon - 5K/20K/2.5K", "sprint triathlon - 420m/16K/5K",
     "sprint triathlon - 420m/20K/5K", "sprint triathlon - 750m/20K/5K",
     "sprint triathlon - 750m/30K/7.5K", "standard triathlon - 1500m/40K/10K",
-    "swim - 1500m", "swim - 3K", "triathlon - 2000m/82K/16K")) |>
-  arrange(event_name, distance_sport_1) |>
-  group_by(event_type, event_distance) |>
+    "swim - 1500m", "swim - 3K", "triathlon - 2000m/82K/16K", "indoor triathlon - 15min/15min/15min"))) |>
+  select(all_of(c(
+    'ID',
+    'EVENT_DISTANCE',
+    'EVENT_TYPE',
+    'POINT_FLAG'
+  )))
+  
+results <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
+  filter(ATHLETE == "ADRIAN JOSEPH") |>
+  filter(ID %in% c(main$ID)) |>
+  select(all_of(c(
+    'ID',
+    'RESULT_FINAL',
+    'RANKING_CATEGORY'
+  ))) |>
+  left_join(main, by = 'ID') |>
+  group_by(EVENT_TYPE, EVENT_DISTANCE) |>
   summarize(
-    fastest_time = min(result_total, na.rm = TRUE),
-    category_podiums = sum(ranking_category <= 3, na.rm = TRUE)
+    fastest_time = case_when(
+      unique(POINT_FLAG) ~ as.character(max(RESULT_FINAL, na.rm = TRUE)),
+      !unique(POINT_FLAG) ~ as.character(hms::as_hms(min(RESULT_FINAL, na.rm = TRUE))),
+      .default = NA
+    ),
+    category_podiums = sum(RANKING_CATEGORY <= 3, na.rm = TRUE),
+    best_placement_category = min(RANKING_CATEGORY, na.rm = TRUE),
+    number_of_races = n()
   ) |>
-  mutate(
-    fastest_time = hms::as_hms(fastest_time)
-  )
+  ungroup() |>
+  arrange(EVENT_TYPE, EVENT_DISTANCE) |>
+  mutate(best_placement_category = ifelse(is.infinite(best_placement_category), NA, best_placement_category),
+         category_podiums = ifelse(category_podiums == 0, NA, category_podiums))
 
-colnames(bests) <- stringr::str_to_title(gsub("_", " ", colnames(bests)))
+
+colnames(results) <- stringr::str_to_title(gsub("_", " ", colnames(results)))
 
 
-DT::datatable(bests,
+
+DT::datatable(results,
               rownames = FALSE,
               filter = 'top',
               selection = 'single',

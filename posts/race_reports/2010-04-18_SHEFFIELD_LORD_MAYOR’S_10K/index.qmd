@@ -19,39 +19,31 @@ This was my first competitive 10K. It was ran in and around the now demolished o
 
 ## Summary
 
-```{=html}
-<div class="row g-4">
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+race_date <- "2010-04-18"
 
-  <div class="col-md-4">
-    <div class="card h-100 bg-info text-white">
-      <div class="card-body">
-        <h5 class="card-title"><b>Position overall: 182/279</b></h5>
-        <p class="card-text"></p>
-      </div>
-    </div>
-  </div>
+source('../../../inst/aux_functions.R')
 
-  <div class="col-md-4">
-    <div class="card h-100 bg-primary text-white">
-      <div class="card-body">
-        <h5 class="card-title"><b>Position gender: 157/196</b></h5>
-        <p class="card-text"></p>
-      </div>
-    </div>
-  </div>
+id <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  collect() |>
+  filter(as.character(EVENT_DATE) == race_date) |>
+  pull(ID)
 
-  <div class="col-md-4">
-    <div class="card h-100 bg-success text-white">
-      <div class="card-body">
-        <h5 class="card-title"><b>Position category: 61/82</b></h5>
-        <p class="card-text"></p>
-      </div>
-    </div>
-  </div>
+df <- get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
+  filter(ID == id) |>
+  filter(ATHLETE == "ADRIAN JOSEPH"))
 
-</div>
-
+DT::datatable(df,
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
 ```
+
 
 ::: {layout-ncol=4}
 ![](https://storage.googleapis.com/blogs_josa/sport_small/2010-04-18_SHEFFIELD_LORD_MAYOR_S_10K/img/01.png){ width="100" group="hi" }

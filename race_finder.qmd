@@ -19,21 +19,18 @@ all_dirs <- data.frame(
 
 
 allRaces <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  select(all_of(c("event_date", "event_name", "event_type", "event_distance", "result_total"))) |>
-  mutate(Race_analysis = ifelse(event_type != "virtual", paste0('<a href="https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%22',
-                       event_date,
-                       "%20-%20",
-                       gsub(' ', "%20", event_name),
-                       "%20-%20",
-                       gsub(' ', "%20", event_type),
-                       '%22" target="_blank">Link</a>'), ''),
-         result_total = as.character(hms::as_hms(result_total)),
-         result_total = ifelse(result_total == "00:00:00", '', result_total)) |>
-  arrange(desc(event_date)) |>
-  mutate(blog_path = paste0(event_date,'_',event_name),
+  select(all_of(c("EVENT_DATE", "EVENT_NAME", "EVENT_TYPE", "EVENT_DISTANCE", "ID"))) |>
+  mutate(Race_analysis = ifelse(EVENT_TYPE != "virtual", paste0('<a href="https://asjblog.shinyapps.io/single_race_viewer/?_inputs_&selector=%22',
+                       gsub(" ", "%20", ID),
+                       '%22" target="_blank">Link</a>'), '')#,
+         # RESULT_FINAL = as.character(hms::as_hms(result_total)),
+         # result_total = ifelse(result_total == "00:00:00", '', result_total)
+         ) |>
+  arrange(desc(EVENT_DATE)) |>
+  mutate(blog_path = paste0(EVENT_DATE,'_',EVENT_NAME),
          blog_path = gsub(' ','_', blog_path)) |>
   left_join(all_dirs, by = 'blog_path') |>
-  mutate(blog_path = ifelse(event_type != 'virtual', paste0(
+  mutate(blog_path = ifelse(EVENT_TYPE != 'virtual', paste0(
     '<a href="posts/race_reports/',
     blog_path,
     '">Link</a>'
@@ -43,12 +40,11 @@ allRaces <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport
     blog_path,
     '">Link</a>'
   ))) |>
-  select(c('event_date', 'event_name',  'event_type', 'event_distance', "result_total", 'blog_path', 'Race_analysis',)) |>
-  rename('Race type' = 'event_type',
-         'Race name' = 'event_name',
-         'Race distance' = 'event_distance',
-         'Race date' = 'event_date',
-         'Time' = 'result_total',
+  select(c('EVENT_DATE', 'EVENT_NAME',  'EVENT_TYPE', 'EVENT_DISTANCE', 'blog_path', 'Race_analysis',)) |>
+  rename('Race type' = 'EVENT_TYPE',
+         'Race name' = 'EVENT_NAME',
+         'Race distance' = 'EVENT_DISTANCE',
+         'Race date' = 'EVENT_DATE',
          'Race report' = 'blog_path',
          'Race analysis' = 'Race_analysis')
 

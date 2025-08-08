@@ -21,15 +21,22 @@ The main event of the race was probably me kicking a young child, maybe 5yro. I 
 
 The annoying thing on the prize giving was that they only recognized the first 3 in some category they made up, and mot the standard divisions. I finished 3rd in my division, but 4th in the category they made up...
 
-[Full race details](http://127.0.0.1:6127/?_inputs_&selector=%222024-04-28%20-%20BENEVA%20MISSISSAUGA%20-%20run%22){target="_blank"}.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2024-04-28"
 
 source('../../../inst/aux_functions.R')
 
-DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  filter(as.character(event_date) == race_date)),
+id <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  collect() |>
+  filter(as.character(EVENT_DATE) == race_date) |>
+  pull(ID)
+
+df <- get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
+  filter(ID == id) |>
+  filter(ATHLETE == "ADRIAN JOSEPH"))
+
+DT::datatable(df,
               rownames = FALSE,
               filter = 'top',
               selection = 'single',

@@ -12,55 +12,35 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/IMG_2088.png)
 
 A challenging and fun obstacle race in the Yorkshire. Denis and I drove up there and ran the course together. Personally I think that the Sheffield Man Of Steel was a better event, but there is nothing wrong with this. They definitely make use of the larger budget by building larger obstacles over a wider field.
 
 At the end there was beer and to shower we had to use freezing cold water coming out of a pipe they used to get drinking water for the horses.
 
 ```{r, echo = FALSE, warning=FALSE, message=FALSE}
-library(DT)
-library(hms)
-library(dplyr)
-library(arrow)
+race_date <- "2012-07-04"
 
-dateIs <- "2012-07-04"
-df <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  filter(event_date == dateIs)# |>
+source('../../../inst/aux_functions.R')
 
-final <- data.frame(
-  "Race type" = paste0(df$event_type, " ", df$event_distance),
-  "Final time" = hms::as_hms(df$result_total),
-  "Overall ranking" = paste0(df$ranking_overall, "/", df$participants_overall),
-  "Gender ranking" = paste0(df$ranking_gender, "/", df$participants_gender),
-  "Category ranking" = paste0(df$ranking_category, "/", df$participants_category)
-)
+id <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  collect() |>
+  filter(as.character(EVENT_DATE) == race_date) |>
+  pull(ID)
 
-final <- t(final)
+df <- get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
+  filter(ID == id) |>
+  filter(ATHLETE == "ADRIAN JOSEPH"))
 
-final <- data.frame(
-  col1 = gsub("\\.", " ", rownames(final)),
-  col2 = final[,1], 
-  row.names = NULL
-) |>
-  filter(!is.na(col2)) |>
-  filter(col2 != "NA/NA") |>
-  mutate(
-    col2 = gsub("NA", "-", col2)
-  )
-  
-
-colnames(final) <- c(df$event_name, final$col2[1])
-final <- final[-1,]
-
-datatable(
-  final,
-  rownames = FALSE,                 # Don't show row names
-  options = list(
-    #    dom = 't',                      # Show only the table body (no search, no pagination, no header)
-    ordering = FALSE                # Optional: disable sorting
-  )
-)
+DT::datatable(df,
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
 ```
 
 ::: {layout-ncol=4}
@@ -74,5 +54,5 @@ datatable(
 
 ![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/04.jpg){ width="100" group="hi" }
 
-
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/IMG_2088.png){ width="100" group="hi" }
 :::
