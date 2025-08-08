@@ -101,8 +101,16 @@ race_date <- "2025-05-04"
 
 source('../../../inst/aux_functions.R')
 
-DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  filter(as.character(event_date) == race_date)),
+id <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  collect() |>
+  filter(as.character(EVENT_DATE) == race_date) |>
+  pull(ID)
+
+df <- get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
+  filter(ID == id) |>
+  filter(ATHLETE == "ADRIAN JOSEPH"))
+
+DT::datatable(df,
               rownames = FALSE,
               filter = 'top',
               selection = 'single',

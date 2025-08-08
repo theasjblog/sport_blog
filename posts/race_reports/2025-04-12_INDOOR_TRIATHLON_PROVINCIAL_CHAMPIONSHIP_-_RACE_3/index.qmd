@@ -59,41 +59,42 @@ In this race I finished 7$^{th}$ overall and 2$^{nd}$ in the Age Group. The guy 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(dplyr)
 library(arrow)
+library(stringr)
 library(kableExtra)
 
 all_races <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet')
 
 summary_race <- all_races |>
-  filter(event_date == '2025-04-12') |>
-  arrange(desc(result_final)) |>
-  mutate(overall_ranking = seq(1, n())) |>
-  group_by(category) |>
-  arrange(desc(result_final)) |>
+  filter(stringr::str_detect(ID, '2025-04-12')) |>
+  arrange(desc(RESULT_FINAL)) |>
+  mutate(OVERALL_RANKING = seq(1, n())) |>
+  group_by(CATEGORY) |>
+  arrange(desc(RESULT_FINAL)) |>
   mutate(ag_ranking = seq(1, n())) |>
   ungroup() |>
-  filter(category == 'MALE40-49') |>
+  filter(CATEGORY == 'MALE40-49') |>
   select(all_of(c(
-    'names',
-    'result_sport_1',
-    'result_sport_2',
-    'result_sport_3',
-    'result_final',
-    'overall_ranking',
+    'ATHLETE',
+    'RESULT_SPORT_1',
+    'RESULT_SPORT_2',
+    'RESULT_SPORT_3',
+    'RESULT_FINAL',
+    'OVERALL_RANKING',
     'ag_ranking'
   ))) |>
   rename(
-    'Name' = 'names',
-    'Swim score' = 'result_sport_1',
-    'Bike score' = 'result_sport_2',
-    'Run score' = 'result_sport_3',
-    'Final score' = 'result_final',
-    'Overall ranking' = 'overall_ranking',
-    'Age Grooup ranking' = 'ag_ranking',
+    'Athlete' = 'ATHLETE',
+    'Swim score' = 'RESULT_SPORT_1',
+    'Bike score' = 'RESULT_SPORT_2',
+    'Run score' = 'RESULT_SPORT_3',
+    'Final score' = 'RESULT_FINAL',
+    'Overall ranking' = 'OVERALL_RANKING',
+    'Age Group ranking' = 'ag_ranking',
   )
 
 
 kableExtra::kable(summary_race) |>
-  row_spec(which(summary_race$Name == "ADRIAN JOSEPH"), bold = TRUE)
+  row_spec(which(summary_race$Athlete == "ADRIAN JOSEPH"), bold = TRUE)
 ```
 
 ### Series ranking
@@ -105,19 +106,19 @@ The good news for me is that Paul Bregin did not do race 1, so as long as I comp
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
 overall_ranking <- all_races |>
-  filter(event_date %in% c('2025-04-12', '2025-02-22')) |>
-  filter(gender == 'M') |>
-  group_by(names) |>
-  summarise(Points = sum(result_final, rm.na = TRUE),
+  filter(stringr::str_detect(ID, '2025-04-12') | stringr::str_detect(ID, '2025-02-22')) |>
+  filter(GENDER == 'MALE') |>
+  group_by(ATHLETE) |>
+  summarise(Points = sum(RESULT_FINAL, rm.na = TRUE),
             n_races = n()) |>
   arrange(desc(Points)) |>
   slice_head(n=10) |>
   rename(
-    'Name' = 'names'
+    'Athlete' = 'ATHLETE'
   )
            
  kableExtra::kable(overall_ranking) |>
-  row_spec(which(overall_ranking$Name == "ADRIAN JOSEPH"), bold = TRUE) 
+  row_spec(which(overall_ranking$Athlete == "ADRIAN JOSEPH"), bold = TRUE) 
 
 ```
 
@@ -131,19 +132,19 @@ This table tells me a few things:
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 gender_ranking <- all_races |>
-  filter(event_date %in% c('2025-04-12', '2025-02-22')) |>
-  filter(category== 'MALE40-49') |>
-  group_by(names) |>
-  summarise(Points = sum(result_final, rm.na = TRUE),
+  filter(stringr::str_detect(ID, '2025-04-12') | stringr::str_detect(ID, '2025-02-22')) |>
+  filter(CATEGORY== 'MALE40-49') |>
+  group_by(ATHLETE) |>
+  summarise(Points = sum(RESULT_FINAL, rm.na = TRUE),
             n_races = n()) |>
   arrange(desc(Points)) |>
   slice_head(n=5) |>
   rename(
-    'Name' = 'names'
+    'Athlete' = 'ATHLETE'
   )
            
  kableExtra::kable(gender_ranking) |>
-  row_spec(which(gender_ranking$Name == "ADRIAN JOSEPH"), bold = TRUE) 
+  row_spec(which(gender_ranking$Athlete == "ADRIAN JOSEPH"), bold = TRUE) 
 
 ```
 
@@ -154,15 +155,22 @@ I do have some competition to keep an eye on. While I managed to outrace Nick ev
 
 Race 4 is coming soon: May 4$^{th}$. It is going to be an interesting one. All out to protect the Age Group lead!
 
-[Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222025-04-12%20-%20INDOOR%20TRIATHLON%20PROVINCIAL%20CHAMPIONSHIP%20-%20RACE%203%20-%20indoor%20triathlon%22){target="_blank"}.
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2025-04-12"
 
 source('../../../inst/aux_functions.R')
 
-DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  filter(as.character(event_date) == race_date)),
+id <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  collect() |>
+  filter(as.character(EVENT_DATE) == race_date) |>
+  pull(ID)
+
+df <- get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
+  filter(ID == id) |>
+  filter(ATHLETE == "ADRIAN JOSEPH"))
+
+DT::datatable(df,
               rownames = FALSE,
               filter = 'top',
               selection = 'single',

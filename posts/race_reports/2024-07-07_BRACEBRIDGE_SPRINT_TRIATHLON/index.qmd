@@ -29,15 +29,22 @@ At the end I finished in 1h15m54s. About 1.5m faster than last year. of this 90s
 
 As for the ranking, I could not defend my 2023 title. The guy who finished first, and Australian, was way faster in every discipline. He was about 3min faster on the swim, 2min faster on the bike, and 1m faster on the run. I might be able to get to run at that pace, and with a similarly spech'ed bike I might be able to post the same time, but the swim was just way too fast for me. I really need to find a way to work on my swim if I want to step up the game.
 
-[Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222024-07-07%20-%20BRACEBRIDGE%20SPRINT%20TRIATHLON%20-%20sprint%20triathlon%22){target="_blank"}.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2024-07-07"
 
 source('../../../inst/aux_functions.R')
 
-DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  filter(as.character(event_date) == race_date)),
+id <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  collect() |>
+  filter(as.character(EVENT_DATE) == race_date) |>
+  pull(ID)
+
+df <- get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
+  filter(ID == id) |>
+  filter(ATHLETE == "ADRIAN JOSEPH"))
+
+DT::datatable(df,
               rownames = FALSE,
               filter = 'top',
               selection = 'single',

@@ -13,22 +13,7 @@ lightbox:
 ---
 ![](https://storage.googleapis.com/blogs_josa/sport_small/2023-12-31_END_OF_YEAR/img/img_1208.png)
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2023-12-31"
 
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  filter(as.character(event_date) == race_date)),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
 
 
 

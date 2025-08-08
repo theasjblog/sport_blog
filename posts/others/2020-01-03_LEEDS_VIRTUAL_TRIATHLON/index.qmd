@@ -15,22 +15,7 @@ lightbox:
 
 This was a "real life" race I entered, but COVID-19 had other plans. The race was cancelled, but participants were given the option to "compete" virtually by completing the bike and run distance over the week end. I guess it was two events over two days to comply with the UK government rule that onl allowed us to go out of the house to exercise once a day.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2020-01-03"
 
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  filter(as.character(event_date) == race_date)),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
 
 
 
