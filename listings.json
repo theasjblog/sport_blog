@@ -1,7 +1,34 @@
 [
   {
+    "listing": "/posts/others.html",
+    "items": [
+      "/posts/others/2025-03-04_finis_smart_first_impressions/index.html",
+      "/posts/others/2025-02-15_season_kit/index.html",
+      "/posts/others/2025-01-31_series_champion/index.html",
+      "/posts/others/2025-01-06_season_planning/index.html",
+      "/posts/others/2024-12-22_age_group/index.html",
+      "/posts/others/2024-12-16_welcome/index.html",
+      "/posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html",
+      "/posts/others/2023-12-31_END_OF_YEAR/index.html",
+      "/posts/others/2023-08-19_3_PORT_TOUR/index.html",
+      "/posts/others/2023-01-03_THE_ENGLISH_CHANNEL/index.html",
+      "/posts/others/2023-01-02_NIAGARA_FALLS/index.html",
+      "/posts/others/2023-01-01_COTSWOLD_WAY/index.html",
+      "/posts/others/2022-01-02_SCANDINAVIA_GARMIN_TACX/index.html",
+      "/posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html",
+      "/posts/others/2020-01-03_LEEDS_VIRTUAL_TRIATHLON/index.html",
+      "/posts/others/2020-01-02_LANDS_END_TO_JOHN_O’GROATS/index.html",
+      "/posts/others/2020-01-01_HADRIAN’S_WALL/index.html",
+      "/posts/others/2019-03-31_SWIMATHON/index.html",
+      "/posts/others/2018-05-20_BIKE_OXFORD/index.html",
+      "/posts/others/2018-04-28_SWIMATHON/index.html",
+      "/posts/others/2017-04-09_SWIMATHON/index.html"
+    ]
+  },
+  {
     "listing": "/posts/race_reports.html",
     "items": [
+      "/posts/race_reports/2023-08-02_MEADOWVALE_PARKRUN/index.html",
       "/posts/race_reports/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON/index.html",
       "/posts/race_reports/2025-06-08_GRAVENHURST_SPRINT_TRIATHLON/index.html",
       "/posts/race_reports/2025-05-04_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_4/index.html",
@@ -113,32 +140,6 @@
       "/posts/race_reports/1997-09-30_BOSCARDIN_FESTA_DELL’ACCOGLIENZA/index.html",
       "/posts/race_reports/1996-04-01_C.S.I._-_U.S._SUMMANO_1946-1996/index.html",
       "/posts/race_reports/1993-08-01_TORNEO_CALCIO_S._MARTINO_DI_CASTROZZA/index.html"
-    ]
-  },
-  {
-    "listing": "/posts/others.html",
-    "items": [
-      "/posts/others/2025-03-04_finis_smart_first_impressions/index.html",
-      "/posts/others/2025-02-15_season_kit/index.html",
-      "/posts/others/2025-01-31_series_champion/index.html",
-      "/posts/others/2025-01-06_season_planning/index.html",
-      "/posts/others/2024-12-22_age_group/index.html",
-      "/posts/others/2024-12-16_welcome/index.html",
-      "/posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html",
-      "/posts/others/2023-12-31_END_OF_YEAR/index.html",
-      "/posts/others/2023-08-19_3_PORT_TOUR/index.html",
-      "/posts/others/2023-01-03_THE_ENGLISH_CHANNEL/index.html",
-      "/posts/others/2023-01-02_NIAGARA_FALLS/index.html",
-      "/posts/others/2023-01-01_COTSWOLD_WAY/index.html",
-      "/posts/others/2022-01-02_SCANDINAVIA_GARMIN_TACX/index.html",
-      "/posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html",
-      "/posts/others/2020-01-03_LEEDS_VIRTUAL_TRIATHLON/index.html",
-      "/posts/others/2020-01-02_LANDS_END_TO_JOHN_O’GROATS/index.html",
-      "/posts/others/2020-01-01_HADRIAN’S_WALL/index.html",
-      "/posts/others/2019-03-31_SWIMATHON/index.html",
-      "/posts/others/2018-05-20_BIKE_OXFORD/index.html",
-      "/posts/others/2018-04-28_SWIMATHON/index.html",
-      "/posts/others/2017-04-09_SWIMATHON/index.html"
     ]
   }
 ]

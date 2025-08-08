@@ -1,0 +1,53 @@
+---
+title: "Meadowvale Parkrun"
+date: "2025-08-02"
+author: "Adrian Joseph"
+categories: [race report, run, parkrun]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+# Testing the Legs at Parkrun – With a Dash of Triathlon Prep
+
+This morning’s mission: a 5K parkrun to fine-tune my training zones and see just how ready (or not!) I am for the Sprint Triathlon Age Group World Championship in Wollongong.
+
+Lately, running and I haven’t exactly been best friends. I’ve been slogging through a series of 22-minute-plus 5Ks, and with a brand-new coach in my corner (more on that drama soon), I was curious—could I sneak under 22 minutes again? Maybe even flirt with 21?
+
+This was my debut at this particular parkrun venue. It’s one of those Goldilocks events: popular enough for a buzz, but not so packed that you spend the whole time dodging elbows. The course is a flat, three-lap loop around a pond—no hills, no hairpin turns, just you, your legs, and the clock. Basically, a recipe for speed… if you don’t get carried away.
+
+Which I promptly did.
+
+I blasted off way too hard, hitting 4:50/km for the first 2K, fully aware I’d lit the matchbook a little too soon. I tucked in behind a speedy young woman for a while, but she eventually glided away like it was nothing. My pace crept above 4:20/km, but mercifully the finish line was getting close. A few runners caught me, but I crossed in 20:39—comfortably under my goal and my fastest 5K since 2016. Not exactly Olympic-qualifying stuff, but for me, a sweet little victory.
+
+Post-race, the parkrun magic kicked in. That friendly, chatty vibe is one of the reasons I love these events. Several people came over to ask about my *St. Albans Striders* vest, which turned into some great conversations.
+
+So now, with my confidence slightly restored and my legs reminded they can still turn over quickly, it’s back to the grind. Wollongong is calling.
+
+
+ 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2025-08-02"
+source('../../../inst/aux_functions.R')
+id <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+  collect() |>
+  filter(as.character(EVENT_DATE) == race_date) |>
+  pull(ID)
+
+df <- get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
+  filter(ID == id) |>
+  filter(ATHLETE == "ADRIAN JOSEPH"))
+
+DT::datatable(df,
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
