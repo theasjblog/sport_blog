@@ -4,7 +4,20 @@ library(hms)
 library(stringr)
 library(DT)
 
-get_summary_data <- function(df){
+get_summary_data <- function(race_date){
+  
+  race_metadata <- arrow::open_dataset('../../../races_metadata.parquet') |>
+    filter(EVENT_DATE == as.Date(race_date)) |>
+    collect()
+  
+  df <- arrow::open_dataset('../../../races_rankings.parquet') |>
+    filter(RACE_ID %in% race_metadata$RACE_ID) |>
+    filter(ATHLETE == "ADRIAN JOSEPH") |>
+    collect() |>
+    dplyr::left_join(
+      race_metadata, by = 'RACE_ID'
+    )
+  
   final <- data.frame(
     "Race type" = paste0(df$EVENT_TYPE, " ", df$EVENT_DISTANCE),
     "Final time" = hms::as_hms(df$RESULT_FINAL),
@@ -39,17 +52,15 @@ get_summary_data <- function(df){
       data.frame(
         col1 = 'Activity details',
         col2 = paste0('<a href="https://asjblog.shinyapps.io/single_race_viewer/?_inputs_&selector=%22',
-                      gsub(" ", "%20", df$ID),
+                      gsub(" ", "%20", df$RACE_ID),
                       '%22" target="_blank">Link</a>',
                       '</a>')
       )
     )
   
-  colnames(final) <- c(df$ID, final$col2[1])
+  colnames(final) <- c(substring(df$RACE_ID, 1, 10), final$col2[1])
   final <- final[-1,]
   
-  
-  
   return(final)
+  
 }
-

@@ -62,10 +62,32 @@ library(arrow)
 library(stringr)
 library(kableExtra)
 
-all_races <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet')
+race_metadata <- arrow::open_dataset('../../../races_metadata.parquet') |>
+  filter(EVENT_DATE == as.Date("2025-05-04") | EVENT_DATE == as.Date("2025-04-12") | EVENT_DATE == as.Date("2025-02-22")) |>
+  collect()
+
+
+
+all_races <- arrow::open_dataset('../../../races_rankings.parquet') |>
+  filter(RACE_ID %in% race_metadata$RACE_ID) |>
+  collect()
+
+activities_metadata <- arrow::open_dataset('../../../activities_metadata.parquet') |>
+  filter(RACE_ID %in% race_metadata$RACE_ID) |>
+  collect()
+
+activities_data <- arrow::open_dataset('../../../activities_data.parquet') |>
+  filter(ID %in% activities_metadata$ID) |>
+  collect()
+
+
+race_ids <- race_metadata |>
+  filter(EVENT_DATE == as.Date('2025-04-12')) |>
+  pull(RACE_ID)
+
 
 summary_race <- all_races |>
-  filter(stringr::str_detect(ID, '2025-04-12')) |>
+  filter(RACE_ID %in% race_ids) |>
   arrange(desc(RESULT_FINAL)) |>
   mutate(OVERALL_RANKING = seq(1, n())) |>
   group_by(CATEGORY) |>
@@ -93,6 +115,8 @@ summary_race <- all_races |>
   )
 
 
+
+
 kableExtra::kable(summary_race) |>
   row_spec(which(summary_race$Athlete == "ADRIAN JOSEPH"), bold = TRUE)
 ```
@@ -104,9 +128,12 @@ kableExtra::kable(summary_race) |>
 The good news for me is that Paul Bregin did not do race 1, so as long as I complete the next race at roughly the same level as this, he cannot catch me in the overall ranking. With that said, here is the overall ranking (male only).
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_ids <- race_metadata |>
+  filter(EVENT_DATE == as.Date('2025-04-12') | EVENT_DATE == as.Date('2025-02-22')) |>
+  pull(RACE_ID)
 
 overall_ranking <- all_races |>
-  filter(stringr::str_detect(ID, '2025-04-12') | stringr::str_detect(ID, '2025-02-22')) |>
+  filter(RACE_ID %in% race_ids) |>
   filter(GENDER == 'MALE') |>
   group_by(ATHLETE) |>
   summarise(Points = sum(RESULT_FINAL, rm.na = TRUE),
@@ -132,7 +159,7 @@ This table tells me a few things:
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 gender_ranking <- all_races |>
-  filter(stringr::str_detect(ID, '2025-04-12') | stringr::str_detect(ID, '2025-02-22')) |>
+  filter(RACE_ID %in% race_ids) |>
   filter(CATEGORY== 'MALE40-49') |>
   group_by(ATHLETE) |>
   summarise(Points = sum(RESULT_FINAL, rm.na = TRUE),
@@ -161,16 +188,7 @@ race_date <- "2025-04-12"
 
 source('../../../inst/aux_functions.R')
 
-id <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  collect() |>
-  filter(as.character(EVENT_DATE) == race_date) |>
-  pull(ID)
-
-df <- get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
-  filter(ID == id) |>
-  filter(ATHLETE == "ADRIAN JOSEPH"))
-
-DT::datatable(df,
+DT::datatable(get_summary_data(race_date),
               rownames = FALSE,
               filter = 'top',
               selection = 'single',
