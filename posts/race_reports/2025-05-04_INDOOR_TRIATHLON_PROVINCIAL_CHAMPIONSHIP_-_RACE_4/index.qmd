@@ -41,22 +41,51 @@ So yes, the competitive spirit wasn’t exactly raging in M40–49, but it did g
 library(arrow)
 library(dplyr)
 library(kableExtra)
+library(DBI)
+library(duckdb)
+library(glue)
 
-race_metadata <- arrow::open_dataset('../../../races_metadata.parquet') |>
-  filter(EVENT_DATE == as.Date("2025-05-04") | EVENT_DATE == as.Date("2025-04-12") | EVENT_DATE == as.Date("2025-02-22")) |>
-  collect()
+# Connect to DuckDB
+  con <- dbConnect(duckdb::duckdb())
+  
+  # Enable HTTPFS extension to access remote files
+  dbExecute(con, "INSTALL httpfs; LOAD httpfs;")
+  
+  query <- "
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet')
+  WHERE EVENT_DATE IN (DATE '2025-05-04', DATE '2025-04-12', DATE '2025-02-22')
+"
+  
+  race_metadata <- dbGetQuery(con, query)
 
-all_races <- arrow::open_dataset('../../../races_rankings.parquet') |>
-  filter(RACE_ID %in% race_metadata$RACE_ID) |>
-  collect()
+  race_ids <- paste0("'", race_metadata$RACE_ID, "'", collapse = ", ")
+  query <- glue("
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_rankings.parquet')
+  WHERE RACE_ID IN ({race_ids})
+")
+  
+  all_races <- dbGetQuery(con, query)
 
-activities_metadata <- arrow::open_dataset('../../../activities_metadata.parquet') |>
-  filter(RACE_ID %in% race_metadata$RACE_ID) |>
-  collect()
 
-activities_data <- arrow::open_dataset('../../../activities_data.parquet') |>
-  filter(ID %in% activities_metadata$ID) |>
-  collect()
+    query <- glue("
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/activities_metadata.parquet')
+  WHERE RACE_ID IN ({race_ids})
+")
+  
+  activities_metadata <- dbGetQuery(con, query)
+  
+    ids <- paste0("'", activities_metadata$ID, "'", collapse = ", ")
+  query <- glue("
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/activities_data.parquet')
+  WHERE ID IN ({ids})
+")
+  
+  activities_data <- dbGetQuery(con, query)
+
 
 race_ids <- race_metadata |>
   filter(EVENT_DATE == as.Date('2025-05-04')) |>

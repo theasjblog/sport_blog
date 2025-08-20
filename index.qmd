@@ -5,24 +5,6 @@ title-block-banner: false
 feed: true
 ---
 
-```{r}
-#| message: false
-#| warning: false
-#| include: false
-
-# download.file('https://storage.googleapis.com/blogs_josa/sport/parquets/races_rankings.parquet', 
-#               destfile = 'races_rankings.parqeut')
-# 
-# download.file('https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet', 
-#               destfile = 'races_metadata.parqeut')
-# 
-# download.file('https://storage.googleapis.com/blogs_josa/sport/parquets/activities_metadata.parquet', 
-#               destfile = 'activities_metadata.parqeut')
-# 
-# download.file('https://storage.googleapis.com/blogs_josa/sport/parquets/activities_data.parqeut',
-#               destfile = 'activities_data.parqeut')
-
-```
 
 **Welcome to my blog!**
 

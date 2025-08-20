@@ -3,17 +3,43 @@ library(dplyr)
 library(hms)
 library(stringr)
 library(DT)
+library(DBI)
+library(duckdb)
+library(glue)
+
 
 get_summary_data <- function(race_date){
+  # Connect to DuckDB
+  con <- dbConnect(duckdb::duckdb())
   
-  race_metadata <- arrow::open_dataset('../../../races_metadata.parquet') |>
-    filter(EVENT_DATE == as.Date(race_date)) |>
-    collect()
+  # Enable HTTPFS extension to access remote files
+  dbExecute(con, "INSTALL httpfs; LOAD httpfs;")
   
-  df <- arrow::open_dataset('../../../races_rankings.parquet') |>
-    filter(RACE_ID %in% race_metadata$RACE_ID) |>
-    filter(ATHLETE == "ADRIAN JOSEPH") |>
-    collect() |>
+  query <- glue("
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet')
+  WHERE EVENT_DATE = DATE '{race_date}'
+")
+  
+  race_metadata <- dbGetQuery(con, query)
+  
+  
+  race_ids <- race_metadata$RACE_ID
+  race_ids_sql <- paste0("'", race_ids, "'", collapse = ", ")
+  
+  athlete_name <- "ADRIAN JOSEPH"
+  
+  query <- glue("
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_rankings.parquet')
+  WHERE RACE_ID IN ({race_ids_sql})
+    AND ATHLETE = '{athlete_name}'
+")
+  
+  df <- dbGetQuery(con, query)
+  
+  
+  df <- df |>
     dplyr::left_join(
       race_metadata, by = 'RACE_ID'
     )
