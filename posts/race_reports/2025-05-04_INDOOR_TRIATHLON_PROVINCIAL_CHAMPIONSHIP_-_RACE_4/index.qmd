@@ -41,14 +41,60 @@ So yes, the competitive spirit wasn’t exactly raging in M40–49, but it did g
 library(arrow)
 library(dplyr)
 library(kableExtra)
+library(DBI)
+library(duckdb)
+library(glue)
 
-all_races <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
-  filter(stringr::str_detect(ID, '2025-05-04') | stringr::str_detect(ID, '2025-04-12') | stringr::str_detect(ID, '2025-02-22'))
+# Connect to DuckDB
+  con <- dbConnect(duckdb::duckdb())
+  
+  # Enable HTTPFS extension to access remote files
+  dbExecute(con, "INSTALL httpfs; LOAD httpfs;")
+  
+  query <- "
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet')
+  WHERE EVENT_DATE IN (DATE '2025-05-04', DATE '2025-04-12', DATE '2025-02-22')
+"
+  
+  race_metadata <- dbGetQuery(con, query)
+
+  race_ids <- paste0("'", race_metadata$RACE_ID, "'", collapse = ", ")
+  query <- glue("
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_rankings.parquet')
+  WHERE RACE_ID IN ({race_ids})
+")
+  
+  all_races <- dbGetQuery(con, query)
+
+
+    query <- glue("
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/activities_metadata.parquet')
+  WHERE RACE_ID IN ({race_ids})
+")
+  
+  activities_metadata <- dbGetQuery(con, query)
+  
+    ids <- paste0("'", activities_metadata$ID, "'", collapse = ", ")
+  query <- glue("
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/activities_data.parquet')
+  WHERE ID IN ({ids})
+")
+  
+  activities_data <- dbGetQuery(con, query)
+
+
+race_ids <- race_metadata |>
+  filter(EVENT_DATE == as.Date('2025-05-04')) |>
+  pull(RACE_ID)
 
 leaders <- all_races |>
-  filter(stringr::str_detect(ID, '2025-05-04')) |>
+  filter(RACE_ID %in% race_ids) |>
   arrange(desc(RESULT_FINAL)) |>
-  mutate(OVERALL_RANKING = seq(1, sum(stringr::str_detect(ID, '2025-05-04')))) |>
+  mutate(OVERALL_RANKING = seq(1, sum(RACE_ID == race_ids))) |>
   group_by(CATEGORY) |>
   arrange(desc(RESULT_FINAL)) |>
   slice_head(n=1) |>
@@ -73,7 +119,7 @@ Since this is a series, the people who race at least three times are more likely
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 segments <- all_races |>
   filter(CATEGORY == unique(CATEGORY[ATHLETE == "ADRIAN JOSEPH"])) |>
-  group_by(ID) |>
+  group_by(RACE_ID) |>
   arrange(desc(RESULT_SPORT_1)) |>
   mutate(ag_ranking_swim = seq(1, n())) |>
   arrange(desc(RESULT_SPORT_2)) |>
@@ -84,13 +130,13 @@ segments <- all_races |>
   mutate(ag_ranking = seq(1, n())) |>
   ungroup() |>
   filter(ATHLETE == 'ADRIAN JOSEPH') |>
-  arrange(ID) |>
+  arrange(RACE_ID) |>
   mutate(ID = c(1, 3, 4)) |>
   select(all_of(c(
-    'ID', 'ag_ranking_swim', 'ag_ranking_bike', 'ag_ranking_run', 'ag_ranking'
+    'RACE_ID', 'ag_ranking_swim', 'ag_ranking_bike', 'ag_ranking_run', 'ag_ranking'
   ))) |>
   rename(
-    'Race [#]' = 'ID',
+    'Race [#]' = 'RACE_ID',
     'Swim Ranking' = 'ag_ranking_swim',
     'Bike Ranking' = 'ag_ranking_bike',
     'Run Ranking' = 'ag_ranking_run',
@@ -116,22 +162,14 @@ I consistently messed up the swim recording, so I do not have many metrics to go
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
-all_races <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_fit.parquet') |>
-  filter(stringr::str_detect(ID, '2025-05-04') | stringr::str_detect(ID, '2025-04-12') | stringr::str_detect(ID, '2025-02-22'))
-  
-
-swim_summary <- all_races |>
-  filter(SPORT == 'SWIM') |>
-  mutate(DISTANCE_M = ifelse(as.Date(TIMESTAMP) == as.Date('2025-02-22'), DISTANCE_M * 2, DISTANCE_M)) |>
-  group_by(ID) |>
-  summarise(DISTANCE_M = max(DISTANCE_M, na.rm = TRUE)) |>
-  ungroup() |>
-  arrange(ID) |>
-  mutate(ID = c(1,3,4)) |>
+swim_summary <- data.frame(
+  id = c(1,2,3),
+  dist = c(850, 800, 875)
+) |>
   rename(
-    'Race [#]' = 'ID',
-    'Distance [m]' = 'DISTANCE_M'
-    )
+    'Race [#]' = 'id',
+    'Distance [m]' = 'dist'
+  )
 
 kableExtra::kable(swim_summary)
 
@@ -165,11 +203,15 @@ Race 1 was a bit of a mess—I didn’t realize the race had started and lost a 
 Here finally we have some metrics to look at. When I race, I always like the feeling of "finishing strong", and having a second half faster than the first half (negative split). Let's see if I achieved that:
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-all_runs <- all_races |>
-  filter(SPORT == 'RUN') |>
+run_id <- activities_metadata |>
+  filter(EVENT_TYPE == 'RUN') |>
+  pull(ID)
+
+all_runs <- activities_data |>
+  filter(ID %in% run_id) |>
   group_by(ID) |>
   arrange(ID) |>
-  mutate(elapsed_time = as.numeric((TIMESTAMP - min(TIMESTAMP))/60)) |>
+  mutate(elapsed_time = max(SECS)/60) |>
   ungroup()
 
 convert_to_pace <- function(decimal_time){
@@ -181,17 +223,17 @@ convert_to_pace <- function(decimal_time){
 
 summary_runs <- all_runs |>
   group_by(ID) |>
-  arrange(TIMESTAMP) |>
-  summarise(tot_distance = round(max(DISTANCE_M)/1000, 2),
-            avg_pace = mean(PACE),
-            pace_var = round(100* (mean(PACE[floor(n()/2)+1:n()], na.rm = TRUE) - mean(PACE[1:floor(n()/2)])) / avg_pace, 2),
-            avg_power = round(mean(POWER_W, na.rm = TRUE)),
-            power_var = round(100* (mean(POWER_W[floor(n()/2)+1:n()], na.rm = TRUE) - mean(POWER_W[1:floor(n()/2)])) / avg_power, 2),
-            avg_cadence = round(mean(CADENCE_XPM, na.rm = TRUE)),
-            cadence_var = round(100* (mean(CADENCE_XPM[floor(n()/2)+1:n()], na.rm = TRUE) - mean(CADENCE_XPM[1:floor(n()/2)])) / avg_cadence, 2),
-            avg_hr = round(mean(HR_BPM, na.rm = TRUE)),
-            hr_var = round(100* (mean(HR_BPM[floor(n()/2)+1:n()], na.rm = TRUE) - mean(HR_BPM[1:floor(n()/2)])) / avg_hr, 2)
-            ) |>
+  arrange(SECS) |>
+  summarise(tot_distance = round(max(KM, na.rm = TRUE), 2),
+            avg_pace = median(PACE, na.rm = TRUE),
+            pace_var = round(100* (mean(PACE[floor(n()/2)+1:n()], na.rm = TRUE) - mean(PACE[1:floor(n()/2)], na.rm = TRUE)) / avg_pace, 2),
+            avg_power = round(mean(WATTS, na.rm = TRUE)),
+            power_var = round(100* (mean(WATTS[floor(n()/2)+1:n()], na.rm = TRUE) - mean(WATTS[1:floor(n()/2)], na.rm = TRUE)) / avg_power, 2),
+            avg_cadence = round(mean(RCAD, na.rm = TRUE)),
+            cadence_var = round(100* (mean(RCAD[floor(n()/2)+1:n()], na.rm = TRUE) - mean(RCAD[1:floor(n()/2)], na.rm = TRUE)) / avg_cadence, 2),
+            avg_hr = round(mean(HR, na.rm = TRUE)),
+            hr_var = round(100* (mean(HR[floor(n()/2)+1:n()], na.rm = TRUE) - mean(HR[1:floor(n()/2)], na.rm = TRUE)) / avg_hr, 2)
+  ) |>
   mutate(avg_pace = convert_to_pace(avg_pace)) |>
   ungroup() |>
   arrange(ID) |>
@@ -234,20 +276,22 @@ library(ggplot2)
 summary_runs_plot <- all_runs |>
   select(all_of(c(
     'ID',
-    'POWER_W',
-    'CADENCE_XPM',
-    'HR_BPM',
-    'elapsed_time',
+    'WATTS',
+    'RCAD',
+    'HR',
+    'SECS',
     'PACE'
   ))) |>
-  mutate(ID = substring(ID, 57, nchar(ID))) |>
+  mutate(
+    SECS = SECS/60,
+    ID = substring(ID, 1, 10)) |>
   tidyr::pivot_longer(
-    cols = c(POWER_W, CADENCE_XPM, HR_BPM, PACE),
+    cols = c(WATTS, RCAD, HR, PACE),
     values_to = 'value'
   )
 
 ggplot(summary_runs_plot) +
-  aes(x = elapsed_time, y = value, colour = ID) +
+  aes(x = SECS, y = value, colour = ID) +
   geom_line(alpha = 0.5) +
   geom_smooth(method = "loess", span = 0.1, se = FALSE) +
   scale_color_hue(direction = 1) +
@@ -312,16 +356,7 @@ race_date <- "2025-05-04"
 
 source('../../../inst/aux_functions.R')
 
-id <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  collect() |>
-  filter(as.character(EVENT_DATE) == race_date) |>
-  pull(ID)
-
-df <- get_summary_data(arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
-  filter(ID == id) |>
-  filter(ATHLETE == "ADRIAN JOSEPH"))
-
-DT::datatable(df,
+DT::datatable(get_summary_data(race_date),
               rownames = FALSE,
               filter = 'top',
               selection = 'single',
