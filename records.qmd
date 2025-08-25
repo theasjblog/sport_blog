@@ -12,8 +12,24 @@ library(DT)
 library(arrow)
 library(hms)
 library(stringr)
+library(DBI)
+library(duckdb)
+library(glue)
 
-main <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
+
+# Connect to DuckDB
+con <- dbConnect(duckdb::duckdb())
+  
+# Enable HTTPFS extension to access remote files
+dbExecute(con, "INSTALL httpfs; LOAD httpfs;")
+  
+race_metadata <- dbGetQuery(con, 
+                            "SELECT EVENT_TYPE, EVENT_DISTANCE, RACE_ID, POINT_FLAG
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet')")
+  
+
+
+main <- race_metadata |>
   mutate(typeIs = paste0(EVENT_TYPE, " - ", EVENT_DISTANCE)) |>
   filter(typeIs %in% toupper(c(
     "aquathlon - 1K/7.5K", "aquathlon - 450m/5K", "aquathlon - 500m/5K",
@@ -25,21 +41,22 @@ main <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/par
     "sprint triathlon - 750m/30K/7.5K", "standard triathlon - 1500m/40K/10K",
     "swim - 1500m", "swim - 3K", "triathlon - 2000m/82K/16K", "indoor triathlon - 15min/15min/15min"))) |>
   select(all_of(c(
-    'ID',
+    'RACE_ID',
     'EVENT_DISTANCE',
     'EVENT_TYPE',
     'POINT_FLAG'
   )))
+
+race_ids <- paste0("'", paste0(main$RACE_ID, collapse = "', '"), "'")
+
+rankings <- dbGetQuery(con, 
+                            glue("SELECT RACE_ID, RESULT_FINAL, RANKING_CATEGORY, RANKING_GENDER, RANKING_OVERALL
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_rankings.parquet')
+  WHERE ATHLETE IN ('ADRIAN JOSEPH') AND
+    RACE_ID IN ({race_ids})"))
   
-results <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/all_results.parquet') |>
-  filter(ATHLETE == "ADRIAN JOSEPH") |>
-  filter(ID %in% c(main$ID)) |>
-  select(all_of(c(
-    'ID',
-    'RESULT_FINAL',
-    'RANKING_CATEGORY'
-  ))) |>
-  left_join(main, by = 'ID') |>
+results <- rankings |>
+  left_join(main, by = 'RACE_ID') |>
   group_by(EVENT_TYPE, EVENT_DISTANCE) |>
   summarize(
     fastest_time = case_when(
@@ -49,12 +66,25 @@ results <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/
     ),
     category_podiums = sum(RANKING_CATEGORY <= 3, na.rm = TRUE),
     best_placement_category = min(RANKING_CATEGORY, na.rm = TRUE),
+    
+    gender_podiums = sum(RANKING_GENDER <= 3, na.rm = TRUE),
+    best_placement_gender = min(RANKING_GENDER, na.rm = TRUE),
+    
+    overall_podiums = sum(RANKING_OVERALL <= 3, na.rm = TRUE),
+    best_placement_overall = min(RANKING_OVERALL, na.rm = TRUE),
+    
     number_of_races = n()
   ) |>
   ungroup() |>
   arrange(EVENT_TYPE, EVENT_DISTANCE) |>
   mutate(best_placement_category = ifelse(is.infinite(best_placement_category), NA, best_placement_category),
-         category_podiums = ifelse(category_podiums == 0, NA, category_podiums))
+         category_podiums = ifelse(category_podiums == 0, NA, category_podiums),
+         
+         best_placement_gender = ifelse(is.infinite(best_placement_gender), NA, best_placement_gender),
+         gender_podiums = ifelse(gender_podiums == 0, NA, gender_podiums),
+         
+         best_placement_overall = ifelse(is.infinite(best_placement_overall), NA, best_placement_overall),
+         overall_podiums = ifelse(overall_podiums == 0, NA, overall_podiums))
 
 
 colnames(results) <- stringr::str_to_title(gsub("_", " ", colnames(results)))

@@ -11,35 +11,46 @@ library(dplyr)
 library(DT)
 library(arrow)
 library(hms)
+library(DBI)
+library(duckdb)
+library(glue)
 
-all_dirs <- list.dirs('./posts/race_reports', recursive = FALSE, full.names = FALSE)
+
+# Connect to DuckDB
+con <- dbConnect(duckdb::duckdb())
+  
+# Enable HTTPFS extension to access remote files
+dbExecute(con, "INSTALL httpfs; LOAD httpfs;")
+  
+race_metadata <- dbGetQuery(con, 
+                            "SELECT EVENT_DATE, EVENT_NAME, EVENT_TYPE, EVENT_DISTANCE, RACE_ID
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet')")
+  
+  
+
+
 all_dirs <- data.frame(
-  blog_path = all_dirs
-)
+  blog_path = list.dirs('./posts/race_reports', recursive = FALSE, full.names = FALSE)
+) |>
+  mutate(
+    EVENT_DATE = as.Date(substring(blog_path, 1,10))
+  )
 
 
-allRaces <- arrow::read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/main_dataset.parquet') |>
-  select(all_of(c("EVENT_DATE", "EVENT_NAME", "EVENT_TYPE", "EVENT_DISTANCE", "ID"))) |>
+allRaces <- race_metadata |>
+  filter(EVENT_DATE %in% all_dirs$EVENT_DATE) |>
   mutate(Race_analysis = ifelse(EVENT_TYPE != "virtual", paste0('<a href="https://asjblog.shinyapps.io/single_race_viewer/?_inputs_&selector=%22',
-                       gsub(" ", "%20", ID),
+                       gsub(" ", "%20", RACE_ID),
                        '%22" target="_blank">Link</a>'), '')#,
-         # RESULT_FINAL = as.character(hms::as_hms(result_total)),
-         # result_total = ifelse(result_total == "00:00:00", '', result_total)
          ) |>
   arrange(desc(EVENT_DATE)) |>
-  mutate(blog_path = paste0(EVENT_DATE,'_',EVENT_NAME),
-         blog_path = gsub(' ','_', blog_path)) |>
-  left_join(all_dirs, by = 'blog_path') |>
-  mutate(blog_path = ifelse(EVENT_TYPE != 'virtual', paste0(
+  left_join(all_dirs, by = 'EVENT_DATE') |>
+  mutate(
+    blog_path = paste0(
     '<a href="posts/race_reports/',
     blog_path,
     '">Link</a>'
-  ),
-  paste0(
-    '<a href="posts/others/',
-    blog_path,
-    '">Link</a>'
-  ))) |>
+  )) |>
   select(c('EVENT_DATE', 'EVENT_NAME',  'EVENT_TYPE', 'EVENT_DISTANCE', 'blog_path', 'Race_analysis',)) |>
   rename('Race type' = 'EVENT_TYPE',
          'Race name' = 'EVENT_NAME',
