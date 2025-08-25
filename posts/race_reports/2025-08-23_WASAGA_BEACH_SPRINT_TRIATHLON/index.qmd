@@ -143,9 +143,9 @@ DT::datatable(get_summary_data(race_date),
 
 ![Swim cap.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/03.png){ width="100" group="hi" }
 
-![Wave 2: GO!.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/04.jpg){ width="100" group="hi" }
+![Wave 2: GO!](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/04.jpg){ width="100" group="hi" }
 
-![Limping put of the water.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/06.jpg){ width="100" group="hi" }
+![Limping out of the water.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/06.jpg){ width="100" group="hi" }
 
 ![Still hoping that the cramps will go away...They won't.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/09.jpg){ width="100" group="hi" }
 
