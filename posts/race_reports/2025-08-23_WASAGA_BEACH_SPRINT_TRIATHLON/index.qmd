@@ -2,7 +2,7 @@
 title: "Wasaga Beach Sprint Triathlon"
 date: "2025-08-23"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/04.jpg
 categories: [race report, run, triathlon]
 format: html
 lightbox:
@@ -143,4 +143,13 @@ DT::datatable(get_summary_data(race_date),
 
 ![Swim cap.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/03.png){ width="100" group="hi" }
 
+![Wave 2: GO!.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/04.jpg){ width="100" group="hi" }
+
+![Limping put of the water.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/06.jpg){ width="100" group="hi" }
+
+![Still hoping that the cramps will go away...They won't.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/09.jpg){ width="100" group="hi" }
+
+![Finish line in sight.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/12.jpg){ width="100" group="hi" }
+
+![Finally over.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/13.jpg){ width="100" group="hi" }
 :::
