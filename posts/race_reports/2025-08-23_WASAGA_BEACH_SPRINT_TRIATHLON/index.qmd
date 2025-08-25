@@ -1,0 +1,146 @@
+---
+title: "Wasaga Beach Sprint Triathlon"
+date: "2025-08-23"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/00.png
+categories: [race report, run, triathlon]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+## Race Setting  
+
+Wasaga Beach is famous for being the **longest freshwater sand beach in the world**, and it makes for a beautiful triathlon backdrop. This race, organized by Multisport Canada, had an impressive turnout: around **450 participants**, nearly double the size of the local races I usually do.  
+
+Thankfully, the familiar lineup of vendors was there too—because, yet again, I forgot my race belt. At this point, I really just need to leave one permanently in my tri-bag.  
+
+Preparation-wise, I came into this event at the tail end of a solid training block—maybe too solid. Three weeks ago, I ran my fastest 5K in years, and I’d been hitting strong sessions on both the bike and run (even off the bike in brick workouts). But as I’d soon find out, **racing doesn’t always follow the script**.  
+
+Warm-up felt good, and heading into the start I was confident. I knew winning the age group was a long shot with Hector Palacios on the line (he’s seriously fast), and as always, plenty of competitors were on TT bikes, which makes it tough to keep up on a road bike. But before thinking about that, there was the swim.  
+
+---
+
+## Swim  
+
+The swim was a small-wave mass start in calm, clear water with a straightforward out-and-back course. **Perfect conditions—almost.**  
+
+The catch: a long wade through knee-deep water both into and out of the swim. That’s not something I’m used to, and it turned out to matter more than expected.  
+
+I swam conservatively (as always) but a touch faster than in recent races, averaging **1:52/100m** instead of my usual >2:00/100m. But as soon as I stood up to run out of the water, **both calves and hamstrings seized in sharp cramps**. I couldn’t run into transition—I had to walk. That was the start of the day’s unraveling.  
+
+---
+
+## Transition Troubles (Again)  
+
+When I finally got to the bike, I at least avoided repeating my Bracebridge mistake (touching the bike before putting on the helmet). Helmet first—check.  
+
+But the transition gods weren’t done with me. My race belt had gone missing. I usually leave it inside my helmet, under my sunglasses, but it wasn’t there. After nearly a minute of searching, I found it under the bike. With oxygen-deprived race brain, even that simple task felt like a puzzle. Finally, belt on, and off onto the bike.  
+
+---
+
+## Bike  
+
+The bike course was **almost perfectly flat**, with a slight downhill bias on the way back. Road surface wasn’t the best—lots of cracks and potholes, but nothing unrideable.  
+
+I kept the effort under control, holding back from my usual push partly to avoid re-triggering the cramps and partly to preserve something for the run. Power numbers were solid but not spectacular.  
+
+---
+
+## Run  
+
+Transition two went smoothly, but the run just wasn’t there. I had hoped to hold **4:20/km pace**, but despite my heart rate spiking, the legs refused to respond.  
+
+The flat course had a few “obstacles”—patches of sand on the path, a couple short steps and sandy slopes—that normally wouldn’t faze me. But in this state, each one broke rhythm and made it harder to recover. The cramps never fully left; they lingered like a shadow, limiting my stride.  
+
+---
+
+## Post-Race Debrief  
+
+I crossed the line in **1h16m**, finishing **5th in my age group**. Respectable on paper, but far from the performance I know I’m capable of. With less than two months to go until the World Championship, it’s frustrating not to have put together a strong race this season.  
+
+I’ve had excuses—being sick in one race, now cramps in this one—but at the end of the day, the results aren’t where I want them. Confidence isn’t built on training numbers alone; it needs race execution.  
+
+Later that day, I debriefed with my new coach (more on him soon). His feedback was blunt but valuable.  
+
+---
+
+## Coach Feedback  
+
+**Training week issues**  
+- Pacing discipline: I overshoot intervals in over/under workouts, creating unnecessary fatigue.  
+- Brick sessions: I went *too hard*, especially on the bike, which left me carrying fatigue into race day.  
+
+**Race-specific issues**  
+- Cramps were the primary limiter. These are common in **cold water (19–22°C)** swims with tight wetsuits and long plantarflexion (pointed toes).  
+- Standing up too suddenly post-swim likely triggered them.  
+- Bike HR drifted higher than expected, suggesting swim stress + cramp fatigue.  
+- On the run, cramps disrupted stride mechanics despite a relatively high HR—clearly neuromuscular, not aerobic, limitation.  
+
+**Cramps were multi-factorial**:  
+- Cold water + wetsuit compression.  
+- Sudden transition from horizontal to vertical.  
+- Possibly hydration/electrolytes (though less likely this early).  
+- Entering the race with cumulative fatigue from double days.  
+
+---
+
+## Advice for Next Race  
+
+1. **Swim → Bike Transition**  
+   - Warm-up with calf raises + hamstring curls.  
+   - Adjust wetsuit fit so calves/hamstrings aren’t overly compressed.  
+   - Stand up gradually, flex ankles before jogging.  
+
+2. **Bike Execution**  
+   - First 2–3 minutes: 200–220W to settle HR.  
+   - Then steady 240–260W, capped at ~285–290W on surges.  
+   - Keep overall average near 270W without overcooking the legs.  
+
+3. **Fuel & Hydration**  
+   - **Bike**: 1 gel (~20–25g carbs) + 200–300ml sports drink.  
+   - **Run**: optional sip of water at aid station.  
+
+4. **Run Execution**  
+   - Open the first 500m at 4:35–4:40/km before building.  
+   - Aim for 4:25–4:30/km if legs allow.  
+   - Use **cadence focus (180–182 spm)** instead of “push harder” when the legs feel heavy.  
+
+---
+
+## Final Thoughts  
+
+Not the race I wanted, but a good reminder that **training fitness doesn’t always translate directly to race-day performance**. Small details—like cramp prevention, pacing discipline, and nutrition—can decide whether the legs show up when it matters.  
+
+I’m taking these lessons forward into the final block before Worlds. There’s work to do, but better to learn these lessons now than on the biggest stage.  
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+source('../../../inst/aux_functions.R')
+race_date <- "2025-08-23"
+
+DT::datatable(get_summary_data(race_date),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+
+::: {layout-ncol=4}
+![Finisher medal.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
+
+![Bib and medal ribbon.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
+
+![Swim cap.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/02.png){ width="100" group="hi" }
+
+![Swim cap.](https://storage.googleapis.com/blogs_josa/sport_small/2025-08-23_WASAGA_BEACH_SPRINT_TRIATHLON/img/03.png){ width="100" group="hi" }
+
+:::
