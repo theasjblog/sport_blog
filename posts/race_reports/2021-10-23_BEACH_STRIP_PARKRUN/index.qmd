@@ -2,6 +2,7 @@
 title: "Beach Strip Parkrun"
 date: "2021-10-23"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2021-10-23_BEACH_STRIP_PARKRUN/img/00.png
 categories: [race report, run, parkrun]
 format: html
 lightbox:

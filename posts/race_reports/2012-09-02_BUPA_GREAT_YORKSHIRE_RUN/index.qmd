@@ -40,5 +40,23 @@ DT::datatable(get_summary_data(race_date),
 
 ![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/02.png){ width="100" group="hi" }
 
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRA0119-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRA2192-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRD1279-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRF1633-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRF1634-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRH1703-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRJ1115-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRJ1116-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRM0714-original.jpeg){ width="100" group="hi" }
+
 
 :::

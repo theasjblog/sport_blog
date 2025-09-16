@@ -55,5 +55,33 @@ DT::datatable(get_summary_data(race_date),
 
 ![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/04.png){ width="100" group="hi" }
 
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFB18661-original.jpeg){ width="100" group="hi" }
 
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFD13492-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFH12131-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFM3874-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFN15164-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFQ22981-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFS8900-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFV3863-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFX11352-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0000-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0001-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0002-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0003-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0004-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0005-original.jpeg){ width="100" group="hi" }
 :::

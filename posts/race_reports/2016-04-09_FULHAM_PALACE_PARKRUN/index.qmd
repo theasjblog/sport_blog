@@ -2,6 +2,7 @@
 title: "Fulham Palace Parkrun"
 date: "2016-04-09"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2016-04-09_FULHAM_PARKRUN/img/00.png
 categories: [race report, run, parkrun]
 format: html
 lightbox:

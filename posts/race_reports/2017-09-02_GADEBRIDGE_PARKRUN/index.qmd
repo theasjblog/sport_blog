@@ -2,6 +2,7 @@
 title: "Gadebridge Parkrun"
 date: "2017-09-02"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2017-09-02_GADEBRIDGE_PARKRUN/img/00.png
 categories: [race report, run, parkrun]
 format: html
 lightbox:
