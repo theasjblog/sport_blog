@@ -47,5 +47,11 @@ DT::datatable(get_summary_data(race_date),
 
 ![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/02.png){ width="100" group="hi" }
 
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/62487638_583934555467485_2039280103120175104_n.jpg){ width="100" group="hi" }
 
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/65544643_584133048780969_6337870015055790080_n.jpg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/65570243_584140592113548_578397108244054016_n.jpg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/65650971_584128805448060_2949400681213067264_n.jpg){ width="100" group="hi" }
 :::

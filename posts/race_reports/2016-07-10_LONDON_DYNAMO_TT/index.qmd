@@ -2,6 +2,7 @@
 title: "London Dynamo TT"
 date: "2016-07-10"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2016-07-10_LONDON_DYNAMO_TT/img/00.png
 categories: [race report, bike TT]
 format: html
 lightbox:

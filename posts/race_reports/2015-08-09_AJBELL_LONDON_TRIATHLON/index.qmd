@@ -1,5 +1,5 @@
 ---
-title: "Ajbell London Triathlon"
+title: "AJBell London Triathlon"
 date: "2015-08-09"
 author: "Adrian Joseph"
 image: https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/00.png

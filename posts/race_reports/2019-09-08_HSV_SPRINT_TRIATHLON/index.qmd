@@ -1,5 +1,5 @@
 ---
-title: "Hsv Sprint Triathlon"
+title: "HSV Sprint Triathlon"
 date: "2019-09-08"
 author: "Adrian Joseph"
 image: https://storage.googleapis.com/blogs_josa/sport_small/2019-09-08_HSV_SPRINT_TRIATHLON/img/00.png

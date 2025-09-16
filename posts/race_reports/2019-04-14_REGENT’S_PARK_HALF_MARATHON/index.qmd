@@ -36,5 +36,9 @@ DT::datatable(get_summary_data(race_date),
 
 ![](https://storage.googleapis.com/blogs_josa/sport_small/2019-04-14_REGENT_S_PARK_HALF_MARATHON/img/01.png){ width="100" group="hi" }
 
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-04-14_REGENT_S_PARK_HALF_MARATHON/img/IMG_7435.jpg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-04-14_REGENT_S_PARK_HALF_MARATHON/img/IMG_7568.jpg){ width="100" group="hi" }
+
 
 :::

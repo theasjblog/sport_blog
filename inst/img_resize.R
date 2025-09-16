@@ -1,6 +1,7 @@
 a_raw <- c(
-  list.files('../../../Downloads/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpg'),
-  list.files('../../../Downloads/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'png'))
+  list.files('../../../Downloads/data_images_to_update', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpg'),
+  list.files('../../../Downloads/data_images_to_update', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpeg'),
+  list.files('../../../Downloads/data_images_to_update', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'png'))
 
 a_small <- c(
   list.files('../../../Downloads/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON_small', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpg'),
@@ -57,10 +58,13 @@ file_info <- a_raw
 #for(i in 1:10){
 for(i in 1:nrow(file_info)){
   cat(i, "of", nrow(file_info), '\n')
-  this_img_tmp <- file.path(tmp_path, 
-                        basename(file_info$name[i]))
-  this_img_final <- file.path(final_path, 
-                              basename(file_info$name[i]))
+  # this_img_tmp <- file.path(tmp_path, 
+  #                       basename(file_info$name[i]))
+  # this_img_final <- file.path(final_path, 
+  #                             basename(file_info$name[i]))
+  
+  this_img_tmp <- gsub('data_images_to_update', 'gcs_down/sport_tmp', file_info$name[i])
+  this_img_final <- gsub('data_images_to_update', 'gcs_down/sport_small', file_info$name[i])
   
   dir.create(dirname(this_img_tmp), recursive = TRUE)
   dir.create(dirname(this_img_final), recursive = TRUE)

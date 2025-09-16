@@ -2,6 +2,7 @@
 title: "Hillingdon TT"
 date: "2015-07-01"
 author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2015-07-01_HILLINGDON_TT/img/00.png
 categories: [race report, bike TT]
 format: html
 lightbox:
