@@ -20,7 +20,7 @@ library(glue)
 con <- dbConnect(duckdb::duckdb())
   
 # Enable HTTPFS extension to access remote files
-dbExecute(con, "INSTALL httpfs; LOAD httpfs;")
+invisible(dbExecute(con, "INSTALL httpfs; LOAD httpfs;"))
   
 race_metadata <- dbGetQuery(con, 
                             "SELECT EVENT_DATE, EVENT_NAME, EVENT_TYPE, EVENT_DISTANCE, RACE_ID
