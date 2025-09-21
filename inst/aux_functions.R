@@ -38,10 +38,9 @@ get_summary_data <- function(race_date){
   
   df <- dbGetQuery(con, query)
   
-  
-  df <- df |>
+  df <- race_metadata |>
     dplyr::left_join(
-      race_metadata, by = 'RACE_ID'
+      df, by = 'RACE_ID'
     )
   
   final <- data.frame(
