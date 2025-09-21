@@ -11,8 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
- 
- 
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 race_date <- "2016-05-07"
 

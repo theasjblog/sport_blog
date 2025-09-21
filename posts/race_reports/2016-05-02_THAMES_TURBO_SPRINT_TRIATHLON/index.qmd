@@ -13,7 +13,7 @@ lightbox:
 ---
 ![](https://storage.googleapis.com/blogs_josa/sport_small/2016-05-02_THAMES_TURBO_SPRINT_TRIATHLON/img/00.png)
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 race_date <- "2016-05-02"
 
 source('../../../inst/aux_functions.R')
