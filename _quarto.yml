@@ -24,6 +24,8 @@ website:
     - href: records.qmd
       text: "Records"
     right:
+      - icon: instagram
+        href: https://www.instagram.com/asj_tri?igsh=OTZ5Z2gxNGliYW1l&utm_source=qr
       - icon: strava
         href: https://www.strava.com/athletes/7974168
       - text: "{{< iconify cib:garmin >}}"
