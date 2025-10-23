@@ -3,7 +3,7 @@ title: "New kit: Finis Swim Smart goggles"
 date: "2025-03-04"
 author: "Adrian Joseph"
 image: https://storage.googleapis.com/blogs_josa/sport_small/2025-03-04_finis_smart_first_impressions/img/goggles.png
-categories: [kit review,]
+categories: [kit review]
 format: html
 lightbox:
   match: auto

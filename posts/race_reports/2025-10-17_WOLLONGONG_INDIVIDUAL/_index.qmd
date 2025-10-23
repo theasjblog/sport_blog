@@ -1,0 +1,156 @@
+---
+title: "World Championships: The Race of a Lifetime"
+subtitle: "Racing among the best in Wollongong"
+date: 2025-10-20
+categories: ["race_reports", "Wollongong2025"]
+image: "images/finish_blue_carpet.jpg"
+description: "Race day at the World Championships in Wollongong — months of training leading to one unforgettable hour."
+toc: false
+freeze: true
+code-tools: false
+format:
+  html:
+    toc: false
+    smooth-scroll: true
+    page-layout: full
+    css: styles/custom.css
+    lightbox: true
+---
+
+## 🌊 The Race of a Lifetime
+
+For years I had dreamed of this moment — racing at the **World Championships**, wearing the maple leaf on my suit.  
+Months and years of structured training, long hours, early mornings — everything led to this.
+
+I reached the start line with excitement, pride… and a bit of fatigue. The travel, the walking around Wollongong, and all the pre-race logistics had taken their toll. Still, the adrenaline of being here overpowered everything else.
+
+---
+
+## 🎒 The Days Before
+
+I collected my race pack the very first day: arm and calf stickers, swim cap, bike and helmet numbers, a transition bag, a nice backpack, a beach towel, and a *Welcome to Wollongong* booklet.  
+The next day, I dropped off my bike for the mandatory pre-race check — with **1,260 athletes** in the sprint alone, this keeps things organized.
+
+On the way there, I got my first omen: the bike squeaked and cracked with every pedal stroke. Not ideal.
+
+---
+
+## ☀️ Race Morning
+
+For once, I didn’t have to wake up at 4 a.m. My start was at **10:45**, pure luxury.  
+I had a calm breakfast, applied my number stickers, and walked to transition.
+
+There, surrounded by incredibly fit athletes from all over the world, it was easy to feel out of place. I reminded myself to stick to my plan and not get distracted.  
+My setup was dialed in: bike shoes clipped and held by elastics, helmet with sunglasses on the bars, running shoes with a gel tucked inside, race belt ready, and Vaseline around the shoe entry for a fast slip-in.
+
+After some dynamic stretching and elastic-band warm-up, I dropped my bag and headed toward the swim start.
+
+---
+
+## 🏊 Swim — Chaos in the Harbour
+
+A surprise awaited us: due to high waves, the course was moved **inside the harbour**. For a weaker swimmer like me, that was a relief.
+
+I warmed up briefly in the water, then lined up with my wave — **76 athletes**, shoulder to shoulder.  
+The speaker’s words echoed: *“Athletes, you are now in the hands of the starter.”*  
+Heartbeats. Silence. The horn blasted.
+
+Chaos. Bodies everywhere. Some swimmers veered off course, making it hard to stay straight.  
+I kept calm, knowing that going too hard early would only lead to fading later.
+
+I exited the water **56th of 76** — far from the front, but I wasn’t last, and more importantly, I made the cutoff I had been worried about.
+
+---
+
+## 🚴 Bike — Two Loops of Noise
+
+Transition was long — nearly **400 m** from swim exit to bike mount — but it went smoothly for once.
+
+The bike course had two loops: a technical first half with small hills, then a flat, fast stretch back. Perfect variety.
+
+I tried to stay with a group early on, but when they pushed the pace, I let them go.  
+I didn’t want to repeat past mistakes of blowing up before the run.  
+I settled around **249 W**, slightly below my **255 W goal**, but steady.
+
+The only problem: my bike sounded like it was falling apart — constant squeaks and cracks.  
+I prayed it would hold together to the end.
+
+---
+
+## 🏃 Run — Holding It Together
+
+T2 was quick, no drama.
+
+My legs felt heavier than I hoped, but I focused on rhythm.  
+The run course had rolling hills and heat, and I maintained a **4:30 min/km** pace — not spectacular, but consistent.  
+I even managed to pick it up in the last 500 m.
+
+Then came the **blue carpet** — that magical final stretch.  
+Crossing the finish arch with a World Championship medal around my neck was a moment I’ll never forget.
+
+---
+
+## 📸 Gallery
+
+::: {.gallery cols=3}
+![Bike racked, transition ready](images/race_bike_rack.jpg)
+![Harbour swim course](images/swim_harbour.jpg)
+![Blue carpet finish](images/finish_blue_carpet.jpg)
+:::
+
+::: {.gallery cols=2}
+![Team Canada pre-race](images/team_canada_lunch.jpg)
+![Post-race medal shot](images/medal_closeup.jpg)
+:::
+
+---
+
+## 🇨🇦 Little Rivalries
+
+I had two “rivals” in mind:  
+- A Canadian I met at swim familiarization — confident and strong in the water. I ended up beating him.  
+- Another Canadian from the bike group that had dropped me. I reeled him in on the run and passed him in the final lap, finishing about **20 seconds ahead**.
+
+Two small, personal wins that made the day even sweeter.
+
+---
+
+## 🏁 Results and Reflections
+
+I finished **56th of 77**. Not spectacular on paper, but in context — this was the **world’s best amateur field**, every athlete here having earned their spot.
+
+My time of **1:15:35** was solid, even a bit faster than my season average given the heat and course difficulty.  
+I also finished **2nd of 6 Canadians** — a proud result.
+
+Looking back at my goals:
+
+- **Top 10%** → not met, but a poor metric anyway since it depends on who shows up.  
+- **Time goal (1:10–1:20)** → met halfway at 1:15:35.  
+- **Don’t fade on the run** → ✅  
+- **Not last** → ✅  
+- **Top 3 Canadians** → ✅  
+
+Most importantly, I executed my plan.  
+I raced smart, steady, and left the finish line with a smile instead of a grimace.  
+That, to me, is a success.
+
+---
+
+{{< video src="videos/finish_clip.mp4" controls="true" autoplay="false" loop="false" >}}
+
+---
+
+::: {.callout-tip title="Race Metrics"}
+| Segment | Time | Pace / Power | Rank |
+|----------|------|--------------|------|
+| Swim     | 13:50 | — | 56 / 76 |
+| Bike     | 36:15 | 249 W | 55 / 76 |
+| Run      | 22:00 | 4:30 min/km | 52 / 76 |
+| **Total** | **1:15:35** | — | **56 / 77** |
+:::
+
+---
+
+::: {.callout-note}
+[⬅️ Previous post: The Road to Wollongong](../2025-10-18-wollongong-experience/)
+:::

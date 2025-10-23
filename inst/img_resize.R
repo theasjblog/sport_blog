@@ -1,7 +1,10 @@
 a_raw <- c(
-  list.files('../../../Downloads/data_images_to_update', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpg'),
-  list.files('../../../Downloads/data_images_to_update', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpeg'),
-  list.files('../../../Downloads/data_images_to_update', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'png'))
+  list.files('../../../Downloads/2025-10-15_WORLD_FINALS', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpg'),
+  list.files('../../../Downloads/2025-10-15_WORLD_FINALS', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpeg'),
+  list.files('../../../Downloads/2025-10-15_WORLD_FINALS', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'png'),
+  list.files('../../../Downloads/2025-10-15_WORLD_FINALS', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'JPG'),
+  list.files('../../../Downloads/2025-10-15_WORLD_FINALS', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'JPEG'),
+  list.files('../../../Downloads/2025-10-15_WORLD_FINALS', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'PNG'))
 
 a_small <- c(
   list.files('../../../Downloads/2025-07-13_BRACEBRIDGE_SPRINT_TRIATHLON_small', full.names = TRUE, recursive = TRUE, include.dirs = FALSE, pattern = 'jpg'),
@@ -63,8 +66,8 @@ for(i in 1:nrow(file_info)){
   # this_img_final <- file.path(final_path, 
   #                             basename(file_info$name[i]))
   
-  this_img_tmp <- gsub('data_images_to_update', 'gcs_down/sport_tmp', file_info$name[i])
-  this_img_final <- gsub('data_images_to_update', 'gcs_down/sport_small', file_info$name[i])
+  this_img_tmp <- gsub('2025-10-15_WORLD_FINALS', 'gcs_down/sport_tmp', file_info$name[i])
+  this_img_final <- gsub('2025-10-15_WORLD_FINALS', 'gcs_down/sport_small', file_info$name[i])
   
   dir.create(dirname(this_img_tmp), recursive = TRUE)
   dir.create(dirname(this_img_final), recursive = TRUE)
@@ -86,7 +89,7 @@ for(i in 1:nrow(file_info)){
     
     #cat("Quality:", q, " Size:", size_mb, "KB\n")
     
-    if (size_mb <= target_size_mb | q == 10) {
+    if (size_mb <= target_size_mb | q == 5) {
       file.copy(this_img_tmp, this_img_final, overwrite = TRUE)
       cat("copied", this_img_final, "\n\n")
       break

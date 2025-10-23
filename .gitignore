@@ -9,3 +9,5 @@ _site/
 *.parquet
 *.png
 collage/
+
+data/
