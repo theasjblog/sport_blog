@@ -1,9 +1,9 @@
 ---
 title: "World Championships: The Race of a Lifetime"
 subtitle: "Racing among the best in Wollongong"
-date: 2025-10-20
+date: 2025-10-28
 categories: ["race_reports", "Wollongong2025"]
-image: "images/finish_blue_carpet.jpg"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/214_3rd-3388546-DIGITAL_HIGHRES-9989_59401-77713498.JPG
 description: "Race day at the World Championships in Wollongong — months of training leading to one unforgettable hour."
 toc: false
 freeze: true
@@ -13,7 +13,6 @@ format:
     toc: false
     smooth-scroll: true
     page-layout: full
-    css: styles/custom.css
     lightbox: true
 ---
 
@@ -32,6 +31,8 @@ I collected my race pack the very first day: arm and calf stickers, swim cap, bi
 The next day, I dropped off my bike for the mandatory pre-race check — with **1,260 athletes** in the sprint alone, this keeps things organized.
 
 On the way there, I got my first omen: the bike squeaked and cracked with every pedal stroke. Not ideal.
+
+![In this races you have to rack the bike the day befre the race. So many bikes!](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/IMG_2261.png){width="500"}
 
 ---
 
@@ -60,6 +61,8 @@ I kept calm, knowing that going too hard early would only lead to fading later.
 
 I exited the water **56th of 76** — far from the front, but I wasn’t last, and more importantly, I made the cutoff I had been worried about.
 
+![Swim done!](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/153_3rd-3388546-DIGITAL_HIGHRES-9989_11448-77713437.JPG){width="500"}
+
 ---
 
 ## 🚴 Bike — Two Loops of Noise
@@ -75,6 +78,9 @@ I settled around **249 W**, slightly below my **255 W goal**, but steady.
 The only problem: my bike sounded like it was falling apart — constant squeaks and cracks.  
 I prayed it would hold together to the end.
 
+
+![Bike leg.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/176_3rd-3388546-DIGITAL_HIGHRES-9989_25888-77713460.JPG){width="500"}
+
 ---
 
 ## 🏃 Run — Holding It Together
@@ -88,20 +94,25 @@ I even managed to pick it up in the last 500 m.
 Then came the **blue carpet** — that magical final stretch.  
 Crossing the finish arch with a World Championship medal around my neck was a moment I’ll never forget.
 
+![Down Flagstaff Hill.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/193_3rd-3388546-DIGITAL_HIGHRES-9989_34874-77713477.JPG){width="500"}
+
 ---
 
 ## 📸 Gallery
 
 ::: {.gallery cols=3}
-![Bike racked, transition ready](images/race_bike_rack.jpg)
-![Harbour swim course](images/swim_harbour.jpg)
-![Blue carpet finish](images/finish_blue_carpet.jpg)
+![Bike checked in and ready to race.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/IMG_2262.png){width="100"}
+
+![Swim done!](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/147_3rd-3388546-DIGITAL_HIGHRES-9989_3713-77713431.JPG){width="100"}
+
+![Getting ready for T2.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/177_3rd-3388546-DIGITAL_HIGHRES-9989_26291-77713461.JPG){width="100"}
+
+![Crossig the finish line.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/207_3rd-3388546-DIGITAL_HIGHRES-9989_54110-77713491.JPG){width="100"}
+
+![The medal, front and back.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2310.png){width="100"}
+
 :::
 
-::: {.gallery cols=2}
-![Team Canada pre-race](images/team_canada_lunch.jpg)
-![Post-race medal shot](images/medal_closeup.jpg)
-:::
 
 ---
 
@@ -109,7 +120,7 @@ Crossing the finish arch with a World Championship medal around my neck was a mo
 
 I had two “rivals” in mind:  
 - A Canadian I met at swim familiarization — confident and strong in the water. I ended up beating him.  
-- Another Canadian from the bike group that had dropped me. I reeled him in on the run and passed him in the final lap, finishing about **20 seconds ahead**.
+- Another Canadian from the bike group that had dropped me. I reeled him in on the run and passed him in the final lap, finishing about **10 seconds ahead**.
 
 Two small, personal wins that made the day even sweeter.
 
@@ -134,23 +145,25 @@ Most importantly, I executed my plan.
 I raced smart, steady, and left the finish line with a smile instead of a grimace.  
 That, to me, is a success.
 
----
-
-{{< video src="videos/finish_clip.mp4" controls="true" autoplay="false" loop="false" >}}
-
----
-
-::: {.callout-tip title="Race Metrics"}
-| Segment | Time | Pace / Power | Rank |
-|----------|------|--------------|------|
-| Swim     | 13:50 | — | 56 / 76 |
-| Bike     | 36:15 | 249 W | 55 / 76 |
-| Run      | 22:00 | 4:30 min/km | 52 / 76 |
-| **Total** | **1:15:35** | — | **56 / 77** |
-:::
 
 ---
 
 ::: {.callout-note}
-[⬅️ Previous post: The Road to Wollongong](../2025-10-18-wollongong-experience/)
+[⬅️ Previous post: The Road to Wollongong](../../others/2025-10-15_WOLLONGONG_OVERALL/index.qmd)
 :::
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+source('../../../inst/aux_functions.R')
+race_date <- "2025-10-17"
+
+DT::datatable(get_summary_data(race_date),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
