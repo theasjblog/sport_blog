@@ -1,0 +1,116 @@
+---
+title: "Wollongong 2025: Photo Gallery"
+description: "A visual wrap-up of the trip, races, and moments around the World Championships."
+date: 2025-10-28
+categories: [wollongong2025, worlds, gallery]
+image: https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2251.png
+format:
+  html:
+    page-layout: full
+    theme: cosmo
+lightbox: auto
+---
+
+# Photo Gallery
+
+## Arrival & Team
+
+::: {.gallery cols=2}
+![The most used app for the whole journey: Find My.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2219.png)
+
+![OK, the bike is on the plane.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2221.png)
+
+![Goodbye Toronto.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2223.png)
+
+![Scouting the swim venue.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2232.png)
+
+![Wollongong north beach.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2237.png)
+
+![Team Canada.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2251.png)
+
+![Team Canada.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2252.png)
+
+![Parade of the Nations.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2249.png)
+
+![Parade of the Nations.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2256.png)
+
+![Parade of the Nations.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2241.png)
+
+![Flies... So. Many. Flies.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2267.png)
+
+![Flagstaff Lighthouse.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2287.png)
+:::
+
+## Individual Race
+
+::: {.gallery cols=3}
+![So many bikes!](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/IMG_2261.png)
+
+![Swim familiarization.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2238.png)
+
+![Swim done.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/147_3rd-3388546-DIGITAL_HIGHRES-9989_3713-77713431.JPG)
+
+![Bike leg.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/170_3rd-3388546-DIGITAL_HIGHRES-9989_20082-77713454.JPG)
+
+![T2 in sight.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/177_3rd-3388546-DIGITAL_HIGHRES-9989_26291-77713461.JPG)
+
+![Run up Flagstff Hill.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/182_3rd-3388546-DIGITAL_HIGHRES-9989_32795-77713466.JPG)
+
+![Run down Flagstff Hill.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/193_3rd-3388546-DIGITAL_HIGHRES-9989_34874-77713477.JPG)
+
+![On the final stretch.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/198_3rd-3388546-DIGITAL_HIGHRES-9989_38486-77713482.JPG)
+
+![Done!](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/214_3rd-3388546-DIGITAL_HIGHRES-9989_59401-77713498.JPG)
+:::
+
+## Mixed Relay
+
+::: {.gallery cols=3}
+![The team.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2243.png)
+
+![The team.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2244.png)
+
+![Ready to check in.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/IMG_2277.png)
+
+![Lisa out of the water.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/302_3rd-3390985-DIGITAL_HIGHRES-9993_3767-77951931.JPG)
+
+![Me out of the water.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/279_3rd-3390985-DIGITAL_HIGHRES-9993_1053-77951908.JPG)
+
+![Irina out of the water.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/287_3rd-3390985-DIGITAL_HIGHRES-9993_1849-77951916.JPG)
+
+![Gregory out of the water.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/292_3rd-3390985-DIGITAL_HIGHRES-9993_2780-77951921.JPG)
+
+![Lisa on the bike.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/333_3rd-3390985-DIGITAL_HIGHRES-9993_8858-77951962.JPG)
+
+![Me on the bike.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/353_3rd-3390985-DIGITAL_HIGHRES-9993_9977-77951982.JPG)
+
+![Irina on the bike.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/359_3rd-3390985-DIGITAL_HIGHRES-9993_11205-77951988.JPG)
+
+![Gregory on the bike.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/365_3rd-3390985-DIGITAL_HIGHRES-9993_12475-77951994.JPG)
+
+![Me on the run.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/377_3rd-3390985-DIGITAL_HIGHRES-9993_15252-77952006.JPG)
+
+![Irina on the run.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/378_3rd-3390985-DIGITAL_HIGHRES-9993_15803-77952007.JPG)
+
+![Gregory on the run.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/393_3rd-3390985-DIGITAL_HIGHRES-9993_17902-77952022.JPG)
+
+![Post-race pic.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/IMG_2280.png)
+
+:::
+
+---
+
+::: {.callout-note}
+All other posts in this series:
+
+[Wollongong Worlds: Individual Sprint Triathlon](../../race_reports/2025-10-19_WOLLONGONG_RELAY/index.qmd)
+
+[Wollongong Worlds: Mixed Team Relay](../../race_reports/2025-10-19_WOLLONGONG_RELAY/index.qmd)
+
+[Wollongong Worlds: Overall experience](../2025-10-15_WOLLONGONG_OVERALL/index.qmd)
+
+[Wollongong Worlds: What it takes to qualify](../2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.qmd)
+
+[Wollongong Worlds: How much does it cost?](../others/2025-10-15_WOLLONGONG_COST/index.qmd)
+:::
+
