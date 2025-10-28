@@ -1,7 +1,7 @@
 ---
 title: "Wollongong Worlds: My Overall Experience"
 subtitle: "Representing Canada at the 2025 World Triathlon Championships"
-date: "2025-10-25"
+date: 2025-10-25
 authro: "Adrian Joseph"
 categories: ["wollongong2025"]
 image: https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2186.png
@@ -97,3 +97,18 @@ Day 7 was the long journey back. More airports, more waiting, and more obsessive
 Competing at Worlds wasn’t just about a single race. It was a celebration of everything that led there — the training, the people, the resilience. Wollongong will always be the week where all those years of effort came together in one unforgettable moment. Hopefully there will be more Worlds to come, but you can never forget the first one!
 
 ![Goodnight Wollongong, it has been an unforgettable experience.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2287.png)
+
+
+::: {.callout-note}
+All other posts in this series:
+
+[Wollongong Worlds: Individual Sprint Triathlon](../../race_reports/2025-10-19_WOLLONGONG_RELAY/index.qmd)
+
+[Wollongong Worlds: Mixed Team Relay](../../race_reports/2025-10-19_WOLLONGONG_RELAY/index.qmd)
+
+[Wollongong Worlds: Photo gallery](../2025-10-15_WOLLONGONG_GALLERY/index.qmd)
+
+[Wollongong Worlds: What it takes to qualify](../2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.qmd)
+
+[Wollongong Worlds: How much does it cost?](../others/2025-10-15_WOLLONGONG_COST/index.qmd)
+:::

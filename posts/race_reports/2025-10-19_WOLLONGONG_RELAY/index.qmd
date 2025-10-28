@@ -1,11 +1,10 @@
 ---
 title: "Mixed Team Relay — Wollongong Worlds"
 subtitle: "Team Canada III (X160)"
-date: YYYY-MM-DD
-categories: [race_reports, worlds_2025]
+date: 2025-10-19
+categories: [race_reports, wollongong2025]
 tags: [mixed team relay, sprint, wollongong, team canada]
-# Hero/featured image for listings and social
-image: PATH/TO/featured_team_photo.jpg
+image: https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2244.png
 # Quarto HTML options
 format:
   html:
@@ -29,6 +28,9 @@ For those unfamiliar, a mixed relay team consists of **four athletes (woman / ma
 
 Four days before the race, I met my teammates at the Boathouse: **Lisa**, **Irina**, and **Gregory**. Together, we were **Team Canada III (X160)**.
 
+![Team at the Boathouse](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2243.png)
+
+
 The day before the race I joined the **swim familiarization**. The water looked calm and inviting — much easier than the individual event had been. While I was swimming, Lisa picked up our race packs (stickers for arms/calves/bike/helmet, timing chip, team cap, etc.).
 
 ::: callout-note
@@ -43,6 +45,9 @@ During the individual race my bike was *constantly squeaking and crackling*. I t
 Another relaxed start: we met at **9:00 a.m.** at transition to sticker bikes, bags, and ourselves, and set up as usual. Then we moved to the relay holding area — a sequence of **gated zones**. First, only **leg-1** athletes entered; later they opened for **leg-2** (me), and so on. Inside, we received the **team timing chip** and waited. A big screen and a loudspeaker called teams, but they occasionally glitched, so we also scanned the chute ourselves.
 
 I spotted **Lisa** charging in, we tagged — and I was off.
+
+![Ready to check in](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/IMG_2277.png)
+
 
 ## My Leg
 
@@ -62,29 +67,31 @@ We placed **21st of 40** teams — solid for an improvised squad with no podium 
 
 ## Photo Highlights
 
-> Lightbox is enabled globally. Use smaller web-sized images here; link to full-size if you have them. Replace paths and captions as needed.
-
 ::: {layout-ncol=3}
-[![](PATH/TO/thumb_team_boathouse.jpg){fig-alt="Team at the Boathouse"}](PATH/TO/full_team_boathouse.jpg "Team Canada III (X160) at the Boathouse")
+![Team at the Boathouse](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2244.png){width=100}
 
-[![](PATH/TO/thumb_swim_familiarization.jpg){fig-alt="Swim familiarization"}](PATH/TO/full_swim_familiarization.jpg "Swim familiarization — calm water and clear lines")
+![Swim venue](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/IMG_2269.png){width=100}
 
-[![](PATH/TO/thumb_transition_stickers.jpg){fig-alt="Transition stickers"}](PATH/TO/full_transition_stickers.jpg "9 a.m. transition: stickers on bikes, bags, and bodies")
-
-[![](PATH/TO/thumb_relay_gates.jpg){fig-alt="Relay gates"}](PATH/TO/full_relay_gates.jpg "Relay holding area — gated flow by leg order")
-
-[![](PATH/TO/thumb_tag_irina.jpg){fig-alt="Tag to Irina"}](PATH/TO/full_tag_irina.jpg "Tagging Irina at the harbour for leg 3")
-
-[![](PATH/TO/thumb_lang_park_finish.jpg){fig-alt="Lang Park"}](PATH/TO/full_lang_park_finish.jpg "Waiting at Lang Park for Gregory’s finish")
+![Post race](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/IMG_2280.png){width=100}
 :::
 
-## Data Box (optional)
+## Data Box
 
 - **Team**: Team Canada III — X160  
 - **Order**: Lisa → *Me* → Irina → Gregory  
-- **Format**: 600 m swim · 6 km bike · 1.3 km run  
+- **Format**: 600 m swim · 5.6 km bike · 1.3 km run  
 - **Finish**: 21 / 40 teams
 
-::: callout-tip
-If you want, I can add a small **results table** pulling split times (if available) and a **Strava/Garmin embed** block.
+::: {.callout-note}
+All other posts in this series:
+
+[Wollongong Worlds: My Overall Experience](../../others/2025-10-15_WOLLONGONG_OVERALL/index.qmd)
+
+[Wollongong Worlds: Individual Sprint Triathlon](../2025-10-19_WOLLONGONG_RELAY/index.qmd)
+
+[Wollongong Worlds: Photo gallery](../../others/2025-10-15_WOLLONGONG_GALLERY/index.qmd)
+
+[Wollongong Worlds: What it takes to qualify](../../others/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.qmd)
+
+[Wollongong Worlds: How much does it cost?](../../others/2025-10-15_WOLLONGONG_COST/index.qmd)
 :::
