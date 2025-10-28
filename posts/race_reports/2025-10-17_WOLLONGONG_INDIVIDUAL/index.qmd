@@ -1,8 +1,8 @@
 ---
 title: "World Championships: The Race of a Lifetime"
 subtitle: "Racing among the best in Wollongong"
-date: 2025-10-28
-categories: ["race_reports", "Wollongong2025"]
+date: 2025-10-17
+categories: ["race_reports", "wollongong2025"]
 image: https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/214_3rd-3388546-DIGITAL_HIGHRES-9989_59401-77713498.JPG
 description: "Race day at the World Championships in Wollongong — months of training leading to one unforgettable hour."
 toc: false
@@ -148,8 +148,19 @@ That, to me, is a success.
 
 ---
 
+
 ::: {.callout-note}
-[⬅️ Previous post: The Road to Wollongong](../../others/2025-10-15_WOLLONGONG_OVERALL/index.qmd)
+All other posts in this series:
+
+[Wollongong Worlds: My Overall Experience](../../others/2025-10-15_WOLLONGONG_OVERALL/index.qmd)
+
+[Wollongong Worlds: Mixed Team Relay](../2025-10-19_WOLLONGONG_RELAY/index.qmd)
+
+[Wollongong Worlds: Photo gallery](../../others/2025-10-15_WOLLONGONG_GALLERY/index.qmd)
+
+[Wollongong Worlds: What it takes to qualify](../../others/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.qmd)
+
+[Wollongong Worlds: How much does it cost?](../../others/2025-10-15_WOLLONGONG_COST/index.qmd)
 :::
 
 
