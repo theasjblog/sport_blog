@@ -1,0 +1,236 @@
+---
+title: "The Cost of Racing the World Championships"
+subtitle: "What it really takes — financially — to represent Team Canada in Wollongong"
+date: 2025-10-30
+categories: ["Wollongong2025"]
+image: ./img/00.jpg
+lightbox: true
+---
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(readr)
+library(dplyr)
+library(kableExtra)
+library(stringr)
+
+df1 <- readr::read_csv(file.path('data', 'df1.csv'),
+                       show_col_types = FALSE) |>
+  filter(
+    Category != 'not_count'
+  ) |>
+  mutate(
+    Cost = gsub("CA\\$", "", Cost),
+    Cost = gsub(",", "", Cost),
+    Cost = as.numeric(Cost)
+  ) |>
+  filter(
+    Category != 'not_count'
+  ) |>
+  group_by(Name) |>
+  summarise(Cost = sum(Cost))
+
+df2 <- readr::read_csv(file.path('data', 'df1.csv'),
+                       show_col_types = FALSE) |>
+  filter(
+    Category != 'not_count'
+  ) |>
+  select(all_of(c('Name', 'Category', 'id'))) |>
+  distinct()
+
+df1 <- df1 |>
+  left_join(df2, by = 'Name')
+
+```
+
+## The real price of a dream
+
+Competing at the **World Triathlon Championships** is one of the highest honours for any age-group athlete.  
+But unlike professional or Olympic racers, **there’s no financial support from the federation** — every athlete covers their own costs: registration, uniforms, travel, accommodation, and more.  
+
+Below, I’ve broken down the main expenses into three categories: mandatory, travel, and optional expenses.
+
+---
+
+## 1. Mandatory expenses
+
+![Mandatory expenses are those you must commit to no matter what. Photo by Emil Kalibradov on Unsplash](./img/01.jpg)
+
+These are **non-negotiable** — every athlete must cover them to be eligible to race for Team Canada.  
+They include the official race entry, national uniforms, and mandatory insurance. Here is the list, lets' break it down.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+df_out <- df1 |>
+  filter(Category == "mandatory") %>%
+  # Add a total row at the bottom
+  bind_rows(
+    summarise(.,
+      across(everything(), ~ if(is.numeric(.)) sum(., na.rm = TRUE) else ""),
+      Name = "Total"
+    )
+  ) |>
+  arrange(id) |>
+  select(-c('Category', 'id')) 
+
+# Render the table
+kable(df_out, digits = 2) |>
+  kable_styling(full_width = FALSE) |>
+  row_spec(nrow(df_out), bold = TRUE)
+
+```
+
+
+First of all, you need to qualify, so you will have to pay for at least one race and to register your EOI. One of the requirements is to be in "good standing" with the federation. In plain English, you need to be a member Triathlon Canada and one of the affiliate branches.
+
+After you qualified you will need to pay a team management fee, get insurance, register for your race, purchase the race gear, and finally the mandatory parade gear.
+
+Note that I took part in two event: the individual sprint race and the mixed team relay race. Your cost here will vary, depend on which events you will actually compete in. 
+
+> 💡 *If you already own a recent Team Canada kit, you may be allowed to race in it, saving a few hundred dollars.*
+
+---
+
+## 2. Travel expenses
+
+![Putting the bike on a plane can be expensive.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2221.png)
+
+You qualified and you have all the gear needed! Congratulations! Now you need to get to the race venue. Of course, this category will be vastly dependent on how far you need to travel, your travel and accommodation preferences, even the kind of race you do (do you need to take the bike on a plane or not?). Here is what it did cost me.
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+df_out <- df1 |>
+  filter(Category == "travel") %>%
+  # Add a total row at the bottom
+  bind_rows(
+    summarise(.,
+      across(everything(), ~ if(is.numeric(.)) sum(., na.rm = TRUE) else ""),
+      Name = "Total"
+    )
+  ) |>
+  arrange(id) |>
+  select(-c('Category', 'id')) 
+
+# Render the table
+kable(df_out, digits = 2) |>
+  kable_styling(full_width = FALSE) |>
+  row_spec(nrow(df_out), bold = TRUE)
+
+```
+
+
+In my case I booked the flight with FlightHub ad the accommodation for 6 nights with Nirvana. I am sure you can find cheaper accommodation, but Nirvana made it easier because they also included shuttle to and from the airport, and the bike tune up. All of those were extras to the basic accommodation deal, but booking everything through the same website, at the same time, made it very convenient and it gave me piece of mind.
+
+Because I was travelling to Australia through US I had to get an electronic VISA for both countries.
+
+I then decided to bring my own bike rather than rent one in Wollongong. First of all, I felt like I "owed" it my bike to take it to the race: it gets me the qualification, it deserved the race! Furthermore, it quickly became obvious to whoever was trying to rent a bike that availability was very limited. Regardless, taking the bike on the plane means having to pay the corresponding extra charge.
+
+Another thing I got before actually travelling to Australia was an e-sim. I got it with HolaFly and it was money well spent, as it allows me to always be in touch with Team Canada in Slack wherever I was.
+
+The next expense if food. This will be drastically different for everyone. In my case I had some food and snacks at the airport, and when in Wollongong I only purchased food at supermarkets and ate in my hotel room. Just trying to save some money really.
+
+The final expense was gifts. After such a long journey, you will want to show some appreciation to whoever supported you and stayed back home.
+
+
+---
+
+## 3. Optional extras
+
+![I now have so much Team Canada stuff...](./img/04.png)
+
+Some expenses aren’t strictly necessary but are part of the experience — souvenirs for yourself, event expo items, or extra federation gear that you’ll probably end up buying anyway.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+df_out <- df1 |>
+  filter(Category == "optional") %>%
+  # Add a total row at the bottom
+  bind_rows(
+    summarise(.,
+      across(everything(), ~ if(is.numeric(.)) sum(., na.rm = TRUE) else ""),
+      Name = "Total"
+    )
+  ) |>
+  arrange(id) |>
+  select(-c('Category', 'id')) 
+
+# Render the table
+kable(df_out, digits = 2) |>
+  kable_styling(full_width = FALSE) |>
+  row_spec(nrow(df_out), bold = TRUE)
+
+```
+
+In my case I got the photo package from the official photographers FinisherPix (for both races), one extra racing trisuit, some extra Team Canada clothing: t-shirts, jumper, cycling kit, running kit, etc.. I went all out. From the expo I got a swim cap, a pair of socks, and a jumper.
+
+
+> 💡 *The last day of the event everything at the expo will be 50% off, but availability will be very limited and you might struggle to find stuff your size. I lucked out with a jumper that I paid 60AUD instead of 120AUD.*
+
+---
+
+## Total cost
+
+![Photo by Simon Kadula on Unsplash](./img/02.jpg)
+
+When all is said and done:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+df_out <- df1 |>
+  group_by(Category) |>
+  summarise(Cost = sum(Cost)) |>
+  # Add a total row at the bottom
+  bind_rows(
+    df1 |>
+      summarise(
+      across(everything(), ~ if(is.numeric(.)) sum(., na.rm = TRUE) else ""),
+      Category = "Total"
+    )
+  ) |>
+  select(-c('Name', 'id'))  |>
+  mutate(Category = stringr::str_to_sentence(Category))
+
+# Render the table
+kable(df_out, digits = 2) |>
+  kable_styling(full_width = FALSE) |>
+  row_spec(nrow(df_out), bold = TRUE)
+```
+
+
+That’s the full picture — what it really costs to race the World Championships as an age-group athlete representing Canada. 
+
+---
+
+## Final thoughts
+
+The experience of racing at Worlds comes with a significant price tag, but also with an immeasurable reward — representing your country, sharing the course with athletes from around the world, and closing a long chapter of hard work and dedication.
+
+It’s not just an investment in a single race — it’s an investment in a lifelong memory.
+
+![I'll never forget Wollongong and the Team Canada experience.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2253.png)
+
+::: {.callout-note}
+All other posts in this series:
+
+[Wollongong Worlds: Individual Sprint Triathlon](../../race_reports/2025-10-19_WOLLONGONG_RELAY/index.qmd)
+
+[Wollongong Worlds: Mixed Team Relay](../../race_reports/2025-10-19_WOLLONGONG_RELAY/index.qmd)
+
+[Wollongong Worlds: Overall experience](../2025-10-15_WOLLONGONG_OVERALL/index.qmd)
+
+[Wollongong Worlds: What it takes to qualify](../2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.qmd)
+
+[Wollongong Worlds: Photo Gallery](../2025-10-15_WOLLONGONG_GALLERY/index.qmd)
+:::
