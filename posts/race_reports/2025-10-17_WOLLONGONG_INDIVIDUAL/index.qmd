@@ -158,8 +158,6 @@ All other posts in this series:
 
 [Wollongong Worlds: Photo gallery](../../others/2025-10-15_WOLLONGONG_GALLERY/index.qmd)
 
-[Wollongong Worlds: What it takes to qualify](../../others/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.qmd)
-
 [Wollongong Worlds: How much does it cost?](../../others/2025-10-15_WOLLONGONG_COST/index.qmd)
 :::
 

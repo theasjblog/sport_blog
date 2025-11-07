@@ -230,7 +230,5 @@ All other posts in this series:
 
 [Wollongong Worlds: Overall experience](../2025-10-15_WOLLONGONG_OVERALL/index.qmd)
 
-[Wollongong Worlds: What it takes to qualify](../2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.qmd)
-
 [Wollongong Worlds: Photo Gallery](../2025-10-15_WOLLONGONG_GALLERY/index.qmd)
 :::

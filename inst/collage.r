@@ -85,6 +85,7 @@ image_write(row, "collage_test.png")
 
 
 library(magick)
+library(dplyr)
 
 make_collage <- function(files, ncol = 10, cell_size = "200x200!", outfile = "collage.png") {
   # Read and resize
@@ -98,7 +99,9 @@ make_collage <- function(files, ncol = 10, cell_size = "200x200!", outfile = "co
   row_imgs <- lapply(rows, function(r) image_append(image_join(r), stack = FALSE))
   
   # Stack rows vertically
-  final <- image_append(image_join(row_imgs), stack = TRUE)
+  final <- image_append(image_join(row_imgs), stack = TRUE) |>
+    image_background("white") |>    # Remove alpha (transparent) if any
+    image_convert("png")            # Force proper PNG encoding
   
   # Save result
   image_write(final, outfile)
@@ -111,6 +114,7 @@ files <- c(
   list.files("collage/medals", pattern = "\\.png$", full.names = TRUE, recursive = TRUE),
   list.files("collage/photos_one_item", pattern = "\\.png$", full.names = TRUE, recursive = TRUE)
 )
+files <- list.files(dirname(file.choose()), full.names = TRUE)
 files <- data.frame(files = files) |>
   mutate(date = stringr::str_split(files, "/", simplify = TRUE)[,4]) |>
   mutate(date = substring(date, 1, 10),
@@ -124,16 +128,17 @@ files <- data.frame(files = files) |>
 this_files <- files |>
   # filter(date>=as.Date("1900-01-01") & date <= as.Date("2015-11-21")) |>
   # filter(date>as.Date("2015-11-21") & date < as.Date("2019-09-28")) |>
-  filter(date>=as.Date("2019-09-28") & date <= as.Date("3019-09-08")) |>
+  # filter(date>=as.Date("2019-09-28") & date <= as.Date("3019-09-08")) |>
   pull(files)
-title_collage <- 'cover_3.png'
-title_collage <- 'spine_3.png'
+title_collage <- 'cover_1.png'
+title_collage <- 'spine_1.png'
+
 
 n_cols <- floor(length(this_files)^(1/2))
 n_rows <- ceiling(length(this_files)/n_cols)
 
-n_cols <- 4
-n_rows <- 20
+n_cols <- 2
+n_rows <- 7
 
 
 missing_to_square <- (n_rows * n_cols) - length(this_files)
