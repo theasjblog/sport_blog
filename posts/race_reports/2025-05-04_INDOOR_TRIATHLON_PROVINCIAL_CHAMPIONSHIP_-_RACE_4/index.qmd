@@ -1,0 +1,375 @@
+---
+title: "Indoor Triathlon Provincial Championship Series - Race 4 And Series Recap"
+date: "2025-05-04"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png
+categories: [race report, triathlon, indoor]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png)
+
+# Overview
+
+This was the third race in the Ontario Indoor Triathlon Championship series. If you're not familiar with the format, I talked about it more in [this post](../2025-02-22_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_1/index.qmd) and [this one](../2025-04-12_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_3/index.qmd).
+
+## Quick Recap of the Format
+
+In this series, your score is based on how far you can swim, bike, and run in 15 minutes each. The further you go, the more points you earn. The series includes four races, but only your best three results count toward the final standings. Whoever has the highest point total at the end wins the championship (and gets a pretty cool trophy). Age Group athletes can also earn bragging rights—and a digital certificate—if they top their 10-year age group.
+
+## My Goals Going In
+
+Heading into this event, I had two main goals:
+
+* Hold on to my age group lead.
+* Do better (or at least not worse) than the previous race.
+
+I wasn’t aiming for the overall title—let’s be real, at 40+ years old, it’s tough to compete with 20-somethings in a sprint-style event like this.
+
+## Age group ranking
+
+Did I manage to keep my age group lead? Yep—and it didn’t take much effort. I was the only one in my age group!
+
+So yes, the competitive spirit wasn’t exactly raging in M40–49, but it did guarantee me the win in the Age Group category for the series. Here are the winner of this last race in each Age Group:
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(arrow)
+library(dplyr)
+library(kableExtra)
+library(DBI)
+library(duckdb)
+library(glue)
+
+# Connect to DuckDB
+  con <- dbConnect(duckdb::duckdb())
+  
+  # Enable HTTPFS extension to access remote files
+  dbExecute(con, "INSTALL httpfs; LOAD httpfs;")
+  
+  query <- "
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet')
+  WHERE EVENT_DATE IN (DATE '2025-05-04', DATE '2025-04-12', DATE '2025-02-22')
+"
+  
+  race_metadata <- dbGetQuery(con, query)
+
+  race_ids <- paste0("'", race_metadata$RACE_ID, "'", collapse = ", ")
+  query <- glue("
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_rankings.parquet')
+  WHERE RACE_ID IN ({race_ids})
+")
+  
+  all_races <- dbGetQuery(con, query)
+
+
+    query <- glue("
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/activities_metadata.parquet')
+  WHERE RACE_ID IN ({race_ids})
+")
+  
+  activities_metadata <- dbGetQuery(con, query)
+  
+    ids <- paste0("'", activities_metadata$ID, "'", collapse = ", ")
+  query <- glue("
+  SELECT *
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/activities_data.parquet')
+  WHERE ID IN ({ids})
+")
+  
+  activities_data <- dbGetQuery(con, query)
+
+
+race_ids <- race_metadata |>
+  filter(EVENT_DATE == as.Date('2025-05-04')) |>
+  pull(RACE_ID)
+
+leaders <- all_races |>
+  filter(RACE_ID %in% race_ids) |>
+  arrange(desc(RESULT_FINAL)) |>
+  mutate(OVERALL_RANKING = seq(1, sum(RACE_ID == race_ids))) |>
+  group_by(CATEGORY) |>
+  arrange(desc(RESULT_FINAL)) |>
+  slice_head(n=1) |>
+  ungroup() |>
+  select(all_of(c(
+    'ATHLETE', 'CATEGORY', 'RESULT_FINAL', 'OVERALL_RANKING'
+  ))) |>
+  rename(
+    'Athlete' = 'ATHLETE',
+    'Age Group' = 'CATEGORY',
+    'Total Points' = 'RESULT_FINAL',
+    'Overall Ranking' = 'OVERALL_RANKING'
+  )
+
+kableExtra::kable(leaders) |>
+  row_spec(which(leaders$Athlete == "ADRIAN JOSEPH"), bold = TRUE)
+
+```
+
+Since this is a series, the people who race at least three times are more likely to win overall—it’s a numbers game. In my case, I was the only M40–49 athlete to race in three or more events. That said, I like to compare my placement across each race to see how close I am to the top of my age group.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+segments <- all_races |>
+  filter(CATEGORY == unique(CATEGORY[ATHLETE == "ADRIAN JOSEPH"])) |>
+  group_by(RACE_ID) |>
+  arrange(desc(RESULT_SPORT_1)) |>
+  mutate(ag_ranking_swim = seq(1, n())) |>
+  arrange(desc(RESULT_SPORT_2)) |>
+  mutate(ag_ranking_bike = seq(1, n())) |>
+  arrange(desc(RESULT_SPORT_3)) |>
+  mutate(ag_ranking_run = seq(1, n())) |>
+  arrange(desc(RESULT_FINAL)) |>
+  mutate(ag_ranking = seq(1, n())) |>
+  ungroup() |>
+  filter(ATHLETE == 'ADRIAN JOSEPH') |>
+  arrange(RACE_ID) |>
+  mutate(ID = c(1, 3, 4)) |>
+  select(all_of(c(
+    'RACE_ID', 'ag_ranking_swim', 'ag_ranking_bike', 'ag_ranking_run', 'ag_ranking'
+  ))) |>
+  rename(
+    'Race [#]' = 'RACE_ID',
+    'Swim Ranking' = 'ag_ranking_swim',
+    'Bike Ranking' = 'ag_ranking_bike',
+    'Run Ranking' = 'ag_ranking_run',
+    'Final Ranking' = 'ag_ranking'
+  )
+
+kableExtra::kable(segments)
+
+
+```
+
+As expected, my bike suffers on the first race because I started a couple of minutes late, and my swim on Race 3 was not great. Regardless, I was always up there, so at least I can tell myself that I did not win the Series only because I was the only one doing three races. I was always up there.
+
+
+## Races comparison
+
+### Swim
+
+Let’s start with the swim. One change in Race 4: it was held in a 25-meter pool instead of a 50-meter one, which usually leads to faster times.
+
+I consistently messed up the swim recording, so I do not have many metrics to go by, except the final number of points:
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+swim_summary <- data.frame(
+  id = c(1,2,3),
+  dist = c(850, 800, 875)
+) |>
+  rename(
+    'Race [#]' = 'id',
+    'Distance [m]' = 'dist'
+  )
+
+kableExtra::kable(swim_summary)
+
+```
+
+
+So never a particularly fast swim, but fairly consistent between the three events.
+
+
+### Bike
+
+Not much to report here either. I didn’t have sensors connected to my watch, so all I have are the official distances:
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+official_records <- data.frame(
+  race_n = c(1,3,4),
+  bike_distance = c(9.0, 10.6, 10.6)
+) |>
+  rename(
+    'Race [#]' = 'race_n',
+    'Distane [km]' = 'bike_distance'
+    )
+
+kable(official_records)
+```
+
+Race 1 was a bit of a mess—I didn’t realize the race had started and lost a couple of minutes. The good news: the bike effort felt easier each time.
+
+### Run
+
+Here finally we have some metrics to look at. When I race, I always like the feeling of "finishing strong", and having a second half faster than the first half (negative split). Let's see if I achieved that:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+run_id <- activities_metadata |>
+  filter(EVENT_TYPE == 'RUN') |>
+  pull(ID)
+
+all_runs <- activities_data |>
+  filter(ID %in% run_id) |>
+  group_by(ID) |>
+  arrange(ID) |>
+  mutate(elapsed_time = max(SECS)/60) |>
+  ungroup()
+
+convert_to_pace <- function(decimal_time){
+  minutes <- floor(decimal_time)
+  seconds <- round((decimal_time - minutes)*60)
+  
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+summary_runs <- all_runs |>
+  group_by(ID) |>
+  arrange(SECS) |>
+  summarise(tot_distance = round(max(KM, na.rm = TRUE), 2),
+            avg_pace = median(PACE, na.rm = TRUE),
+            pace_var = round(100* (mean(PACE[floor(n()/2)+1:n()], na.rm = TRUE) - mean(PACE[1:floor(n()/2)], na.rm = TRUE)) / avg_pace, 2),
+            avg_power = round(mean(WATTS, na.rm = TRUE)),
+            power_var = round(100* (mean(WATTS[floor(n()/2)+1:n()], na.rm = TRUE) - mean(WATTS[1:floor(n()/2)], na.rm = TRUE)) / avg_power, 2),
+            avg_cadence = round(mean(RCAD, na.rm = TRUE)),
+            cadence_var = round(100* (mean(RCAD[floor(n()/2)+1:n()], na.rm = TRUE) - mean(RCAD[1:floor(n()/2)], na.rm = TRUE)) / avg_cadence, 2),
+            avg_hr = round(mean(HR, na.rm = TRUE)),
+            hr_var = round(100* (mean(HR[floor(n()/2)+1:n()], na.rm = TRUE) - mean(HR[1:floor(n()/2)], na.rm = TRUE)) / avg_hr, 2)
+  ) |>
+  mutate(avg_pace = convert_to_pace(avg_pace)) |>
+  ungroup() |>
+  arrange(ID) |>
+  mutate(ID = as.character(c(1,3,4))) |>
+  rename(
+    'Race [#]' = 'ID',
+    'Distance [Km]' = 'tot_distance',
+    'Pace [min/Km]' = 'avg_pace',
+    'Pace Variation [%]' = 'pace_var',
+    'Power [W]' = 'avg_power',
+    'Power Variation [%]' = 'power_var',
+    'Cadence [spm]' = 'avg_cadence',
+    'Cadence Variation [%]' = 'cadence_var',
+    'Heart rate [bpm]' = 'avg_hr',
+    'Heart rate Vartiation [%]' = 'hr_var'
+  )
+
+num_cols <- c('Pace Variation [%]', 'Power Variation [%]',
+              'Cadence Variation [%]', 'Heart rate Vartiation [%]')
+
+summary_runs <- summary_runs |>
+  mutate(across(all_of(num_cols), ~ cell_spec(.x, 
+                                              color = ifelse(as.numeric(.x) < 0, "green", "red")))) |>
+  mutate(across(!all_of(num_cols), ~ cell_spec(.x, color = "black")))
+
+summary_runs |>
+kableExtra::kable('html',  escape = FALSE) |>
+  kable_styling()
+```
+
+The cells in green are areas where I managed to hit a negative split, the ones in red are cells with a positive split.
+
+I’m pretty happy with the progression. While I’m still not quite at the speed I’d like, things are trending in the right direction. Power is up, cadence is up, and I managed to keep an even or negative split.
+
+Race 1 was a bit of a head-scratcher—I couldn’t raise my heart rate or generate much speed. I suspect I went too hard on the bike trying to make up for the late start.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+
+summary_runs_plot <- all_runs |>
+  select(all_of(c(
+    'ID',
+    'WATTS',
+    'RCAD',
+    'HR',
+    'SECS',
+    'PACE'
+  ))) |>
+  mutate(
+    SECS = SECS/60,
+    ID = substring(ID, 1, 10)) |>
+  tidyr::pivot_longer(
+    cols = c(WATTS, RCAD, HR, PACE),
+    values_to = 'value'
+  )
+
+ggplot(summary_runs_plot) +
+  aes(x = SECS, y = value, colour = ID) +
+  geom_line(alpha = 0.5) +
+  geom_smooth(method = "loess", span = 0.1, se = FALSE) +
+  scale_color_hue(direction = 1) +
+  labs(
+    x = "Elapsed time [min]",
+    y = "",
+    title = "Run metrics for the three races"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 20L,
+                              face = "bold"),
+    axis.title.x = element_text(size = 15L,
+                                face = "bold"),
+    axis.text.y = element_text(size = 15L),
+    axis.text.x = element_text(size = 15L),
+    legend.text = element_text(size = 15L),
+    legend.title = element_text(face = "bold",
+                                size = 15L)
+  ) +
+  facet_wrap(vars(name), scales = 'free_y')
+```
+
+### Official results
+
+The distances above are from my Garmin and Stryd power meter, which are great for comparisons—but not always accurate compared to the official results. For example, running in the outside lane to pass others adds distance that isn’t captured in the official numbers.
+
+Here’s the official breakdown:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+official_records <- data.frame(
+  race_n = as.character(c(1,3,4)),
+  swim_distance = c(825, 775, 887),
+  swim_points = c(330, 310, 355),
+  bike_distance = c(9.0, 10.6, 10.6),
+  bike_points = c(450, 530, 530),
+  run_distance = c(3.0, 3.3, 3.4),
+  run_points = c(375, 413, 425),
+  total_points = c(1150, 1253, 1310)
+) |>
+  rename(
+    'Race [#]' = 'race_n',
+    'Swim [m]' = 'swim_distance',
+    'Swim Points' = 'swim_points',
+    'Bike [Km]' = 'bike_distance',
+    'Bike Points' = 'bike_points',
+    'Run [Km]' = 'run_distance',
+    'Run Points' = 'run_points',
+    'Total Points' = 'total_points'
+        )
+
+kable(official_records)
+```
+
+# Final Thoughts
+
+All in all, I’m happy with how things went. There’s clear improvement across the board, and more importantly, I felt stronger each time out. That’s a good sign as I head into the outdoor season. Let’s see what the next phase brings!
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2025-05-04"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(race_date),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+
+
+::: {layout-ncol=4}
+
+:::
+

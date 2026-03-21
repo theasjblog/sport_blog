@@ -1,0 +1,39 @@
+---
+title: "Basket Dueville - Campioni Provinciali Cadetti"
+date: "1999-01-01"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/1999_BASKET_DUEVILLE_CAMPIONI_PROVINCIALI_CADETTI/img/00.png
+categories: [race report, random race]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/1999_BASKET_DUEVILLE_CAMPIONI_PROVINCIALI_CADETTI/img/00.png)
+
+
+## Summary
+
+```{=html}
+<div class="row g-4">
+
+  <div class="col-md-4">
+    <div class="card h-100 bg-info text-white">
+      <div class="card-body">
+        <h5 class="card-title"><b>Position overall: 1</b></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+```
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/1999_BASKET_DUEVILLE_CAMPIONI_PROVINCIALI_CADETTI/img/00.png){ width="100" group="hi" }
+:::

@@ -1,0 +1,26 @@
+---
+title: "Cotswold Way"
+date: "2023-01-01"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_COTSWOLD_WAY/img/00.png
+categories: [race report, virtual]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_COTSWOLD_WAY/img/00.png)
+
+
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_COTSWOLD_WAY/img/00.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_COTSWOLD_WAY/img/01.png){ width="100" group="hi" }
+
+
+:::

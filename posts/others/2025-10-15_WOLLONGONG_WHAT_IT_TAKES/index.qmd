@@ -1,0 +1,134 @@
+---
+title: "2025 Season Recap: A World Championship Season"
+date: "2025-11-06"
+categories: ["season_recap"]
+image: "https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/tss.png"
+lightbox: true
+---
+
+# Introduction
+
+Every triathlon season tells a story — not just of watts, splits, and meters swum, but of consistency, learning, and the daily choices that shape the big picture. 
+
+Between October 2024 and October 2025, I logged roughly **380 hours of structured training** across swim, bike, run, and strength work. The load was significantly higher than last year and comparable to 2023.
+
+In this post, I’ll cover both the **metrics and the meaning** behind them: monthly training trends, load distribution, and how key markers like FTP, pace, and heart rate changed through the season. But more importantly, I’ll share what those numbers meant — the highs that built confidence, the lows that tested patience, and how it all came together -or not- on race day.
+
+# Season Overview
+
+In 2025, I logged **380 hours** of training.
+
+![Season totals.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/totals.png)
+
+The number of sessions was fairly balanced across disciplines. The time distribution also makes sense when you think of a sprint triathlon: swimming is the shortest leg, cycling takes the longest, and running sits somewhere in between.
+
+What was likely too low, though, was time in the gym. The “strength” category also includes mobility and foam-rolling, so the actual time lifting weights was even smaller. I need to work more on overall strength — core stability, shoulder power for swimming, and leg endurance for both bike and run.
+
+## Monthly Distribution
+
+I like to look at monthly training time to assess consistency. Ideally, volume remains fairly stable, with a gentle decline during race season as intensity ramps up.
+
+![Monthly duration.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/monthly_duration.png)
+![Monthly distance.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/monthly_distance.png)
+
+I built volume steadily from October 2024 through January 2025, followed by a dip in February (I caught a cold then). The biggest drop came between April and July — partly due to racing, partly to a motivation dip, and critically, to growing doubts about the **Humango** coaching platform I was using at the time. Things normalized again after July.
+
+## Performance Chart
+
+Training volume is only part of the story. To track fitness, I rely on the **TRIMP curve** in Golden Cheetah — a metric similar to TrainingPeaks’ TSS, combining intensity and duration.
+
+![Yearly TRIMP score. The TRIMP score is in solid blue, the load in pink, and the fatigue in green.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/tss.png)
+
+As expected from the mid-season dip, TRIMP dropped in those months. On the bright side, fitness peaked right before my A race at Worlds, with fatigue well under control (around -4 the day before the individual race). Though race-week logistics certainly added some hidden fatigue, the numbers suggest I timed the peak well.
+
+# Swim
+
+Swimming remains my Achilles’ heel. I trained consistently and even hit sub-1:40/100m pace in the pool — but in open water, that speed just vanishes. It’s frustrating.
+
+I spent a decent amount of time in the water and swam outdoors whenever possible, often at **Cherry Beach** in Toronto. Yet, my pace dropped from an already modest **8:00/500m in the pool** to about **9:16/500m in open water**.
+
+![Swim: 2025 season overview.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/swim_overview.png)
+
+Looking at peak swim pace over 10- and 20-minute efforts (roughly the window for a 750m race) tells the same story.
+
+![Swim peak pace. Frustratingly flat.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/swim_pace.png)
+
+The trend is almost flat. There’s a slight improvement toward the end of the season, but that’s likely due to race-specific sharpening. I clearly need structured coaching — either joining a club or booking one-on-one sessions.
+
+![Cheery Beach in Toronto.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/IMG_2084.png)
+
+# Bike
+
+Cycling usually brings me more satisfaction. I often race on a **road bike** against athletes on TT bikes, but at least my legs hold their own.
+
+![Bike: 2025 season overview.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/bike_overview.png)
+
+First, the **VO$_{2}$ max trend**. There’s a gradual increase overall, with dips in June and September. I’m not entirely sure why — though I suspect inconsistent body-weight updates in Golden Cheetah might distort the estimate.
+
+![Bike: VO$_{2}$ max trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/bike_vo2.png)
+
+Next, the **peak 20- and 30-minute power**, which approximate race effort duration.
+
+![Bike: peak 20min and 30min power trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/bike_peak_w.png)
+
+This metric stayed fairly flat, even trending slightly downward late in the season. That September dip aligns with the VO$_{2}$ drop — something to monitor. It might represent a true plateau or a need to adjust my training stimulus.
+
+Finally, I tracked **Power/Heart Rate**, a solid proxy for aerobic efficiency — more watts per heartbeat means better fitness.
+
+![Bike: power over heart rate trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/bike_whr.png)
+
+This ratio trended nicely upward, despite small dips in March–April and September. That suggests my aerobic base continued improving even when top-end numbers stalled.
+
+# Run
+
+Running was the biggest struggle this year — especially in races. In one event, I was on the edge of a fever; in another, heat wiped me out. But more generally, I couldn’t produce speed off the bike.
+
+This was one of the reasons I left Humango. The platform rarely prescribed **brick runs** or intensity during the build phase — exactly when I needed them. After switching to ChatGPT-based coaching, I did a standalone 5K test and ran my **fastest time in five years**. The potential is there; I just need to translate it off the bike.
+
+![Run: 2025 season overview.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/run_overview.png)
+
+The **VO$_{2}$ max trend** looks encouraging — a clear upward slope.
+
+![Run: VO$_{2}$ max trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/run_vo2.png)
+
+The **run power trend** also improved steadily, though the jump in June reflects a switch from Stryd to the built-in Garmin Forerunner 965 sensor.
+
+![Run: peak power trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/run_power.png)
+
+Lastly, **peak pace** shows a nice downward trend — faster speeds over time.
+
+![Run: pace trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/run_pace.png)
+
+Not a massive improvement, but consistent progress.
+
+# Highs and Lows
+
+This season was full of contrasts. It ended on a high note with the **World Championships**, and I also claimed age-group wins in both the **Indoor Triathlon Championship** and the **Canada Multisport Series**. Those results look great on paper — though, to be fair, participation matters as much as speed in these series. In both cases, I was the only athlete in my age group completing three qualifying races.
+
+My race results included **2nd, 3rd, and 5th** place finishes. Respectable, but slower than my targets — especially in swim and run splits. Still, representing **Team Canada** and running my fastest 5K in years were undeniable highlights.
+
+# Lessons Learned
+
+Here’s what I’m taking forward:
+
+* Monitor trends (power, pace, HR ratio) continuously, and adjust training sooner.  
+* **Lose weight** — I’m carrying ~8 kg more than ideal, which can cost ~3.5 minutes on a rolling sprint course.  
+* Find a **swimming club** or book 1-on-1 coaching.  
+* Stay on top of **bike maintenance**.  
+* Do more **strength** and **mobility**.  
+* Schedule regular **massage** and recovery work.
+
+Now that I’ve refined how I use ChatGPT as a virtual coach, I can provide better inputs and context — making feedback loops tighter and adjustments smarter.
+
+# 2026 Goals
+
+Next year will be another ambitious one. I plan to add **duathlon** to my calendar — partly to see how removing the swim affects performance. My aim is to qualify for the **2027 World Championships** in both sprint triathlon and sprint duathlon.
+
+Performance goals that depend only on me:
+
+* Run a **sub-20-minute 5K**.  
+* Improve swimming technique and efficiency.  
+* Reach **77 kg race weight**.  
+* Race the bike leg at **≥ 3.5 W/kg** (currently ~3.0 W/kg).
+
+It’s going to be a challenging season — and I’m excited for it.

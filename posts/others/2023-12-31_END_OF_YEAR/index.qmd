@@ -1,0 +1,27 @@
+---
+title: "End Of Year"
+date: "2023-12-31"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2023-12-31_END_OF_YEAR/img/img_1208.png
+categories: [race report, virtual]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-12-31_END_OF_YEAR/img/img_1208.png)
+
+
+
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-12-31_END_OF_YEAR/img/img_1208.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2023-12-31_END_OF_YEAR/img/img_1209.png){ width="100" group="hi" }
+
+
+:::

@@ -1,0 +1,40 @@
+---
+title: "Sheffield Man Of Steel"
+date: "2013-07-21"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/01.png
+categories: [race report, obstacle race]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/01.png)
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+race_date <- "2013-07-21"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(race_date),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/00.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2013-07-21_SHEFFIELD_MAN_OF_STEEL/img/01.png){ width="100" group="hi" }
+
+
+:::

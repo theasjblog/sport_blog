@@ -1,0 +1,37 @@
+---
+title: "Meadowvale Parkrun"
+date: "2025-09-13"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2025-09-13_MEADOWVALE_PARKRUN/img/00.png
+categories: [race report, run, parkrun]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+# Last 5K prep test before the World Championships
+
+Lately, my running training zones for heart rate, pace, and power have been completely out of sync. With just five weeks to go before the World Championships, my coach threw another test my way — a chance to reset the numbers and see exactly where I stand.
+The goal was simple on paper: match (or better) my last Parkrun effort, but with smarter pacing. The plan was to open the first 3K between 4:10 and 4:15/km, then gradually turn the screws. Easy, right? Well, not quite. A couple of days before the race I came down with something and lined up on the start feeling far from 100%.
+Still, the first half went almost perfectly. I kept things controlled at 4:07, 4:09, 4:09 — a big improvement from my previous attempt where I went out way too hot. The challenge came in the final stretch. The negative splits I had in mind slipped away as fatigue kicked in, and I slowed to 4:15 and 4:18 for the last 2K.
+The end result? Practically identical to last time — just three seconds slower, which, given the circumstances, I’ll take as a small win.
+The only sting in the tail was watching another runner in my category fly past me right near the end to grab first place, crossing the line eight seconds ahead. A tough pill to swallow, but another reminder that pacing — and finishing strong — makes all the difference.
+
+ 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+source('../../../inst/aux_functions.R')
+race_date <- "2025-09-13"
+
+DT::datatable(get_summary_data(race_date),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```

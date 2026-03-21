@@ -1,0 +1,48 @@
+---
+title: "Sheffield Half Marathon"
+date: "2011-05-08"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2011-05-08_SHEFFIELD_HALF_MARATHON/img/00.png
+categories: [race report, run]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-05-08_SHEFFIELD_HALF_MARATHON/img/00.png)
+
+This was my home race, with a finish in the new Sheffield (UK) Stadium. I do not remember much of this race, just that I found out how a half marathon was way longer than a 10K, which I think you do not really need to run it to figure it out...
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+race_date <- "2011-05-08"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(race_date),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-05-08_SHEFFIELD_HALF_MARATHON/img/00.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-05-08_SHEFFIELD_HALF_MARATHON/img/01.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-05-08_SHEFFIELD_HALF_MARATHON/img/02.jpg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2011-05-08_SHEFFIELD_HALF_MARATHON/img/05.jpg){ width="100" group="hi" }
+
+
+:::
