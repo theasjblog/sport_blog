@@ -160,15 +160,13 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 <section id="high-priority" class="level2">
 <h2 class="anchored" data-anchor-id="high-priority">High Priority</h2>
 <ul>
-<li>Rewrite Git history to remove old large image blobs and other generated artifacts from history. Notes: The biggest blobs in history are old files like <code>posts/**/img_modal/*.png</code>, many of them 13-19 MB each. Use <code>git filter-repo</code> or BFG, then force-push carefully.</li>
-<li>Stop tracking generated render artifacts in the content tree. Notes: There are many committed <code>posts/**/index_cache</code> folders and a few <code>posts/**/index_files</code> folders. These make the repo noisy and should be ignored unless there is a deliberate reason to keep them.</li>
 <li>Decide what should live in Git, what should live in GCS, and what should be generated on demand. Notes: Right now the boundary is not very explicit. Write down a simple rule such as: raw media in GCS cold storage, derived web media in GCS public storage, source content in Git, build outputs not tracked.</li>
 </ul>
 </section>
 <section id="repo-cleanup" class="level2">
 <h2 class="anchored" data-anchor-id="repo-cleanup">Repo Cleanup</h2>
 <ul>
-<li>Add ignore rules for common junk and generated files. Notes: <code>.DS_Store</code>, <code>log.log</code>, <code>log_2.log</code>, <code>posts/**/index_cache/</code>, <code>posts/**/index_files/</code>, and similar local artifacts should not be tracked.</li>
+<li>Add ignore rules for common junk and generated files. Notes: Partly done. <code>.DS_Store</code>, <code>log.log</code>, <code>log_2.log</code>, <code>posts/**/index_cache/</code>, and <code>posts/**/index_files/</code> are now ignored. Follow-up: review whether there are any other local-only artifacts worth ignoring.</li>
 <li>Review whether <code>_freeze/</code> should stay in Git. Notes: It is only about <code>9.5M</code> now, so it is not the main size problem. Keep it only if it materially improves reproducibility or deploy speed.</li>
 <li>Remove dead or one-off scripts, or move them into a documented <code>scripts/</code> workflow. Notes: Files like <code>inst/gcs.R</code> and <code>inst/img_resize.R</code> look like useful utilities, but they are currently ad hoc and include interactive/local-path assumptions.</li>
 <li>Add a short maintenance guide. Notes: Document how to add a post, upload images, generate small variants, refresh data, and publish.</li>
@@ -217,25 +215,32 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 <section id="concrete-findings-from-this-review" class="level2">
 <h2 class="anchored" data-anchor-id="concrete-findings-from-this-review">Concrete Findings From This Review</h2>
 <ul>
-<li><code>.git</code> is about <code>1.9G</code>, which is the dominant size problem.</li>
-<li>Current checked-out content is relatively small: <code>_freeze/</code> about <code>9.5M</code>, <code>posts/</code> about <code>11M</code>, <code>img/</code> well under <code>2M</code>.</li>
+<li>Repo history and deployment branch have already been reset and cleaned.</li>
+<li>The old large-history problem was caused mainly by historical <code>posts/**/img_modal/*.png</code> files and committed render artifacts.</li>
+<li>Tracked <code>posts/**/index_cache</code> and <code>posts/**/index_files</code> content has been removed.</li>
 <li>No GitHub Actions workflow is present.</li>
 <li>No <code>.quartoignore</code> was present before this review.</li>
 <li><code>styles.css</code> is effectively empty.</li>
 <li>Several data pages depend on remote parquet reads from GCS during render.</li>
-<li>The repo still contains many per-post render caches under <code>posts/**/index_cache</code>.</li>
-<li>A few posts also contain committed <code>index_files</code> directories that duplicate rendered assets.</li>
 </ul>
 </section>
 <section id="candidate-first-pass" class="level2">
 <h2 class="anchored" data-anchor-id="candidate-first-pass">Candidate First Pass</h2>
 <ul>
-<li>Clean history with <code>git filter-repo</code>, then force-push once.</li>
-<li>Add durable ignore rules for generated files and local junk.</li>
+<li>Review whether any additional local-only files should be ignored.</li>
 <li>Replace the ad hoc image upload process with a scripted resize-and-publish workflow.</li>
 <li>Create a lightweight custom homepage and custom listing cards.</li>
 <li>Add one GitHub Actions workflow for render, link checking, and deploy.</li>
 <li>Create small derived datasets for <code>race_finder.qmd</code> and <code>records.qmd</code>.</li>
+</ul>
+</section>
+<section id="completed" class="level2">
+<h2 class="anchored" data-anchor-id="completed">Completed</h2>
+<ul>
+<li>Reset and cleaned <code>master</code> history to remove old large blobs and unnecessary history.</li>
+<li>Re-created the <code>gh-pages</code> branch from fresh publish output.</li>
+<li>Removed tracked Quarto-generated cache and render-asset directories from the repo.</li>
+<li>Added ignore rules to stop common generated files from being re-committed.</li>
 </ul>
 </section>
 <section id="existing-ideas-from-readme" class="level2">
