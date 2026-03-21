@@ -81,6 +81,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 </script>
+<link rel="apple-touch-icon" href="../../../img/logo.png">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -104,8 +105,20 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../posts/race_reports.html"> 
+<span class="menu-text">Race Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../posts/others.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../../race_finder.html"> 
-<span class="menu-text">Race finder</span></a>
+<span class="menu-text">Race Finder</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../../records.html"> 
@@ -126,11 +139,6 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
   <li class="nav-item">
     <a class="nav-link" href="https://connect.garmin.com/modern/profile/adrianstevejoseph"> 
 <span class="menu-text"><iconify-icon role="img" inline="" icon="cib:garmin" aria-label="Icon garmin from cib Iconify.design set." title="Icon garmin from cib Iconify.design set."></iconify-icon></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../../"> <i class="bi bi-rss" role="img">
-</i> 
-<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -183,14 +191,14 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 
 
 
-<p><a href="https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_HADRIAN%E2%80%99S_WALL/img/01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_HADRIAN%E2%80%99S_WALL/img/01.png" class="img-fluid"></a></p>
+<p><a href="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_HADRIAN%E2%80%99S_WALL/img/thumbnail/01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_HADRIAN%E2%80%99S_WALL/img/thumbnail/01.jpg" class="img-fluid"></a></p>
 <div>
 
 </div>
 <div class="quarto-layout-panel" data-layout-ncol="4">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_HADRIAN%E2%80%99S_WALL/img/01.png" class="lightbox" data-gallery="hi"><img src="https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_HADRIAN%E2%80%99S_WALL/img/01.png" class="img-fluid" width="100"></a></p>
+<p><a href="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_HADRIAN%E2%80%99S_WALL/img/full/01.jpg"><img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_HADRIAN%E2%80%99S_WALL/img/thumbnail/01.jpg" class="img-fluid" data-group="hi" width="100"></a></p>
 </div>
 </div>
 </div>
@@ -198,6 +206,85 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 
 
 </main> <!-- /main -->
+<dialog id="gallery-lightbox" class="gallery-lightbox">
+  <button type="button" class="gallery-lightbox__close" aria-label="Close image viewer">
+    ×
+  </button>
+  <img class="gallery-lightbox__image" alt="">
+  <p class="gallery-lightbox__caption" hidden=""></p>
+</dialog>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dialog = document.getElementById("gallery-lightbox");
+  if (!dialog) return;
+
+  const image = dialog.querySelector(".gallery-lightbox__image");
+  const caption = dialog.querySelector(".gallery-lightbox__caption");
+  const closeButton = dialog.querySelector(".gallery-lightbox__close");
+
+  const galleryLinks = Array.from(
+    document.querySelectorAll('a[href*="/img/full/"]')
+  ).filter((link) => link.querySelector('img[group="hi"]'));
+
+  if (galleryLinks.length === 0) return;
+
+  const closeDialog = () => {
+    dialog.close();
+    image.removeAttribute("src");
+    image.alt = "";
+    caption.textContent = "";
+    caption.hidden = true;
+  };
+
+  const openDialog = (link) => {
+    const thumbnail = link.querySelector('img[group="hi"]');
+    const fullSrc = link.getAttribute("href");
+    if (!thumbnail || !fullSrc) return;
+
+    image.src = fullSrc;
+    image.alt = thumbnail.getAttribute("alt") || "";
+
+    const text = (thumbnail.getAttribute("alt") || "").trim();
+    caption.textContent = text;
+    caption.hidden = text === "";
+
+    if (!dialog.open) {
+      dialog.showModal();
+    }
+  };
+
+  galleryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+      openDialog(link);
+    });
+  });
+
+  closeButton.addEventListener("click", closeDialog);
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      closeDialog();
+    }
+  });
+
+  dialog.addEventListener("close", () => {
+    image.removeAttribute("src");
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -621,7 +708,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="theasjblog/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","selector":".lightbox","loop":false,"openEffect":"fade","descPosition":"right"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"fade","descPosition":"right","closeEffect":"fade","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

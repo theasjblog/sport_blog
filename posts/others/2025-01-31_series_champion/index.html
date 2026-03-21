@@ -8,6 +8,7 @@
 
 <meta name="author" content="Adrian Joseph">
 <meta name="dcterms.date" content="2025-01-31">
+<meta name="description" content="A surprise series title, what those 2024 results added up to, and why the plaque means more than I expected.">
 
 <title>2024 MultiSport Canada Series Champion! – ASJ TRI</title>
 <style>
@@ -78,6 +79,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 </script>
+<link rel="apple-touch-icon" href="../../../img/logo.png">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -101,8 +103,20 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../posts/race_reports.html"> 
+<span class="menu-text">Race Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../posts/others.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../../race_finder.html"> 
-<span class="menu-text">Race finder</span></a>
+<span class="menu-text">Race Finder</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../../records.html"> 
@@ -124,11 +138,6 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
     <a class="nav-link" href="https://connect.garmin.com/modern/profile/adrianstevejoseph"> 
 <span class="menu-text"><iconify-icon role="img" inline="" icon="cib:garmin" aria-label="Icon garmin from cib Iconify.design set." title="Icon garmin from cib Iconify.design set."></iconify-icon></span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../../"> <i class="bi bi-rss" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -141,8 +150,14 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">2024 MultiSport Canada Series Champion!</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                  <div>
+        <div class="description">
+          A surprise series title, what those 2024 results added up to, and why the plaque means more than I expected.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">notes</div>
+                <div class="quarto-category">series</div>
               </div>
                   </div>
   </div>
@@ -181,7 +196,7 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://storage.googleapis.com/blogs_josa/sport_small/2025-01-31_series_champion/img/cover.png" class="img-fluid figure-img"></p>
+<p><img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-01-31_series_champion/img/thumbnail/cover.jpg" class="img-fluid figure-img"></p>
 <figcaption>MultiSport Canada Champions plaque.</figcaption>
 </figure>
 </div>
@@ -191,7 +206,7 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 <p>And now, as I hold this plaque in my hands (after its adventure through the Canada Post strike!), I can’t help but feel even more motivated for what’s ahead. This isn’t just a recognition of past achievements; it’s fuel for future goals, especially as I prepare for the Age Group World Championship.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://storage.googleapis.com/blogs_josa/sport_small/2025-01-31_series_champion/img/top3.png" class="img-fluid figure-img"></p>
+<p><img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-01-31_series_champion/img/thumbnail/top3.jpg" class="img-fluid figure-img"></p>
 <figcaption>Top M40-44 in the series.</figcaption>
 </figure>
 </div>
@@ -199,6 +214,85 @@ gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 
 
 </main> <!-- /main -->
+<dialog id="gallery-lightbox" class="gallery-lightbox">
+  <button type="button" class="gallery-lightbox__close" aria-label="Close image viewer">
+    ×
+  </button>
+  <img class="gallery-lightbox__image" alt="">
+  <p class="gallery-lightbox__caption" hidden=""></p>
+</dialog>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dialog = document.getElementById("gallery-lightbox");
+  if (!dialog) return;
+
+  const image = dialog.querySelector(".gallery-lightbox__image");
+  const caption = dialog.querySelector(".gallery-lightbox__caption");
+  const closeButton = dialog.querySelector(".gallery-lightbox__close");
+
+  const galleryLinks = Array.from(
+    document.querySelectorAll('a[href*="/img/full/"]')
+  ).filter((link) => link.querySelector('img[group="hi"]'));
+
+  if (galleryLinks.length === 0) return;
+
+  const closeDialog = () => {
+    dialog.close();
+    image.removeAttribute("src");
+    image.alt = "";
+    caption.textContent = "";
+    caption.hidden = true;
+  };
+
+  const openDialog = (link) => {
+    const thumbnail = link.querySelector('img[group="hi"]');
+    const fullSrc = link.getAttribute("href");
+    if (!thumbnail || !fullSrc) return;
+
+    image.src = fullSrc;
+    image.alt = thumbnail.getAttribute("alt") || "";
+
+    const text = (thumbnail.getAttribute("alt") || "").trim();
+    caption.textContent = text;
+    caption.hidden = text === "";
+
+    if (!dialog.open) {
+      dialog.showModal();
+    }
+  };
+
+  galleryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+      openDialog(link);
+    });
+  });
+
+  closeButton.addEventListener("click", closeDialog);
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      closeDialog();
+    }
+  });
+
+  dialog.addEventListener("close", () => {
+    image.removeAttribute("src");
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

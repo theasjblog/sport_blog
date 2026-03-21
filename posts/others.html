@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Adrian Joseph">
+<meta name="description" content="Training notes, gear thoughts, planning posts, and the pieces that sit around the races rather than inside them.">
 
-<title>Miscellaneous – ASJ TRI</title>
+<title>Notes – ASJ TRI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,9 +81,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 18,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -108,6 +110,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
 </script>
+<link rel="apple-touch-icon" href="../img/logo.png">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -160,8 +163,20 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../posts/race_reports.html"> 
+<span class="menu-text">Race Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../posts/others.html" aria-current="page"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../race_finder.html"> 
-<span class="menu-text">Race finder</span></a>
+<span class="menu-text">Race Finder</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../records.html"> 
@@ -183,11 +198,6 @@ window.Quarto = {
     <a class="nav-link" href="https://connect.garmin.com/modern/profile/adrianstevejoseph"> 
 <span class="menu-text"><iconify-icon role="img" inline="" icon="cib:garmin" aria-label="Icon garmin from cib Iconify.design set." title="Icon garmin from cib Iconify.design set."></iconify-icon></span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../"> <i class="bi bi-rss" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -201,15 +211,20 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(25)</span></div><div class="category" data-category="Wollongong2025">Wollongong2025 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bike">bike <span class="quarto-category-count">(2)</span></div><div class="category" data-category="gallery">gallery <span class="quarto-category-count">(1)</span></div><div class="category" data-category="kit review">kit review <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(5)</span></div><div class="category" data-category="race report">race report <span class="quarto-category-count">(15)</span></div><div class="category" data-category="season_recap">season_recap <span class="quarto-category-count">(1)</span></div><div class="category" data-category="swim">swim <span class="quarto-category-count">(3)</span></div><div class="category" data-category="virtual">virtual <span class="quarto-category-count">(10)</span></div><div class="category" data-category="wollongong2025">wollongong2025 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="worlds">worlds <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(25)</span></div><div class="category" data-category="bike">bike <span class="quarto-category-count">(2)</span></div><div class="category" data-category="gallery">gallery <span class="quarto-category-count">(1)</span></div><div class="category" data-category="gear">gear <span class="quarto-category-count">(2)</span></div><div class="category" data-category="notes">notes <span class="quarto-category-count">(8)</span></div><div class="category" data-category="planning">planning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="race report">race report <span class="quarto-category-count">(14)</span></div><div class="category" data-category="season_recap">season_recap <span class="quarto-category-count">(1)</span></div><div class="category" data-category="series">series <span class="quarto-category-count">(1)</span></div><div class="category" data-category="swim">swim <span class="quarto-category-count">(3)</span></div><div class="category" data-category="virtual">virtual <span class="quarto-category-count">(10)</span></div><div class="category" data-category="wollongong2025">wollongong2025 <span class="quarto-category-count">(5)</span></div><div class="category" data-category="worlds">worlds <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Miscellaneous</h1>
+<h1 class="title">Notes</h1>
 </div>
 
+<div>
+  <div class="description">
+    Training notes, gear thoughts, planning posts, and the pieces that sit around the races rather than inside them.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta column-page-left">
@@ -230,92 +245,91 @@ window.Quarto = {
 </header>
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="season_recap" data-listing-date-sort="1762405200000" data-listing-file-modified-sort="1774053890169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1162">
-<div class="thumbnail">
-<p><a href="../posts/others/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.html" class="no-external"></a></p><a href="../posts/others/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/tss.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.html" class="no-external"></a></p>
+<div class="archive-intro">
+<p>The less structured side of the site: training blocks, equipment, planning, reflections, and the longer stories around the season.</p>
 </div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.html" class="no-external">2025 Season Recap: A World Championship Season</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.html" class="no-external"></a>
-</div>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="season_recap,wollongong2025" data-listing-date-sort="1762405200000" data-listing-file-modified-sort="1774132838082" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1162">
+<a href="../posts/others/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/tss.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+2025 Season Recap: A World Championship Season
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('season_recap'); return false;">
 season_recap
 </div>
+<div class="listing-category" onclick="window.quartoListingCategory('wollongong2025'); return false;">
+wollongong2025
 </div>
-<div class="listing-description">
-<a href="../posts/others/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.html" class="no-external">Every triathlon season tells a story — not just of watts, splits, and meters swum, but of consistency, learning, and the daily choices that shape the big picture.</a>
 </div>
+<div class="card-text listing-description">
+Training volume, fitness trends, and the bigger story behind the season that led to the World Championships.
 </div>
-<div class="metadata">
-<a href="../posts/others/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/index.html" class="no-external">
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
+</div>
 <div class="listing-date">
 Nov 6, 2025
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Wollongong2025" data-listing-date-sort="1761796800000" data-listing-file-modified-sort="1774053890169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1329">
-<div class="thumbnail">
-<p><a href="../posts/others/2025-10-15_WOLLONGONG_COST/index.html" class="no-external"></a></p><a href="../posts/others/2025-10-15_WOLLONGONG_COST/index.html" class="no-external">
-<p><img loading="lazy" src="../posts/others/2025-10-15_WOLLONGONG_COST/img/00.jpg" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2025-10-15_WOLLONGONG_COST/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2025-10-15_WOLLONGONG_COST/index.html" class="no-external">The Cost of Racing the World Championships</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2025-10-15_WOLLONGONG_COST/index.html" class="no-external">What it really takes — financially — to represent Team Canada in Wollongong</a>
-</div>
+<div class="g-col-1" data-index="1" data-categories="wollongong2025,notes" data-listing-date-sort="1761796800000" data-listing-file-modified-sort="1774132838082" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1329">
+<a href="../posts/others/2025-10-15_WOLLONGONG_COST/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_COST/img/thumbnail/00.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The Cost of Racing the World Championships
+</h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Wollongong2025'); return false;">
-Wollongong2025
+<div class="listing-category" onclick="window.quartoListingCategory('wollongong2025'); return false;">
+wollongong2025
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('notes'); return false;">
+notes
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2025-10-15_WOLLONGONG_COST/index.html" class="no-external">Competing at the <strong>World Triathlon Championships</strong> is one of the highest honours for any age-group athlete.<br>
-But unlike professional or Olympic racers, <strong>there’s no financial…</strong></a>
+<div class="card-text listing-description">
+Flights, accommodation, race fees, kit, and the real financial cost of getting to the World Championships in Wollongong.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2025-10-15_WOLLONGONG_COST/index.html" class="no-external">
 <div class="listing-date">
 Oct 30, 2025
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="wollongong2025,worlds,gallery" data-listing-date-sort="1761624000000" data-listing-file-modified-sort="1774053890169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
-<div class="thumbnail">
-<p><a href="../posts/others/2025-10-15_WOLLONGONG_GALLERY/index.html" class="no-external"></a></p><a href="../posts/others/2025-10-15_WOLLONGONG_GALLERY/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2251.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2025-10-15_WOLLONGONG_GALLERY/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2025-10-15_WOLLONGONG_GALLERY/index.html" class="no-external">Wollongong 2025: Photo Gallery</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2025-10-15_WOLLONGONG_GALLERY/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="2" data-categories="wollongong2025,worlds,gallery" data-listing-date-sort="1761624000000" data-listing-file-modified-sort="1774109725756" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
+<a href="../posts/others/2025-10-15_WOLLONGONG_GALLERY/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG/img/thumbnail/IMG_2251.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Wollongong 2025: Photo Gallery
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('wollongong2025'); return false;">
 wollongong2025
@@ -327,301 +341,289 @@ worlds
 gallery
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2025-10-15_WOLLONGONG_GALLERY/index.html" class="no-external">A visual wrap-up of the trip, races, and moments around the World Championships.</a>
+<div class="card-text listing-description">
+A visual wrap-up of the trip, races, and moments around the World Championships.
 </div>
-</div>
-<div class="metadata">
-<a href="../posts/others/2025-10-15_WOLLONGONG_GALLERY/index.html" class="no-external">
-<div class="listing-date">
-Oct 28, 2025
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Adrian Joseph
 </div>
+<div class="listing-date">
+Oct 28, 2025
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="wollongong2025" data-listing-date-sort="1761364800000" data-listing-file-modified-sort="1774053890169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="857">
-<div class="thumbnail">
-<p><a href="../posts/others/2025-10-15_WOLLONGONG_OVERALL/index.html" class="no-external"></a></p><a href="../posts/others/2025-10-15_WOLLONGONG_OVERALL/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2186.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2025-10-15_WOLLONGONG_OVERALL/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2025-10-15_WOLLONGONG_OVERALL/index.html" class="no-external">Wollongong Worlds: My Overall Experience</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2025-10-15_WOLLONGONG_OVERALL/index.html" class="no-external">Representing Canada at the 2025 World Triathlon Championships</a>
-</div>
+<div class="g-col-1" data-index="3" data-categories="wollongong2025" data-listing-date-sort="1761364800000" data-listing-file-modified-sort="1774109725756" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="857">
+<a href="../posts/others/2025-10-15_WOLLONGONG_OVERALL/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG/img/thumbnail/IMG_2186.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Wollongong Worlds: My Overall Experience
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('wollongong2025'); return false;">
 wollongong2025
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2025-10-15_WOLLONGONG_OVERALL/index.html" class="no-external">A personal reflection on my week in Wollongong — from travel chaos to racing pride, and everything in between.</a>
+<div class="card-text listing-description">
+A personal reflection on my week in Wollongong — from travel chaos to racing pride, and everything in between.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2025-10-15_WOLLONGONG_OVERALL/index.html" class="no-external">
 <div class="listing-date">
 Oct 25, 2025
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="kit review" data-listing-date-sort="1741064400000" data-listing-file-modified-sort="1774053890168" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2557">
-<div class="thumbnail">
-<p><a href="../posts/others/2025-03-04_finis_smart_first_impressions/index.html" class="no-external"></a></p><a href="../posts/others/2025-03-04_finis_smart_first_impressions/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2025-03-04_finis_smart_first_impressions/img/goggles.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2025-03-04_finis_smart_first_impressions/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2025-03-04_finis_smart_first_impressions/index.html" class="no-external">New kit: Finis Swim Smart goggles</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2025-03-04_finis_smart_first_impressions/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="4" data-categories="notes,gear" data-listing-date-sort="1741064400000" data-listing-file-modified-sort="1774132838081" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2547">
+<a href="../posts/others/2025-03-04_finis_smart_first_impressions/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-03-04_finis_smart_first_impressions/img/thumbnail/goggles.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+New kit: Finis Swim Smart goggles
+</h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('kit review'); return false;">
-kit review
+<div class="listing-category" onclick="window.quartoListingCategory('notes'); return false;">
+notes
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('gear'); return false;">
+gear
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2025-03-04_finis_smart_first_impressions/index.html" class="no-external">I have been using the Finis Smart Goggles for a bit over a week. This is a first impressions review. If something significant will come up, I’ll keep you posted.</a>
+<div class="card-text listing-description">
+Early impressions after a week with the Finis Smart Goggles, and whether they feel useful beyond the novelty factor.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2025-03-04_finis_smart_first_impressions/index.html" class="no-external">
 <div class="listing-date">
 Mar 4, 2025
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="news" data-listing-date-sort="1739077200000" data-listing-file-modified-sort="1774053890167" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1185">
-<div class="thumbnail">
-<p><a href="../posts/others/2025-02-15_season_kit/index.html" class="no-external"></a></p><a href="../posts/others/2025-02-15_season_kit/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2025-02-15_season_kit/img/cover.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2025-02-15_season_kit/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2025-02-15_season_kit/index.html" class="no-external">2025 Gear</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2025-02-15_season_kit/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="5" data-categories="notes,gear" data-listing-date-sort="1739077200000" data-listing-file-modified-sort="1774132838081" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1185">
+<a href="../posts/others/2025-02-15_season_kit/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-15_season_kit/img/thumbnail/cover.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+2025 Gear
+</h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
+<div class="listing-category" onclick="window.quartoListingCategory('notes'); return false;">
+notes
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('gear'); return false;">
+gear
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2025-02-15_season_kit/index.html" class="no-external">Triathlon is a sport that demands efficiency, endurance, and the right gear to perform at your best. Over the years, I’ve refined my equipment to balance performance and…</a>
+<div class="card-text listing-description">
+The 2025 triathlon gear setup, from bike and shoes to the smaller equipment choices that matter on race day.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2025-02-15_season_kit/index.html" class="no-external">
 <div class="listing-date">
 Feb 9, 2025
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="news" data-listing-date-sort="1738299600000" data-listing-file-modified-sort="1774053890167" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="211">
-<div class="thumbnail">
-<p><a href="../posts/others/2025-01-31_series_champion/index.html" class="no-external"></a></p><a href="../posts/others/2025-01-31_series_champion/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2025-01-31_series_champion/img/cover.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2025-01-31_series_champion/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2025-01-31_series_champion/index.html" class="no-external">2024 MultiSport Canada Series Champion!</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2025-01-31_series_champion/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="6" data-categories="notes,series" data-listing-date-sort="1738299600000" data-listing-file-modified-sort="1774132838081" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="211">
+<a href="../posts/others/2025-01-31_series_champion/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-01-31_series_champion/img/thumbnail/cover.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+2024 MultiSport Canada Series Champion!
+</h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
+<div class="listing-category" onclick="window.quartoListingCategory('notes'); return false;">
+notes
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('series'); return false;">
+series
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2025-01-31_series_champion/index.html" class="no-external">What an incredible surprise to cap off an amazing year of racing! When that email from MultiSport Canada landed in my inbox announcing my first-place finish in the Sprint…</a>
+<div class="card-text listing-description">
+A surprise series title, what those 2024 results added up to, and why the plaque means more than I expected.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2025-01-31_series_champion/index.html" class="no-external">
 <div class="listing-date">
 Jan 31, 2025
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="news" data-listing-date-sort="1736139600000" data-listing-file-modified-sort="1774053890167" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="656">
-<div class="thumbnail">
-<p><a href="../posts/others/2025-01-06_season_planning/index.html" class="no-external"></a></p><a href="../posts/others/2025-01-06_season_planning/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2025-01-06_season_planning/img/cover.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2025-01-06_season_planning/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2025-01-06_season_planning/index.html" class="no-external">2025 Season Planning</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2025-01-06_season_planning/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="7" data-categories="notes,planning" data-listing-date-sort="1736139600000" data-listing-file-modified-sort="1774132838080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="656">
+<a href="../posts/others/2025-01-06_season_planning/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-01-06_season_planning/img/thumbnail/cover.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+2025 Season Planning
+</h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
+<div class="listing-category" onclick="window.quartoListingCategory('notes'); return false;">
+notes
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('planning'); return false;">
+planning
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2025-01-06_season_planning/index.html" class="no-external">When one season ends, it’s time to take a break—at least a couple of weeks. As the break winds down, I start planning for the next season. In this post, I’ll walk you…</a>
+<div class="card-text listing-description">
+A look at how the 2025 season calendar came together, from race selection to priority planning and course-specific preparation.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2025-01-06_season_planning/index.html" class="no-external">
 <div class="listing-date">
 Jan 6, 2025
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="news" data-listing-date-sort="1734843600000" data-listing-file-modified-sort="1774053890167" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="582">
-<div class="thumbnail">
-<p><a href="../posts/others/2024-12-22_age_group/index.html" class="no-external"></a></p><a href="../posts/others/2024-12-22_age_group/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2024-12-22_age_group/img/cover.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2024-12-22_age_group/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2024-12-22_age_group/index.html" class="no-external">2025: Destination Wollongong!</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2024-12-22_age_group/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="8" data-categories="notes,wollongong2025" data-listing-date-sort="1734843600000" data-listing-file-modified-sort="1774132838080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
+<a href="../posts/others/2024-12-22_age_group/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-12-22_age_group/img/thumbnail/cover.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+2025: Destination Wollongong!
+</h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
+<div class="listing-category" onclick="window.quartoListingCategory('notes'); return false;">
+notes
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('wollongong2025'); return false;">
+wollongong2025
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2024-12-22_age_group/index.html" class="no-external">I’m writing this post a few months after the dust has settled. Back in early 2024, I set a big goal for myself: qualify for the Age Group World Championship for Sprint…</a>
+<div class="card-text listing-description">
+How the Wollongong age-group world championship goal took shape, and what qualifying for it actually required.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2024-12-22_age_group/index.html" class="no-external">
 <div class="listing-date">
 Dec 22, 2024
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="news" data-listing-date-sort="1734325200000" data-listing-file-modified-sort="1774053890167" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="322">
-<div class="thumbnail">
-<p><a href="../posts/others/2024-12-16_welcome/index.html" class="no-external"></a></p><a href="../posts/others/2024-12-16_welcome/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/19.jpg" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2024-12-16_welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2024-12-16_welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2024-12-16_welcome/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="9" data-categories="notes" data-listing-date-sort="1734325200000" data-listing-file-modified-sort="1774132838079" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="322">
+<a href="../posts/others/2024-12-16_welcome/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/19.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Welcome To My Blog
+</h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
+<div class="listing-category" onclick="window.quartoListingCategory('notes'); return false;">
+notes
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2024-12-16_welcome/index.html" class="no-external"><strong>Welcome!</strong></a>
+<div class="card-text listing-description">
+A proper introduction to the blog, the triathlon journey behind it, and what this site is meant to capture over time.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2024-12-16_welcome/index.html" class="no-external">
 <div class="listing-date">
 Dec 16, 2024
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="race report,virtual" data-listing-date-sort="1730347200000" data-listing-file-modified-sort="1774053890166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="103">
-<div class="thumbnail">
-<p><a href="../posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html" class="no-external"></a></p><a href="../posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2024-10-31_DIA_DE_LOS_MUERTOS/img/00.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html" class="no-external">Dia De Los Muertos</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="10" data-categories="notes,virtual" data-listing-date-sort="1730347200000" data-listing-file-modified-sort="1774132838077" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="103">
+<a href="../posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-10-31_DIA_DE_LOS_MUERTOS/img/thumbnail/00.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Dia De Los Muertos
+</h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
-race report
+<div class="listing-category" onclick="window.quartoListingCategory('notes'); return false;">
+notes
 </div>
 <div class="listing-category" onclick="window.quartoListingCategory('virtual'); return false;">
 virtual
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html" class="no-external">This is probably the last one of the virtual challenges I’ll do for a while. I normally use these things to get motivated to do something after a long break, i.e., after…</a>
+<div class="card-text listing-description">
+A final virtual challenge, used more as motivation than competition, and a small marker of getting training momentum back.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2024-10-31_DIA_DE_LOS_MUERTOS/index.html" class="no-external">
 <div class="listing-date">
 Oct 31, 2024
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-categories="race report,virtual" data-listing-date-sort="1703998800000" data-listing-file-modified-sort="1774053890166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="thumbnail">
-<p><a href="../posts/others/2023-12-31_END_OF_YEAR/index.html" class="no-external"></a></p><a href="../posts/others/2023-12-31_END_OF_YEAR/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2023-12-31_END_OF_YEAR/img/img_1208.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2023-12-31_END_OF_YEAR/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2023-12-31_END_OF_YEAR/index.html" class="no-external">End Of Year</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2023-12-31_END_OF_YEAR/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="11" data-categories="race report,virtual" data-listing-date-sort="1703998800000" data-listing-file-modified-sort="1774113237228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<a href="../posts/others/2023-12-31_END_OF_YEAR/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-12-31_END_OF_YEAR/img/thumbnail/img_1208.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+End Of Year
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -630,36 +632,33 @@ race report
 virtual
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2023-12-31_END_OF_YEAR/index.html" class="no-external">
+<div class="card-text listing-description">
 
-</a>
+
+
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2023-12-31_END_OF_YEAR/index.html" class="no-external">
 <div class="listing-date">
 Dec 31, 2023
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="12" data-categories="race report,bike" data-listing-date-sort="1692417600000" data-listing-file-modified-sort="1774053890166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="374">
-<div class="thumbnail">
-<p><a href="../posts/others/2023-08-19_3_PORT_TOUR/index.html" class="no-external"></a></p><a href="../posts/others/2023-08-19_3_PORT_TOUR/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/01.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2023-08-19_3_PORT_TOUR/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2023-08-19_3_PORT_TOUR/index.html" class="no-external">3 Port Tour</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2023-08-19_3_PORT_TOUR/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="12" data-categories="race report,bike" data-listing-date-sort="1692417600000" data-listing-file-modified-sort="1774128329253" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="245">
+<a href="../posts/others/2023-08-19_3_PORT_TOUR/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/thumbnail/01.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+3 Port Tour
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -668,34 +667,31 @@ race report
 bike
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2023-08-19_3_PORT_TOUR/index.html" class="no-external">This was a tough one. I prepared for it by progressively hitting 100K to 120K rides, but 160K is something different.</a>
+<div class="card-text listing-description">
+This was a tough one. I prepared for it by progressively hitting 100K to 120K rides, but 160K is something different.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2023-08-19_3_PORT_TOUR/index.html" class="no-external">
 <div class="listing-date">
 Aug 19, 2023
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="13" data-categories="race report,virtual" data-listing-date-sort="1672722000000" data-listing-file-modified-sort="1774053890166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="thumbnail">
-<p><a href="../posts/others/2023-01-03_THE_ENGLISH_CHANNEL/index.html" class="no-external"></a></p><a href="../posts/others/2023-01-03_THE_ENGLISH_CHANNEL/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_THE_ENGLISH_CHANNEL/img/00.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2023-01-03_THE_ENGLISH_CHANNEL/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2023-01-03_THE_ENGLISH_CHANNEL/index.html" class="no-external">The English Channel</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2023-01-03_THE_ENGLISH_CHANNEL/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="13" data-categories="race report,virtual" data-listing-date-sort="1672722000000" data-listing-file-modified-sort="1774113237228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<a href="../posts/others/2023-01-03_THE_ENGLISH_CHANNEL/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-01-01_THE_ENGLISH_CHANNEL/img/thumbnail/00.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The English Channel
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -704,36 +700,33 @@ race report
 virtual
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2023-01-03_THE_ENGLISH_CHANNEL/index.html" class="no-external">
+<div class="card-text listing-description">
 
-</a>
+
+
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2023-01-03_THE_ENGLISH_CHANNEL/index.html" class="no-external">
 <div class="listing-date">
 Jan 3, 2023
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="14" data-categories="race report,virtual" data-listing-date-sort="1672635600000" data-listing-file-modified-sort="1774053890166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="thumbnail">
-<p><a href="../posts/others/2023-01-02_NIAGARA_FALLS/index.html" class="no-external"></a></p><a href="../posts/others/2023-01-02_NIAGARA_FALLS/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_NIAGARA_FALLS/img/00.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2023-01-02_NIAGARA_FALLS/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2023-01-02_NIAGARA_FALLS/index.html" class="no-external">Niagara Falls</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2023-01-02_NIAGARA_FALLS/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="14" data-categories="race report,virtual" data-listing-date-sort="1672635600000" data-listing-file-modified-sort="1774113237228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<a href="../posts/others/2023-01-02_NIAGARA_FALLS/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-01-01_NIAGARA_FALLS/img/thumbnail/00.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Niagara Falls
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -742,36 +735,33 @@ race report
 virtual
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2023-01-02_NIAGARA_FALLS/index.html" class="no-external">
+<div class="card-text listing-description">
 
-</a>
+
+
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2023-01-02_NIAGARA_FALLS/index.html" class="no-external">
 <div class="listing-date">
 Jan 2, 2023
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="15" data-categories="race report,virtual" data-listing-date-sort="1672549200000" data-listing-file-modified-sort="1774053890166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="thumbnail">
-<p><a href="../posts/others/2023-01-01_COTSWOLD_WAY/index.html" class="no-external"></a></p><a href="../posts/others/2023-01-01_COTSWOLD_WAY/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_COTSWOLD_WAY/img/00.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2023-01-01_COTSWOLD_WAY/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2023-01-01_COTSWOLD_WAY/index.html" class="no-external">Cotswold Way</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2023-01-01_COTSWOLD_WAY/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="15" data-categories="race report,virtual" data-listing-date-sort="1672549200000" data-listing-file-modified-sort="1774113237227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<a href="../posts/others/2023-01-01_COTSWOLD_WAY/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-01-01_COTSWOLD_WAY/img/thumbnail/00.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cotswold Way
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -780,36 +770,33 @@ race report
 virtual
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2023-01-01_COTSWOLD_WAY/index.html" class="no-external">
+<div class="card-text listing-description">
 
-</a>
+
+
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2023-01-01_COTSWOLD_WAY/index.html" class="no-external">
 <div class="listing-date">
 Jan 1, 2023
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="16" data-categories="race report,virtual" data-listing-date-sort="1641099600000" data-listing-file-modified-sort="1774053890165" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail">
-<p><a href="../posts/others/2022-01-02_SCANDINAVIA_GARMIN_TACX/index.html" class="no-external"></a></p><a href="../posts/others/2022-01-02_SCANDINAVIA_GARMIN_TACX/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2022-01-01_SCANDINAVIA_GARMIN_TACX/img/00.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2022-01-02_SCANDINAVIA_GARMIN_TACX/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2022-01-02_SCANDINAVIA_GARMIN_TACX/index.html" class="no-external">Scandinavia Garmin Tacx</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2022-01-02_SCANDINAVIA_GARMIN_TACX/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="16" data-categories="race report,virtual" data-listing-date-sort="1641099600000" data-listing-file-modified-sort="1774113237227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<a href="../posts/others/2022-01-02_SCANDINAVIA_GARMIN_TACX/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2022-01-01_SCANDINAVIA_GARMIN_TACX/img/thumbnail/00.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Scandinavia Garmin Tacx
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -818,36 +805,33 @@ race report
 virtual
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2022-01-02_SCANDINAVIA_GARMIN_TACX/index.html" class="no-external">
+<div class="card-text listing-description">
 
-</a>
+
+
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2022-01-02_SCANDINAVIA_GARMIN_TACX/index.html" class="no-external">
 <div class="listing-date">
 Jan 2, 2022
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="17" data-categories="race report,virtual" data-listing-date-sort="1641013200000" data-listing-file-modified-sort="1774053890165" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail">
-<p><a href="../posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html" class="no-external"></a></p><a href="../posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/img/00.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html" class="no-external">Low Countries Garmin Tacx</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="17" data-categories="race report,virtual" data-listing-date-sort="1641013200000" data-listing-file-modified-sort="1774113237227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<a href="../posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/img/thumbnail/00.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Low Countries Garmin Tacx
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -856,36 +840,33 @@ race report
 virtual
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html" class="no-external">
+<div class="card-text listing-description">
 
-</a>
+
+
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2022-01-01_LOW_COUNTRIES_GARMIN_TACX/index.html" class="no-external">
 <div class="listing-date">
 Jan 1, 2022
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="18" data-categories="race report,virtual" data-listing-date-sort="1578027600000" data-listing-file-modified-sort="1774053890165" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="72">
-<div class="thumbnail">
-<p><a href="../posts/others/2020-01-03_LEEDS_VIRTUAL_TRIATHLON/index.html" class="no-external"></a></p><a href="../posts/others/2020-01-03_LEEDS_VIRTUAL_TRIATHLON/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/img/01.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2020-01-03_LEEDS_VIRTUAL_TRIATHLON/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2020-01-03_LEEDS_VIRTUAL_TRIATHLON/index.html" class="no-external">Leeds Virtual Triathlon</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2020-01-03_LEEDS_VIRTUAL_TRIATHLON/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="18" data-categories="race report,virtual" data-listing-date-sort="1578027600000" data-listing-file-modified-sort="1774113237227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="72">
+<a href="../posts/others/2020-01-03_LEEDS_VIRTUAL_TRIATHLON/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/img/thumbnail/01.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Leeds Virtual Triathlon
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -894,34 +875,31 @@ race report
 virtual
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2020-01-03_LEEDS_VIRTUAL_TRIATHLON/index.html" class="no-external">This was a “real life” race I entered, but COVID-19 had other plans. The race was cancelled, but participants were given the option to “compete” virtually by completing the…</a>
+<div class="card-text listing-description">
+This was a “real life” race I entered, but COVID-19 had other plans. The race was cancelled, but participants were given the option to “compete” virtually by completing the…
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2020-01-03_LEEDS_VIRTUAL_TRIATHLON/index.html" class="no-external">
 <div class="listing-date">
 Jan 3, 2020
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="19" data-categories="race report,virtual" data-listing-date-sort="1577941200000" data-listing-file-modified-sort="1774053890165" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail">
-<p><a href="../posts/others/2020-01-02_LANDS_END_TO_JOHN_O’GROATS/index.html" class="no-external"></a></p><a href="../posts/others/2020-01-02_LANDS_END_TO_JOHN_O’GROATS/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_LANDS_END_TO_JOHN_O%E2%80%99GROATS/img/01.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2020-01-02_LANDS_END_TO_JOHN_O’GROATS/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2020-01-02_LANDS_END_TO_JOHN_O’GROATS/index.html" class="no-external">Lands End To John O’groats</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2020-01-02_LANDS_END_TO_JOHN_O’GROATS/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="19" data-categories="race report,virtual" data-listing-date-sort="1577941200000" data-listing-file-modified-sort="1774113237227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<a href="../posts/others/2020-01-02_LANDS_END_TO_JOHN_O’GROATS/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_LANDS_END_TO_JOHN_O%E2%80%99GROATS/img/thumbnail/01.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Lands End To John O’groats
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -930,36 +908,33 @@ race report
 virtual
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2020-01-02_LANDS_END_TO_JOHN_O’GROATS/index.html" class="no-external">
+<div class="card-text listing-description">
 
-</a>
+
+
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2020-01-02_LANDS_END_TO_JOHN_O’GROATS/index.html" class="no-external">
 <div class="listing-date">
 Jan 2, 2020
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="20" data-categories="race report,virtual" data-listing-date-sort="1577854800000" data-listing-file-modified-sort="1774053890165" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail">
-<p><a href="../posts/others/2020-01-01_HADRIAN’S_WALL/index.html" class="no-external"></a></p><a href="../posts/others/2020-01-01_HADRIAN’S_WALL/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_HADRIAN%E2%80%99S_WALL/img/01.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2020-01-01_HADRIAN’S_WALL/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2020-01-01_HADRIAN’S_WALL/index.html" class="no-external">Hadrian’s Wall</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2020-01-01_HADRIAN’S_WALL/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="20" data-categories="race report,virtual" data-listing-date-sort="1577854800000" data-listing-file-modified-sort="1774113237226" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<a href="../posts/others/2020-01-01_HADRIAN’S_WALL/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_HADRIAN%E2%80%99S_WALL/img/thumbnail/01.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Hadrian’s Wall
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -968,36 +943,33 @@ race report
 virtual
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2020-01-01_HADRIAN’S_WALL/index.html" class="no-external">
+<div class="card-text listing-description">
 
-</a>
+
+
 </div>
-</div>
-<div class="metadata">
-<a href="../posts/others/2020-01-01_HADRIAN’S_WALL/index.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2020
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Adrian Joseph
 </div>
+<div class="listing-date">
+Jan 1, 2020
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="21" data-categories="race report,swim" data-listing-date-sort="1554091200000" data-listing-file-modified-sort="1774053890164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="146">
-<div class="thumbnail">
-<p><a href="../posts/others/2019-03-31_SWIMATHON/index.html" class="no-external"></a></p><a href="../posts/others/2019-03-31_SWIMATHON/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2019-03-31_SWIMATHON/img/00.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2019-03-31_SWIMATHON/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2019-03-31_SWIMATHON/index.html" class="no-external">Swimathon</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2019-03-31_SWIMATHON/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="21" data-categories="race report,swim" data-listing-date-sort="1554091200000" data-listing-file-modified-sort="1774128329256" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="../posts/others/2019-03-31_SWIMATHON/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-03-31_SWIMATHON/img/thumbnail/00.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Swimathon
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -1006,37 +978,60 @@ race report
 swim
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2019-03-31_SWIMATHON/index.html" class="no-external">
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-9ce199206003ed88967d" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-9ce199206003ed88967d">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\"…</script></div></a>
+<div class="card-text listing-description">
+
+<thead>
+<tr>
+<th>
+2019-04-01
+</th>
+<th>
+SWIM 2100M
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Final time
+</td>
+<td>
+00:38:05
+</td>
+</tr>
+<tr>
+<td>
+Activity details
+</td>
+<td>
+Link
+</td>
+</tr>
+</tbody>
+
 </div>
-</div>
-<div class="metadata">
-<a href="../posts/others/2019-03-31_SWIMATHON/index.html" class="no-external">
-<div class="listing-date">
-Apr 1, 2019
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Adrian Joseph
 </div>
+<div class="listing-date">
+Apr 1, 2019
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="22" data-categories="race report,bike" data-listing-date-sort="1526788800000" data-listing-file-modified-sort="1774053890164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="143">
-<div class="thumbnail">
-<p><a href="../posts/others/2018-05-20_BIKE_OXFORD/index.html" class="no-external"></a></p><a href="../posts/others/2018-05-20_BIKE_OXFORD/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2018-05-20_BIKE_OXFORD/img/00.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2018-05-20_BIKE_OXFORD/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2018-05-20_BIKE_OXFORD/index.html" class="no-external">Bike Oxford</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2018-05-20_BIKE_OXFORD/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="22" data-categories="race report,bike" data-listing-date-sort="1526788800000" data-listing-file-modified-sort="1774128329251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
+<a href="../posts/others/2018-05-20_BIKE_OXFORD/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-05-20_BIKE_OXFORD/img/thumbnail/00.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Bike Oxford
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -1045,37 +1040,60 @@ race report
 bike
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2018-05-20_BIKE_OXFORD/index.html" class="no-external">
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-9f6d0dc73f9c9ed7247f" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-9f6d0dc73f9c9ed7247f">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\"…</script></div></a>
+<div class="card-text listing-description">
+
+<thead>
+<tr>
+<th>
+2018-05-20
+</th>
+<th>
+BIKE 135K
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Final time
+</td>
+<td>
+05:21:17
+</td>
+</tr>
+<tr>
+<td>
+Activity details
+</td>
+<td>
+Link
+</td>
+</tr>
+</tbody>
+
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2018-05-20_BIKE_OXFORD/index.html" class="no-external">
 <div class="listing-date">
 May 20, 2018
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="23" data-categories="race report,swim" data-listing-date-sort="1524888000000" data-listing-file-modified-sort="1774053890164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="149">
-<div class="thumbnail">
-<p><a href="../posts/others/2018-04-28_SWIMATHON/index.html" class="no-external"></a></p><a href="../posts/others/2018-04-28_SWIMATHON/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2018-04-28_SWIMATHON/img/00.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2018-04-28_SWIMATHON/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2018-04-28_SWIMATHON/index.html" class="no-external">Swimathon</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2018-04-28_SWIMATHON/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="23" data-categories="race report,swim" data-listing-date-sort="1524888000000" data-listing-file-modified-sort="1774128329254" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
+<a href="../posts/others/2018-04-28_SWIMATHON/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-04-28_SWIMATHON/img/thumbnail/00.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Swimathon
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -1084,37 +1102,60 @@ race report
 swim
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2018-04-28_SWIMATHON/index.html" class="no-external">
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-d824c1eb62aa0ea3f852" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d824c1eb62aa0ea3f852">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\"…</script></div></a>
+<div class="card-text listing-description">
+
+<thead>
+<tr>
+<th>
+2018-04-28
+</th>
+<th>
+SWIM 2200M
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Final time
+</td>
+<td>
+00:39:05
+</td>
+</tr>
+<tr>
+<td>
+Activity details
+</td>
+<td>
+Link
+</td>
+</tr>
+</tbody>
+
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Adrian Joseph
 </div>
-<div class="metadata">
-<a href="../posts/others/2018-04-28_SWIMATHON/index.html" class="no-external">
 <div class="listing-date">
 Apr 28, 2018
 </div>
-<div class="listing-author">
-Adrian Joseph
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="24" data-categories="race report,swim" data-listing-date-sort="1491710400000" data-listing-file-modified-sort="1774053890164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
-<div class="thumbnail">
-<p><a href="../posts/others/2017-04-09_SWIMATHON/index.html" class="no-external"></a></p><a href="../posts/others/2017-04-09_SWIMATHON/index.html" class="no-external">
-<p><img loading="lazy" src="https://storage.googleapis.com/blogs_josa/sport_small/2017-04-09_SWIMATHON/img/00.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/others/2017-04-09_SWIMATHON/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/others/2017-04-09_SWIMATHON/index.html" class="no-external">Swimathon</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/others/2017-04-09_SWIMATHON/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="24" data-categories="race report,swim" data-listing-date-sort="1491710400000" data-listing-file-modified-sort="1774128329253" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
+<a href="../posts/others/2017-04-09_SWIMATHON/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-04-09_SWIMATHON/img/thumbnail/00.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Swimathon
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('race report'); return false;">
 race report
@@ -1123,29 +1164,137 @@ race report
 swim
 </div>
 </div>
-<div class="listing-description">
-<a href="../posts/others/2017-04-09_SWIMATHON/index.html" class="no-external">
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-ce2fa715d64d4e053c0d" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-ce2fa715d64d4e053c0d">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\"…</script></div></a>
+<div class="card-text listing-description">
+
+<thead>
+<tr>
+<th>
+2017-04-09
+</th>
+<th>
+SWIM 2750M
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Final time
+</td>
+<td>
+00:52:56
+</td>
+</tr>
+<tr>
+<td>
+Activity details
+</td>
+<td>
+Link
+</td>
+</tr>
+</tbody>
+
 </div>
-</div>
-<div class="metadata">
-<a href="../posts/others/2017-04-09_SWIMATHON/index.html" class="no-external">
-<div class="listing-date">
-Apr 9, 2017
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Adrian Joseph
 </div>
-</a>
+<div class="listing-date">
+Apr 9, 2017
 </div>
+</div>
+</div>
+</div>
+</a>
 </div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
+<dialog id="gallery-lightbox" class="gallery-lightbox">
+  <button type="button" class="gallery-lightbox__close" aria-label="Close image viewer">
+    ×
+  </button>
+  <img class="gallery-lightbox__image" alt="">
+  <p class="gallery-lightbox__caption" hidden=""></p>
+</dialog>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dialog = document.getElementById("gallery-lightbox");
+  if (!dialog) return;
+
+  const image = dialog.querySelector(".gallery-lightbox__image");
+  const caption = dialog.querySelector(".gallery-lightbox__caption");
+  const closeButton = dialog.querySelector(".gallery-lightbox__close");
+
+  const galleryLinks = Array.from(
+    document.querySelectorAll('a[href*="/img/full/"]')
+  ).filter((link) => link.querySelector('img[group="hi"]'));
+
+  if (galleryLinks.length === 0) return;
+
+  const closeDialog = () => {
+    dialog.close();
+    image.removeAttribute("src");
+    image.alt = "";
+    caption.textContent = "";
+    caption.hidden = true;
+  };
+
+  const openDialog = (link) => {
+    const thumbnail = link.querySelector('img[group="hi"]');
+    const fullSrc = link.getAttribute("href");
+    if (!thumbnail || !fullSrc) return;
+
+    image.src = fullSrc;
+    image.alt = thumbnail.getAttribute("alt") || "";
+
+    const text = (thumbnail.getAttribute("alt") || "").trim();
+    caption.textContent = text;
+    caption.hidden = text === "";
+
+    if (!dialog.open) {
+      dialog.showModal();
+    }
+  };
+
+  galleryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+      openDialog(link);
+    });
+  });
+
+  closeButton.addEventListener("click", closeDialog);
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      closeDialog();
+    }
+  });
+
+  dialog.addEventListener("close", () => {
+    image.removeAttribute("src");
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
