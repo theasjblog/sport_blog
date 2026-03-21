@@ -11,12 +11,6 @@ This file collects cleanup and improvement ideas for the repo and site.
 
 ## High Priority
 
-- Rewrite Git history to remove old large image blobs and other generated artifacts from history.
-  Notes:
-  The biggest blobs in history are old files like `posts/**/img_modal/*.png`, many of them 13-19 MB each. Use `git filter-repo` or BFG, then force-push carefully.
-- Stop tracking generated render artifacts in the content tree.
-  Notes:
-  There are many committed `posts/**/index_cache` folders and a few `posts/**/index_files` folders. These make the repo noisy and should be ignored unless there is a deliberate reason to keep them.
 - Decide what should live in Git, what should live in GCS, and what should be generated on demand.
   Notes:
   Right now the boundary is not very explicit. Write down a simple rule such as:
@@ -26,7 +20,9 @@ This file collects cleanup and improvement ideas for the repo and site.
 
 - Add ignore rules for common junk and generated files.
   Notes:
-  `.DS_Store`, `log.log`, `log_2.log`, `posts/**/index_cache/`, `posts/**/index_files/`, and similar local artifacts should not be tracked.
+  Partly done. `.DS_Store`, `log.log`, `log_2.log`, `posts/**/index_cache/`, and `posts/**/index_files/` are now ignored.
+  Follow-up:
+  review whether there are any other local-only artifacts worth ignoring.
 - Review whether `_freeze/` should stay in Git.
   Notes:
   It is only about `9.5M` now, so it is not the main size problem. Keep it only if it materially improves reproducibility or deploy speed.
@@ -109,24 +105,28 @@ This file collects cleanup and improvement ideas for the repo and site.
 
 ## Concrete Findings From This Review
 
-- `.git` is about `1.9G`, which is the dominant size problem.
-- Current checked-out content is relatively small:
-  `_freeze/` about `9.5M`, `posts/` about `11M`, `img/` well under `2M`.
+- Repo history and deployment branch have already been reset and cleaned.
+- The old large-history problem was caused mainly by historical `posts/**/img_modal/*.png` files and committed render artifacts.
+- Tracked `posts/**/index_cache` and `posts/**/index_files` content has been removed.
 - No GitHub Actions workflow is present.
 - No `.quartoignore` was present before this review.
 - `styles.css` is effectively empty.
 - Several data pages depend on remote parquet reads from GCS during render.
-- The repo still contains many per-post render caches under `posts/**/index_cache`.
-- A few posts also contain committed `index_files` directories that duplicate rendered assets.
 
 ## Candidate First Pass
 
-- Clean history with `git filter-repo`, then force-push once.
-- Add durable ignore rules for generated files and local junk.
+- Review whether any additional local-only files should be ignored.
 - Replace the ad hoc image upload process with a scripted resize-and-publish workflow.
 - Create a lightweight custom homepage and custom listing cards.
 - Add one GitHub Actions workflow for render, link checking, and deploy.
 - Create small derived datasets for `race_finder.qmd` and `records.qmd`.
+
+## Completed
+
+- Reset and cleaned `master` history to remove old large blobs and unnecessary history.
+- Re-created the `gh-pages` branch from fresh publish output.
+- Removed tracked Quarto-generated cache and render-asset directories from the repo.
+- Added ignore rules to stop common generated files from being re-committed.
 
 ## Existing Ideas From README
 
