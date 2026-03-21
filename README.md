@@ -114,8 +114,7 @@ The prep script is the standard step before `quarto render`.
 ## Render command
 
 ```
-rm -rf .quarto _site _freeze
-quarto render
+rm -rf .quarto _site _freeze && quarto render
 ```
 ## Summary Table Pattern
 
