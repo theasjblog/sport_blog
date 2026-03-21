@@ -2,8 +2,9 @@
 title: "Barrie Sprint Triathlon"
 date: "2024-08-11"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/00.png
-categories: [race report, triathlon]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/00.jpg
+description: "An early-morning sprint in Barrie and the final qualifying chance of the season for the age-group championship path."
+categories: [race_reports, triathlon]
 format: html
 lightbox:
   match: auto
@@ -11,7 +12,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/00.jpg)
 
 This was the last qualifying event of the season. It was an early start. To be in Barrie at 6am, I left at 4am from Burlington.
 
@@ -41,46 +42,33 @@ Finally, back to Rob. Turns out he swam in 15min, so I won there, then he cycled
 
 [Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222024-08-11%20-%20BARRIE%20SPRINT%20TRIATHLON%20-%20sprint%20triathlon%22){target="_blank"}.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2024-08-11"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2024-08-11 -->
+{{< include summary_table.html >}}
 
 
 
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/02.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/03.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/03.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/full/03.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/04.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/04.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/full/04.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/05.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/05.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/full/05.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/06.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/06.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/full/06.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/07.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/07.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/full/07.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/11.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/11.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/full/11.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/14.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/thumbnail/14.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-08-11_BARRIE_SPRINT_TRIATHLON/img/full/14.jpg)
 
 
 :::

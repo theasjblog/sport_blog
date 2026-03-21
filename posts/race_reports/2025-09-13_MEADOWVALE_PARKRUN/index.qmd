@@ -2,8 +2,9 @@
 title: "Meadowvale Parkrun"
 date: "2025-09-13"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2025-09-13_MEADOWVALE_PARKRUN/img/00.png
-categories: [race report, run, parkrun]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-09-13_MEADOWVALE_PARKRUN/img/thumbnail/00.jpg
+description: "A final 5K benchmark before Worlds, used to check speed and confidence just before the championship taper."
+categories: [race_reports, run, parkrun]
 format: html
 lightbox:
   match: auto
@@ -21,17 +22,5 @@ The end result? Practically identical to last time — just three seconds slower
 The only sting in the tail was watching another runner in my category fly past me right near the end to grab first place, crossing the line eight seconds ahead. A tough pill to swallow, but another reminder that pacing — and finishing strong — makes all the difference.
 
  
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-source('../../../inst/aux_functions.R')
-race_date <- "2025-09-13"
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2025-09-13 -->
+{{< include summary_table.html >}}

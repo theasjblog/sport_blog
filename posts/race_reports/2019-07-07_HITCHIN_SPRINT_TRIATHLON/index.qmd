@@ -2,7 +2,7 @@
 title: "Hitchin Sprint Triathlon"
 date: "2019-07-07"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/thumbnail/00.jpg
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -11,38 +11,25 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/thumbnail/00.jpg)
 
 I remember that a colleague from Tessella came to this race: Ana. I acted a bit like "the expert". I remember she started quite a bit before me, and I caught her towards the end of the bike leg.
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2019-07-07"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2019-07-07 -->
+{{< include summary_table.html >}}
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/02.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/03.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/thumbnail/03.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/full/03.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/04.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/thumbnail/04.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-07-07_HITCHIN_SPRINT_TRIATHLON/img/full/04.jpg)
 
 
 :::

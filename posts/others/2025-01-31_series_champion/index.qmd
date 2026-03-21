@@ -2,11 +2,12 @@
 title: "2024 MultiSport Canada Series Champion!"
 author: "Adrian Joseph"
 date: "2025-01-31"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2025-01-31_series_champion/img/cover.png
-categories: [news]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-01-31_series_champion/img/thumbnail/cover.jpg
+description: "A surprise series title, what those 2024 results added up to, and why the plaque means more than I expected."
+categories: [notes, series]
 ---
 
-![MultiSport Canada Champions plaque.](https://storage.googleapis.com/blogs_josa/sport_small/2025-01-31_series_champion/img/cover.png)
+![MultiSport Canada Champions plaque.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-01-31_series_champion/img/thumbnail/cover.jpg)
 
 What an incredible surprise to cap off an amazing year of racing! When that email from MultiSport Canada landed in my inbox announcing my first-place finish in the Sprint Triathlon series, I was genuinely shocked. I hadn't even realized I was competing in a series – talk about a pleasant surprise!
 
@@ -16,5 +17,4 @@ But beyond the points and placements, what really makes this achievement special
 
 And now, as I hold this plaque in my hands (after its adventure through the Canada Post strike!), I can't help but feel even more motivated for what's ahead. This isn't just a recognition of past achievements; it's fuel for future goals, especially as I prepare for the Age Group World Championship.
 
-![Top M40-44 in the series.](https://storage.googleapis.com/blogs_josa/sport_small/2025-01-31_series_champion/img/top3.png)
-
+![Top M40-44 in the series.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-01-31_series_champion/img/thumbnail/top3.jpg)

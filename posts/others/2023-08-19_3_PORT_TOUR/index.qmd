@@ -2,7 +2,7 @@
 title: "3 Port Tour"
 date: "2023-08-19"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/thumbnail/01.jpg
 categories: [race report, bike]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/thumbnail/01.jpg)
 
 This was a tough one. I prepared for it by progressively hitting 100K to 120K rides, but 160K is something different.
 
@@ -25,35 +25,22 @@ The last 20K or so were also pretty hard, between the heath and the accumulated 
 
 But I did. Overall a fun day out, even if not my favourite kind of sporting challenge. The only major downside is that cycling events like this are more like a parkrun that a competition. There is plenty of time to chat, but no official timing, ranking, or medal.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2023-08-19"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2023-08-19 -->
+{{< include summary_table.html >}}
 
 
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/02.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/04.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/thumbnail/04.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/full/04.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-08-19_3_PORT_TOUR/img/05.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/thumbnail/05.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-08-19_3_PORT_TOUR/img/full/05.jpg)
 
 
 :::

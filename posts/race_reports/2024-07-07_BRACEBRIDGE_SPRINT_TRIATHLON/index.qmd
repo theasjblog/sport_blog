@@ -2,8 +2,9 @@
 title: "Bracebridge Sprint Triathlon"
 date: "2024-07-07"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg
-categories: [race report, triathlon]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/15.jpg
+description: "Back in Bracebridge after the 2023 win, but this time against a deeper field and a much harder title defence."
+categories: [race_reports, triathlon]
 format: html
 lightbox:
   match: auto
@@ -11,7 +12,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/15.jpg)
 
 Back racing in Bracebridge after the 2023 Age Group victory. However, defending the title would have not been easy, as a quick look at the people around me in transition was suggesting a much more competitive field than the 2023 race.
 
@@ -30,44 +31,31 @@ At the end I finished in 1h15m54s. About 1.5m faster than last year. of this 90s
 As for the ranking, I could not defend my 2023 title. The guy who finished first, and Australian, was way faster in every discipline. He was about 3min faster on the swim, 2min faster on the bike, and 1m faster on the run. I might be able to get to run at that pace, and with a similarly spech'ed bike I might be able to post the same time, but the swim was just way too fast for me. I really need to find a way to work on my swim if I want to step up the game.
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2024-07-07"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2024-07-07 -->
+{{< include summary_table.html >}}
 
 
 
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/02.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/03.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/03.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/full/03.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/04.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/04.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/full/04.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/05.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/05.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/full/05.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/08.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/08.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/full/08.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/13.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/13.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/full/13.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/15.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/thumbnail/15.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-07-07_BRACEBRIDGE_SPRINT_TRIATHLON/img/full/15.jpg)
 
 
 :::

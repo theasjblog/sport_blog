@@ -1,30 +1,102 @@
 ---
-title: "![ASJ TRI](/img/logo.png){width=\"300\"}"
+title: "ASJ TRI"
 page-layout: full
 title-block-banner: false
 feed: true
+listing:
+  - id: latest-race-reports
+    contents: posts/race_reports
+    sort: "date desc"
+    type: grid
+    max-items: 2
+    categories: false
+    filter-ui: false
+    sort-ui: false
+  - id: latest-notes
+    contents: posts/others
+    sort: "date desc"
+    type: grid
+    max-items: 2
+    categories: false
+    filter-ui: false
+    sort-ui: false
 ---
 
+::: {.home-hero}
+::: {.home-hero__copy}
+![ASJ TRI](/img/logo.png){.home-hero__logo}
 
-**Welcome to my blog!**
+## Amateur Triathlon, Documented My Way
 
-I'm a 40-year-old amateur triathlete. As we all do, by day I navigate the corporate world in a 9-to-5 office job, but my heart truly comes alive when I'm training for my next race.
+Training, racing, and figuring out how to fit swim-bike-run around work, family, travel, and the usual chaos of normal life.
 
-**What You'll Find Here**
+This is the front page for race reports, training notes, gear thoughts, and the longer story behind what it takes to keep showing up as an age-group athlete.
 
-Here, I share my experiences of balancing a full-time career with the demanding world of triathlon training. From early morning swims to lunch-break runs and weekend cycling adventures, I'll take you through the ups and downs of pursuing athletic goals while maintaining a professional career and personal life. I will include race reports, lessons learnt from the trenches, stories about balancing family time, work responsibilities, and training, and challenges and victories of amateur triathlon.
+::: {.home-hero__actions}
+[Latest Race Reports](posts/race_reports.qmd){.home-button .home-button--primary}
+[Explore Everything Else](posts/others.qmd){.home-button .home-button--secondary}
+:::
+:::
 
-**Join Me!**
+::: {.home-hero__panel}
+### Current Focus
 
-Whether you're a fellow age-group triathlete, someone curious about the sport, or just interested in how to balance multiple passions with daily life, I hope you'll find value in my experiences and insights. Follow along as I share my journey of swimming, biking, and running through life!
+- Qualify for the 2027 Sprint Duathlon World Championship in Edmonton, Canada
 
+[Race Finder](race_finder.qmd){.home-inline-link}
 
----
+[Records](records.qmd){.home-inline-link}
+:::
+:::
 
-# Race reports
+## Latest from the blog
 
-[![](https://storage.googleapis.com/blogs_josa/sport_small/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/img/19.jpg){width="500"}](posts/race_reports.qmd)
+::: {.home-listing-block}
+### Latest race reports
 
-# Miscellaneous
+::: {#latest-race-reports}
+:::
+:::
 
-[![](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-15_season_kit/img/cover.png){width="500"}](posts/others.qmd)
+::: {.home-listing-block}
+### Latest notes and features
+
+::: {#latest-notes}
+:::
+:::
+
+## Start Here
+
+::: {.home-nav-grid}
+::: {.home-nav-card}
+### [Race Reports](posts/race_reports.qmd)
+
+Chronological race stories, results, lessons learned, and galleries from triathlons, runs, swims, and the occasional surprise.
+:::
+
+::: {.home-nav-card}
+### [Training and other posts](posts/others.qmd)
+
+Longer reflections on preparation, age-group racing, kit, planning, and whatever did not fit neatly into a race report.
+:::
+
+::: {.home-nav-card}
+### [Race Finder](race_finder.qmd)
+
+Structured race data with filters and lookup tools when you want the database view instead of the narrative version.
+:::
+
+::: {.home-nav-card}
+### [Records](records.qmd)
+
+Personal bests, rankings, and performance snapshots across the different formats and distances.
+:::
+:::
+
+## Why This Site Exists
+
+::: {.home-about}
+This started as a way to keep race memories organized, but it has turned into something more useful: a record of how training, racing, work, travel, family life, and long-term progression actually fit together over time.
+
+The goal is not just to post finish-line photos. It is to keep the stories, the numbers, and the lessons in one place.
+:::

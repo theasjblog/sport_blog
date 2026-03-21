@@ -2,8 +2,9 @@
 title: "Meadowvale Parkrun"
 date: "2025-08-02"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2025-08-02_MEADOWVALE_PARKRUN/img/00.png
-categories: [race report, run, parkrun]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-08-02_MEADOWVALE_PARKRUN/img/thumbnail/00.jpg
+description: "A parkrun used as a sharp leg test, with one eye on 5K form and the other on triathlon preparation."
+categories: [race_reports, run, parkrun]
 format: html
 lightbox:
   match: auto
@@ -30,17 +31,5 @@ So now, with my confidence slightly restored and my legs reminded they can still
 
 
  
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-source('../../../inst/aux_functions.R')
-race_date <- "2025-08-02"
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2025-08-02 -->
+{{< include summary_table.html >}}

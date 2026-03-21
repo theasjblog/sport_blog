@@ -2,7 +2,7 @@
 title: "Centurion Triathlon"
 date: "2019-06-30"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/thumbnail/00.jpg
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/thumbnail/00.jpg)
 
 This was the first attempt at a long-ish distance, with the added difficulties of not being really trained for it.
 
@@ -23,35 +23,22 @@ The problems started on the run. From very early on, it was clear I had nothing 
 
 At the end I stayed on the venue for a bit under the TriForce tent.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2019-06-30"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2019-06-30 -->
+{{< include summary_table.html >}}
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/02.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/62487638_583934555467485_2039280103120175104_n.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/thumbnail/62487638_583934555467485_2039280103120175104_n.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/full/62487638_583934555467485_2039280103120175104_n.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/65544643_584133048780969_6337870015055790080_n.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/thumbnail/65544643_584133048780969_6337870015055790080_n.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/full/65544643_584133048780969_6337870015055790080_n.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/65570243_584140592113548_578397108244054016_n.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/thumbnail/65570243_584140592113548_578397108244054016_n.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/full/65570243_584140592113548_578397108244054016_n.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-06-30_CENTURION_TRIATHLON/img/65650971_584128805448060_2949400681213067264_n.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/thumbnail/65990209_583961752131432_6244789986328051712_n.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-06-30_CENTURION_TRIATHLON/img/full/65990209_583961752131432_6244789986328051712_n.jpg)
 :::

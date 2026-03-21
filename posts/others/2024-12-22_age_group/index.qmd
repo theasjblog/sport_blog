@@ -2,11 +2,12 @@
 title: "2025: Destination Wollongong!"
 author: "Adrian Joseph"
 date: "2024-12-22"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2024-12-22_age_group/img/cover.png
-categories: [news]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-12-22_age_group/img/thumbnail/cover.jpg
+description: "How the Wollongong age-group world championship goal took shape, and what qualifying for it actually required."
+categories: [notes, wollongong2025]
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-12-22_age_group/img/cover.png){ width="500"}
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-12-22_age_group/img/thumbnail/cover.jpg){.content-image}
 
 
 I’m writing this post a few months after the dust has settled. Back in early 2024, I set a big goal for myself: qualify for the Age Group World Championship for Sprint Triathlon. This decision was fueled partly by the ego boost of winning the [Bracebridge](../../race_reports/2023-07-09_BRACEBRIDGE_SPRINT_TRIATHLON/index.qmd) race last year (let’s be honest, who doesn’t love a little ego boost?). On top of that, I dug into the winning times from qualifying races over the past 3–4 years. While I wasn’t quite there yet, I figured that with a bit of luck—and maybe some roll-down magic—I might just make it happen.  

@@ -1,0 +1,7 @@
+_site/
+_freeze/
+site_libs/
+.quarto/
+blog_assets/
+collage/
+data/

@@ -2,7 +2,7 @@
 title: "St. Neots Half Marathon"
 date: "2019-11-17"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-11-17_ST._NEOTS_HALF_MARATHON/img/thumbnail/00.jpg
 categories: [race report, run]
 format: html
 lightbox:
@@ -11,36 +11,23 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-11-17_ST._NEOTS_HALF_MARATHON/img/thumbnail/00.jpg)
 
 Not much memories on this. Just that I got there way too early, it was raining, and I had to wait in the car while they opened registration. Also, there was no changing rooms, everybody was getting ready in a gym hall.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2019-11-17"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2019-11-17 -->
+{{< include summary_table.html >}}
 
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-11-17_ST._NEOTS_HALF_MARATHON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-11-17_ST._NEOTS_HALF_MARATHON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-11-17_ST._NEOTS_HALF_MARATHON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-11-17_ST._NEOTS_HALF_MARATHON/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/02.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-11-17_ST._NEOTS_HALF_MARATHON/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-11-17_ST._NEOTS_HALF_MARATHON/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/03.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-11-17_ST._NEOTS_HALF_MARATHON/img/thumbnail/03.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-11-17_ST._NEOTS_HALF_MARATHON/img/full/03.jpg)
 
 
 :::

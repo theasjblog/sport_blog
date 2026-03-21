@@ -2,7 +2,7 @@
 title: "Total Warrior"
 date: "2012-07-04"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/thumbnail/00.jpg
 categories: [race report, obstacle race]
 format: html
 lightbox:
@@ -12,38 +12,25 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/IMG_2088.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/thumbnail/IMG_2088.jpg)
 
 A challenging and fun obstacle race in the Yorkshire. Denis and I drove up there and ran the course together. Personally I think that the Sheffield Man Of Steel was a better event, but there is nothing wrong with this. They definitely make use of the larger budget by building larger obstacles over a wider field.
 
 At the end there was beer and to shower we had to use freezing cold water coming out of a pipe they used to get drinking water for the horses.
 
-```{r, echo = FALSE, warning=FALSE, message=FALSE}
-race_date <- "2012-07-04"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2012-07-04 -->
+{{< include summary_table.html >}}
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/01.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/02.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/thumbnail/04.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/full/04.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/03.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/thumbnail/03.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/full/03.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/04.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/thumbnail/04.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/full/04.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2012-07-04_TOTAL_WARRIOR/img/IMG_2088.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/thumbnail/IMG_2088.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2012-07-04_TOTAL_WARRIOR/img/full/IMG_2088.jpg)
 :::

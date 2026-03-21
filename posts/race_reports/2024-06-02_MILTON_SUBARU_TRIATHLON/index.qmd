@@ -2,8 +2,9 @@
 title: "Milton Subaru Triathlon"
 date: "2024-06-02"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2024-06-02_MILTON_SUBARU_TRIATHLON/img/00.png
-categories: [race report, triathlon]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/thumbnail/00.jpg
+description: "A rain-soaked triathlon in Milton where the weather shaped the whole day before, during, and after the race."
+categories: [race_reports, triathlon]
 format: html
 lightbox:
   match: auto
@@ -11,7 +12,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-02_MILTON_SUBARU_TRIATHLON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/thumbnail/00.jpg)
 
 This was a wet one. It rained all the time. Before the race, during, and after. Everything got drenched (pro tip: bring a change to leave in the car, so that it stays dry).
 
@@ -32,40 +33,27 @@ Finally, the run. My legs were not into it at all, and the few hills along the c
 Also, turns out that my fancy carbon plated running shoes can give me blisters wif my feet are wet and there is grit inside the shoes. Not great.
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2024-06-02"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2024-06-02 -->
+{{< include summary_table.html >}}
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-02_MILTON_SUBARU_TRIATHLON/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-02_MILTON_SUBARU_TRIATHLON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-02_MILTON_SUBARU_TRIATHLON/img/01a.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/thumbnail/01a.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/full/01a.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-02_MILTON_SUBARU_TRIATHLON/img/01b.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/thumbnail/01b.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/full/01b.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-02_MILTON_SUBARU_TRIATHLON/img/01c.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/thumbnail/01c.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/full/01c.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-02_MILTON_SUBARU_TRIATHLON/img/02.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-02_MILTON_SUBARU_TRIATHLON/img/07.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/thumbnail/07.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/full/07.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-02_MILTON_SUBARU_TRIATHLON/img/11.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/thumbnail/11.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/full/11.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-02_MILTON_SUBARU_TRIATHLON/img/18.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/thumbnail/18.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-02_MILTON_SUBARU_TRIATHLON/img/full/18.jpg)
 
 
 :::

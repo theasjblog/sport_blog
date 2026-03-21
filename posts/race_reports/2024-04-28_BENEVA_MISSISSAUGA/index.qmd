@@ -2,8 +2,9 @@
 title: "Beneva Mississauga"
 date: "2024-04-28"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2024-04-28_BENEVA_MISSISSAUGA/img/00.png
-categories: [race report, run]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-04-28_BENEVA_MISSISSAUGA/img/thumbnail/00.jpg
+description: "A spring 10K test in Mississauga, with modest goals, a not-quite-flat course, and an honest check on early-season running form."
+categories: [race_reports, run]
 format: html
 lightbox:
   match: auto
@@ -11,7 +12,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-04-28_BENEVA_MISSISSAUGA/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-04-28_BENEVA_MISSISSAUGA/img/thumbnail/00.jpg)
 
 This a race Ali picked. On paper, a flat and fast 10K, good as a test event. In reality, there ware a couple of "hills". Nothing major, but for sure  something that could affect people hunting for a PB. But that was not me. My focus was simply to see what I could. No main goal, except maybe at least stay under 45min.
 
@@ -22,31 +23,18 @@ The main event of the race was probably me kicking a young child, maybe 5yro. I 
 The annoying thing on the prize giving was that they only recognized the first 3 in some category they made up, and mot the standard divisions. I finished 3rd in my division, but 4th in the category they made up...
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2024-04-28"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2024-04-28 -->
+{{< include summary_table.html >}}
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-04-28_BENEVA_MISSISSAUGA/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-04-28_BENEVA_MISSISSAUGA/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-04-28_BENEVA_MISSISSAUGA/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-04-28_BENEVA_MISSISSAUGA/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-04-28_BENEVA_MISSISSAUGA/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-04-28_BENEVA_MISSISSAUGA/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-04-28_BENEVA_MISSISSAUGA/img/02.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-04-28_BENEVA_MISSISSAUGA/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-04-28_BENEVA_MISSISSAUGA/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-04-28_BENEVA_MISSISSAUGA/img/06.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-04-28_BENEVA_MISSISSAUGA/img/thumbnail/06.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-04-28_BENEVA_MISSISSAUGA/img/full/06.jpg)
 
 
 :::

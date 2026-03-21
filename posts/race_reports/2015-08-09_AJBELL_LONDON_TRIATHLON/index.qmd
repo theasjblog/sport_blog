@@ -2,7 +2,7 @@
 title: "AJBell London Triathlon"
 date: "2015-08-09"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/00.jpg
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -11,51 +11,38 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/00.jpg)
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2015-08-09"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2015-08-09 -->
+{{< include summary_table.html >}}
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/02.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/02a.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/02a.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/02a.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/02b.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/02b.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/02b.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/03.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/03.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/03.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/05.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/05.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/05.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/07.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/07.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/07.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/11.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/11.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/11.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/16.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/20x30-AUTB3695.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/20x30-AUTB3695.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/17.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/17.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/17.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/23.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/23.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/23.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-08-09_AJBELL_LONDON_TRIATHLON/img/25.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/thumbnail/25.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-08-09_AJBELL_LONDON_TRIATHLON/img/full/25.jpg)
 
 
 :::

@@ -2,7 +2,7 @@
 title: "Bedford Autodrome Sprint Duathlon"
 date: "2017-03-12"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/thumbnail/00.jpg
 categories: [race report, duathlon]
 format: html
 lightbox:
@@ -11,39 +11,26 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/thumbnail/00.jpg)
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2017-03-12"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2017-03-12 -->
+{{< include summary_table.html >}}
 
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/01a.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/thumbnail/01a.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/full/01a.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/01b.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/thumbnail/01b.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/full/01b.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/02.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/05.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/thumbnail/05.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2017-03-12_BEDFORD_AUTODROME_SPRINT_DUATHLON/img/full/05.jpg)
 
 
 :::

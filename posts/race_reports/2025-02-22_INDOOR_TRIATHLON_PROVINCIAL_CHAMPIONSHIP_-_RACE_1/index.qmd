@@ -2,8 +2,9 @@
 title: "Indoor Triathlon Provincial Championship Series - Race 1"
 date: "2025-02-22"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png
-categories: [race report, triathlon, indoor]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/00.jpg
+description: "A chaotic but memorable first indoor triathlon of the series, with missed bike-start minutes and an age-group win anyway."
+categories: [race_reports, triathlon, indoor]
 format: html
 lightbox:
   match: auto
@@ -11,7 +12,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/00.jpg)
 
 # Overview
 
@@ -96,35 +97,22 @@ All in all, it was a **wild, slightly frustrating, but fun** experience. Next ti
 
 [Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222025-02-22%20-%20INDOOR%20TRIATHLON%20PROVINCIAL%20CHAMPIONSHIP%20-%20RACE%201%20-%20indoor%20triathlon%22){target="_blank"}.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2025-05-04"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2025-05-04 -->
+{{< include summary_table.html >}}
 
 
 
 
 
 ::: {layout-ncol=4}
-![The PanAm Centre.](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png){ width="100" group="hi" }
+[![The PanAm Centre.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/02.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/full/02.jpg)
 
-![The scoring card.](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/03.png){ width="100" group="hi" }
+[![The scoring card.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/03.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/full/03.jpg)
 
-![The main pool.](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/04.png){ width="100" group="hi" }
+[![The main pool.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/04.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/full/04.jpg)
 
 :::

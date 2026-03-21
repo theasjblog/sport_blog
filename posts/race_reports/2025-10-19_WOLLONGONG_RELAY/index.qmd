@@ -4,7 +4,7 @@ subtitle: "Team Canada III (X160)"
 date: 2025-10-19
 categories: [race_reports, wollongong2025]
 tags: [mixed team relay, sprint, wollongong, team canada]
-image: https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2244.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG/img/thumbnail/IMG_2244.jpg
 # Quarto HTML options
 format:
   html:
@@ -28,7 +28,7 @@ For those unfamiliar, a mixed relay team consists of **four athletes (woman / ma
 
 Four days before the race, I met my teammates at the Boathouse: **Lisa**, **Irina**, and **Gregory**. Together, we were **Team Canada III (X160)**.
 
-![Team at the Boathouse](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2243.png)
+![Team at the Boathouse](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG/img/thumbnail/IMG_2243.jpg)
 
 
 The day before the race I joined the **swim familiarization**. The water looked calm and inviting — much easier than the individual event had been. While I was swimming, Lisa picked up our race packs (stickers for arms/calves/bike/helmet, timing chip, team cap, etc.).
@@ -46,7 +46,7 @@ Another relaxed start: we met at **9:00 a.m.** at transition to sticker bikes, b
 
 I spotted **Lisa** charging in, we tagged — and I was off.
 
-![Ready to check in](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/IMG_2277.png)
+![Ready to check in](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-19_MTR_WOLLONGONG/img/thumbnail/IMG_2277.jpg)
 
 
 ## My Leg
@@ -68,11 +68,11 @@ We placed **21st of 40** teams — solid for an improvised squad with no podium 
 ## Photo Highlights
 
 ::: {layout-ncol=3}
-![Team at the Boathouse](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2244.png){width=100}
+![Team at the Boathouse](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG/img/thumbnail/IMG_2244.jpg){width=100}
 
-![Swim venue](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/IMG_2269.png){width=100}
+![Swim venue](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-19_MTR_WOLLONGONG/img/thumbnail/IMG_2269.jpg){width=100}
 
-![Post race](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-19_MTR_WOLLONGONG/img/IMG_2280.png){width=100}
+![Post race](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-19_MTR_WOLLONGONG/img/thumbnail/IMG_2280.jpg){width=100}
 :::
 
 ## Data Box

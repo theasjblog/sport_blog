@@ -1,0 +1,49 @@
+---
+title: "Race Report Title"
+subtitle: "Optional subtitle"
+date: 2026-01-01
+categories: ["race_reports", "triathlon"]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/<post-slug>/img/thumbnail/cover.jpg
+description: "One-sentence summary that works in listing cards and previews."
+toc: false
+freeze: true
+code-tools: false
+format:
+  html:
+    toc: false
+    smooth-scroll: true
+    page-layout: full
+    lightbox: true
+---
+
+## The setup
+
+Open with the context that matters: why this race mattered, what the goal was, and what state you arrived in.
+
+## The race
+
+Break the narrative into meaningful sections rather than one long block.
+
+## Gallery
+
+::: {.gallery cols=3}
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/<post-slug>/img/thumbnail/00.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/<post-slug>/img/full/00.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/<post-slug>/img/thumbnail/01.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/<post-slug>/img/full/01.jpg)
+:::
+
+## Reflections
+
+Close with what went well, what did not, and what you would carry forward.
+
+::: {.callout-note}
+Optional related posts:
+
+[Related post title](../../others/<related-post>/index.qmd)
+:::
+
+If the post should include a race summary table, add this at the bottom after you copy the template into a real post folder:
+
+```md
+<!-- summary_race_id: 2026-01-01_ABC123 -->
+{{< include summary_table.html >}}
+```

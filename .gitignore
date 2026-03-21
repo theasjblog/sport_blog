@@ -8,10 +8,13 @@ log_2.log
 
 /.quarto/
 _site/
+_freeze/
+site_libs/
 *.Rproj
 *.parquet
 *.png
 collage/
+posts/**/index.html
 **/index_cache/
 **/index_files/
 

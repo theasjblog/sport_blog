@@ -2,8 +2,9 @@
 title: "Oakville 10k"
 date: "2024-09-29"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2024-09-29_OAKVILLE_10K/img/00.png
-categories: [race report, run]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/thumbnail/00.jpg
+description: "The final race of 2024, run off disrupted training and a difficult move, with more realism than speed."
+categories: [race_reports, run]
 format: html
 lightbox:
   match: auto
@@ -11,42 +12,29 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-09-29_OAKVILLE_10K/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/thumbnail/00.jpg)
 
 Last race of the year. One of the worst 10K ever time wise, but the last month was not great for training. Moving from Burlington to Brampton completely destroyed the training routine.
 
 [Full race details](https://asjblog.shinyapps.io/race_shiny/?_inputs_&selector=%222024-09-29%20-%20OAKVILLE%2010K%20-%20run%22){target="_blank"}.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2024-09-29"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2024-09-29 -->
+{{< include summary_table.html >}}
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-09-29_OAKVILLE_10K/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-09-29_OAKVILLE_10K/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-09-29_OAKVILLE_10K/img/02.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-09-29_OAKVILLE_10K/img/03.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/thumbnail/03.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/full/03.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-09-29_OAKVILLE_10K/img/04.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/thumbnail/04.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/full/04.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-09-29_OAKVILLE_10K/img/05.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/thumbnail/05.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/full/05.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-09-29_OAKVILLE_10K/img/06.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/thumbnail/06.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-09-29_OAKVILLE_10K/img/full/06.jpg)
 
 
 :::

@@ -2,7 +2,7 @@
 title: "Hathersage Hilly Triathlon"
 date: "2013-06-30"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a0.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/00a0.jpg
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -12,7 +12,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a0.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/00a0.jpg)
 
 My first triathlon. Organized by the Sheffield Triathlon Club in Hathersage, in the middle of the Peak District. A great place. I do not remember the distances exactly, but they were a bit odd, somewhere in between a sprint and a standard, except for the swim that was a short one in a heated outdoor pool. The main "selling" point was that, has the name implies and because of the venue (the Peak District), it was "hilly". Very hilly...
 
@@ -27,53 +27,41 @@ Anyway, the swim went as good as it could have: I did not drawn and I finished i
 
 All in all, it was a good and fun race. I have never done it again because I was not a fun of the hilly run with poor marking, but if that is you jam, go for it, you won't regret doing the Hathersage Hilly Triathlon.
 
-```{r, echo = FALSE, warning=FALSE, message=FALSE}
-race_date <- "2013-06-30"
+<!-- summary_race_date: 2013-06-30 -->
+{{< include summary_table.html >}}
 
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a0.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/00a0.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/00a0.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a1.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/00a1.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/00a1.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00a2.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/00a2.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/00a2.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/00c.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/2013-06-30%2005.12.15.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/2013-06-30%2005.12.15.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/01.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3797.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3797.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/04.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3798.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3798.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/06.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3799.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3799.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/14.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3800.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3800.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/19.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3803.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3803.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/20.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3809.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3809.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/21.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3810.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3810.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/24.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3811.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3811.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/25.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3812.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3812.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/28.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3813.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3813.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/29.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3814.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3814.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/31.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/thumbnail/DSCN3815.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2013-06-30_HATHERSAGE_HILLY_TRIATHLON/img/full/DSCN3815.jpg)
 
 
 :::

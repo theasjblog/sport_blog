@@ -2,7 +2,7 @@
 title: "Rother Valley 10K"
 date: "2010-05-15"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2010-05-15_ROTHER_VALLEY_10K/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2010-05-15_ROTHER_VALLEY_10K/img/thumbnail/01.jpg
 categories: [race report, run]
 format: html
 lightbox:
@@ -12,38 +12,25 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2010-05-15_ROTHER_VALLEY_10K/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2010-05-15_ROTHER_VALLEY_10K/img/thumbnail/01.jpg)
 
 Rother Valley is a pretty park with a lake in the middle in Rotheram, UK. This race was a loop around the lake. This was my second ever 10K race, and I remember it was harder than the first one (it was also about 4min faster). My housemate and I took the bus from Sheffield and headed down to Rother Valley for the race. All in all, a good race venue and a good race.
 
 ## Summary
 
-```{r, echo = FALSE, warning=FALSE, message=FALSE}
-race_date <- "2010-05-15"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2010-05-15 -->
+{{< include summary_table.html >}}
 
 
 
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2010-05-15_ROTHER_VALLEY_10K/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2010-05-15_ROTHER_VALLEY_10K/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2010-05-15_ROTHER_VALLEY_10K/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2010-05-15_ROTHER_VALLEY_10K/img/02.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2010-05-15_ROTHER_VALLEY_10K/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2010-05-15_ROTHER_VALLEY_10K/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2010-05-15_ROTHER_VALLEY_10K/img/03.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2010-05-15_ROTHER_VALLEY_10K/img/thumbnail/03.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2010-05-15_ROTHER_VALLEY_10K/img/full/03.jpg)
 
 
 :::

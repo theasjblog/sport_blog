@@ -2,7 +2,7 @@
 title: "British Sprint Triathlon Championships"
 date: "2015-05-10"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/thumbnail/00.jpg
 categories: [race report, triathlon]
 format: html
 lightbox:
@@ -12,40 +12,27 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/thumbnail/00.jpg)
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2015-05-10"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2015-05-10 -->
+{{< include summary_table.html >}}
 
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/00a.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/thumbnail/00a.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/full/00a.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/00b.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/thumbnail/00b.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/full/00b.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/01.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/thumbnail/DSCN4359.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/full/DSCN4359.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/02.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/thumbnail/DSCN4360.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/full/DSCN4360.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/05.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/thumbnail/05.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/full/05.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/06.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/thumbnail/DSCN4362.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2015-05-10_BRITISH_SPRINT_TRIATHLON_CHAMPIONSHIPS/img/full/DSCN4362.jpg)
 
 
 :::

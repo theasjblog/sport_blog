@@ -2,7 +2,7 @@
 title: "Swimathon"
 date: "2018-04-28"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2018-04-28_SWIMATHON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-04-28_SWIMATHON/img/thumbnail/00.jpg
 categories: [race report, swim]
 format: html
 lightbox:
@@ -11,35 +11,22 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2018-04-28_SWIMATHON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-04-28_SWIMATHON/img/thumbnail/00.jpg)
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2018-04-28"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2018-04-28 -->
+{{< include summary_table.html >}}
 
 
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2018-04-28_SWIMATHON/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-04-28_SWIMATHON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-04-28_SWIMATHON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2018-04-28_SWIMATHON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-04-28_SWIMATHON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-04-28_SWIMATHON/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2018-04-28_SWIMATHON/img/02.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-04-28_SWIMATHON/img/thumbnail/02.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-04-28_SWIMATHON/img/full/02.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2018-04-28_SWIMATHON/img/03.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-04-28_SWIMATHON/img/thumbnail/03.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2018-04-28_SWIMATHON/img/full/03.jpg)
 
 
 :::

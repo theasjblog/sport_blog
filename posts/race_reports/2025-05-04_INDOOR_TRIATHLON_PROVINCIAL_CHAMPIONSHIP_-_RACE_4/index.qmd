@@ -2,8 +2,9 @@
 title: "Indoor Triathlon Provincial Championship Series - Race 4 And Series Recap"
 date: "2025-05-04"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png
-categories: [race report, triathlon, indoor]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/00.jpg
+description: "The final indoor race and series recap, with the age-group result settled and the full progression across the four-race block."
+categories: [race_reports, triathlon, indoor]
 format: html
 lightbox:
   match: auto
@@ -12,7 +13,7 @@ lightbox:
   loop: false
 ---
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/00.jpg)
 
 # Overview
 
@@ -38,53 +39,15 @@ Did I manage to keep my age group lead? Yep—and it didn’t take much effort. 
 So yes, the competitive spirit wasn’t exactly raging in M40–49, but it did guarantee me the win in the Age Group category for the series. Here are the winner of this last race in each Age Group:
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-library(arrow)
+source('../../../inst/aux_functions.R')
 library(dplyr)
 library(kableExtra)
-library(DBI)
-library(duckdb)
-library(glue)
 
-# Connect to DuckDB
-  con <- dbConnect(duckdb::duckdb())
-  
-  # Enable HTTPFS extension to access remote files
-  dbExecute(con, "INSTALL httpfs; LOAD httpfs;")
-  
-  query <- "
-  SELECT *
-  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet')
-  WHERE EVENT_DATE IN (DATE '2025-05-04', DATE '2025-04-12', DATE '2025-02-22')
-"
-  
-  race_metadata <- dbGetQuery(con, query)
-
-  race_ids <- paste0("'", race_metadata$RACE_ID, "'", collapse = ", ")
-  query <- glue("
-  SELECT *
-  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_rankings.parquet')
-  WHERE RACE_ID IN ({race_ids})
-")
-  
-  all_races <- dbGetQuery(con, query)
-
-
-    query <- glue("
-  SELECT *
-  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/activities_metadata.parquet')
-  WHERE RACE_ID IN ({race_ids})
-")
-  
-  activities_metadata <- dbGetQuery(con, query)
-  
-    ids <- paste0("'", activities_metadata$ID, "'", collapse = ", ")
-  query <- glue("
-  SELECT *
-  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/activities_data.parquet')
-  WHERE ID IN ({ids})
-")
-  
-  activities_data <- dbGetQuery(con, query)
+analysis_data <- get_post_analysis_data(c('2025-05-04', '2025-04-12', '2025-02-22'))
+race_metadata <- analysis_data$race_metadata
+all_races <- analysis_data$all_races
+activities_metadata <- analysis_data$activities_metadata
+activities_data <- analysis_data$activities_data
 
 
 race_ids <- race_metadata |>
@@ -229,8 +192,8 @@ summary_runs <- all_runs |>
             pace_var = round(100* (mean(PACE[floor(n()/2)+1:n()], na.rm = TRUE) - mean(PACE[1:floor(n()/2)], na.rm = TRUE)) / avg_pace, 2),
             avg_power = round(mean(WATTS, na.rm = TRUE)),
             power_var = round(100* (mean(WATTS[floor(n()/2)+1:n()], na.rm = TRUE) - mean(WATTS[1:floor(n()/2)], na.rm = TRUE)) / avg_power, 2),
-            avg_cadence = round(mean(RCAD, na.rm = TRUE)),
-            cadence_var = round(100* (mean(RCAD[floor(n()/2)+1:n()], na.rm = TRUE) - mean(RCAD[1:floor(n()/2)], na.rm = TRUE)) / avg_cadence, 2),
+            avg_cadence = round(mean(CAD, na.rm = TRUE)),
+            cadence_var = round(100* (mean(CAD[floor(n()/2)+1:n()], na.rm = TRUE) - mean(CAD[1:floor(n()/2)], na.rm = TRUE)) / avg_cadence, 2),
             avg_hr = round(mean(HR, na.rm = TRUE)),
             hr_var = round(100* (mean(HR[floor(n()/2)+1:n()], na.rm = TRUE) - mean(HR[1:floor(n()/2)], na.rm = TRUE)) / avg_hr, 2)
   ) |>
@@ -277,7 +240,7 @@ summary_runs_plot <- all_runs |>
   select(all_of(c(
     'ID',
     'WATTS',
-    'RCAD',
+    'CAD',
     'HR',
     'SECS',
     'PACE'
@@ -286,7 +249,7 @@ summary_runs_plot <- all_runs |>
     SECS = SECS/60,
     ID = substring(ID, 1, 10)) |>
   tidyr::pivot_longer(
-    cols = c(WATTS, RCAD, HR, PACE),
+    cols = c(WATTS, CAD, HR, PACE),
     values_to = 'value'
   )
 
@@ -351,25 +314,11 @@ kable(official_records)
 All in all, I’m happy with how things went. There’s clear improvement across the board, and more importantly, I felt stronger each time out. That’s a good sign as I head into the outdoor season. Let’s see what the next phase brings!
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2025-05-04"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2025-05-04 -->
+{{< include summary_table.html >}}
 
 
 
 ::: {layout-ncol=4}
 
 :::
-

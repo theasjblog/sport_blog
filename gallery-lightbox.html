@@ -1,0 +1,83 @@
+<dialog id="gallery-lightbox" class="gallery-lightbox">
+  <button
+    type="button"
+    class="gallery-lightbox__close"
+    aria-label="Close image viewer"
+  >
+    ×
+  </button>
+  <img class="gallery-lightbox__image" alt="" />
+  <p class="gallery-lightbox__caption" hidden></p>
+</dialog>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dialog = document.getElementById("gallery-lightbox");
+  if (!dialog) return;
+
+  const image = dialog.querySelector(".gallery-lightbox__image");
+  const caption = dialog.querySelector(".gallery-lightbox__caption");
+  const closeButton = dialog.querySelector(".gallery-lightbox__close");
+
+  const galleryLinks = Array.from(
+    document.querySelectorAll('a[href*="/img/full/"]')
+  ).filter((link) => link.querySelector('img[group="hi"]'));
+
+  if (galleryLinks.length === 0) return;
+
+  const closeDialog = () => {
+    dialog.close();
+    image.removeAttribute("src");
+    image.alt = "";
+    caption.textContent = "";
+    caption.hidden = true;
+  };
+
+  const openDialog = (link) => {
+    const thumbnail = link.querySelector('img[group="hi"]');
+    const fullSrc = link.getAttribute("href");
+    if (!thumbnail || !fullSrc) return;
+
+    image.src = fullSrc;
+    image.alt = thumbnail.getAttribute("alt") || "";
+
+    const text = (thumbnail.getAttribute("alt") || "").trim();
+    caption.textContent = text;
+    caption.hidden = text === "";
+
+    if (!dialog.open) {
+      dialog.showModal();
+    }
+  };
+
+  galleryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+      openDialog(link);
+    });
+  });
+
+  closeButton.addEventListener("click", closeDialog);
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      closeDialog();
+    }
+  });
+
+  dialog.addEventListener("close", () => {
+    image.removeAttribute("src");
+  });
+});
+</script>

@@ -1,8 +1,9 @@
 ---
 title: "2025 Season Recap: A World Championship Season"
 date: "2025-11-06"
-categories: ["season_recap"]
-image: "https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/tss.png"
+description: "Training volume, fitness trends, and the bigger story behind the season that led to the World Championships."
+categories: [season_recap, wollongong2025]
+image: "https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/tss.jpg"
 lightbox: true
 ---
 
@@ -18,7 +19,7 @@ In this post, I’ll cover both the **metrics and the meaning** behind them: mon
 
 In 2025, I logged **380 hours** of training.
 
-![Season totals.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/totals.png)
+![Season totals.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/totals.jpg)
 
 The number of sessions was fairly balanced across disciplines. The time distribution also makes sense when you think of a sprint triathlon: swimming is the shortest leg, cycling takes the longest, and running sits somewhere in between.
 
@@ -28,8 +29,8 @@ What was likely too low, though, was time in the gym. The “strength” categor
 
 I like to look at monthly training time to assess consistency. Ideally, volume remains fairly stable, with a gentle decline during race season as intensity ramps up.
 
-![Monthly duration.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/monthly_duration.png)
-![Monthly distance.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/monthly_distance.png)
+![Monthly duration.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/monthly_duration.jpg)
+![Monthly distance.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/monthly_distance.jpg)
 
 I built volume steadily from October 2024 through January 2025, followed by a dip in February (I caught a cold then). The biggest drop came between April and July — partly due to racing, partly to a motivation dip, and critically, to growing doubts about the **Humango** coaching platform I was using at the time. Things normalized again after July.
 
@@ -37,7 +38,7 @@ I built volume steadily from October 2024 through January 2025, followed by a di
 
 Training volume is only part of the story. To track fitness, I rely on the **TRIMP curve** in Golden Cheetah — a metric similar to TrainingPeaks’ TSS, combining intensity and duration.
 
-![Yearly TRIMP score. The TRIMP score is in solid blue, the load in pink, and the fatigue in green.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/tss.png)
+![Yearly TRIMP score. The TRIMP score is in solid blue, the load in pink, and the fatigue in green.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/tss.jpg)
 
 As expected from the mid-season dip, TRIMP dropped in those months. On the bright side, fitness peaked right before my A race at Worlds, with fatigue well under control (around -4 the day before the individual race). Though race-week logistics certainly added some hidden fatigue, the numbers suggest I timed the peak well.
 
@@ -47,35 +48,35 @@ Swimming remains my Achilles’ heel. I trained consistently and even hit sub-1:
 
 I spent a decent amount of time in the water and swam outdoors whenever possible, often at **Cherry Beach** in Toronto. Yet, my pace dropped from an already modest **8:00/500m in the pool** to about **9:16/500m in open water**.
 
-![Swim: 2025 season overview.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/swim_overview.png)
+![Swim: 2025 season overview.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/swim_overview.jpg)
 
 Looking at peak swim pace over 10- and 20-minute efforts (roughly the window for a 750m race) tells the same story.
 
-![Swim peak pace. Frustratingly flat.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/swim_pace.png)
+![Swim peak pace. Frustratingly flat.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/swim_pace.jpg)
 
 The trend is almost flat. There’s a slight improvement toward the end of the season, but that’s likely due to race-specific sharpening. I clearly need structured coaching — either joining a club or booking one-on-one sessions.
 
-![Cheery Beach in Toronto.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/IMG_2084.png)
+![Cheery Beach in Toronto.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/IMG_2084.jpg)
 
 # Bike
 
 Cycling usually brings me more satisfaction. I often race on a **road bike** against athletes on TT bikes, but at least my legs hold their own.
 
-![Bike: 2025 season overview.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/bike_overview.png)
+![Bike: 2025 season overview.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/bike_overview.jpg)
 
 First, the **VO$_{2}$ max trend**. There’s a gradual increase overall, with dips in June and September. I’m not entirely sure why — though I suspect inconsistent body-weight updates in Golden Cheetah might distort the estimate.
 
-![Bike: VO$_{2}$ max trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/bike_vo2.png)
+![Bike: VO$_{2}$ max trend.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/bike_vo2.jpg)
 
 Next, the **peak 20- and 30-minute power**, which approximate race effort duration.
 
-![Bike: peak 20min and 30min power trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/bike_peak_w.png)
+![Bike: peak 20min and 30min power trend.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/bike_peak_w.jpg)
 
 This metric stayed fairly flat, even trending slightly downward late in the season. That September dip aligns with the VO$_{2}$ drop — something to monitor. It might represent a true plateau or a need to adjust my training stimulus.
 
 Finally, I tracked **Power/Heart Rate**, a solid proxy for aerobic efficiency — more watts per heartbeat means better fitness.
 
-![Bike: power over heart rate trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/bike_whr.png)
+![Bike: power over heart rate trend.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/bike_whr.jpg)
 
 This ratio trended nicely upward, despite small dips in March–April and September. That suggests my aerobic base continued improving even when top-end numbers stalled.
 
@@ -85,19 +86,19 @@ Running was the biggest struggle this year — especially in races. In one event
 
 This was one of the reasons I left Humango. The platform rarely prescribed **brick runs** or intensity during the build phase — exactly when I needed them. After switching to ChatGPT-based coaching, I did a standalone 5K test and ran my **fastest time in five years**. The potential is there; I just need to translate it off the bike.
 
-![Run: 2025 season overview.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/run_overview.png)
+![Run: 2025 season overview.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/run_overview.jpg)
 
 The **VO$_{2}$ max trend** looks encouraging — a clear upward slope.
 
-![Run: VO$_{2}$ max trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/run_vo2.png)
+![Run: VO$_{2}$ max trend.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/run_vo2.jpg)
 
 The **run power trend** also improved steadily, though the jump in June reflects a switch from Stryd to the built-in Garmin Forerunner 965 sensor.
 
-![Run: peak power trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/run_power.png)
+![Run: peak power trend.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/run_power.jpg)
 
 Lastly, **peak pace** shows a nice downward trend — faster speeds over time.
 
-![Run: pace trend.](https://storage.googleapis.com/blogs_josa/sport_small/2025-11-06_SEASON_RECAP/run_pace.png)
+![Run: pace trend.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_WHAT_IT_TAKES/img/thumbnail/run_pace.jpg)
 
 Not a massive improvement, but consistent progress.
 

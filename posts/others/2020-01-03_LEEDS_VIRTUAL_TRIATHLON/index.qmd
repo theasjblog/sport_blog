@@ -2,7 +2,7 @@
 title: "Leeds Virtual Triathlon"
 date: "2020-01-03"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/img/thumbnail/01.jpg
 categories: [race report, virtual]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/img/thumbnail/01.jpg)
 
 This was a "real life" race I entered, but COVID-19 had other plans. The race was cancelled, but participants were given the option to "compete" virtually by completing the bike and run distance over the week end. I guess it was two events over two days to comply with the UK government rule that onl allowed us to go out of the house to exercise once a day.
 
@@ -20,7 +20,7 @@ This was a "real life" race I entered, but COVID-19 had other plans. The race wa
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_LEEDS_VIRTUAL_TRIATHLON/img/full/01.jpg)
 
 
 :::

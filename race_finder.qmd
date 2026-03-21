@@ -1,9 +1,18 @@
 ---
-title: "Race finder"
-image: img/profile.png
-about:
-  template: jolla
+title: "Race Finder"
+description: "Search the race archive by date, type, distance, and report availability."
+page-layout: full
+title-block-banner: false
 ---
+
+::: {.utility-shell}
+::: {.utility-intro}
+## Find a race quickly
+
+This is the structured archive view of the site. Use it when you want to jump straight to a race report or the deeper race-analysis app without browsing the narrative archive page by page.
+:::
+
+::: {.utility-panel}
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -69,3 +78,5 @@ DT::datatable(allRaces,
                 pageLength =  10
               ))
 ```
+:::
+:::

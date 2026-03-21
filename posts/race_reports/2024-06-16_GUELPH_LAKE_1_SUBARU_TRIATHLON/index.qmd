@@ -2,8 +2,9 @@
 title: "Guelph Lake 1 Subaru Triathlon"
 date: "2024-06-16"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/00.png
-categories: [race report, triathlon]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/00.jpg
+description: "The first real age-group qualification attempt of the season, and the frustration of finishing just outside the podium call-up."
+categories: [race_reports, triathlon]
 format: html
 lightbox:
   match: auto
@@ -11,7 +12,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/00.jpg)
 
 This was the first time I tried to qualify for the Age Group. It did not happen. Also, slightly annoying finishing 6th, when the first 5 were called up to the podium...
 
@@ -33,48 +34,35 @@ Overall the race was not bad. I set a new PB for the distance, improving the old
 As a qualifying event, I would have liked to finish higher up, but I cannot control who show up to a race. I just need to focus on how I executed the race plan.
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2024-06-16"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2024-06-16 -->
+{{< include summary_table.html >}}
 
 
 
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/01a.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/01a.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/full/01a.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/01b.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/01b.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/full/01b.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/01c.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/01c.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/full/01c.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/03.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/10.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/full/01.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/14.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/01a.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/full/01a.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/22.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/01b.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/full/01b.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/24.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/01c.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/full/01c.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/28.jpg){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2024-06-16_GUELPH_LAKE_1_SUBARU_TRIATHLON/img/full/00.jpg)
 
 
 :::

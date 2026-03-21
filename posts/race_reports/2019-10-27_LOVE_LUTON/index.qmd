@@ -2,7 +2,7 @@
 title: "Love Luton"
 date: "2019-10-27"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2019-10-27_LOVE_LUTON/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-10-27_LOVE_LUTON/img/thumbnail/00.jpg
 categories: [race report, run]
 format: html
 lightbox:
@@ -11,31 +11,18 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-10-27_LOVE_LUTON/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-10-27_LOVE_LUTON/img/thumbnail/00.jpg)
 
 The only thing I remember of this race is that the start was not anywere near to the finish. I had to walk quite a bit to go back to the car.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-race_date <- "2019-10-27"
-
-source('../../../inst/aux_functions.R')
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2019-10-27 -->
+{{< include summary_table.html >}}
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-10-27_LOVE_LUTON/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-10-27_LOVE_LUTON/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-10-27_LOVE_LUTON/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2019-10-27_LOVE_LUTON/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-10-27_LOVE_LUTON/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2019-10-27_LOVE_LUTON/img/full/01.jpg)
 
 
 :::

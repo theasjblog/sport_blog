@@ -2,8 +2,9 @@
 title: "The Cost of Racing the World Championships"
 subtitle: "What it really takes — financially — to represent Team Canada in Wollongong"
 date: 2025-10-30
-categories: ["Wollongong2025"]
-image: ./img/00.jpg
+description: "Flights, accommodation, race fees, kit, and the real financial cost of getting to the World Championships in Wollongong."
+categories: [wollongong2025, notes]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_COST/img/thumbnail/00.jpg
 lightbox: true
 ---
 
@@ -53,7 +54,7 @@ Below, I’ve broken down the main expenses into three categories: mandatory, tr
 
 ## 1. Mandatory expenses
 
-![Mandatory expenses are those you must commit to no matter what. Photo by Emil Kalibradov on Unsplash](./img/01.jpg)
+![Mandatory expenses are those you must commit to no matter what. Photo by Emil Kalibradov on Unsplash](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_COST/img/thumbnail/01.jpg)
 
 These are **non-negotiable** — every athlete must cover them to be eligible to race for Team Canada.  
 They include the official race entry, national uniforms, and mandatory insurance. Here is the list, lets' break it down.
@@ -95,7 +96,7 @@ Note that I took part in two event: the individual sprint race and the mixed tea
 
 ## 2. Travel expenses
 
-![Putting the bike on a plane can be expensive.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2221.png)
+![Putting the bike on a plane can be expensive.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG/img/thumbnail/IMG_2221.jpg)
 
 You qualified and you have all the gear needed! Congratulations! Now you need to get to the race venue. Of course, this category will be vastly dependent on how far you need to travel, your travel and accommodation preferences, even the kind of race you do (do you need to take the bike on a plane or not?). Here is what it did cost me.
 
@@ -142,7 +143,7 @@ The final expense was gifts. After such a long journey, you will want to show so
 
 ## 3. Optional extras
 
-![I now have so much Team Canada stuff...](./img/04.png)
+![I now have so much Team Canada stuff...](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_COST/img/thumbnail/04.jpg)
 
 Some expenses aren’t strictly necessary but are part of the experience — souvenirs for yourself, event expo items, or extra federation gear that you’ll probably end up buying anyway.
 
@@ -179,7 +180,7 @@ In my case I got the photo package from the official photographers FinisherPix (
 
 ## Total cost
 
-![Photo by Simon Kadula on Unsplash](./img/02.jpg)
+![Photo by Simon Kadula on Unsplash](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG_COST/img/thumbnail/02.jpg)
 
 When all is said and done:
 
@@ -219,7 +220,7 @@ The experience of racing at Worlds comes with a significant price tag, but also 
 
 It’s not just an investment in a single race — it’s an investment in a lifelong memory.
 
-![I'll never forget Wollongong and the Team Canada experience.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2253.png)
+![I'll never forget Wollongong and the Team Canada experience.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG/img/thumbnail/IMG_2253.jpg)
 
 ::: {.callout-note}
 All other posts in this series:

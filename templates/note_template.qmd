@@ -1,0 +1,40 @@
+---
+title: "Notes Post Title"
+date: 2026-01-01
+categories: ["notes"]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/<post-slug>/img/thumbnail/cover.jpg
+description: "One-sentence summary that explains why this post is worth opening."
+toc: false
+freeze: true
+code-tools: false
+format:
+  html:
+    toc: false
+    smooth-scroll: true
+    page-layout: full
+    lightbox: true
+---
+
+## Why this post exists
+
+Start with the practical context or question that motivated the post.
+
+## Main section
+
+Use a few clear sections instead of a long unbroken essay.
+
+## Optional gallery
+
+::: {.gallery cols=3}
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/<post-slug>/img/thumbnail/00.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/<post-slug>/img/full/00.jpg)
+:::
+
+## Takeaways
+
+End with the conclusion, lesson, or next step.
+
+::: {.callout-note}
+Optional related posts:
+
+[Related post title](../<related-post>/index.qmd)
+:::

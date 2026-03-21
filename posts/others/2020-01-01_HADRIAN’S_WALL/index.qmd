@@ -2,7 +2,7 @@
 title: "Hadrian’s Wall"
 date: "2020-01-01"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_HADRIAN%E2%80%99S_WALL/img/01.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_HADRIAN%E2%80%99S_WALL/img/thumbnail/01.jpg
 categories: [race report, virtual]
 format: html
 lightbox:
@@ -11,13 +11,13 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_HADRIAN%E2%80%99S_WALL/img/01.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_HADRIAN%E2%80%99S_WALL/img/thumbnail/01.jpg)
 
 
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2020-01-01_HADRIAN%E2%80%99S_WALL/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_HADRIAN%E2%80%99S_WALL/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2020-01-01_HADRIAN%E2%80%99S_WALL/img/full/01.jpg)
 
 
 :::

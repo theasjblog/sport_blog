@@ -1,10 +1,11 @@
 ---
-title: "Race reports"
+title: "Race Reports"
+description: "The race archive: triathlon, running, swimming, and the occasional detour, told one event at a time."
 
 listing:
   contents: race_reports
   sort: "date desc"
-  type: default
+  type: grid
   categories: true
   sort-ui: false
   filter-ui: false
@@ -12,3 +13,7 @@ page-layout: full
 title-block-banner: false
 feed: true
 ---
+
+::: {.archive-intro}
+Recent race reports, older races worth revisiting, and the full competitive timeline in one place.
+:::

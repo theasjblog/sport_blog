@@ -1,9 +1,18 @@
 ---
 title: "Records"
-image: img/profile.png
-about:
-  template: jolla
+description: "Best performances, podium counts, and race history summaries across formats and distances."
+page-layout: full
+title-block-banner: false
 ---
+
+::: {.utility-shell}
+::: {.utility-intro}
+## Best marks across the archive
+
+This page summarizes the strongest performances in each event type and distance, along with podium counts and best placements. It is the compact numbers-first view of the blog.
+:::
+
+::: {.utility-panel}
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -101,3 +110,5 @@ DT::datatable(results,
                 pageLength =  30
               ))
 ```
+:::
+:::

@@ -2,7 +2,7 @@
 title: "End Of Year"
 date: "2023-12-31"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2023-12-31_END_OF_YEAR/img/img_1208.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-12-31_END_OF_YEAR/img/thumbnail/img_1208.jpg
 categories: [race report, virtual]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-12-31_END_OF_YEAR/img/img_1208.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-12-31_END_OF_YEAR/img/thumbnail/img_1208.jpg)
 
 
 
@@ -19,9 +19,9 @@ lightbox:
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-12-31_END_OF_YEAR/img/img_1208.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-12-31_END_OF_YEAR/img/thumbnail/img_1208.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-12-31_END_OF_YEAR/img/full/img_1208.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-12-31_END_OF_YEAR/img/img_1209.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-12-31_END_OF_YEAR/img/thumbnail/img_1209.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-12-31_END_OF_YEAR/img/full/img_1209.jpg)
 
 
 :::

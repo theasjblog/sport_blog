@@ -1,10 +1,11 @@
 ---
-title: "Miscellaneous"
+title: "Notes"
+description: "Training notes, gear thoughts, planning posts, and the pieces that sit around the races rather than inside them."
 
 listing:
   contents: others
   sort: "date desc"
-  type: default
+  type: grid
   categories: true
   sort-ui: false
   filter-ui: false
@@ -12,3 +13,7 @@ page-layout: full
 title-block-banner: false
 feed: true
 ---
+
+::: {.archive-intro}
+The less structured side of the site: training blocks, equipment, planning, reflections, and the longer stories around the season.
+:::

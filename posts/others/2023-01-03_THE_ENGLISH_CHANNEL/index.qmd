@@ -2,7 +2,7 @@
 title: "The English Channel"
 date: "2023-01-03"
 author: "Adrian Joseph"
-image: https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_THE_ENGLISH_CHANNEL/img/00.png
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-01-01_THE_ENGLISH_CHANNEL/img/thumbnail/00.jpg
 categories: [race report, virtual]
 format: html
 lightbox:
@@ -11,7 +11,7 @@ lightbox:
   desc-position: right
   loop: false
 ---
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_THE_ENGLISH_CHANNEL/img/00.png)
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-01-01_THE_ENGLISH_CHANNEL/img/thumbnail/00.jpg)
 
 
 
@@ -19,9 +19,9 @@ lightbox:
 
 
 ::: {layout-ncol=4}
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_THE_ENGLISH_CHANNEL/img/00.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-01-01_THE_ENGLISH_CHANNEL/img/thumbnail/00.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-01-01_THE_ENGLISH_CHANNEL/img/full/00.jpg)
 
-![](https://storage.googleapis.com/blogs_josa/sport_small/2023-01-01_THE_ENGLISH_CHANNEL/img/01.png){ width="100" group="hi" }
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-01-01_THE_ENGLISH_CHANNEL/img/thumbnail/01.jpg){ width="100" group="hi" }](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2023-01-01_THE_ENGLISH_CHANNEL/img/full/01.jpg)
 
 
 :::

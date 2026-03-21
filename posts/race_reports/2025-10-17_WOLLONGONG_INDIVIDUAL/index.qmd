@@ -3,7 +3,7 @@ title: "World Championships: The Race of a Lifetime"
 subtitle: "Racing among the best in Wollongong"
 date: 2025-10-17
 categories: ["race_reports", "wollongong2025"]
-image: https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/214_3rd-3388546-DIGITAL_HIGHRES-9989_59401-77713498.JPG
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/thumbnail/109_3rd-3388546-FT-9989_32604-77713393.jpg
 description: "Race day at the World Championships in Wollongong — months of training leading to one unforgettable hour."
 toc: false
 freeze: true
@@ -32,7 +32,7 @@ The next day, I dropped off my bike for the mandatory pre-race check — with **
 
 On the way there, I got my first omen: the bike squeaked and cracked with every pedal stroke. Not ideal.
 
-![In this races you have to rack the bike the day befre the race. So many bikes!](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/IMG_2261.png){width="500"}
+![In this races you have to rack the bike the day befre the race. So many bikes!](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/thumbnail/IMG_2261.jpg){.content-image}
 
 ---
 
@@ -61,7 +61,7 @@ I kept calm, knowing that going too hard early would only lead to fading later.
 
 I exited the water **56th of 76** — far from the front, but I wasn’t last, and more importantly, I made the cutoff I had been worried about.
 
-![Swim done!](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/153_3rd-3388546-DIGITAL_HIGHRES-9989_11448-77713437.JPG){width="500"}
+![Swim done!](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/thumbnail/101_3rd-3388546-FT-9989_25884-77713385.jpg){.content-image}
 
 ---
 
@@ -79,7 +79,7 @@ The only problem: my bike sounded like it was falling apart — constant squeaks
 I prayed it would hold together to the end.
 
 
-![Bike leg.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/176_3rd-3388546-DIGITAL_HIGHRES-9989_25888-77713460.JPG){width="500"}
+![Bike leg.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/thumbnail/103_3rd-3388546-FT-9989_25886-77713387.jpg){.content-image}
 
 ---
 
@@ -94,22 +94,22 @@ I even managed to pick it up in the last 500 m.
 Then came the **blue carpet** — that magical final stretch.  
 Crossing the finish arch with a World Championship medal around my neck was a moment I’ll never forget.
 
-![Down Flagstaff Hill.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/193_3rd-3388546-DIGITAL_HIGHRES-9989_34874-77713477.JPG){width="500"}
+![Down Flagstaff Hill.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/thumbnail/106_3rd-3388546-FT-9989_26291-77713390.jpg){.content-image}
 
 ---
 
 ## 📸 Gallery
 
 ::: {.gallery cols=3}
-![Bike checked in and ready to race.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/IMG_2262.png){width="100"}
+![Bike checked in and ready to race.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/thumbnail/IMG_2262.jpg){width="100"}
 
-![Swim done!](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/147_3rd-3388546-DIGITAL_HIGHRES-9989_3713-77713431.JPG){width="100"}
+![Swim done!](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/thumbnail/100_3rd-3388546-FT-9989_25882-77713384.jpg){width="100"}
 
-![Getting ready for T2.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/177_3rd-3388546-DIGITAL_HIGHRES-9989_26291-77713461.JPG){width="100"}
+![Getting ready for T2.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/thumbnail/104_3rd-3388546-FT-9989_25887-77713388.jpg){width="100"}
 
-![Crossing the finish line.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/207_3rd-3388546-DIGITAL_HIGHRES-9989_54110-77713491.JPG){width="100"}
+![Crossing the finish line.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-17_SPRINT_TRIATHLON_WOLLONGONG/img/thumbnail/108_3rd-3388546-FT-9989_32358-77713392.jpg){width="100"}
 
-![The medal, front and back.](https://storage.googleapis.com/blogs_josa/sport_small/2025-10-15_WOLLONGONG/img/IMG_2310.png){width="100"}
+![The medal, front and back.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-10-15_WOLLONGONG/img/thumbnail/IMG_2310.jpg){width="100"}
 
 :::
 
@@ -162,17 +162,5 @@ All other posts in this series:
 :::
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-source('../../../inst/aux_functions.R')
-race_date <- "2025-10-17"
-
-DT::datatable(get_summary_data(race_date),
-              rownames = FALSE,
-              filter = 'top',
-              selection = 'single',
-              escape = FALSE,
-              options = list(
-                paging =TRUE,
-                pageLength =  10
-              ))
-```
+<!-- summary_race_date: 2025-10-17 -->
+{{< include summary_table.html >}}
