@@ -1,0 +1,14 @@
+---
+title: "Race reports"
+
+listing:
+  contents: race_reports
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+feed: true
+---

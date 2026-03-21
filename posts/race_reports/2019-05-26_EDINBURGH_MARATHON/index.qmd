@@ -1,0 +1,87 @@
+---
+title: "Edinburgh Marathon"
+date: "2019-05-26"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/00.png
+categories: [race report, run]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/00.png)
+
+I entered this as I did not go into the London Marathon. Ali and I rented a car and drove up to Edinburgh. We stayed in a small B&B near the city center.
+
+On race day, it rained in the morning, but not much and it stopped shortly after we started. The race started in city center, and my designated changing space was in a school. I did not drop y bag to the organizers, but I gave to Ali instead. In hindsight, I should have dropped it to the organizers.
+
+I started off reasonably well, and I stayed strong up until ~30K. But then I had to stop for a wee. And after I stopped, my legs refused to start again. I had to walk for 5K or so. Closer to the end, I managed to get the legs moving again, and at least I finished the day running.
+
+The end of the race was in field in the middle of nowhere. Ali was not there, as she was waiting for me in city center, so I did not have my bag. I remember sitting down on the grass for a while, then starting the long walk to the bus shuttle.
+
+The day after my legs were quite stiff. Ali had to do the drive back home.
+
+A tough day, but it was fun. I'm just not sure I want to do another one, and that long stuff is for me. Single sport events in articular, like this one, are boring to prepare, and for months before this race I only did runs, with little to no swimming or cycling.
+
+Also, I had to do such a high volume at low intensity, that for years I felt like the marathon training killed my race speed.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2019-05-26"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(race_date),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/00.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/01.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/02.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/03.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/04.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFB18661-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFD13492-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFH12131-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFM3874-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFN15164-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFQ22981-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFS8900-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFV3863-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/EMFX11352-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0000-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0001-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0002-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0003-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0004-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-05-26_EDINBURGH_MARATHON/img/XXXA0005-original.jpeg){ width="100" group="hi" }
+:::

@@ -1,0 +1,46 @@
+---
+title: "St. Neots Half Marathon"
+date: "2019-11-17"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png
+categories: [race report, run]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png)
+
+Not much memories on this. Just that I got there way too early, it was raining, and I had to wait in the car while they opened registration. Also, there was no changing rooms, everybody was getting ready in a gym hall.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2019-11-17"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(race_date),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/00.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/01.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/02.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2019-11-17_ST._NEOTS_HALF_MARATHON/img/03.png){ width="100" group="hi" }
+
+
+:::

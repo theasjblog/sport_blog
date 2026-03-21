@@ -1,0 +1,62 @@
+---
+title: "BUPA Great Yorkshire Run"
+date: "2012-09-02"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/00.png
+categories: [race report, run]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/00.png)
+
+Another edition of my home race in Sheffield, UK. Always the same race going from the Crucible towards the Morrisons in Hillsborough Park area, and back. As always, a lot of runners, and a lot of cheering people and bands. Great atmosphere.
+
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+race_date <- "2012-09-02"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(race_date),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/00.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/01.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/02.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRA0119-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRA2192-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRD1279-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRF1633-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRF1634-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRH1703-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRJ1115-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRJ1116-original.jpeg){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-09-02_BUPA_GREAT_YORKSHIRE_RUN/img/GYRM0714-original.jpeg){ width="100" group="hi" }
+
+
+:::

@@ -1,0 +1,29 @@
+---
+title: "London Dynamo TT"
+date: "2016-07-10"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2016-07-10_LONDON_DYNAMO_TT/img/00.png
+categories: [race report, bike TT]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+ 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+race_date <- "2016-07-10"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(race_date),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```

@@ -1,0 +1,44 @@
+---
+title: "Sheffield Varsity 10K"
+date: "2012-03-25"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport_small/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png
+categories: [race report, run]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png)
+
+The Varsity was the competition between the two universities of Sheffield: Sheffield University (the one I attended), and Sheffield Hallam. The strong guys had their own "private" events, but there were a few more open to everyone.
+
+I remember it was pretty cold, and there freezing rain earlier in the morning. I went to this event with my friend Denis, but we each did our own race. Which was good, because Denis got the number of laps wrong. It was a 4 laps race, but he thought it was only 3 laps, so he went out way too fast.
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+race_date <- "2012-03-25"
+
+source('../../../inst/aux_functions.R')
+
+DT::datatable(get_summary_data(race_date),
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
+
+
+::: {layout-ncol=4}
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-03-25_SHEFFIELD_VARSITY_10K/img/00.png){ width="100" group="hi" }
+
+![](https://storage.googleapis.com/blogs_josa/sport_small/2012-03-25_SHEFFIELD_VARSITY_10K/img/01.jpg){ width="100" group="hi" }
+
+
+:::

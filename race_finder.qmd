@@ -1,0 +1,71 @@
+---
+title: "Race finder"
+image: img/profile.png
+about:
+  template: jolla
+---
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(dplyr)
+library(DT)
+library(arrow)
+library(hms)
+library(DBI)
+library(duckdb)
+library(glue)
+
+
+# Connect to DuckDB
+con <- dbConnect(duckdb::duckdb())
+  
+# Enable HTTPFS extension to access remote files
+invisible(dbExecute(con, "INSTALL httpfs; LOAD httpfs;"))
+  
+race_metadata <- dbGetQuery(con, 
+                            "SELECT EVENT_DATE, EVENT_NAME, EVENT_TYPE, EVENT_DISTANCE, RACE_ID
+  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet')")
+  
+  
+
+
+all_dirs <- data.frame(
+  blog_path = list.dirs('./posts/race_reports', recursive = FALSE, full.names = FALSE)
+) |>
+  mutate(
+    EVENT_DATE = as.Date(substring(blog_path, 1,10))
+  )
+
+
+allRaces <- race_metadata |>
+  filter(EVENT_DATE %in% all_dirs$EVENT_DATE) |>
+  mutate(Race_analysis = ifelse(EVENT_TYPE != "virtual", paste0('<a href="https://asjblog.shinyapps.io/single_race_viewer/?_inputs_&selector=%22',
+                       gsub(" ", "%20", RACE_ID),
+                       '%22" target="_blank">Link</a>'), '')#,
+         ) |>
+  arrange(desc(EVENT_DATE)) |>
+  left_join(all_dirs, by = 'EVENT_DATE') |>
+  mutate(
+    blog_path = paste0(
+    '<a href="posts/race_reports/',
+    blog_path,
+    '">Link</a>'
+  )) |>
+  select(c('EVENT_DATE', 'EVENT_NAME',  'EVENT_TYPE', 'EVENT_DISTANCE', 'blog_path', 'Race_analysis',)) |>
+  rename('Race type' = 'EVENT_TYPE',
+         'Race name' = 'EVENT_NAME',
+         'Race distance' = 'EVENT_DISTANCE',
+         'Race date' = 'EVENT_DATE',
+         'Race report' = 'blog_path',
+         'Race analysis' = 'Race_analysis')
+
+DT::datatable(allRaces,
+              rownames = FALSE,
+              filter = 'top',
+              selection = 'single',
+              escape = FALSE,
+              options = list(
+                paging =TRUE,
+                pageLength =  10
+              ))
+```
