@@ -342,6 +342,12 @@ Activity details
 
 </main> <!-- /main -->
 <dialog id="gallery-lightbox" class="gallery-lightbox">
+  <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--previous" aria-label="Show previous image">
+    ‹
+  </button>
+  <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--next" aria-label="Show next image">
+    ›
+  </button>
   <button type="button" class="gallery-lightbox__close" aria-label="Close image viewer">
     ×
   </button>
@@ -357,30 +363,85 @@ document.addEventListener("DOMContentLoaded", () => {
   const image = dialog.querySelector(".gallery-lightbox__image");
   const caption = dialog.querySelector(".gallery-lightbox__caption");
   const closeButton = dialog.querySelector(".gallery-lightbox__close");
+  const previousButton = dialog.querySelector(".gallery-lightbox__nav--previous");
+  const nextButton = dialog.querySelector(".gallery-lightbox__nav--next");
 
-  const galleryLinks = Array.from(
-    document.querySelectorAll('a[href*="/img/full/"]')
-  ).filter((link) => link.querySelector('img[group="hi"]'));
+  const galleryContainers = Array.from(document.querySelectorAll(".gallery"));
+  if (galleryContainers.length === 0) return;
 
-  if (galleryLinks.length === 0) return;
+  let currentGalleryItems = [];
+  let currentIndex = -1;
 
   const closeDialog = () => {
     dialog.close();
+    currentGalleryItems = [];
+    currentIndex = -1;
     image.removeAttribute("src");
     image.alt = "";
     caption.textContent = "";
     caption.hidden = true;
   };
 
-  const openDialog = (link) => {
-    const thumbnail = link.querySelector('img[group="hi"]');
-    const fullSrc = link.getAttribute("href");
-    if (!thumbnail || !fullSrc) return;
+  const updateNavState = () => {
+    const hasMultipleImages = currentGalleryItems.length > 1;
+    previousButton.hidden = !hasMultipleImages;
+    nextButton.hidden = !hasMultipleImages;
+  };
 
-    image.src = fullSrc;
-    image.alt = thumbnail.getAttribute("alt") || "";
+  const resolveFullImageSrc = (src) => {
+    if (!src) return "";
+    return src.includes("/img/thumbnail/")
+      ? src.replace("/img/thumbnail/", "/img/full/")
+      : src;
+  };
 
-    const text = (thumbnail.getAttribute("alt") || "").trim();
+  const buildGalleryItems = (gallery) => {
+    const items = [];
+
+    gallery.querySelectorAll("a, img").forEach((element) => {
+      if (element.tagName === "A") {
+        const thumbnail = element.querySelector("img");
+        const fullSrc =
+          element.getAttribute("href") || resolveFullImageSrc(thumbnail?.currentSrc || thumbnail?.getAttribute("src"));
+
+        if (!thumbnail || !fullSrc) return;
+
+        items.push({
+          trigger: element,
+          fullSrc,
+          alt: thumbnail.getAttribute("alt") || "",
+        });
+        return;
+      }
+
+      if (element.closest("a")) return;
+
+      const src = element.currentSrc || element.getAttribute("src");
+      const fullSrc = resolveFullImageSrc(src);
+      if (!fullSrc) return;
+
+      items.push({
+        trigger: element,
+        fullSrc,
+        alt: element.getAttribute("alt") || "",
+      });
+    });
+
+    return items;
+  };
+
+  const openDialog = (items, nextIndex) => {
+    const selectedItem = items[nextIndex];
+    if (!selectedItem) return;
+
+    currentGalleryItems = items;
+    currentIndex = nextIndex;
+    updateNavState();
+
+    image.src = selectedItem.fullSrc;
+    image.alt = selectedItem.alt;
+
+    const text = selectedItem.alt.trim();
     caption.textContent = text;
     caption.hidden = text === "";
 
@@ -389,29 +450,71 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  galleryLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      if (
-        event.defaultPrevented ||
-        event.button !== 0 ||
-        event.metaKey ||
-        event.ctrlKey ||
-        event.shiftKey ||
-        event.altKey
-      ) {
-        return;
-      }
+  const showRelativeImage = (offset) => {
+    if (currentIndex === -1 || currentGalleryItems.length < 2) return;
 
-      event.preventDefault();
-      openDialog(link);
+    const nextIndex =
+      (currentIndex + offset + currentGalleryItems.length) % currentGalleryItems.length;
+    openDialog(currentGalleryItems, nextIndex);
+  };
+
+  updateNavState();
+
+  galleryContainers.forEach((gallery) => {
+    const items = buildGalleryItems(gallery);
+    if (items.length === 0) return;
+
+    items.forEach((item, index) => {
+      item.trigger.addEventListener("click", (event) => {
+        if (
+          event.defaultPrevented ||
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey
+        ) {
+          return;
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        openDialog(items, index);
+      }, { capture: true });
     });
   });
 
-  closeButton.addEventListener("click", closeDialog);
+  closeButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    closeDialog();
+  });
+
+  previousButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    showRelativeImage(-1);
+  });
+
+  nextButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    showRelativeImage(1);
+  });
 
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) {
       closeDialog();
+    }
+  });
+
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showRelativeImage(-1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showRelativeImage(1);
     }
   });
 
@@ -843,7 +946,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="theasjblog/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"fade","descPosition":"right","closeEffect":"fade"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"right","openEffect":"fade","loop":false,"selector":".lightbox","closeEffect":"fade"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
