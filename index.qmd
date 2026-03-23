@@ -24,7 +24,7 @@ listing:
 
 ::: {.home-hero}
 ::: {.home-hero__copy}
-![ASJ TRI](/img/logo.png){.home-hero__logo}
+![2025 World Finals, Wollongong](/img/home.jpg){.home-hero__logo}
 
 ## Amateur Triathlon, Documented My Way
 
