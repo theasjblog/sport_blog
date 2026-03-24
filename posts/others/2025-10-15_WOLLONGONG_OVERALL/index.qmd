@@ -10,11 +10,10 @@ toc: false
 draft: false
 format:
   html:
+    page-layout: full
     code-fold: false
     smooth-scroll: true
     anchor-sections: false
-    grid:
-      body-width: 800px
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Notes"
+title: "Beyond Racing"
 description: "Training notes, gear thoughts, planning posts, and the pieces that sit around the races rather than inside them."
 
 listing:

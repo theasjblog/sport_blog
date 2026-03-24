@@ -30,7 +30,7 @@ website:
     - href: posts/race_reports.qmd
       text: "Race Reports"
     - href: posts/others.qmd
-      text: "Notes"
+      text: "Beyond Racing"
     - href: race_finder.qmd
       text: "Race Finder"
     - href: records.qmd
@@ -38,10 +38,13 @@ website:
     right:
       - icon: instagram
         href: https://www.instagram.com/asj_tri?igsh=OTZ5Z2gxNGliYW1l&utm_source=qr
+        target: _blank
       - icon: strava
         href: https://www.strava.com/athletes/7974168
+        target: _blank
       - text: "{{< iconify cib:garmin >}}"
         href: https://connect.garmin.com/modern/profile/adrianstevejoseph
+        target: _blank
 
 format:
   html:

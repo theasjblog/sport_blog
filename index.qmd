@@ -1,7 +1,9 @@
 ---
 title: "ASJ TRI"
 page-layout: full
+title-block: false
 title-block-banner: false
+body-classes: home-page
 feed: true
 listing:
   - id: latest-race-reports
@@ -34,7 +36,7 @@ This is the front page for race reports, training notes, gear thoughts, and the 
 
 ::: {.home-hero__actions}
 [Latest Race Reports](posts/race_reports.qmd){.home-button .home-button--primary}
-[Explore Everything Else](posts/others.qmd){.home-button .home-button--secondary}
+[Beyond Racing](posts/others.qmd){.home-button .home-button--secondary}
 :::
 :::
 
@@ -59,7 +61,7 @@ This is the front page for race reports, training notes, gear thoughts, and the 
 :::
 
 ::: {.home-listing-block}
-### Latest notes and features
+### Latest <span class="home-section-name">Beyond Racing</span> posts
 
 ::: {#latest-notes}
 :::
@@ -75,7 +77,7 @@ Chronological race stories, results, lessons learned, and galleries from triathl
 :::
 
 ::: {.home-nav-card}
-### [Training and other posts](posts/others.qmd)
+### [Beyond Racing](posts/others.qmd)
 
 Longer reflections on preparation, age-group racing, kit, planning, and whatever did not fit neatly into a race report.
 :::
@@ -91,12 +93,4 @@ Structured race data with filters and lookup tools when you want the database vi
 
 Personal bests, rankings, and performance snapshots across the different formats and distances.
 :::
-:::
-
-## Why This Site Exists
-
-::: {.home-about}
-This started as a way to keep race memories organized, but it has turned into something more useful: a record of how training, racing, work, travel, family life, and long-term progression actually fit together over time.
-
-The goal is not just to post finish-line photos. It is to keep the stories, the numbers, and the lessons in one place.
 :::
