@@ -172,7 +172,7 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed home-page">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -199,7 +199,7 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./posts/others.html"> 
-<span class="menu-text">Notes</span></a>
+<span class="menu-text">Beyond Racing</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./race_finder.html"> 
@@ -212,17 +212,17 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.instagram.com/asj_tri?igsh=OTZ5Z2gxNGliYW1l&amp;utm_source=qr"> <i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://www.instagram.com/asj_tri?igsh=OTZ5Z2gxNGliYW1l&amp;utm_source=qr" target="_blank"> <i class="bi bi-instagram" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.strava.com/athletes/7974168"> <i class="bi bi-strava" role="img">
+    <a class="nav-link" href="https://www.strava.com/athletes/7974168" target="_blank"> <i class="bi bi-strava" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://connect.garmin.com/modern/profile/adrianstevejoseph"> 
+    <a class="nav-link" href="https://connect.garmin.com/modern/profile/adrianstevejoseph" target="_blank"> 
 <span class="menu-text"><iconify-icon role="img" inline="" icon="cib:garmin" aria-label="Icon garmin from cib Iconify.design set." title="Icon garmin from cib Iconify.design set."></iconify-icon></span></a>
   </li>  
 </ul>
@@ -272,7 +272,7 @@ window.Quarto = {
 <p>Training, racing, and figuring out how to fit swim-bike-run around work, family, travel, and the usual chaos of normal life.</p>
 <p>This is the front page for race reports, training notes, gear thoughts, and the longer story behind what it takes to keep showing up as an age-group athlete.</p>
 <div class="home-hero__actions">
-<p><a href="./posts/race_reports.html" class="home-button home-button--primary">Latest Race Reports</a> <a href="./posts/others.html" class="home-button home-button--secondary">Explore Everything Else</a></p>
+<p><a href="./posts/race_reports.html" class="home-button home-button--primary">Latest Race Reports</a> <a href="./posts/others.html" class="home-button home-button--secondary">Beyond Racing</a></p>
 </div>
 </section>
 </div>
@@ -347,8 +347,8 @@ No matching items
 </div>
 </div>
 </section>
-<section id="latest-notes-and-features" class="level3 home-listing-block">
-<h3 class="anchored" data-anchor-id="latest-notes-and-features">Latest notes and features</h3>
+<section id="latest-beyond-racing-posts" class="level3 home-listing-block">
+<h3 class="anchored" data-anchor-id="latest-beyond-racing-posts">Latest <span class="home-section-name">Beyond Racing</span> posts</h3>
 <div id="listing-latest-notes" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0" data-categories="season_recap,wollongong2025" data-listing-date-sort="1762405200000" data-listing-file-modified-sort="1774132838082" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1162">
@@ -415,8 +415,8 @@ No matching items
 <h3 class="anchored" data-anchor-id="race-reports"><a href="./posts/race_reports.html">Race Reports</a></h3>
 <p>Chronological race stories, results, lessons learned, and galleries from triathlons, runs, swims, and the occasional surprise.</p>
 </section>
-<section id="training-and-other-posts" class="level3 home-nav-card">
-<h3 class="anchored" data-anchor-id="training-and-other-posts"><a href="./posts/others.html">Training and other posts</a></h3>
+<section id="beyond-racing" class="level3 home-nav-card">
+<h3 class="anchored" data-anchor-id="beyond-racing"><a href="./posts/others.html">Beyond Racing</a></h3>
 <p>Longer reflections on preparation, age-group racing, kit, planning, and whatever did not fit neatly into a race report.</p>
 </section>
 <section id="race-finder" class="level3 home-nav-card">
@@ -427,13 +427,6 @@ No matching items
 <h3 class="anchored" data-anchor-id="records"><a href="./records.html">Records</a></h3>
 <p>Personal bests, rankings, and performance snapshots across the different formats and distances.</p>
 </section>
-</div>
-</section>
-<section id="why-this-site-exists" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-site-exists">Why This Site Exists</h2>
-<div class="home-about">
-<p>This started as a way to keep race memories organized, but it has turned into something more useful: a record of how training, racing, work, travel, family life, and long-term progression actually fit together over time.</p>
-<p>The goal is not just to post finish-line photos. It is to keep the stories, the numbers, and the lessons in one place.</p>
 </div>
 
 
@@ -466,8 +459,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const previousButton = dialog.querySelector(".gallery-lightbox__nav--previous");
   const nextButton = dialog.querySelector(".gallery-lightbox__nav--next");
 
-  const galleryContainers = Array.from(document.querySelectorAll(".gallery"));
-  if (galleryContainers.length === 0) return;
+  const isImageUrl = (value) => {
+    if (!value) return false;
+
+    try {
+      const url = new URL(value, window.location.href);
+      return /\.(avif|gif|jpe?g|png|svg|webp)$/i.test(url.pathname);
+    } catch {
+      return false;
+    }
+  };
 
   let currentGalleryItems = [];
   let currentIndex = -1;
@@ -494,6 +495,48 @@ document.addEventListener("DOMContentLoaded", () => {
       ? src.replace("/img/thumbnail/", "/img/full/")
       : src;
   };
+
+  const galleryContainers = Array.from(
+    document.querySelectorAll(".gallery, .quarto-layout-panel[data-layout-ncol]")
+  ).filter((container) => {
+    if (container.classList.contains("gallery")) return true;
+
+    const groupedImages = container.querySelectorAll("img[data-group]");
+    if (groupedImages.length > 1) return true;
+
+    const standaloneImages = container.querySelectorAll("img");
+    if (standaloneImages.length > 1) return true;
+
+    const imageLinks = Array.from(container.querySelectorAll("a")).filter((link) => {
+      const thumbnail = link.querySelector("img");
+      return Boolean(thumbnail) && isImageUrl(link.getAttribute("href"));
+    });
+
+    return imageLinks.length > 1;
+  });
+
+  const standaloneLightboxItems = Array.from(document.querySelectorAll("a.lightbox"))
+    .filter((link) => !link.closest(".gallery, .quarto-layout-panel[data-layout-ncol]"))
+    .map((link) => {
+      const thumbnail = link.querySelector("img");
+      const source =
+        link.getAttribute("href") ||
+        thumbnail?.currentSrc ||
+        thumbnail?.getAttribute("src") ||
+        "";
+
+      return {
+        trigger: link,
+        fullSrc: resolveFullImageSrc(source),
+        alt:
+          thumbnail?.getAttribute("alt") ||
+          link.getAttribute("title") ||
+          "",
+      };
+    })
+    .filter((item) => item.fullSrc);
+
+  if (galleryContainers.length === 0 && standaloneLightboxItems.length === 0) return;
 
   const buildGalleryItems = (gallery) => {
     const items = [];
@@ -583,6 +626,26 @@ document.addEventListener("DOMContentLoaded", () => {
         openDialog(items, index);
       }, { capture: true });
     });
+  });
+
+  standaloneLightboxItems.forEach((item, index) => {
+    item.trigger.addEventListener("click", (event) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      openDialog(standaloneLightboxItems, index);
+    }, { capture: true });
   });
 
   closeButton.addEventListener("click", (event) => {

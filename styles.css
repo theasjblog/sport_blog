@@ -58,6 +58,11 @@ body {
   color: var(--site-accent-deep) !important;
 }
 
+.home-page .navbar-brand-container,
+.home-page #title-block-header {
+  display: none;
+}
+
 main.content,
 .quarto-about-jolla,
 .page-columns {
@@ -187,6 +192,10 @@ main#quarto-document-content {
 
 main#quarto-document-content > * {
   max-width: 760px;
+}
+
+.page-layout-full main#quarto-document-content > * {
+  max-width: 1160px;
 }
 
 main#quarto-document-content > .quarto-figure,
@@ -640,6 +649,12 @@ table {
 .home-listing-block h3 {
   margin-bottom: 1rem;
   color: var(--home-ink);
+}
+
+.home-section-name {
+  font-style: italic;
+  font-weight: 800;
+  color: var(--home-accent-deep);
 }
 
 .home-listing-block .quarto-listing-container-grid {
