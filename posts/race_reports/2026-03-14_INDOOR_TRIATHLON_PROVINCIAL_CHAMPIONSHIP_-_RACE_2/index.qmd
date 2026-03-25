@@ -1,0 +1,373 @@
+---
+title: "Indoor Triathlon Provincial Championship Series - Race 2"
+date: "2026-03-14"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/00.jpg
+description: "Race 2 of the indoor provincial championship series."
+categories: [race_reports, triathlon, indoor]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-03-14_INDOOR_TRIATHLON_RACE_2/img/thumbnail/IMG_2609.jpg)
+
+# Overview
+
+This was the second race in the Ontario Indoor Triathlon Championship series.
+
+If you are not familiar with the format, the short version is simple: 15 minutes of swimming, 15 minutes of biking, and 15 minutes of running, with your score based on how far you cover in each segment. I explained the points system in more detail in [Indoor Triathlon Provincial Championship Series - Race 1](../2025-02-22_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_1/index.qmd).
+
+## Goals Going In
+
+This was the first race of the season. I had not even done a parkrun yet, so I had very little sense of where my race fitness actually stood.
+
+Because of that, the goal was to put in a solid effort without going too deep into the red. The problem was that I did not really know where that red line was yet, and I did not want to turn the day into a long suffer-fest by crossing it too early and then spending the rest of the race hanging on.
+
+Even so, I did have some minimum targets in mind:
+
+* about 800m in the swim
+* 10km on the bike
+* 16 laps on the run
+
+## Swim
+
+I started in the fifth wave. This time the swim was in the 50m pool, which I like. Even though I am not especially used to that length, it lets you settle into a rhythm instead of constantly breaking it with turns and push-offs every few seconds.
+
+I shared the lane with a much younger guy who looked fit, and in the next lane there was another athlete who looked competitive and possibly in my age group. I kept an eye on both of them, but without trying to chase too hard. There is no drafting advantage here, so there is no point burning matches just to sit on someone's feet.
+
+In the end, I did not need to worry too much about either of them, or really anyone else in my wave. I out-swam everybody in the wave by at least one lap, which was a first for me. I do not think that means I suddenly became a great swimmer overnight. More likely, this particular wave just was not that strong in the water. Still, it was a nice feeling to be clear of everyone.
+
+I finished on exactly 800m, with about 10 seconds to spare. That works out to roughly 1:52 per 100m, so not especially quick. Pretty leisurely, really.
+
+But that was not the point. The important thing for me was that I hit my minimum target of 800m and did it while feeling completely under control. It stayed aerobic the whole way through. I was just focused on staying calm, breathing comfortably, and holding something close to decent form.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+format_pace_label <- function(value) {
+  minutes <- floor(value)
+  seconds <- round((value - minutes) * 60)
+  rollover <- seconds == 60
+  minutes[rollover] <- minutes[rollover] + 1
+  seconds[rollover] <- 0
+
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+activity_meta <- read.csv(
+  "analysis_data/activities_metadata_swim_run.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+swim_id <- activity_meta |>
+  filter(EVENT_TYPE == "SWIM") |>
+  pull(ID)
+
+activity_data <- read.csv(
+  "analysis_data/activities_data_swim_run.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(ID == swim_id) |>
+  mutate(
+    time_min = SECS / 60,
+    pace = as.numeric(PACE),
+    cadence = as.numeric(CAD),
+    hr = na_if(as.numeric(HR), 0)
+  ) |>
+  select(time_min, pace, cadence, hr) |>
+  pivot_longer(
+    cols = c(pace, cadence, hr),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = recode(
+      metric,
+      pace = "Pace [min/100m]",
+      cadence = "Cadence [spm]",
+      hr = "HR [bpm]"
+    )
+  )
+
+swim_labels <- activity_data |>
+  group_by(metric) |>
+  summarise(avg_value = mean(value, na.rm = TRUE), .groups = "drop") |>
+  mutate(
+    avg_label = ifelse(
+      grepl("^Pace", metric),
+      format_pace_label(avg_value),
+      as.character(round(avg_value))
+    ),
+    metric_label = paste0(metric, " | Average=", avg_label)
+  ) |>
+  select(metric, metric_label)
+
+activity_data <- activity_data |>
+  left_join(swim_labels, by = "metric")
+
+ggplot(activity_data, aes(x = time_min, y = value)) +
+  geom_line(linewidth = 0.5, color = "#1f4e79") +
+  facet_wrap(~ metric_label, scales = "free_y", ncol = 1) +
+  labs(
+    x = "Time [min]",
+    y = NULL,
+    title = "Swim pacing and effort over time"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+The swim pace starts off reasonably well, at a little over 1:30 per 100m, but it quickly fades toward 1:50 and at times even slower. That happens alongside a small but noticeable increase in stroke rate, from below 29 to above 30. It is not a huge jump, but it is there, and to me it suggests a breakdown in form: quicker and shorter strokes, but clearly less efficient ones.
+
+Through all of that, heart rate stays fairly low, around 125 bpm, which matches the feeling I had in the water: controlled, comfortable, and never close to the limit.
+
+In other words, the data confirms something I already know very well: my main limiter in the swim is technique, not aerobic capacity.
+
+## Bike
+
+The bike was a similar story. Because it is stationary, you do not really get much feedback on what the other competitors are doing, so there is not much point in trying to race off other people. My focus was simply to sit around 40km/h, which would get me to 10km by the end of the segment, while making sure it never felt like I had to fight to stay there.
+
+I definitely pushed harder on the bike than I did in the swim. I am much more comfortable judging effort on two wheels than I am in the water, and in general I know myself better on dry land. Even so, the effort still felt controlled. My legs were not burning, my breathing was not ragged, and I was never in that place where you are just staring at the clock and begging for the 15 minutes to end.
+
+To keep up the tradition of messing up at least one leg of the race, I forgot to start my watch for the bike, so I do not have a complete set of heart-rate data to analyze afterward.
+
+I finished on 10.3km, with a few seconds to spare. Not enough to get to 10.5km and collect the next bump in points, but still enough to hit the target I had in mind.
+
+So again, mission accomplished, both in terms of distance and in terms of keeping the effort where I wanted it.
+
+## Run
+
+The run is probably the leg I could have raced a bit better.
+
+Once again, my main guide was feel: stay comfortable, stay in control, do not push so hard that the whole thing unravels. I was also glancing at pace, but that is not especially useful indoors because the watch is all over the place. By the end it measured about 200m more than the official distance, which is a full extra lap. Power would probably have been a better metric, but I do not have a good reference yet for what kind of running power I should be targeting in this format.
+
+From the start, it felt like a three-man race: the young guy from my swim lane, the other athlete I thought might be in my age group, and me.
+
+The younger guy went out hard right away. I let him go immediately. That pace was not part of my plan, and probably not something I could have held even if I had wanted to. More importantly, he was not in my age group, so I was not really racing him anyway. My attention was much more on the other guy, the one I thought might be my real competition.
+
+We ran together for about the first 10 laps. At times he was slightly ahead, then I was. During that stretch we also reeled in the younger guy, which confirmed that his opening pace had been too ambitious.
+
+After about 10 laps, the maybe-my-age-group guy put in a surge and ended up covering half a lap more than I did. Maybe, just maybe, I could have gone with him. But I was not convinced that this was the right race to make that move.
+
+This is where race strategy matters. Yes, he beat me by half a lap on the run, but I knew I had swum much better than him. The bike was less certain, but I trusted my bike strength and thought it was unlikely that he would put enough time into me there to undo the swim advantage.
+
+And in the end, it turned out that he was not even in my age group after all. He was in the younger 30-39 category.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+activity_meta <- read.csv(
+  "analysis_data/activities_metadata_swim_run.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+run_id <- activity_meta |>
+  filter(EVENT_TYPE == "RUN") |>
+  pull(ID)
+
+run_data <- read.csv(
+  "analysis_data/activities_data_swim_run.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(ID == run_id) |>
+  filter(as.numeric(SECS) > 30) |>
+  mutate(
+    time_min = SECS / 60,
+    power = as.numeric(WATTS),
+    pace = as.numeric(PACE),
+    hr = na_if(as.numeric(HR), 0)
+  ) |>
+  select(time_min, power, pace, hr) |>
+  pivot_longer(
+    cols = c(power, pace, hr),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = recode(
+      metric,
+      power = "Power [W]",
+      pace = "Pace [min/km]",
+      hr = "HR [bpm]"
+    )
+  )
+
+run_labels <- run_data |>
+  group_by(metric) |>
+  summarise(avg_value = mean(value, na.rm = TRUE), .groups = "drop") |>
+  mutate(
+    avg_label = ifelse(
+      grepl("^Pace", metric),
+      format_pace_label(avg_value),
+      as.character(round(avg_value))
+    ),
+    metric_label = paste0(metric, " | Average=", avg_label)
+  ) |>
+  select(metric, metric_label)
+
+run_data <- run_data |>
+  left_join(run_labels, by = "metric")
+
+ggplot(run_data, aes(x = time_min, y = value)) +
+  geom_line(linewidth = 0.5, color = "#8c2d04") +
+  facet_wrap(~ metric_label, scales = "free_y", ncol = 1) +
+  labs(
+    x = "Time [min]",
+    y = NULL,
+    title = "Run pacing and effort over time"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+Even though the effort felt controlled, heart rate went quite a bit higher than I would have liked. That is a bit of a concern, because I do not think I can sustain much more than that for very long, which in turn suggests I may not have much room to go faster yet.
+
+The hopeful interpretation is that this was simply the first real race effort of the season. Because of snow and ice, I had almost no opportunities to do proper fast running sessions through the winter, so it makes sense that the system was not fully ready for that kind of work yet.
+
+On the positive side, all the metrics are fairly consistent. There is no major drop in pace or power, which suggests that the elevated heart rate was still reasonably well tolerated, even if it was higher than I wanted.
+
+The little jump in power and the quicker pace toward the end was deliberate: I wanted to make sure I got through the 16th lap in time and secured all the available points for that distance.
+
+## Final thoughts
+
+Even if this ended up being my worst result in terms of ranking, I am happy with the approach. I performed almost at the same level as in previous indoor races, but I did it feeling much more in control and at a lower perceived effort. Whether I already have the ability to push significantly harder and still sustain it is not clear yet, but this still feels like a promising sign for the season ahead.
+
+That matters because the real goal this year is bigger: qualify for the 2027 Sprint Duathlon World Championship.
+
+On that note, the swim is obviously not the priority this season. Still, the data showed a pattern I know very well: I struggle to sustain pace in the water. The good news is that, with the main focus shifting toward competitive cycling and running rather than swimming, I can afford to slow things down in the pool and focus much more on technique for the rest of the year, with the hope of coming back stronger next season.
+
+### My results across the series
+
+This table isolates my results across the indoor races completed so far. It is a simple race-by-race view of total points, together with the swim, bike, and run contributions that made up each score.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+adrian_series_points <- read.csv(
+  "analysis_data/adrian_indoor_series_points.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+) |>
+  rename(
+    `Race date` = race_date,
+    `Total points` = total_points,
+    `Swim points` = swim_points,
+    `Bike points` = bike_points,
+    `Run points` = run_points
+  )
+
+knitr::kable(adrian_series_points)
+```
+
+## Results
+
+Add the race result, age-group placement, and any series implications here.
+
+### Race 2: M40-49 standings
+
+This table shows the results from Race 2 only for the `Men40-49` category. It includes the final score plus the points collected in each discipline: swim, bike, and run.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+race_rankings <- read.csv(
+  "analysis_data/race_rankings.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+) |>
+  filter(CATEGORY == "Men40-49") |>
+  arrange(desc(RESULT_FINAL)) |>
+  select(
+    ATHLETE,
+    RESULT_FINAL,
+    RESULT_SPORT_1,
+    RESULT_SPORT_2,
+    RESULT_SPORT_3
+  ) |>
+  rename(
+    Athlete = ATHLETE,
+    `Final points` = RESULT_FINAL,
+    Swim = RESULT_SPORT_1,
+    Bike = RESULT_SPORT_2,
+    Run = RESULT_SPORT_3
+  )
+
+kable(race_rankings)
+```
+
+I ended up 4th in this race. Third place looks within reach; first and second probably do not.
+
+I remember Paul Bregin from last year as well. He only did one race in 2025, which is part of why I was able to win the series in the end. These guys are seriously impressive. Compared with my race, Paul put 100 more points into me in the swim and 88 more on the run. That is about 250m extra in the swim and roughly 600m more on the run. That is a big gap.
+
+Chapeau.
+
+### Series standings after two races
+
+This table aggregates the `Men40-49` results from the first two races of the series. For each athlete, it sums total points and shows how many races they have completed so far.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+age_group_series <- read.csv(
+  "analysis_data/male_40_49_age_group_results.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+) |>
+  group_by(athlete) |>
+  summarise(
+    `Total points` = sum(as.numeric(total_points), na.rm = TRUE),
+    `Number of races` = n(),
+    .groups = "drop"
+  ) |>
+  arrange(desc(`Total points`)) |>
+  rename(
+    Athlete = athlete
+  )
+
+kable(age_group_series)
+```
+
+I currently sit 5th in the standings, and there is only one race left.
+
+Even if Paul does not come to the final race, I have no chance of catching him. I could maybe reach Santiago if he does not show up and I have a very, very good day. Marcio, in 3rd, is a more realistic target, but again only if he does not race the final event. Derek is going to be difficult too. I have never scored that many points in a single race, so if he shows up in similar form for the last race, closing that gap will be hard.
+
+In a way, that probably means the scoring is pretty fair. If we all stop at two races, I might move up to 4th, but probably not better than that. And if the stronger athletes come back for a third race, of course they will add even more points, but the table also makes it pretty clear that they are simply stronger than me anyway.
+
+So this does not feel like the situation I wrote about in [2025 MultiSport Canada Series Champion!](../../others/2026-01-01_series_champion/index.qmd), where the three-race rule played a much bigger role in the final outcome. Here, even before the final race, the standings already look broadly honest.
+
+---
+
+<!-- summary_race_date: 2026-03-14 -->
+{{< include summary_table.html >}}

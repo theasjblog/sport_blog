@@ -127,14 +127,35 @@ build_summary_data <- function(race_metadata, race_rankings) {
       race_rankings, by = 'RACE_ID'
     )
 
+  point_flag <- FALSE
+  if ("POINT_FLAG" %in% names(df)) {
+    point_flag <- isTRUE(df$POINT_FLAG[[1]]) ||
+      identical(tolower(as.character(df$POINT_FLAG[[1]])), "true")
+  }
+
+  format_summary_result <- function(values) {
+    if (point_flag) {
+      return(as.character(values))
+    }
+
+    as.character(hms::as_hms(values))
+  }
+
+  final_label <- if (point_flag) "Final points" else "Final time"
+  sport_1_label <- if (point_flag) "Sport 1 points" else "Sport 1 time"
+  t_1_label <- if (point_flag) "T 1 points" else "T 1 time"
+  sport_2_label <- if (point_flag) "Sport 2 points" else "Sport 2 time"
+  t_2_label <- if (point_flag) "T 2 points" else "T 2 time"
+  sport_3_label <- if (point_flag) "Sport 3 points" else "Sport 3 Time"
+
   final <- data.frame(
     "Race type" = paste0(df$EVENT_TYPE, " ", df$EVENT_DISTANCE),
-    "Final time" = hms::as_hms(df$RESULT_FINAL),
-    "Sport 1 time" = hms::as_hms(df$RESULT_SPORT_1),
-    "T 1 time" = hms::as_hms(df$RESULT_T_1),
-    "Sport 2 time" = hms::as_hms(df$RESULT_SPORT_2),
-    "T 2 time" = hms::as_hms(df$RESULT_T_2),
-    "Sport 3 Time" = hms::as_hms(df$RESULT_SPORT_3),
+    setNames(list(format_summary_result(df$RESULT_FINAL)), final_label),
+    setNames(list(format_summary_result(df$RESULT_SPORT_1)), sport_1_label),
+    setNames(list(format_summary_result(df$RESULT_T_1)), t_1_label),
+    setNames(list(format_summary_result(df$RESULT_SPORT_2)), sport_2_label),
+    setNames(list(format_summary_result(df$RESULT_T_2)), t_2_label),
+    setNames(list(format_summary_result(df$RESULT_SPORT_3)), sport_3_label),
     "Overall ranking" = df$RANKING_OVERALL,
     "Gender ranking" = df$RANKING_GENDER,
     "Category ranking" = df$RANKING_CATEGORY
@@ -149,7 +170,7 @@ build_summary_data <- function(race_metadata, race_rankings) {
   ) |>
     filter(!is.na(col2)) |>
     filter(stringr::str_detect(col2, "NA/", negate = TRUE)) |>
-    filter(col2 != "00:00:00") |>
+    filter(!point_flag | col2 != "00:00:00") |>
     mutate(
       col2 = gsub("NA", "-", col2)
     )

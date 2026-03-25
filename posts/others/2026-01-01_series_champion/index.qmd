@@ -1,0 +1,96 @@
+---
+title: "2025 MultiSport Canada Series Champion!"
+date: 2026-01-01
+categories: [notes, series]
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-12-31_MULTISPORT_CANADA_CHAMPIONSHIP/img/thumbnail/IMG_2619.jpg
+description: "A second straight MultiSport Canada series title!"
+toc: false
+freeze: true
+code-tools: false
+format:
+  html:
+    toc: false
+    smooth-scroll: true
+    page-layout: full
+    lightbox: true
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+library(kableExtra)
+library(readr)
+
+scoring <- data.frame(
+  ranking = 1:10,
+  points = c(100, 90, 85, 80, 75, 70, 65, 60, 55, 50)
+)
+
+standings <- read_csv("final_table.csv", show_col_types = FALSE) |>
+  filter(category == "m40-44") |>
+  mutate(
+    tot_points = as.integer(tot_points),
+    n_races = as.integer(n_races),
+    final_rank = as.integer(final_rank)
+  ) |>
+  arrange(final_rank, desc(tot_points), desc(n_races), names)
+
+standings_nonzero <- standings |>
+  filter(tot_points > 0)
+```
+
+![MultiSport Canada Champions plaque.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-12-31_MULTISPORT_CANADA_CHAMPIONSHIP/img/thumbnail/IMG_2619.jpg)
+
+Back-to-back.
+
+After winning the title in 2024, I managed to defend it in 2025 as well. Last year's win felt like a surprise when I first learned I had topped the series; this time I understood the stakes a little better, which somehow made it both more satisfying and more stressful. If you want the origin story, the first title is in [2024 MultiSport Canada Series Champion!](../2025-01-31_series_champion/index.qmd).
+
+## How the series works
+
+The MultiSport Canada series pulls together results from races organized by MultiSport Canada across the season. To be eligible for the year-end standings, you need to complete at least three races. At the end of the year, champions are awarded by discipline and category, including sprint triathlon, standard triathlon, sprint duathlon, long-distance events, and others.
+
+The scoring is simple: the better you place, the more points you earn. The top 10 score on the following scale:
+
+```{r}
+#| echo: false
+kable(scoring, col.names = c("Place", "Points")) |>
+  kable_styling(full_width = FALSE)
+```
+
+That structure rewards consistency. Show up, race well, and stack enough results together, and the series starts to tilt in your favor.
+
+## My category: M40-44
+
+Here is the 2025 M40-44 results table:
+
+```{r}
+#| echo: false
+kable(
+  standings_nonzero |>
+  select(-c("category")),
+  col.names = c("Name", "Points", "Races", "Rank")
+) |>
+  kable_styling(full_width = FALSE)
+```
+
+I finished on 250 points from three races, which was enough to take the category again. But the part that stands out most is how tight it was underneath. Hector Palacios and Nicholas Yardley both finished on 200 points from only two races.
+
+That is what makes the three-race eligibility rule bittersweet. On one hand, I understand the logic: a series title should reward a full season, not just one or two standout results. From the organizer's point of view, the structure also makes complete sense. MultiSport Canada is a business, and races only happen if people keep signing up, so of course the series is designed to reward participation and give athletes a reason to come back more often. If you want to win the title, you need to race with them more. On the other hand, it can still feel a little like a pay-to-win system, because participation matters almost as much as raw performance. The gap from first to second was only 50 points. Under this scoring table, that means one additional 10th-place finish would have been enough to erase it, and either of those athletes looked more than capable of doing much better than 10th.
+
+I still take a lot of pride in winning it. A title is a title, and defending one is even harder than winning the first time. But the final table also shows how much these series standings depend on being able to line up often enough across the year.
+
+## Takeaways
+
+The result says I was the 2025 MultiSport Canada series champion in M40-44, and I am proud of that. It also says something broader about how endurance series work: they reward fitness, race execution, and consistency, but they also reward availability.
+
+That tension is part of the game. This year, it worked in my favor.
+
+::: {.callout-note}
+Related post:
+
+[2024 MultiSport Canada Series Champion!](../2025-01-31_series_champion/index.qmd)
+:::
