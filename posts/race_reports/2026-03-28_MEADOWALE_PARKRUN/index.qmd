@@ -1,0 +1,287 @@
+---
+title: "Meadowale Parkrun"
+date: "2026-03-28"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-09-13_MEADOWVALE_PARKRUN/img/thumbnail/00.jpg
+description: "Meadowale Parkrun. First run test of the season."
+categories: [race_reports, run, parkrun]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+# Race Overview
+
+This was the first proper run test of the season.
+
+That sounds more structured than it really was. I had done little to no speed work beforehand. The only remotely hard running in the bank was the 15-minute run segment at [Indoor Triathlon Provincial Championship Series - Race 2](../2026-03-14_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_2/index.qmd) two weeks earlier.
+
+Beyond that, winter in Canada had done a good job of shutting down any grand plans for sharp 5K-specific preparation. It is hard enough to run consistently outside through the colder months. It is even harder to do anything fast when every session risks becoming a negotiation with snow, slush, or ice. As a side note, I will probably be looking for a treadmill before next winter.
+
+# Before the Start
+
+This test had already been pushed back two or three times because of icy conditions. There is not much point calling it a fitness test if a quarter of your mental energy is going into staying upright.
+
+The goal was simple: ideally break 22 minutes, put in a solid shift, but do not force it.
+
+The pacing plan was conservative on paper. Start at about 4:20/km, settle there, and then maybe squeeze things down near the end if the legs were still cooperating. Holding 4:20/km would give a finish of roughly 21:40, which meant I had about 20 seconds of margin even if things got a bit ragged late on.
+
+My warm-up was also flawless in the way that only bad warm-ups can be: I arrived about 0 minutes before the start.
+
+Even with that, there was still just enough time to study the opposition. A couple of guys looked quick. One in particular stood out immediately: old muddy shoes, holes in the running tights, cycling top. You see that combination and you know the man is not here for a gentle jog around the park.
+
+# How It Went
+
+From the gun, the plan was to feel like I was holding back.
+
+Two guys went out hard straight away, including the one I had already marked down as suspiciously serious. I let them go without hesitation. Then I looked at the watch: 4:10/km.
+
+That was clearly faster than the plan, but it still felt under control, so I made a small adjustment. Rather than forcing myself back to 4:20/km, I decided to hold something in the 4:10 to 4:15/km range and see how long that remained sensible.
+
+For a while, the effort felt good. I could also hear the footsteps of another runner tucked in behind me, close enough to be noticed the whole time, but I stayed on my own pace and ignored it.
+
+Toward the end of kilometre 3, the first signs of fatigue started to show. The pace slipped, but not dramatically, only by a few seconds per kilometre. Two more runners came past me at that point, and I did not try, or perhaps could not try, to go with them.
+
+Then came the moment every 5K seems to require: a quick negotiation with yourself. I glanced at the watch and saw 4:30/km. That was a bit too charitable. Slipping back to 4:20/km would have been acceptable. 4:30/km was not. So the internal instruction was simple: pick it up.
+
+I finished in 20:49.
+
+That felt like a good result for late March, especially with so little specific speed work in the legs. More importantly, it did not feel like a full all-out effort. There is clearly more in there somewhere. The next job is figuring out how to access it.
+
+# What the Data Says
+
+The basic summary is reassuring enough. The average pace comes out at just over 4:13/km, with heart rate and power both building to sensible 5K levels rather than exploding early.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+format_pace_label <- function(value) {
+  minutes <- floor(value)
+  seconds <- round((value - minutes) * 60)
+  rollover <- seconds == 60
+  minutes[rollover] <- minutes[rollover] + 1
+  seconds[rollover] <- 0
+
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+activity_meta <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+run_id <- activity_meta |>
+  filter(EVENT_TYPE == "RUN") |>
+  pull(ID)
+
+run_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(ID == run_id) |>
+  mutate(
+    time_min = as.numeric(SECS) / 60,
+    distance_km = as.numeric(KM),
+    pace = as.numeric(PACE),
+    cadence = na_if(as.numeric(CAD), 0),
+    hr = na_if(as.numeric(HR), 0),
+    power = na_if(as.numeric(WATTS), 0)
+  ) |>
+  filter(as.numeric(SECS) > 5)
+
+summary_table <- data.frame(
+  Metric = c(
+    "Elapsed time [min]",
+    "Distance [km]",
+    "Average pace [min/km]",
+    "Average cadence [spm]",
+    "Average HR [bpm]",
+    "Average power [W]",
+    "Max HR [bpm]",
+    "Max power [W]"
+  ),
+  Value = c(
+    sprintf("%.2f", max(run_data$time_min, na.rm = TRUE)),
+    sprintf("%.3f", max(run_data$distance_km, na.rm = TRUE)),
+    format_pace_label(mean(run_data$pace, na.rm = TRUE)),
+    sprintf("%.1f", mean(run_data$cadence, na.rm = TRUE)),
+    sprintf("%.1f", mean(run_data$hr, na.rm = TRUE)),
+    sprintf("%.1f", mean(run_data$power, na.rm = TRUE)),
+    sprintf("%.0f", max(run_data$hr, na.rm = TRUE)),
+    sprintf("%.0f", max(run_data$power, na.rm = TRUE))
+  )
+)
+
+#kable(summary_table)
+```
+
+The chart below tells the story in some more detail. Pace was strong early, then drifted in the second half as the effort started to bite. Heart rate rises steadily, which is what you would expect in a properly paced 5K. Cadence stays fairly stable, so the slowdown looks more like a drop in force production than a complete collapse in mechanics.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+format_pace_label <- function(value) {
+  minutes <- floor(value)
+  seconds <- round((value - minutes) * 60)
+  rollover <- seconds == 60
+  minutes[rollover] <- minutes[rollover] + 1
+  seconds[rollover] <- 0
+
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+activity_meta <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+run_id <- activity_meta |>
+  filter(EVENT_TYPE == "RUN") |>
+  pull(ID)
+
+run_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(ID == run_id) |>
+  mutate(
+    time_min = as.numeric(SECS) / 60,
+    distance_km = as.numeric(KM),
+    pace = as.numeric(PACE),
+    cadence = na_if(as.numeric(CAD), 0),
+    hr = na_if(as.numeric(HR), 0),
+    power = na_if(as.numeric(WATTS), 0)
+  ) |>
+  filter(as.numeric(SECS) > 5) |>
+  select(distance_km, pace, cadence, hr, power) |>
+  pivot_longer(
+    cols = c(pace, cadence, hr, power),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = recode(
+      metric,
+      pace = "Pace [min/km]",
+      cadence = "Cadence [spm]",
+      hr = "HR [bpm]",
+      power = "Power [W]"
+    )
+  )
+
+plot_labels <- run_data |>
+  group_by(metric) |>
+  summarise(avg_value = mean(value, na.rm = TRUE), .groups = "drop") |>
+  mutate(
+    avg_label = ifelse(
+      metric == "Pace [min/km]",
+      format_pace_label(avg_value),
+      as.character(round(avg_value))
+    ),
+    metric_label = paste0(metric, " | Average=", avg_label)
+  ) |>
+  select(metric, metric_label)
+
+run_data |>
+  left_join(plot_labels, by = "metric") |>
+  ggplot(aes(x = distance_km, y = value)) +
+  geom_line(linewidth = 0.4, color = "#2c7fb8", alpha = 0.8) +
+  geom_smooth(method = "loess", span = 0.1, se = FALSE, color = "#d95f0e", linewidth = 0.7) +
+  facet_wrap(~ metric_label, scales = "free_y", ncol = 1) +
+  labs(
+    x = "Distance [km]",
+    y = NULL,
+    title = "Run metrics by distance"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+The kilometre averages make that progression easier to read. The first three kilometres are the strongest part of the race. After that, pace gives away a few seconds while power, cadence, and heart rate all stay reasonably high. That fits the subjective feeling quite well: I was tiring, but not blowing up.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+format_pace_label <- function(value) {
+  minutes <- floor(value)
+  seconds <- round((value - minutes) * 60)
+  rollover <- seconds == 60
+  minutes[rollover] <- minutes[rollover] + 1
+  seconds[rollover] <- 0
+
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+activity_meta <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+run_id <- activity_meta |>
+  filter(EVENT_TYPE == "RUN") |>
+  pull(ID)
+
+km_table <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(ID == run_id) |>
+  mutate(
+    distance_km = as.numeric(KM),
+    pace = as.numeric(PACE),
+    cadence = na_if(as.numeric(CAD), 0),
+    hr = na_if(as.numeric(HR), 0),
+    power = na_if(as.numeric(WATTS), 0),
+    km_split = floor(distance_km) + 1
+  ) |>
+  filter(distance_km < 5) |>
+  group_by(km_split) |>
+  summarise(
+    `Average pace [min/km]` = format_pace_label(mean(pace, na.rm = TRUE)),
+    `Average power [W]` = sprintf("%.0f", mean(power, na.rm = TRUE)),
+    `Average cadence [spm]` = sprintf("%.0f", mean(cadence, na.rm = TRUE)),
+    `Average HR [bpm]` = sprintf("%.0f", mean(hr, na.rm = TRUE)),
+    .groups = "drop"
+  ) |>
+  mutate(`KM` = paste0("KM ", km_split)) |>
+  select(KM, everything(), -km_split)
+
+kable(km_table)
+```
+
+# Takeaways
+
+For a first proper run test of the season, this was encouraging. The result was comfortably under the original goal, the pacing was mostly controlled, and the fade late on was modest rather than dramatic.
+
+So the conclusion is fairly simple: the engine is in decent shape already, but there is still room to sharpen the top end. If I can add a bit more speed work, ideally without spending next winter skating around on frozen paths, there should be more to come.
+
+
+<!-- summary_race_date: 2026-03-28 -->
+{{< include summary_table.html >}}
