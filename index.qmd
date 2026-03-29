@@ -73,19 +73,19 @@ This is the front page for race reports, training notes, gear thoughts, and the 
 ::: {.home-nav-card}
 ### [Race Reports](posts/race_reports.qmd)
 
-Chronological race stories, results, lessons learned, and galleries from triathlons, runs, swims, and the occasional surprise.
+Race stories, results, lessons learned, and galleries from triathlons, runs, swims, and the occasional surprise.
 :::
 
 ::: {.home-nav-card}
 ### [Beyond Racing](posts/others.qmd)
 
-Longer reflections on preparation, age-group racing, kit, planning, and whatever did not fit neatly into a race report.
+Reflections on preparation, age-group racing, kit, planning, and whatever did not fit neatly into a race report.
 :::
 
 ::: {.home-nav-card}
 ### [Race Finder](race_finder.qmd)
 
-Structured race data with filters and lookup tools when you want the database view instead of the narrative version.
+Look for a race based on race name, date, or type.
 :::
 
 ::: {.home-nav-card}
