@@ -271,17 +271,18 @@ Activity details
 
 </main> <!-- /main -->
 <dialog id="gallery-lightbox" class="gallery-lightbox">
-  <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--previous" aria-label="Show previous image">
-    ‹
-  </button>
-  <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--next" aria-label="Show next image">
-    ›
-  </button>
-  <button type="button" class="gallery-lightbox__close" aria-label="Close image viewer">
-    ×
-  </button>
-  <img class="gallery-lightbox__image" alt="">
-  <p class="gallery-lightbox__caption" hidden=""></p>
+  <div class="gallery-lightbox__stage">
+    <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--previous" aria-label="Show previous image">
+      ‹
+    </button>
+    <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--next" aria-label="Show next image">
+      ›
+    </button>
+    <button type="button" class="gallery-lightbox__close" aria-label="Close image viewer">
+      ×
+    </button>
+    <img class="gallery-lightbox__image" alt="">
+  </div>
 </dialog>
 
 <script>
@@ -290,7 +291,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!dialog) return;
 
   const image = dialog.querySelector(".gallery-lightbox__image");
-  const caption = dialog.querySelector(".gallery-lightbox__caption");
   const closeButton = dialog.querySelector(".gallery-lightbox__close");
   const previousButton = dialog.querySelector(".gallery-lightbox__nav--previous");
   const nextButton = dialog.querySelector(".gallery-lightbox__nav--next");
@@ -315,8 +315,6 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = -1;
     image.removeAttribute("src");
     image.alt = "";
-    caption.textContent = "";
-    caption.hidden = true;
   };
 
   const updateNavState = () => {
@@ -419,10 +417,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     image.src = selectedItem.fullSrc;
     image.alt = selectedItem.alt;
-
-    const text = selectedItem.alt.trim();
-    caption.textContent = text;
-    caption.hidden = text === "";
 
     if (!dialog.open) {
       dialog.showModal();
@@ -945,7 +939,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="theasjblog/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"fade","selector":".lightbox","loop":false,"closeEffect":"fade","descPosition":"right"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"right","loop":false,"closeEffect":"fade","selector":".lightbox","openEffect":"fade"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
