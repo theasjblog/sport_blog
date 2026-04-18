@@ -1,0 +1,286 @@
+---
+title: "Meadowvale Parkrun"
+date: "2026-04-18"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-09-13_MEADOWVALE_PARKRUN/img/thumbnail/00.jpg
+description: "Meadowvale Parkrun. Power meter re-calibration."
+categories: [race_reports, run, parkrun]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+
+# Race Overview
+
+This was not originally on the plan.
+
+Three weeks after my previous Meadowvale parkrun, I was back on the same course for a more practical reason than a race target. I had switched my running power source from the Garmin FR965 built-in estimate to a Stryd footpod, and I needed a hard 5K effort to recalibrate my running power zones.
+
+That made the event useful, but it did not make me feel especially ready for it. I did not feel particularly springy, and my stomach was a little unsettled before the start. During the warm-up I also noticed that my heart rate was rising more easily than I would have liked. None of that was dramatic enough to call the run off, but it was enough to make me think this might be more of a calibration exercise than a performance day.
+
+# Before the Start
+
+While scanning the field before the start, I noticed a couple of young girls wearing Toronto cross-country championship T-shirts. That is usually a decent warning sign. I also spotted one or two men who looked like they might be quicker than me.
+
+So the rough expectation was simple: run hard, collect useful power data, and see where that left me. I was not expecting anything spectacular.
+
+# How It Went
+
+After the start, one of the two girls I had noticed and one of the quicker-looking men immediately went to the front. Then another guy came flying through from behind at a pace that looked ambitious. He was breathing hard almost straight away, though, and I was ready to bet that he would not be able to hold it.
+
+Spoiler alert: he could not.
+
+Once the early sorting-out was done, the race became fairly uneventful. The girl at the front held the lead comfortably, and the gap between the man in second and me stayed steady at roughly 10 metres for most of the run. I was working, but I was not chasing anything down, and nobody behind me seemed to be closing quickly.
+
+That changed near the end. A runner who had been sitting in fourth came past fast and finished a few seconds ahead of me. I had nothing left to respond with, so the only thing to do was keep moving and get to the line.
+
+I finished in 20:54.
+
+That was a little slower than the same race three weeks earlier, but the context matters. With a bit more freshness and without the stomach issues, I think I could have improved on the previous run. Even so, this still did the job: it gave me a hard, honest effort on the new power meter and a useful baseline for the next block.
+
+# What the Data Says
+
+The headline result was slightly slower than last time, but the pacing was more stable. There was still a dip towards the end, especially when I could not respond to the late pass, but the effort looks controlled rather than chaotic.
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+format_pace_label <- function(value) {
+  minutes <- floor(value)
+  seconds <- round((value - minutes) * 60)
+  rollover <- seconds == 60
+  minutes[rollover] <- minutes[rollover] + 1
+  seconds[rollover] <- 0
+
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+activity_meta <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+run_id <- activity_meta |>
+  filter(EVENT_TYPE == "RUN") |>
+  pull(ID)
+
+run_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(ID == run_id) |>
+  mutate(
+    time_min = as.numeric(SECS) / 60,
+    distance_km = as.numeric(KM),
+    pace = as.numeric(PACE),
+    cadence = na_if(as.numeric(CAD), 0),
+    hr = na_if(as.numeric(HR), 0),
+    power = na_if(as.numeric(WATTS), 0)
+  ) |>
+  filter(as.numeric(SECS) > 5)
+
+summary_table <- data.frame(
+  Metric = c(
+    "Elapsed time [min]",
+    "Distance [km]",
+    "Average pace [min/km]",
+    "Average cadence [spm]",
+    "Average HR [bpm]",
+    "Average power [W]",
+    "Max HR [bpm]",
+    "Max power [W]"
+  ),
+  Value = c(
+    sprintf("%.2f", max(run_data$time_min, na.rm = TRUE)),
+    sprintf("%.3f", max(run_data$distance_km, na.rm = TRUE)),
+    format_pace_label(mean(run_data$pace, na.rm = TRUE)),
+    sprintf("%.1f", mean(run_data$cadence, na.rm = TRUE)),
+    sprintf("%.1f", mean(run_data$hr, na.rm = TRUE)),
+    sprintf("%.1f", mean(run_data$power, na.rm = TRUE)),
+    sprintf("%.0f", max(run_data$hr, na.rm = TRUE)),
+    sprintf("%.0f", max(run_data$power, na.rm = TRUE))
+  )
+)
+
+kable(summary_table)
+```
+
+The chart below tells the story in some more detail. Heart rate climbed early, which matched how I felt in the warm-up. Pace and power slowly degraded through the middle of the race. The late fade is still there, except for the finish line pick up.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+format_pace_label <- function(value) {
+  minutes <- floor(value)
+  seconds <- round((value - minutes) * 60)
+  rollover <- seconds == 60
+  minutes[rollover] <- minutes[rollover] + 1
+  seconds[rollover] <- 0
+
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+activity_meta <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+run_id <- activity_meta |>
+  filter(EVENT_TYPE == "RUN") |>
+  pull(ID)
+
+run_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(ID == run_id) |>
+  mutate(
+    time_min = as.numeric(SECS) / 60,
+    distance_km = as.numeric(KM),
+    pace = as.numeric(PACE),
+    cadence = na_if(as.numeric(CAD), 0),
+    hr = na_if(as.numeric(HR), 0),
+    power = na_if(as.numeric(WATTS), 0)
+  ) |>
+  filter(as.numeric(SECS) > 5) |>
+  select(distance_km, pace, cadence, hr, power) |>
+  pivot_longer(
+    cols = c(pace, cadence, hr, power),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = recode(
+      metric,
+      pace = "Pace [min/km]",
+      cadence = "Cadence [spm]",
+      hr = "HR [bpm]",
+      power = "Power [W]"
+    )
+  )
+
+plot_labels <- run_data |>
+  group_by(metric) |>
+  summarise(avg_value = mean(value, na.rm = TRUE), .groups = "drop") |>
+  mutate(
+    avg_label = ifelse(
+      metric == "Pace [min/km]",
+      format_pace_label(avg_value),
+      as.character(round(avg_value))
+    ),
+    metric_label = paste0(metric, " | Average=", avg_label)
+  ) |>
+  select(metric, metric_label)
+
+run_data |>
+  left_join(plot_labels, by = "metric") |>
+  ggplot(aes(x = distance_km, y = value)) +
+  geom_line(linewidth = 0.4, color = "#2c7fb8", alpha = 0.8) +
+  geom_smooth(method = "loess", span = 0.1, se = FALSE, color = "#d95f0e", linewidth = 0.7) +
+  facet_wrap(~ metric_label, scales = "free_y", ncol = 1) +
+  labs(
+    x = "Distance [km]",
+    y = NULL,
+    title = "Run metrics by distance"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+The kilometre averages make that progression easier to read. The middle of the race was the most settled part: not spectacular, but steady enough for the purpose of recalibrating zones. The final kilometre shows the cost of the effort and the lack of a response when I was passed late on.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+format_pace_label <- function(value) {
+  minutes <- floor(value)
+  seconds <- round((value - minutes) * 60)
+  rollover <- seconds == 60
+  minutes[rollover] <- minutes[rollover] + 1
+  seconds[rollover] <- 0
+
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+activity_meta <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+run_id <- activity_meta |>
+  filter(EVENT_TYPE == "RUN") |>
+  pull(ID)
+
+km_table <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(ID == run_id) |>
+  mutate(
+    distance_km = as.numeric(KM),
+    pace = as.numeric(PACE),
+    cadence = na_if(as.numeric(CAD), 0),
+    hr = na_if(as.numeric(HR), 0),
+    power = na_if(as.numeric(WATTS), 0),
+    km_split = floor(distance_km) + 1
+  ) |>
+  filter(distance_km < 5) |>
+  group_by(km_split) |>
+  summarise(
+    `Average pace [min/km]` = format_pace_label(mean(pace, na.rm = TRUE)),
+    `Average power [W]` = sprintf("%.0f", mean(power, na.rm = TRUE)),
+    `Average cadence [spm]` = sprintf("%.0f", mean(cadence, na.rm = TRUE)),
+    `Average HR [bpm]` = sprintf("%.0f", mean(hr, na.rm = TRUE)),
+    .groups = "drop"
+  ) |>
+  mutate(`KM` = paste0("KM ", km_split)) |>
+  select(KM, everything(), -km_split)
+
+kable(km_table)
+```
+
+# Takeaways
+
+This was not a race I had circled in the calendar, but it was still useful.
+
+The time was slightly slower than three weeks earlier, and I did not feel great on the day. But as a controlled hard effort for the Stryd power meter, it was exactly what I needed. The main positive is that the pacing was a little more stable, even if the finish lacked the extra gear I would have liked.
+
+The next step is to use this as the new reference point rather than reading too much into a five-second difference on a day when I was not especially fresh.
+
+# Coach review
+
+From a coaching standpoint, this was a very strong and well-executed 5K. The power profile shows a controlled effort with a slight positive split (353 → 334W), which is typical and acceptable, especially given the early pacing. More importantly, there was no late-race collapse, indicating good durability and that your threshold is well-aligned with your current fitness. The average power around ~340W gives us a reliable anchor for your current performance level and confirms that your Critical Power was slightly underestimated.
+
+The key takeaway is that your sustainable 5K power sits closer to ~335–340W, with optimal execution likely achieved by slightly moderating the first kilometer. This result provides a clean benchmark to recalibrate your zones and, more importantly, defines a precise target range for race execution moving forward—particularly for the run leg of a sprint triathlon, where we’ll aim to translate this into a controlled ~310–315W off the bike.
+
+<!-- summary_race_id: 2026-04-18_USWZU -->
+{{< include summary_table.html >}}

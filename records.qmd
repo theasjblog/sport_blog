@@ -3,6 +3,8 @@ title: "Records"
 description: "Best performances, podium counts, and race history summaries across formats and distances."
 page-layout: full
 title-block-banner: false
+execute:
+  freeze: false
 ---
 
 ::: {.utility-shell}
@@ -30,11 +32,26 @@ library(glue)
 con <- dbConnect(duckdb::duckdb())
   
 # Enable HTTPFS extension to access remote files
-dbExecute(con, "INSTALL httpfs; LOAD httpfs;")
+invisible(dbExecute(con, "INSTALL httpfs; LOAD httpfs;"))
+invisible(dbExecute(con, "PRAGMA disable_object_cache"))
+
+cache_bust <- as.integer(Sys.time())
+
+races_metadata_url <- paste0(
+  "https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet",
+  "?cache_bust=",
+  cache_bust
+)
+
+races_rankings_url <- paste0(
+  "https://storage.googleapis.com/blogs_josa/sport/parquets/races_rankings.parquet",
+  "?cache_bust=",
+  cache_bust
+)
   
 race_metadata <- dbGetQuery(con, 
-                            "SELECT EVENT_TYPE, EVENT_DISTANCE, RACE_ID, POINT_FLAG
-  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet')")
+                            glue("SELECT EVENT_TYPE, EVENT_DISTANCE, RACE_ID, POINT_FLAG
+  FROM read_parquet('{races_metadata_url}')"))
   
 
 
@@ -60,7 +77,7 @@ race_ids <- paste0("'", paste0(main$RACE_ID, collapse = "', '"), "'")
 
 rankings <- dbGetQuery(con, 
                             glue("SELECT RACE_ID, RESULT_FINAL, RANKING_CATEGORY, RANKING_GENDER, RANKING_OVERALL
-  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_rankings.parquet')
+  FROM read_parquet('{races_rankings_url}')
   WHERE ATHLETE IN ('ADRIAN JOSEPH') AND
     RACE_ID IN ({race_ids})"))
   

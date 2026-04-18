@@ -3,6 +3,8 @@ title: "Race Finder"
 description: "Search the race archive by date, type, distance, and report availability."
 page-layout: full
 title-block-banner: false
+execute:
+  freeze: false
 ---
 
 ::: {.utility-shell}
@@ -30,10 +32,17 @@ con <- dbConnect(duckdb::duckdb())
   
 # Enable HTTPFS extension to access remote files
 invisible(dbExecute(con, "INSTALL httpfs; LOAD httpfs;"))
+invisible(dbExecute(con, "PRAGMA disable_object_cache"))
+
+races_metadata_url <- paste0(
+  "https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet",
+  "?cache_bust=",
+  as.integer(Sys.time())
+)
   
 race_metadata <- dbGetQuery(con, 
-                            "SELECT EVENT_DATE, EVENT_NAME, EVENT_TYPE, EVENT_DISTANCE, RACE_ID
-  FROM read_parquet('https://storage.googleapis.com/blogs_josa/sport/parquets/races_metadata.parquet')")
+                            glue("SELECT EVENT_DATE, EVENT_NAME, EVENT_TYPE, EVENT_DISTANCE, RACE_ID
+  FROM read_parquet('{races_metadata_url}')"))
   
   
 
