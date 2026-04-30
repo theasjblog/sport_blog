@@ -1,6 +1,6 @@
 ---
 title: "Records"
-description: "Best performances, podium counts, and race history summaries across formats and distances."
+description: ""
 page-layout: full
 title-block-banner: false
 execute:
@@ -9,9 +9,8 @@ execute:
 
 ::: {.utility-shell}
 ::: {.utility-intro}
-## Best marks across the archive
 
-This page summarizes the strongest performances in each event type and distance, along with podium counts and best placements. It is the compact numbers-first view of the blog.
+This is my little gallery of records, the best performaces for every combination of race type and distance.
 :::
 
 ::: {.utility-panel}
@@ -50,7 +49,7 @@ races_rankings_url <- paste0(
 )
   
 race_metadata <- dbGetQuery(con, 
-                            glue("SELECT EVENT_TYPE, EVENT_DISTANCE, RACE_ID, POINT_FLAG
+                            glue("SELECT EVENT_TYPE, EVENT_DISTANCE, EVENT_NAME, RACE_ID, POINT_FLAG
   FROM read_parquet('{races_metadata_url}')"))
   
 
@@ -69,6 +68,7 @@ main <- race_metadata |>
   select(all_of(c(
     'RACE_ID',
     'EVENT_DISTANCE',
+    'EVENT_NAME',
     'EVENT_TYPE',
     'POINT_FLAG'
   )))
@@ -84,33 +84,51 @@ rankings <- dbGetQuery(con,
 results <- rankings |>
   left_join(main, by = 'RACE_ID') |>
   group_by(EVENT_TYPE, EVENT_DISTANCE) |>
-  summarize(
-    fastest_time = case_when(
-      unique(POINT_FLAG) ~ as.character(max(RESULT_FINAL, na.rm = TRUE)),
-      !unique(POINT_FLAG) ~ as.character(hms::as_hms(min(RESULT_FINAL, na.rm = TRUE))),
-      .default = NA
-    ),
-    category_podiums = sum(RANKING_CATEGORY <= 3, na.rm = TRUE),
-    best_placement_category = min(RANKING_CATEGORY, na.rm = TRUE),
-    
-    gender_podiums = sum(RANKING_GENDER <= 3, na.rm = TRUE),
-    best_placement_gender = min(RANKING_GENDER, na.rm = TRUE),
-    
-    overall_podiums = sum(RANKING_OVERALL <= 3, na.rm = TRUE),
-    best_placement_overall = min(RANKING_OVERALL, na.rm = TRUE),
-    
-    number_of_races = n()
-  ) |>
+  group_modify(\(.x, .y) {
+    valid_rows <- .x |>
+      filter(!is.na(RESULT_FINAL), RESULT_FINAL > 0)
+
+    if (nrow(valid_rows) == 0) {
+      return(tibble(
+        event_name = NA_character_,
+        fastest_time = NA_character_
+      ))
+    }
+
+    point_flag <- unique(valid_rows$POINT_FLAG)
+    best_index <- if (isTRUE(point_flag)) {
+      which.max(valid_rows$RESULT_FINAL)[1]
+    } else {
+      which.min(valid_rows$RESULT_FINAL)[1]
+    }
+
+    fastest_value <- valid_rows$RESULT_FINAL[best_index]
+    fastest_label <- if (isTRUE(point_flag)) {
+      as.character(fastest_value)
+    } else {
+      as.character(hms::as_hms(fastest_value))
+    }
+
+    fastest_race_id <- valid_rows$RACE_ID[best_index]
+    fastest_event_name <- valid_rows$EVENT_NAME[best_index]
+    fastest_link <- paste0(
+      "https://asjblog.shinyapps.io/single_race_viewer/?_inputs_&selector=%22",
+      gsub(" ", "%20", fastest_race_id),
+      "%22"
+    )
+
+    tibble(
+      event_name = paste0(
+        '<a href="', fastest_link, '" target="_blank">',
+        fastest_event_name,
+        '</a>'
+      ),
+      fastest_time = fastest_label
+    )
+  }) |>
   ungroup() |>
   arrange(EVENT_TYPE, EVENT_DISTANCE) |>
-  mutate(best_placement_category = ifelse(is.infinite(best_placement_category), NA, best_placement_category),
-         category_podiums = ifelse(category_podiums == 0, NA, category_podiums),
-         
-         best_placement_gender = ifelse(is.infinite(best_placement_gender), NA, best_placement_gender),
-         gender_podiums = ifelse(gender_podiums == 0, NA, gender_podiums),
-         
-         best_placement_overall = ifelse(is.infinite(best_placement_overall), NA, best_placement_overall),
-         overall_podiums = ifelse(overall_podiums == 0, NA, overall_podiums))
+  select(EVENT_TYPE, EVENT_DISTANCE, event_name, fastest_time)
 
 
 colnames(results) <- stringr::str_to_title(gsub("_", " ", colnames(results)))
