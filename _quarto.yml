@@ -51,4 +51,6 @@ format:
     theme: cosmo
     css: styles.css
     include-in-header: head-icons.html
-    include-after-body: gallery-lightbox.html
+    include-after-body:
+      - gallery-lightbox.html
+      - listing-reading-time.html
