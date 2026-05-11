@@ -532,6 +532,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const listingItems = document.querySelectorAll(".quarto-listing .g-col-1");
+
+  listingItems.forEach((item) => {
+    const minutes = item.dataset.listingReadingTimeSort;
+    if (!minutes) return;
+
+    const attribution = item.querySelector(".card-attribution");
+    if (!attribution || attribution.querySelector(".listing-reading-time")) return;
+
+    const readingTime = document.createElement("div");
+    readingTime.className = "listing-reading-time";
+    readingTime.textContent = `${minutes} min read`;
+    attribution.appendChild(readingTime);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -955,7 +973,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="theasjblog/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"right","closeEffect":"fade","selector":".lightbox","loop":false,"openEffect":"fade"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","selector":".lightbox","loop":false,"openEffect":"fade","descPosition":"right"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

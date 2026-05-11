@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.45">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Adrian Joseph">
+<meta name="dcterms.date" content="2026-05-11">
+<meta name="description" content="How I stitched together Notion, Intervals.icu, and AI into a more personalized triathlon planning system without paying for full-time coaching.">
+
+<title>Building Myself a Practical AI Training Assistant – ASJ TRI</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../..//img/logo.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-53CD66TT4Z"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-53CD66TT4Z', { 'anonymize_ip': true});
+</script>
+<link rel="apple-touch-icon" href="../../../img/logo.png">
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">ASJ TRI</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../posts/race_reports.html"> 
+<span class="menu-text">Race Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../posts/others.html"> 
+<span class="menu-text">Beyond Racing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../race_finder.html"> 
+<span class="menu-text">Race Finder</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../records.html"> 
+<span class="menu-text">Records</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/asj_tri?igsh=OTZ5Z2gxNGliYW1l&amp;utm_source=qr" target="_blank"> <i class="bi bi-instagram" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.strava.com/athletes/7974168" target="_blank"> <i class="bi bi-strava" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://connect.garmin.com/modern/profile/adrianstevejoseph" target="_blank"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="cib:garmin" aria-label="Icon garmin from cib Iconify.design set." title="Icon garmin from cib Iconify.design set."></iconify-icon></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Building Myself a Practical AI Training Assistant</h1>
+            <p class="subtitle lead">How I stitched together Notion, Intervals.icu, and AI to get more personalized triathlon planning without hiring a full-time coach</p>
+                  <div>
+        <div class="description">
+          How I stitched together Notion, Intervals.icu, and AI into a more personalized triathlon planning system without paying for full-time coaching.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">notes</div>
+                <div class="quarto-category">planning</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Adrian Joseph </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 11, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="why-i-ended-up-building-an-ai-training-assistant" class="level2">
+<h2 class="anchored" data-anchor-id="why-i-ended-up-building-an-ai-training-assistant">Why I Ended Up Building an AI Training Assistant</h2>
+<p>I did not need another generic training plan. I needed a plan that understood that I was trying to qualify again for high-level age-group racing while also having a job, a family.</p>
+<p>I am a serious amateur triathlete. I have represented Canada at the Triathlon Age Group World Championship, and I am trying to qualify again for similar events. That usually means one thing: ideally, I should have a coach.</p>
+<p>That is the ideal version of reality.</p>
+<p>The real version is that triathlon is expensive, <a href="https://theasjblog.github.io/art_portfolio/" target="_blank" rel="noopener">photography</a> is also expensive, and a growing family tends to have strong opinions about what counts as a reasonable monthly bill. A recurring coaching fee starts to look less like a performance investment and more like something I would need to explain carefully over dinner.</p>
+<p>That is what pushed me toward building my own training-support system.</p>
+<p>It was never about proving that software is better than a coach. It is not. It was about building something that could help me train more intelligently inside the constraints of actual life.</p>
+</section>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>What I wanted was not just a plan. I wanted a way to:</p>
+<ul>
+<li>track how training was really going</li>
+<li>get a personalized next-week plan</li>
+<li>adapt that plan to my real availability</li>
+<li>stop re-explaining the same constraints to my virtual coach over and over</li>
+</ul>
+<p>In other words, I wanted something that could react to the moving parts of my actual training life instead of handing me the same answer every time.</p>
+<p>That matters more than it sounds. There is a special kind of frustration in looking at a beautifully structured training week that is completely detached from the week you are actually about to live.</p>
+<p>I did not want training to become one more source of background stress. I wanted it to feel sustainable, especially if I was going to keep chasing big goals.</p>
+</section>
+<section id="the-path-that-led-here" class="level2">
+<h2 class="anchored" data-anchor-id="the-path-that-led-here">The Path That Led Here</h2>
+<p>Like a lot of athletes, I started with downloaded plans from the internet. That is a normal first step. They are simple, cheap, and often good enough to make you better.</p>
+<p>And to be fair, they do work for a while. But the better you get, the more you notice the gap between a plan that looks good on paper and a plan that fits your life, your fatigue, and your actual goals.</p>
+<p>Then I moved to Humango. It worked well enough for a while. In fact, it was great: I qualified for Team Canada in the year I used it. But over time I ran into problems. I wanted something that fit more naturally with my own workflow and had better access to the information I cared about. And after later product changes, some of the features I relied on most, especially around coach interaction and availability-based adjustments, stopped working the way I needed.</p>
+<p>So I tried going straight to ChatGPT.</p>
+<p>That was fun at first. I was getting nice personalized plans, decent advice, and I could test ideas in real time. Then the honeymoon phase ended. The longer the conversation became, the slower it got. It sometimes confused days. It could forget updated training zones. And I found myself starting too many chats with some version of:</p>
+<p>“Today is Thursday, these are my current zones, and no, I cannot do a long ride in the middle of a workday.”</p>
+<p>That was the moment I realized the problem was not just “I need AI.” The problem was “I need AI inside a structure I can trust.”</p>
+</section>
+<section id="the-idea-behind-the-new-system" class="level2">
+<h2 class="anchored" data-anchor-id="the-idea-behind-the-new-system">The Idea Behind the New System</h2>
+<p>The main change was simple: stop asking the model to remember everything, and give it a cleaner job.</p>
+<p>Instead of relying on one long conversation, I moved the changing parts of my training life into structured places:</p>
+<ul>
+<li>availability</li>
+<li>races</li>
+<li>athlete profile</li>
+<li>weekly review</li>
+<li>settings such as zones and thresholds</li>
+</ul>
+<p>And I moved the stable rules into the system itself:</p>
+<ul>
+<li>do not prescribe sports that I cannot do that day</li>
+<li>do not exceed the maximum number of sessions I can do</li>
+<li>keep weekday sessions inside reasonable limits</li>
+<li>respect the broader training context: build phase and taper phase require very different sessions</li>
+</ul>
+<p>That way, the AI is not improvising from memory. It is working from organized information and fixed rules.</p>
+<p>That was the real shift. I stopped treating the AI like an all-knowing coach and started treating it like one part of a system.</p>
+</section>
+<section id="the-tools-i-use" class="level2">
+<h2 class="anchored" data-anchor-id="the-tools-i-use">The Tools I Use</h2>
+<p>The setup that works for me today is built around three main pieces:</p>
+<ul>
+<li><code>Intervals.icu</code> for training data and activity history</li>
+<li><code>Notion</code> for organizing availability, races, athlete profile, reviews, and planning context</li>
+<li><code>Codex + ChatGPT/OpenAI</code> for turning that context into a weekly review and a next-week draft plan</li>
+</ul>
+<p>None of these tools is doing everything.</p>
+<p>Intervals.icu is where training data lives naturally. Notion gives me a place to keep the moving parts organized. The AI is used for interpretation and drafting, not for pretending it is the entire system.</p>
+<p>That division matters more than it sounds.</p>
+<p>If you want the more detailed technical version of how this works, I wrote it <a href="https://theasjblog.github.io/analytics_blog/posts/2026-05-10_coach_ai/" target="_blank" rel="noopener">here</a>.</p>
+</section>
+<section id="what-the-weekly-workflow-looks-like" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-weekly-workflow-looks-like">What the Weekly Workflow Looks Like</h2>
+<p>At a high level, the process looks like this:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A["Workouts and activity data"] --&gt; D["Organized weekly workflow"]
+    B["Availability, races,&lt;br/&gt;profile, and notes"] --&gt; D
+    D --&gt; E["Weekly review"]
+    E --&gt; F["Draft next-week plan"]
+    F --&gt; G["Rule checks"]
+    G --&gt;|valid| H["Final plan"]
+    G --&gt;|invalid part only| I["Repair that part"]
+    I --&gt; F
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The important part is not the diagram. The important part is the behavior.</p>
+<p>The system reviews what happened, drafts what comes next, and checks the draft against reality. If one part is wrong, it fixes it.</p>
+<p>The biggest payoff was not that everything suddenly became perfect. It was that the plan stopped feeling detached from my real life. It started feeling more like support and less like one more thing I had to manage manually.</p>
+</section>
+<section id="why-that-feels-better-than-plain-chat" class="level2">
+<h2 class="anchored" data-anchor-id="why-that-feels-better-than-plain-chat">Why That Feels Better Than Plain Chat</h2>
+<p>This is the biggest difference in day-to-day use: the system feels calmer.</p>
+<p>I am no longer hoping the AI remembers what I told it three weeks ago. My zones live in one place. My availability lives in one place. My races live in one place. The weekly plan is built from that context instead of from whatever the conversation happened to remember.</p>
+<p>That does not make it magical. It makes it more repeatable.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/notion.png" class="img-fluid figure-img"></p>
+<figcaption>Notion weekly availability table.</figcaption>
+</figure>
+</div>
+</section>
+<section id="one-simple-example" class="level2">
+<h2 class="anchored" data-anchor-id="one-simple-example">One Simple Example</h2>
+<p>Suppose Tuesday is marked as run-only, with one session maximum, and I only have an hour available.</p>
+<p>If the AI proposes something silly there, like a 2h ride, the system does not just shrug and call it creativity. It catches the mismatch and asks for that specific session to be repaired, all automatically, without me having to intervene at all.</p>
+<p>That is exactly the kind of behavior I wanted.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Example: draft session repair</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Wrong prescription</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"day"</span><span class="fu">:</span> <span class="st">"Tuesday"</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"sport"</span><span class="fu">:</span> <span class="st">"bike"</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"duration"</span><span class="fu">:</span> <span class="st">"2h"</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"notes"</span><span class="fu">:</span> <span class="st">"Endurance ride"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><strong>Corrected version</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"day"</span><span class="fu">:</span> <span class="st">"Tuesday"</span><span class="fu">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"sport"</span><span class="fu">:</span> <span class="st">"run"</span><span class="fu">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"duration"</span><span class="fu">:</span> <span class="st">"45min"</span><span class="fu">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"notes"</span><span class="fu">:</span> <span class="st">"Easy aerobic run"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>Tuesday is marked as run-only, with a maximum of one session and roughly one hour available, so the repair step replaces the invalid bike workout with a compliant run session.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="why-i-like-it" class="level2">
+<h2 class="anchored" data-anchor-id="why-i-like-it">Why I Like It</h2>
+<p>This setup will not be for everyone, but for me it has a few clear advantages.</p>
+<ul>
+<li>it is more personalized than a static plan</li>
+<li>it adapts better to real life than a generic template</li>
+<li>it is more repeatable than re-running the same conversation forever</li>
+<li>it is relatively cost-effective</li>
+<li>it lets me keep using tools I already trust</li>
+</ul>
+<p>It also gives me a much better feeling of control. Not total control, because that would be a lie. But enough control that I can trust the workflow.</p>
+<p>And for me, that trust is the whole point. A plan only helps if I can actually live with it for months, not just admire it for five minutes.</p>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
+<p>So far, I really like this system.</p>
+<p>It gives me a middle ground between generic plans and full human coaching. It helps me keep context organized, adapt training to actual life, and get personalized plans without starting from scratch every week.</p>
+<p>That said, I would still tell any athlete the same thing: if you can work with a good human coach, do that.</p>
+<p>A coach is still better. A coach brings judgment, motivation, experience, and accountability in a way software does not. And if you are a less experienced athlete, it is much easier to miss bad suggestions when they come from a system that sounds confident.</p>
+<p>For me, though, this has been a very useful compromise. It is practical, a bit nerdy, and surprisingly effective.</p>
+</section>
+<section id="how-it-compares" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-compares">How It Compares</h2>
+<p>If I had to summarize the landscape, I would put it like this: pre-made plans are the easiest place to start, Humango sits in the middle as a more adaptive commercial product, plain ChatGPT is flexible but fragile, and this system is the most work upfront but gives me the best balance of structure and adaptability.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comparison item</th>
+<th>Pre-made plans</th>
+<th>Humango</th>
+<th>ChatGPT alone</th>
+<th>This system</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cost</td>
+<td>Low</td>
+<td>Medium to high</td>
+<td>Low to medium</td>
+<td>Low to medium</td>
+</tr>
+<tr class="even">
+<td>Ease of setup</td>
+<td>Very easy</td>
+<td>Easy</td>
+<td>Very easy</td>
+<td>Hardest</td>
+</tr>
+<tr class="odd">
+<td>Adaptability</td>
+<td>Low</td>
+<td>Medium to high</td>
+<td>High in theory</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<td>Ease of daily use</td>
+<td>Easy</td>
+<td>Easy</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr class="odd">
+<td>Context reliability</td>
+<td>High, but static</td>
+<td>Medium</td>
+<td>Low</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<td>Main advantage</td>
+<td>Simple, cheap, predictable</td>
+<td>Adaptive and more structured</td>
+<td>Flexible and conversational</td>
+<td>Flexible, structured, and grounded in real context</td>
+</tr>
+<tr class="odd">
+<td>Main disadvantage</td>
+<td>Too generic</td>
+<td>Product limits and subscription cost</td>
+<td>Memory drift and inconsistent outputs</td>
+<td>More effort to build and maintain</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-it-costs" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-costs">What It Costs</h2>
+<p>Another reason I like this setup is that it is pretty affordable to run. <code>Intervals.icu</code> is free, though I strongly recommend supporting the project. In my case that works out to less than 50 CAD per year after taxes. <code>Notion</code> is on the free plan. For the OpenAI side, I do not need a ChatGPT subscription at all because I am using the API directly, and the weekly cost has usually been around 5 cents or less.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>What I use</th>
+<th>Approximate cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Intervals.icu</td>
+<td>Supporter tier</td>
+<td>&lt; 50 CAD/year</td>
+</tr>
+<tr class="even">
+<td>Notion</td>
+<td>Free plan</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>OpenAI API</td>
+<td>Weekly review + plan generation</td>
+<td>about 0.05 CAD/week or less</td>
+</tr>
+<tr class="even">
+<td>ChatGPT subscription</td>
+<td>Not required</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>That affordability matters because it keeps the system in the category of “useful tool” rather than “another recurring expense I need to justify.” That was one of the original goals, and so far it has held up well.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<dialog id="gallery-lightbox" class="gallery-lightbox">
+  <div class="gallery-lightbox__stage">
+    <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--previous" aria-label="Show previous image">
+      ‹
+    </button>
+    <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--next" aria-label="Show next image">
+      ›
+    </button>
+    <button type="button" class="gallery-lightbox__close" aria-label="Close image viewer">
+      ×
+    </button>
+    <img class="gallery-lightbox__image" alt="">
+  </div>
+</dialog>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dialog = document.getElementById("gallery-lightbox");
+  if (!dialog) return;
+
+  const image = dialog.querySelector(".gallery-lightbox__image");
+  const closeButton = dialog.querySelector(".gallery-lightbox__close");
+  const previousButton = dialog.querySelector(".gallery-lightbox__nav--previous");
+  const nextButton = dialog.querySelector(".gallery-lightbox__nav--next");
+
+  const isImageUrl = (value) => {
+    if (!value) return false;
+
+    try {
+      const url = new URL(value, window.location.href);
+      return /\.(avif|gif|jpe?g|png|svg|webp)$/i.test(url.pathname);
+    } catch {
+      return false;
+    }
+  };
+
+  let currentGalleryItems = [];
+  let currentIndex = -1;
+
+  const closeDialog = () => {
+    dialog.close();
+    currentGalleryItems = [];
+    currentIndex = -1;
+    image.removeAttribute("src");
+    image.alt = "";
+  };
+
+  const updateNavState = () => {
+    const hasMultipleImages = currentGalleryItems.length > 1;
+    previousButton.hidden = !hasMultipleImages;
+    nextButton.hidden = !hasMultipleImages;
+  };
+
+  const resolveFullImageSrc = (src) => {
+    if (!src) return "";
+    return src.includes("/img/thumbnail/")
+      ? src.replace("/img/thumbnail/", "/img/full/")
+      : src;
+  };
+
+  const galleryContainers = Array.from(
+    document.querySelectorAll(".gallery, .quarto-layout-panel[data-layout-ncol]")
+  ).filter((container) => {
+    if (container.classList.contains("gallery")) return true;
+
+    const groupedImages = container.querySelectorAll("img[data-group]");
+    if (groupedImages.length > 1) return true;
+
+    const standaloneImages = container.querySelectorAll("img");
+    if (standaloneImages.length > 1) return true;
+
+    const imageLinks = Array.from(container.querySelectorAll("a")).filter((link) => {
+      const thumbnail = link.querySelector("img");
+      return Boolean(thumbnail) && isImageUrl(link.getAttribute("href"));
+    });
+
+    return imageLinks.length > 1;
+  });
+
+  const standaloneLightboxItems = Array.from(document.querySelectorAll("a.lightbox"))
+    .filter((link) => !link.closest(".gallery, .quarto-layout-panel[data-layout-ncol]"))
+    .map((link) => {
+      const thumbnail = link.querySelector("img");
+      const source =
+        link.getAttribute("href") ||
+        thumbnail?.currentSrc ||
+        thumbnail?.getAttribute("src") ||
+        "";
+
+      return {
+        trigger: link,
+        fullSrc: resolveFullImageSrc(source),
+        alt:
+          thumbnail?.getAttribute("alt") ||
+          link.getAttribute("title") ||
+          "",
+      };
+    })
+    .filter((item) => item.fullSrc);
+
+  if (galleryContainers.length === 0 && standaloneLightboxItems.length === 0) return;
+
+  const buildGalleryItems = (gallery) => {
+    const items = [];
+
+    gallery.querySelectorAll("a, img").forEach((element) => {
+      if (element.tagName === "A") {
+        const thumbnail = element.querySelector("img");
+        const fullSrc =
+          element.getAttribute("href") || resolveFullImageSrc(thumbnail?.currentSrc || thumbnail?.getAttribute("src"));
+
+        if (!thumbnail || !fullSrc) return;
+
+        items.push({
+          trigger: element,
+          fullSrc,
+          alt: thumbnail.getAttribute("alt") || "",
+        });
+        return;
+      }
+
+      if (element.closest("a")) return;
+
+      const src = element.currentSrc || element.getAttribute("src");
+      const fullSrc = resolveFullImageSrc(src);
+      if (!fullSrc) return;
+
+      items.push({
+        trigger: element,
+        fullSrc,
+        alt: element.getAttribute("alt") || "",
+      });
+    });
+
+    return items;
+  };
+
+  const openDialog = (items, nextIndex) => {
+    const selectedItem = items[nextIndex];
+    if (!selectedItem) return;
+
+    currentGalleryItems = items;
+    currentIndex = nextIndex;
+    updateNavState();
+
+    image.src = selectedItem.fullSrc;
+    image.alt = selectedItem.alt;
+
+    if (!dialog.open) {
+      dialog.showModal();
+    }
+  };
+
+  const showRelativeImage = (offset) => {
+    if (currentIndex === -1 || currentGalleryItems.length < 2) return;
+
+    const nextIndex =
+      (currentIndex + offset + currentGalleryItems.length) % currentGalleryItems.length;
+    openDialog(currentGalleryItems, nextIndex);
+  };
+
+  updateNavState();
+
+  galleryContainers.forEach((gallery) => {
+    const items = buildGalleryItems(gallery);
+    if (items.length === 0) return;
+
+    items.forEach((item, index) => {
+      item.trigger.addEventListener("click", (event) => {
+        if (
+          event.defaultPrevented ||
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey
+        ) {
+          return;
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        openDialog(items, index);
+      }, { capture: true });
+    });
+  });
+
+  standaloneLightboxItems.forEach((item, index) => {
+    item.trigger.addEventListener("click", (event) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      openDialog(standaloneLightboxItems, index);
+    }, { capture: true });
+  });
+
+  closeButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    closeDialog();
+  });
+
+  previousButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    showRelativeImage(-1);
+  });
+
+  nextButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    showRelativeImage(1);
+  });
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      closeDialog();
+    }
+  });
+
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showRelativeImage(-1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showRelativeImage(1);
+    }
+  });
+
+  dialog.addEventListener("close", () => {
+    image.removeAttribute("src");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const listingItems = document.querySelectorAll(".quarto-listing .g-col-1");
+
+  listingItems.forEach((item) => {
+    const minutes = item.dataset.listingReadingTimeSort;
+    if (!minutes) return;
+
+    const attribution = item.querySelector(".card-attribution");
+    if (!attribution || attribution.querySelector(".listing-reading-time")) return;
+
+    const readingTime = document.createElement("div");
+    readingTime.className = "listing-reading-time";
+    readingTime.textContent = `${minutes} min read`;
+    attribution.appendChild(readingTime);
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/theasjblog\.github\.io\/sport_blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="theasjblog/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
