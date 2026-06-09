@@ -1,0 +1,465 @@
+---
+title: "My AI Coach Got a Lot More Useful"
+subtitle: >-
+  The new version is less like a clever chatbot and more like a real training
+  tool I can actually use week after week
+author: "Adrian Joseph"
+date: "2026-06-01"
+description: "The updated version of my AI training assistant now has a real interface, better planning logic, and a workflow that fits actual training life much better."
+categories: [notes, planning]
+format:
+  html:
+    title-block-banner: true
+---
+
+## A Quick Update
+
+A few weeks ago I wrote about the first version of the AI training assistant I
+built for myself.
+
+That version already did something useful: it could take my training context,
+review the previous week, and suggest a new one. For a self-coached athlete,
+that is not nothing.
+
+But it still felt a bit like a project.
+
+It worked, but it worked in the way that many early personal tools work: you
+could see the idea, you could see the potential, and you could also see all
+the parts where you were still helping it along.
+
+The newer version is better in a much more important way.
+
+It is not just smarter. It is easier to use.
+
+And if a tool is meant to help you train consistently for months, that matters
+at least as much as how impressive the underlying technology sounds.
+
+`TODO: insert cover image or screenshot of the new app home screen`
+
+## The Biggest Change: It Became an Actual App
+
+The first version depended on a workflow that still felt too scattered.
+
+Some information lived in Notion. Some came from Intervals.icu. Some came from
+my local setup. Some of the interaction still felt like I was operating a
+system rather than being coached by one.
+
+Now there is a proper interface.
+
+That means I can open the app and move through the workflow in a cleaner way:
+
+- set up or review a season
+- check my zones
+- generate a week
+- edit the plan
+- review what actually happened
+- ask for feedback
+
+This sounds obvious, but it changes the feeling of the whole thing.
+
+Before, the assistant could produce decent answers.
+Now, it feels much more like a tool that belongs in a real training routine.
+
+`TODO: insert screenshot of the app UI showing the main tabs or dashboard`
+
+## Season Planning Is Better Thought Through
+
+One of the biggest improvements is at the season level.
+
+The earlier version could generate a season, but it still jumped a bit too
+quickly from race calendar to weekly planning. That is not really how good
+coaching works.
+
+What is better now is the middle layer.
+
+Instead of only thinking in terms of:
+
+- season
+- week
+- workout
+
+the new version gives more attention to the blocks in between.
+
+That is important because a good training week should serve a block objective,
+not just exist because a calendar says it is Monday.
+
+So now the planning is clearer around questions like:
+
+- what is this block trying to improve?
+- what is the limiter right now?
+- which sport or quality gets the most attention?
+- what would count as success for this block?
+
+This makes the plans feel less generic.
+It also makes them easier to judge.
+
+If a block is supposed to improve run threshold, then the week should make
+that obvious. If it does not, something is wrong.
+
+`TODO: insert simple diagram or table showing Season -> Block -> Week -> Workout`
+
+## The Planning Flow Now Feels More Human
+
+Another change I really like is that season planning is now done in a more
+disciplined sequence.
+
+The system first gathers what it can already know:
+
+- race calendar
+- recent fitness
+- zones and thresholds
+- recent training load
+- standard race distances
+
+Then, before it generates the season, it checks whether it already has enough
+to make a good plan.
+
+If something still needs clarification, it asks first.
+Only after that does it generate the actual season plan.
+
+That part matters because it is much closer to how a real coach would work.
+A good coach does not pretend to know everything immediately. They start with
+the facts, then ask the right follow-up questions.
+
+In the old world, a lot of AI tools either guess too much or ask for too much.
+This version feels more balanced.
+
+It tries to do the work first.
+Then it asks for input only where input is actually useful.
+
+And once the season is on screen, I do not have to regenerate the whole thing
+just to make a few sensible coaching edits. I can now change things like taper
+days, recovery days, and block-level targets directly in the preview, and the
+load and fitness chart updates immediately. That part is handled by software
+rules rather than another AI call, which makes the whole process feel more
+stable.
+
+`TODO: insert screenshot of the season-planning preview and clarification step`
+
+## Weekly Planning Feels More Grounded
+
+This is where I probably notice the difference most.
+
+The weekly plan used to be personalized, but sometimes in a slightly
+superficial way. It knew some things about me, but it did not always feel
+tied tightly enough to the broader training goal.
+
+Now it is better at keeping the week connected to the bigger picture.
+
+If I am in a block where the run is the main limiter, the week is more likely
+to reflect that.
+If I am close to a race, the week changes accordingly.
+If the block should emphasize maintenance in one discipline and progress in
+another, that is more visible.
+
+That sounds like a small improvement, but it is actually a major one.
+
+Many triathletes train all three sports in a roughly equal way all year long
+because it feels balanced.
+But balanced is not always what helps most.
+
+Sometimes what helps most is a slightly unfair week.
+
+More attention to the weak point.
+Enough work elsewhere to hold fitness.
+Then move on.
+
+That is the sort of logic the new version handles better.
+
+Part of the reason is that the weekly planner is no longer trying to write the
+entire week from scratch in one shot.
+
+The newer version first decides what each session is supposed to be:
+
+- run threshold
+- endurance ride
+- swim drill session
+- short bike-run brick
+
+Then it matches that intent to a structured workout template and adapts it to
+the available time and current training context.
+
+If one session still comes out wrong, the tool does not need to throw away the
+whole week anymore. It now tries to repair just the bad part:
+
+- first by fixing obvious mechanical issues in code
+- then by remaking that session from another suitable template
+- and only then by asking the AI to rewrite that specific session or day
+
+That sounds more technical, but from the athlete side the effect is simple:
+the workouts are less random. They are more likely to fit the actual purpose
+of the week and less likely to contain fuzzy instructions that sound plausible
+but are not precise enough to train from.
+
+That also helps with swim technique work. A session can now keep a normal goal
+like endurance or threshold while still including a bit of drill work, instead
+of turning every technique-focused swim into a drill-only session.
+
+Another useful change is that more of the coach-authored workout library is now
+available in executable form. The current `Your Best Triathlon` workout subset
+has been converted into structured templates across swim, bike, run, and brick
+work, instead of being left as text that only influences prompting indirectly.
+
+It is also stricter about what counts as "close enough." If the software picks
+an actual workout template, the saved session should describe that same workout
+family rather than keeping an older label that says something else. And for
+pool swimming, a vague continuous line like "Main 50:00" is no longer treated
+as a good enough session on its own. The plan is expected to preserve a real
+swim shape: warmup, main work, cooldown, and drills where they make sense.
+The same goes for wording. If the planner chooses one option, the final row
+should not still carry leftovers from a discarded alternative.
+
+`TODO: insert screenshot of a generated weekly plan highlighting block focus or sport emphasis`
+
+## It Is Also Better at Dealing With Real Life
+
+This may be the most valuable part of all.
+
+A training plan is only useful if it survives contact with work, family,
+fatigue, logistics, and all the normal disruptions that make up actual life.
+
+The new version is simply stronger here.
+
+It does a better job of working from real constraints instead of treating them
+as optional background detail.
+
+That means:
+
+- availability is clearer
+- race timing is clearer
+- saved zones and thresholds are easier to reuse
+- weekly review is part of the same system instead of a disconnected step
+
+One small but important upgrade is that availability is now entered one slot
+at a time instead of one generic row per day. So if I only have 30 minutes to
+run before work but can still fit in a 60-minute swim later, the tool can now
+treat those as different opportunities instead of flattening them into one
+daily limit.
+
+And if I leave a clear note like "Bike should be at least 1h45min," that can
+now be treated as a real planning constraint instead of a vague comment the
+model might overlook.
+
+So the plan feels less like a theoretical best-case week and more like
+something I might actually do.
+
+That is a bigger win than making the language more elegant.
+
+`TODO: insert screenshot of weekly availability constraints feeding into planning`
+
+## Feedback Is More Useful Too
+
+The review side has improved as well.
+
+Instead of only generating plans, the tool now does a better job of looking at
+what actually happened and using that to shape what comes next.
+
+It can review a whole week, but it can also look at one workout in more
+detail when needed.
+
+I like that split.
+
+Not every session needs deep commentary.
+But sometimes one session really does deserve a closer look, especially when
+it did not go to plan or when it says something important about fatigue,
+pacing, or execution.
+
+That makes the tool feel more coach-like.
+Not because it is pretending to be human, but because it is focusing more on
+where interpretation is actually useful.
+
+The other big improvement is that the review is less vague now.
+
+Before, it could look at the numbers and jump too quickly to the idea that a
+session had not matched the prescription, even when the structure was mostly
+right and the real story was simply that I rode or swam a bit harder than
+target.
+
+Now it separates those ideas better.
+
+It first checks whether the session matched the intended shape:
+
+- was the warmup there?
+- was the main set there?
+- were the reps done?
+- was the cooldown there?
+
+Then it asks how the work itself was executed.
+
+So a session can now be recognized as structurally correct while still getting
+the comment that the key intervals were a bit too hard. That is a much more
+useful coaching distinction than just saying the workout "did not match."
+
+It also shows more of that logic back to the user through a simple session
+match view, instead of hiding it all behind the scenes. So you can now see, in
+a much clearer way, what the tool thinks matched, what did not, and why.
+
+`TODO: insert screenshot of weekly review or single-workout feedback view`
+
+## It Makes Fewer Obvious Planning Mistakes
+
+Another practical improvement is that the system now catches and fixes more of
+the silly mechanical issues on its own.
+
+Some mistakes are not really “coaching” mistakes. They are things like:
+
+- a session duration not matching the intervals inside it
+- a swim that is too ambitious for the time available
+- a brick that ends up slightly too long for the day
+
+The newer version now handles more of those cases automatically before asking
+the AI to repair the plan.
+
+It is also stricter about what a finished session is allowed to look like.
+
+Every workout now has to stay inside the day’s available time.
+The sport has to match what the day is supposed to be.
+The total planned duration has to match the sum of the intervals.
+And every interval is expected to carry a clear numeric target range, except
+for swim drills and explicit rest blocks.
+
+That is the kind of detail that matters a lot in real training. “Easy” might
+sound fine in conversation, but if a plan is going to be stored, reviewed,
+scored, and compared against execution later, the structure has to be much
+more exact than that.
+
+It is also better at preserving sport balance when that matters. If a week is
+for a triathlete and the available slots actually allow swimming, biking, and
+running, the planner is now much less likely to quietly forget one of those
+sports. That sounds basic, but it is exactly the kind of thing that makes a
+training tool feel either trustworthy or careless.
+
+That matters because it reduces pointless churn. If most of the week is fine,
+the tool no longer needs to reopen the whole problem just because one duration
+did not add up cleanly.
+
+It is a small change from the outside, but it makes the planning process feel
+more solid and less fussy.
+
+## Under the Hood, It Is More Stable
+
+I will keep this part brief because I have written the more technical version
+elsewhere, but one reason the assistant feels better now is that it has a more
+stable foundation.
+
+There is now:
+
+- a proper app interface
+- persistent storage
+- better tracking of what was planned and what was saved
+- more structured use of outside training knowledge
+- clearer logging of what the system is doing
+- more deterministic checks before the AI is asked to repair anything
+- clearer telemetry on when the deterministic planner succeeds and when it
+  still has to fall back
+
+From an athlete point of view, the result is simple:
+
+I trust it more.
+
+Not blindly.
+Just more.
+
+And trust is everything with a training tool.
+If you are always wondering whether it forgot something important, you will
+stop using it no matter how clever it sounds.
+
+The weekly review flow is also cleaner now. A saved future week can still be
+opened and reviewed as a plan even if no actual workouts exist for it yet.
+
+And one more quiet improvement: the lightweight token-monitoring view no longer
+lives inside the coaching app itself. That information now sits in the separate
+monitoring dashboard, which is a better place for it. The logs behind that
+dashboard are also more useful now because they record not just token totals,
+but whether a weekly plan was built through deterministic template
+materialization, whether it needed targeted deterministic repair, and whether
+it eventually needed an AI repair call at all.
+
+`TODO: insert simple diagram showing app + Intervals.icu + storage + AI coach flow`
+
+## It Still Does Not Replace a Good Coach
+
+That has not changed.
+
+If you can work with a genuinely good human coach, that is still the better
+option.
+
+A real coach gives you judgment, accountability, context, and emotional
+intelligence in a way software does not.
+
+But the gap between “generic downloaded plan” and “full human coaching” is a
+big one.
+
+That gap is exactly where this kind of tool becomes interesting.
+
+For me, the updated version feels much more like a practical middle ground:
+
+- more adaptive than a static plan
+- more affordable than full-time coaching
+- more organized than random AI conversations
+- more usable than the first version I built
+
+That last point matters.
+It is not enough for a tool to be promising.
+It has to be usable.
+
+`TODO: insert comparison table: static plan vs chatbot vs human coach vs this tool`
+
+## Where I Think This Is Going
+
+The main lesson for me so far is that the value is not just in “adding AI.”
+
+The value comes from putting the AI inside a system with better structure.
+
+That means:
+
+- cleaner inputs
+- clearer planning logic
+- better state management
+- a smoother workflow
+
+Once those pieces are in place, the model becomes more helpful because it has
+a better job to do.
+
+That may be the biggest design lesson in the whole project.
+
+The useful question is not “How do I get the AI to write better workouts?”
+The better question is “What part should the AI decide, and what part should
+the software guarantee?”
+
+Right now the answer looks a lot healthier:
+
+- the AI helps decide the intent of the session
+- the software makes sure the structure is coherent
+- the review system tracks what happened and what it cost
+
+That is probably the most encouraging part of the whole project.
+
+The better this gets, the less it feels like I am asking a chatbot to guess
+what kind of coach I need.
+And the more it feels like I am using a training tool that understands what I
+am trying to do.
+
+## Final Thoughts
+
+The first version proved that the idea was useful.
+
+This newer version proves something more important: it can become part of a
+real training process.
+
+That does not make it finished.
+It is still evolving, and I still think there is a lot of room to improve it.
+
+But it has crossed an important line for me.
+
+It no longer feels like a fun experiment I run because I enjoy building
+things.
+
+It feels like something that genuinely helps me train better.
+
+And for a self-coached athlete trying to chase ambitious goals inside a normal
+life, that is a pretty good place to be.
+
+If you want the more technical version of what changed under the hood, I wrote
+that up in much more detail
+[here](https://theasjblog.github.io/analytics_blog/posts/2026-06-01-coach_ai_part_2/){target="_blank" rel="noopener"}.

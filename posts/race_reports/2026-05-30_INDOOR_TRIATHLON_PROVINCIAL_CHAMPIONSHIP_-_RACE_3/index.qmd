@@ -1,0 +1,441 @@
+---
+title: "Indoor Triathlon Provincial Championship Series - Race 3 and series recap"
+date: "2026-05-30"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/00.jpg
+description: "Recap of the 2026 Indoor Triathlon Championship."
+categories: [race_reports, triathlon, indoor]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2025-02-22_INDOOR_TRIATHLON_SERIES_RACE_1/img/thumbnail/00.jpg)
+
+# Overview
+
+This was the third race in the Ontario Indoor Triathlon Championship series, but only the second one for me.
+
+If you are not familiar with the format, the short version is simple: 15 minutes of swimming, 15 minutes of biking, and 15 minutes of running. It is short, intense, and leaves very little room to hide.
+
+Coming into this race, I was mostly focused on the run. On the bike, I felt I was already close to the best I can currently do, so anything close to the previous race would have been acceptable. I was even willing to give up a little on the bike if that translated into a stronger run.
+
+## Swim
+
+I was in the same wave as the series leader in my age group. I knew I had no chance of staying with him in the water, so I picked a lane far enough away that I would not spend the whole swim watching him pull away, while also staying clear of the poolside wall.
+
+The guy in the next lane, I think, was in an older age group. I started slightly faster than him, but he pulled away pretty quickly and ended up swimming around 50m more than I did.
+
+And of course, it would not be an indoor triathlon without at least one self-inflicted technical mistake. I forgot to set the pool length to 50m. All results below are therefore converted from the watch data by doubling the recorded lengths.
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+format_pace_label <- function(value) {
+  minutes <- floor(value)
+  seconds <- round((value - minutes) * 60)
+  rollover <- seconds == 60
+  minutes[rollover] <- minutes[rollover] + 1
+  seconds[rollover] <- 0
+
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+activity_meta <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+swim_id <- activity_meta |>
+  filter(EVENT_TYPE == "SWIM", EVENT_DATE == "2026-05-30") |>
+  pull(ID)
+
+swim_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(ID %in% swim_id) |>
+  mutate(
+    distance_m = KM * 1000 * 2,
+    pace = as.numeric(PACE) / 2,
+    hr = na_if(as.numeric(HR), 0)
+  ) |>
+  select(distance_m, pace, hr) |>
+  pivot_longer(
+    cols = c(pace, hr),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = recode(
+      metric,
+      pace = "Pace [min/100m]",
+      hr = "HR [bpm]"
+    )
+  )
+
+swim_labels <- swim_data |>
+  group_by(metric) |>
+  summarise(avg_value = mean(value, na.rm = TRUE), .groups = "drop") |>
+  mutate(
+    avg_label = ifelse(
+      grepl("^Pace", metric),
+      format_pace_label(avg_value),
+      as.character(round(avg_value))
+    ),
+    metric_label = paste0(metric, " | Average=", avg_label)
+  ) |>
+  select(metric, metric_label)
+
+swim_data <- swim_data |>
+  left_join(swim_labels, by = "metric")
+
+ggplot(swim_data, aes(x = distance_m, y = value)) +
+  geom_line(linewidth = 0.5, color = "#1f4e79") +
+  facet_wrap(~ metric_label, scales = "free_y", ncol = 1) +
+  labs(
+    x = "Distance [m]",
+    y = NULL,
+    title = "Swim pace and heart rate over distance"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+The good news is that I managed to swim 50m farther than in the previous race, so that goal was achieved.
+
+## Bike
+
+As always, I have no meaningful data for the bike, since it is a stationary bike without a power meter I can connect to.
+The official distance was 10.4 km, which was right in line with my past performances, so there is not much to analyse here. The bike leg felt solid, but not surprising, which is about what I expected.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+activity_meta <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+bike_id <- activity_meta |>
+  filter(EVENT_TYPE == "BIKE", EVENT_DATE == "2026-05-30") |>
+  pull(ID)
+
+bike_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(ID %in% bike_id) |>
+  mutate(
+    time_min = SECS / 60,
+    hr = na_if(as.numeric(HR), 0)
+  ) |>
+  filter(!is.na(hr))
+
+ggplot(bike_data, aes(x = time_min, y = hr)) +
+  geom_line(linewidth = 0.5, color = "#8c2d04") +
+  labs(
+    x = "Time [min]",
+    y = "HR [bpm]",
+    title = "Bike heart rate over time"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+
+## Run
+
+Now the run, which was where I hoped for the biggest performance gain. As expected, Paul, the series leader in my age group, moved away immediately. I did not even consider trying to go with him. That was never going to happen. Instead, I focused on starting conservatively. In hindsight, I may have been a little too conservative.
+
+I was feeling good, and the watch was showing around 4:10 min/km, which would normally be close to high-threshold effort for me in a 5K. The problem was that I felt better than that suggested. Later I realised, once again, that you really should not trust an indoor watch pace, especially when you forget your reliable Stryd. Another indoor-tech failure.
+
+I ended up with 17 laps, or 3.4 km. Honestly, I think there was still a bit more there. I was probably too conservative early on, but at least I hit my goal of covering at least 16 laps.
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+format_pace_label <- function(value) {
+  minutes <- floor(value)
+  seconds <- round((value - minutes) * 60)
+  rollover <- seconds == 60
+  minutes[rollover] <- minutes[rollover] + 1
+  seconds[rollover] <- 0
+
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+activity_meta <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+run_id <- activity_meta |>
+  filter(EVENT_TYPE == "RUN", EVENT_DATE == "2026-05-30") |>
+  pull(ID)
+
+run_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(ID %in% run_id) |>
+  mutate(
+    time_min = SECS / 60,
+    pace = as.numeric(PACE),
+    hr = na_if(as.numeric(HR), 0)
+  ) |>
+  select(time_min, pace, hr) |>
+  pivot_longer(
+    cols = c(pace, hr),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = recode(
+      metric,
+      pace = "Pace [min/km]",
+      hr = "HR [bpm]"
+    )
+  )
+
+run_labels <- run_data |>
+  group_by(metric) |>
+  summarise(avg_value = mean(value, na.rm = TRUE), .groups = "drop") |>
+  mutate(
+    avg_label = ifelse(
+      grepl("^Pace", metric),
+      format_pace_label(avg_value),
+      as.character(round(avg_value))
+    ),
+    metric_label = paste0(metric, " | Average=", avg_label)
+  ) |>
+  select(metric, metric_label)
+
+run_data <- run_data |>
+  left_join(run_labels, by = "metric")
+
+ggplot(run_data, aes(x = time_min, y = value)) +
+  geom_line(linewidth = 0.5, color = "#8c2d04") +
+  facet_wrap(~ metric_label, scales = "free_y", ncol = 1) +
+  labs(
+    x = "Time [min]",
+    y = NULL,
+    title = "Run pace and heart rate over time"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+The watch pace is clearly way off. The official distance was 3.4 km, which gives an average pace of 4:25 min/km, more than 10 seconds per kilometre slower than my outdoor 5K race pace. Again, that one is on me for trusting the watch.
+
+## Results
+
+So how did the ranking look? Very different from last year. A performance that would have comfortably won my age group in 2025 left me dead last in 2026. That says less about a bad race from me and more about how much stronger the field was this time around.
+
+### Race 3: age-group standings
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+race_rankings <- read.csv(
+  "analysis_data/all_races.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+) |>
+  filter(substr(RACE_ID, 1, 10) == "2026-05-30")
+
+adrian_category <- race_rankings |>
+  filter(ATHLETE == "ADRIAN JOSEPH") |>
+  pull(CATEGORY) |>
+  unique()
+
+age_group_rankings <- race_rankings |>
+  filter(CATEGORY %in% adrian_category) |>
+  arrange(desc(RESULT_FINAL)) |>
+  select(
+    ATHLETE,
+    RESULT_FINAL,
+    RESULT_SPORT_1,
+    RESULT_SPORT_2,
+    RESULT_SPORT_3,
+    RANKING_CATEGORY
+  ) |>
+  rename(
+    Athlete = ATHLETE,
+    `Final points` = RESULT_FINAL,
+    Swim = RESULT_SPORT_1,
+    Bike = RESULT_SPORT_2,
+    Run = RESULT_SPORT_3,
+    `Age-group rank` = RANKING_CATEGORY
+  )
+
+kable(age_group_rankings)
+```
+
+That is not a small gap. Those guys were simply operating on another level.
+
+### Series standings after three races
+
+Here is what the series standings looked like after three races in my age group.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+all_race_rankings <- read.csv(
+  "analysis_data/all_races.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+)
+
+adrian_category <- all_race_rankings |>
+  filter(ATHLETE == "ADRIAN JOSEPH") |>
+  pull(CATEGORY) |>
+  unique()
+
+series_age_group_totals <- all_race_rankings |>
+  filter(CATEGORY %in% adrian_category) |>
+  group_by(ATHLETE) |>
+  summarise(
+    `Swim points` = sum(RESULT_SPORT_1, na.rm = TRUE),
+    `Bike points` = sum(RESULT_SPORT_2, na.rm = TRUE),
+    `Run points` = sum(RESULT_SPORT_3, na.rm = TRUE),
+    `Overall points` = sum(RESULT_FINAL, na.rm = TRUE),
+    `Races counted` = n(),
+    .groups = "drop"
+  ) |>
+  arrange(desc(`Overall points`)) |>
+  rename(Athlete = ATHLETE) |>
+  mutate(ranking = row_number(), .before = Athlete)
+
+kable(series_age_group_totals)
+```
+
+Of course this is a race series, and you collect points over 3 races. If you are very strong, but only do one race, you are not going to top the series. Howver, just for fun, what would happen if we level the field and we take not the sum of the points, but the average? Well, here is what happens:
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+series_age_group_averages <- all_race_rankings |>
+  filter(CATEGORY %in% adrian_category) |>
+  group_by(ATHLETE) |>
+  summarise(
+    `Swim points` = mean(RESULT_SPORT_1, na.rm = TRUE),
+    `Bike points` = mean(RESULT_SPORT_2, na.rm = TRUE),
+    `Run points` = mean(RESULT_SPORT_3, na.rm = TRUE),
+    `Overall points` = mean(RESULT_FINAL, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(desc(`Overall points`)) |>
+  rename(Athlete = ATHLETE) |>
+  mutate(ranking = row_number(), .before = Athlete)
+
+kable(series_age_group_averages, digits = 1)
+```
+
+The main change at the top is that Colin Campbell gets promoted from 6$^{th}$ to 3$^{rd}$, and I get bumped from 4$^{th}$ to 5$^{th}$. So I guess it is a good thing they sum the points...
+
+The jump in competition level this year has been huge. I went from a comfortable 1$^{st}$ last season to a hard-fought 5$^{th}$ this time around. But that is also a good reminder not to focus too much on things I cannot control. I cannot control who shows up. I can only control how well I prepare and how well I race. So instead of obsessing over placement, it makes more sense to look at how I have progressed across the five races I have done so far: three last year and two this year.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+adrian_all_races <- bind_rows(
+  read.csv(
+    "analysis_data/all_races.csv",
+    check.names = FALSE,
+    stringsAsFactors = FALSE,
+    na.strings = c("NA", "")
+  ),
+  read.csv(
+    "../2025-05-04_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_4/analysis_data/all_races.csv",
+    check.names = FALSE,
+    stringsAsFactors = FALSE,
+    na.strings = c("NA", "")
+  )
+) |>
+  filter(ATHLETE == "ADRIAN JOSEPH") |>
+  mutate(Date = as.Date(substr(RACE_ID, 1, 10))) |>
+  arrange(Date) |>
+  select(
+    Date,
+    RESULT_SPORT_1,
+    RESULT_SPORT_2,
+    RESULT_SPORT_3,
+    RESULT_FINAL
+  ) |>
+  rename(
+    Swim = RESULT_SPORT_1,
+    Bike = RESULT_SPORT_2,
+    Run = RESULT_SPORT_3,
+    `Overall points` = RESULT_FINAL
+  )
+
+kable(adrian_all_races)
+```
+
+The race on 2025-05-04 was a bit of an outlier because the swim was in a 25 m pool, which is considerably faster than a 50 m pool. Even with that in mind, the swim in this most recent race was right up there with my best, and it felt noticeably easier than the earlier ones. The bike was in line with the others; the first race looks much worse mainly because I started late and therefore did not get a full 15 minutes on the bike. The run was also comparable to my best runs in the series. So maybe I am not dramatically faster than before, but I do seem to be getting more efficient and more controlled, which is still progress.
+
+## Final thoughts
+
+This is always a fun series to do at the start of the year, and it is a very good way to sharpen up for the rest of the season. I think I raced well within my current abilities, and even if the score was not much higher than last year, I think I got there in a more controlled way.
+
+Maybe a little too controlled.
+
+That is probably the main lesson from this race. The engine is there, but I still need to get comfortable pushing deeper into the red zone when the moment calls for it. That matters even more this year, because my focus will be duathlon. In triathlon, a controlled swim can sometimes ease you into the race. In duathlon, there is no such luxury. It is hard from the gun, and you either respond or you get dropped.
+
+So the result itself was mixed, but the takeaways were useful: the swim is improving, the bike is stable, the run is moving in the right direction, and I probably have a little more to give next time. That is enough to leave this race feeling motivated for what comes next.
+
+---
+
+<!-- summary_race_date: 2026-05-30 -->
+{{< include summary_table.html >}}

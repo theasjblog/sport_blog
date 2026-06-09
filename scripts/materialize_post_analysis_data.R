@@ -19,6 +19,10 @@ jobs <- list(
   list(
     path = "posts/race_reports/2025-05-04_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_4",
     event_dates = c("2025-05-04", "2025-04-12", "2025-02-22")
+  ),
+  list(
+    path = "posts/race_reports/2026-05-30_INDOOR_TRIATHLON_PROVINCIAL_CHAMPIONSHIP_-_RACE_3",
+    event_dates = c("2026-03-14", "2026-05-30")
   )
 )
 
