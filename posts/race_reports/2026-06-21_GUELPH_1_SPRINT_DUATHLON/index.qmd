@@ -1,0 +1,959 @@
+---
+title: >-
+  Guelph 1 Sprint Duathlon: A Duathlon, a Birthday Party, and a Shot at
+  Edmonton
+date: "2026-06-21"
+author: "Adrian Joseph"
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/thumbnail/726576169_10175327597435268_1584635662403780368_n-2.jpg
+description: >-
+  First duathlon in nine years. A surprise podium. And maybe a ticket to
+  Edmonton 2027.
+categories: [race_reports, duathlon]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/thumbnail/726576169_10175327597435268_1584635662403780368_n-2.jpg)
+
+
+## Back on the Road to Worlds
+
+When I raced at the World Championships in Wollongong last year, Edmonton
+2027 felt a long way off.
+
+Now it suddenly feels very real.
+
+This race was my first opportunity to earn a qualification spot for
+the **2027 World Multisport Championships in Edmonton**, and that
+gave it a significance well beyond the result itself.
+
+After making the trip halfway around the world to Australia, the prospect of
+racing a World Championship on home soil is incredibly appealing. No
+trans-Pacific flights, no major time-zone adjustments, and a much easier
+opportunity to share the experience with family and friends.
+
+Of course, before thinking too much about Edmonton, there is a small
+challenge to deal with: I hadn't raced a duathlon in **nine years**.
+
+My previous duathlon was a **5 km run / 20 km bike / 2.5 km run** format.
+This one flipped things around with a **2 km run / 20 km bike / 5 km run**.
+
+Still, after nine years away from the discipline, a World Championship
+qualifier seemed like as good a reason as any to come back.
+
+---
+
+## The Qualification Game
+
+One of the funny things about qualification races is that sometimes you
+finish without really knowing how well you've done.
+
+Awards are presented in **10-year age groups**, but qualification rankings
+are calculated using **5-year age groups**.
+
+That means someone standing next to you on the podium might not actually be
+your competition for a qualification spot. Someone who finished ahead of you
+could age out of your category next year. Your direct competitor might
+now come from the younger award group.
+
+As if that wasn't confusing enough, duathlon introduced another challenge
+for me.
+
+Coming from years of short-course triathlon, it felt strange to race in
+socks. Normally, in a sprint triathlon, we do not use socks
+
+During the race, I discovered that socks create an unexpected qualification
+problem.
+
+Organizers mark athletes' ages on their calves. In theory, that lets you
+know whether the person ahead of you is someone you're actually racing for a
+qualification spot.
+
+In practice, many athletes wear tall socks.
+
+Which means the age markings disappear entirely.
+
+So throughout the race I found myself staring at calves, trying to figure
+out whether the person ahead was 39, 44, or 49 years old, only to be
+defeated by a pair of compression socks.
+
+And then there is the biggest unknown of all:
+
+Who actually submitted an Expression of Interest?
+
+*[Qualification process graphic placeholder]*
+
+---
+
+## A Duathlon, a Birthday Party, and a Shot at Edmonton
+
+Elite athletes talk about training camps, altitude blocks, and carefully
+controlled pre-race routines.
+
+My race preparation looked slightly different.
+
+The day before the race was my youngest daughter's fourth birthday party.
+
+The schedule included decorating, entertaining kids,
+cleaning up afterward, and trying to convince myself that "just one more
+candy" was a perfectly reasonable nutritional choice before a world
+championship qualifier.
+
+To be fair, I thought I had done a pretty good job. I avoided most of the
+obvious junk food and generally ate well throughout the day.
+
+The only problem was that "most" and "all" are not the same thing.
+
+Somewhere between the cake and the candy table my self-control started 
+to fade. By race morning my
+stomach was politely informing me that perhaps this had not been the
+optimal fueling strategy.
+
+Fortunately, things settled down before the start and never became an issue
+during the race itself.
+
+Still, it felt like a fitting reminder of what age-group racing actually
+looks like. One day you're hosting a birthday party. The next day you're
+standing on a start line trying to qualify for a world championship.
+
+---
+
+## Race Morning
+
+As usual, I arrived ridiculously early.
+
+About two hours early, to be precise.
+
+That gave me plenty of time to set up transition, overthink every equipment
+decision, and chat with other athletes.
+
+The morning also turned into a mini reunion.
+
+I ran into several people I'd met at Wollongong, including one of my relay
+teammates. I also bumped into another athlete named Daniel. We knew we'd
+met somewhere before, but neither of us could remember where.
+
+The mystery wasn't solved until the award ceremony.
+
+Turns out we had both raced in Wollongong.
+
+---
+
+## Not Exactly My Kind of Course
+
+The course was hilly.
+
+Very hilly.
+
+The temperature hovered around **24°C**, which doesn't sound extreme on
+paper, but it felt noticeably warm out on course.
+
+So naturally, I approached the race with a carefully thought-out pacing
+strategy.
+
+Which lasted approximately zero seconds.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+activities_metadata <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+activities_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+)
+
+activity_order <- activities_metadata |>
+  filter(EVENT_TYPE %in% c("RUN", "BIKE")) |>
+  distinct(ID, EVENT_TYPE) |>
+  mutate(
+    sport = c("Run 1", "Bike", "Run 2")
+  )
+
+altitude_data <- activities_data |>
+  filter(ID %in% activity_order$ID) |>
+  select(ID, KM, ALT) |>
+  left_join(activity_order, by = "ID") |>
+  rename(
+    distance_km = KM,
+    altitude_m = ALT
+  ) |>
+  mutate(
+    sport = factor(sport, levels = c("Run 1", "Bike", "Run 2"))
+  )
+
+ggplot(altitude_data, aes(x = distance_km, y = altitude_m)) +
+  geom_line(linewidth = 0.6, color = "#8c2d04") +
+  facet_wrap(~ sport, scales = "free_x", ncol = 1) +
+  labs(
+    x = "Distance [km]",
+    y = "Altitude [m]",
+    title = "Altitude profile across the three race segments"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+---
+
+## Run 1: Classic Adrian
+
+The opening 2 km started exactly as expected:
+
+Too fast.
+
+I quickly realized where things were heading and backed off before
+completely detonating my legs.
+
+Maybe I backed off a little too much.
+
+The result was a **9:20 split for 2 km**.
+
+Yes, it was hilly.
+
+But it was also only 2 km.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+activities_metadata <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+activities_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+)
+
+run_1_id <- activities_metadata |>
+  filter(EVENT_TYPE == "RUN") |>
+  distinct(ID) |>
+  slice(1) |>
+  pull(ID)
+
+run_1_data <- activities_data |>
+  filter(ID == run_1_id) |>
+  transmute(
+    secs = as.numeric(SECS),
+    distance_km = KM,
+    altitude_m = ALT,
+    pace_min_km = as.numeric(PACE),
+    hr_bpm = na_if(as.numeric(HR), 0)
+  ) |>
+  filter(!is.na(pace_min_km))
+
+pace_min <- min(run_1_data$pace_min_km, na.rm = TRUE)
+pace_max <- max(run_1_data$pace_min_km, na.rm = TRUE)
+hr_min <- min(run_1_data$hr_bpm, na.rm = TRUE)
+hr_max <- max(run_1_data$hr_bpm, na.rm = TRUE)
+alt_min <- min(run_1_data$altitude_m, na.rm = TRUE)
+alt_max <- max(run_1_data$altitude_m, na.rm = TRUE)
+
+alt_span <- alt_max - alt_min
+
+if (pace_max == pace_min) {
+  pace_max <- pace_min + 1
+}
+
+if (hr_max == hr_min) {
+  hr_max <- hr_min + 1
+}
+
+scale_altitude <- function(altitude, y_min, y_max) {
+  y_min + ((altitude - alt_min) / ifelse(alt_span == 0, 1, alt_span)) *
+    (y_max - y_min)
+}
+
+run_1_plot_data <- run_1_data |>
+  mutate(
+    altitude_scaled_hr = scale_altitude(altitude_m, hr_min, hr_max)
+  )
+
+pace_plot_start_secs <- run_1_plot_data |>
+  filter(pace_min_km <= 4) |>
+  summarise(start_secs = min(secs, na.rm = TRUE)) |>
+  pull(start_secs)
+
+run_1_pace_plot_data <- run_1_plot_data |>
+  filter(secs >= pace_plot_start_secs)
+
+pace_plot_min <- min(run_1_pace_plot_data$pace_min_km, na.rm = TRUE)
+pace_plot_max <- max(run_1_pace_plot_data$pace_min_km, na.rm = TRUE)
+
+if (pace_plot_max == pace_plot_min) {
+  pace_plot_max <- pace_plot_min + 1
+}
+
+run_1_pace_plot_data <- run_1_pace_plot_data |>
+  mutate(
+    altitude_scaled_pace = scale_altitude(altitude_m, pace_plot_min, pace_plot_max)
+  )
+
+ggplot(run_1_plot_data, aes(x = distance_km)) +
+  geom_ribbon(
+    aes(ymin = hr_min, ymax = altitude_scaled_hr),
+    fill = "grey55",
+    alpha = 0.25
+  ) +
+  geom_line(
+    aes(y = hr_bpm),
+    linewidth = 0.7,
+    color = "red",
+    na.rm = TRUE
+  ) +
+  scale_y_continuous(name = "HR [bpm]", limits = c(hr_min, hr_max)) +
+  labs(
+    x = "Distance [km]",
+    title = "Run 1 altitude and heart rate over distance"
+  ) +
+  theme_minimal(base_size = 11)
+
+ggplot(run_1_pace_plot_data, aes(x = distance_km)) +
+  geom_ribbon(
+    aes(ymin = pace_plot_min, ymax = altitude_scaled_pace),
+    fill = "grey55",
+    alpha = 0.25
+  ) +
+  geom_line(
+    aes(y = pace_min_km),
+    linewidth = 0.7,
+    color = "#1f4e79"
+  ) +
+  scale_y_continuous(
+    name = "Pace [min/km]",
+    limits = c(pace_plot_min, pace_plot_max)
+  ) +
+  labs(
+    x = "Distance [km]",
+    title = "Run 1 altitude and pace over distance"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+
+
+---
+
+## Bike: Conservative... Maybe Too Conservative?
+
+Transition 1 didn't go entirely to plan.
+
+I completely missed getting into my left cycling shoe on the first attempt
+and spent what felt like an eternity wrestling with it while trying to get
+moving.
+
+In the process I also managed to confuse my watch and start the bike
+segment late.
+
+Not ideal.
+
+Once settled, the plan was simple: stay controlled and respect the hills.
+
+I think I succeeded.
+
+The question is whether I succeeded a little too well.
+
+Looking back at the data, I suspect there may have been a bit more speed
+available.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+bike_id <- activities_metadata |>
+  filter(EVENT_TYPE == "BIKE") |>
+  distinct(ID) |>
+  slice(1) |>
+  pull(ID)
+
+rolling_time_avg <- function(values, secs, window_seconds = 10) {
+  vapply(seq_along(values), function(i) {
+    in_window <- secs >= (secs[i] - window_seconds) & secs <= secs[i]
+    mean(values[in_window], na.rm = TRUE)
+  }, numeric(1))
+}
+
+bike_data <- activities_data |>
+  filter(ID == bike_id) |>
+  transmute(
+    secs = as.numeric(SECS),
+    distance_km = KM,
+    altitude_m = ALT,
+    power_w = na_if(as.numeric(WATTS), 0),
+    hr_bpm = na_if(as.numeric(HR), 0)
+  ) |>
+  arrange(secs) |>
+  mutate(
+    power_10s_w = rolling_time_avg(power_w, secs),
+    hr_10s_bpm = rolling_time_avg(hr_bpm, secs)
+  ) |>
+  filter(!is.na(power_10s_w))
+
+power_min <- min(bike_data$power_10s_w, na.rm = TRUE)
+power_max <- max(bike_data$power_10s_w, na.rm = TRUE)
+hr_min <- min(bike_data$hr_10s_bpm, na.rm = TRUE)
+hr_max <- max(bike_data$hr_10s_bpm, na.rm = TRUE)
+alt_min <- min(bike_data$altitude_m, na.rm = TRUE)
+alt_max <- max(bike_data$altitude_m, na.rm = TRUE)
+
+hr_plot_min <- 140
+hr_plot_max <- hr_max
+alt_span <- alt_max - alt_min
+
+if (power_max == power_min) {
+  power_max <- power_min + 1
+}
+
+if (hr_plot_max == hr_plot_min) {
+  hr_plot_max <- hr_plot_min + 1
+}
+
+scale_altitude <- function(altitude, y_min, y_max) {
+  y_min + ((altitude - alt_min) / ifelse(alt_span == 0, 1, alt_span)) *
+    (y_max - y_min)
+}
+
+bike_plot_data <- bike_data |>
+  mutate(
+    altitude_scaled_power = scale_altitude(altitude_m, power_min, power_max),
+    altitude_scaled_hr = scale_altitude(altitude_m, hr_plot_min, hr_plot_max)
+  )
+
+ggplot(bike_plot_data, aes(x = distance_km)) +
+  geom_ribbon(
+    aes(ymin = hr_plot_min, ymax = altitude_scaled_hr),
+    fill = "grey55",
+    alpha = 0.25
+  ) +
+  geom_line(
+    aes(y = hr_10s_bpm),
+    linewidth = 0.7,
+    color = "red",
+    na.rm = TRUE
+  ) +
+  scale_y_continuous(name = "HR [bpm]", limits = c(hr_plot_min, hr_plot_max)) +
+  labs(
+    x = "Distance [km]",
+    title = "Bike altitude and heart rate over distance"
+  ) +
+  theme_minimal(base_size = 11)
+
+ggplot(bike_plot_data, aes(x = distance_km)) +
+  geom_ribbon(
+    aes(ymin = power_min, ymax = altitude_scaled_power),
+    fill = "grey55",
+    alpha = 0.25
+  ) +
+  geom_line(
+    aes(y = power_10s_w),
+    linewidth = 0.7,
+    color = "#1f4e79"
+  ) +
+  scale_y_continuous(name = "Power [W]", limits = c(power_min, power_max)) +
+  labs(
+    x = "Distance [km]",
+    title = "Bike altitude and power over distance"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+
+---
+
+## Run 2: The Long Five Kilometres
+
+Then came the final 5 km.
+
+Hard.
+
+Slow.
+
+Painful.
+
+The three words that describe most second runs in multisport racing.
+
+My final split was **22:29**, which is actually very much in line with my
+recent multisport performances.
+
+Still, it felt slower than it should have.
+
+The hills certainly didn't help. Neither did the heat.
+
+And perhaps my legs were more cooked than I realized from the first run and
+the bike.
+
+Or maybe those earlier segments weren't quite as conservative as they felt
+at the time.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+run_2_id <- activities_metadata |>
+  filter(EVENT_TYPE == "RUN") |>
+  distinct(ID) |>
+  slice(2) |>
+  pull(ID)
+
+run_2_data <- activities_data |>
+  filter(ID == run_2_id) |>
+  transmute(
+    secs = as.numeric(SECS),
+    distance_km = KM,
+    altitude_m = ALT,
+    pace_min_km = as.numeric(PACE),
+    hr_bpm = na_if(as.numeric(HR), 0)
+  ) |>
+  filter(!is.na(pace_min_km))
+
+pace_min <- min(run_2_data$pace_min_km, na.rm = TRUE)
+pace_max <- max(run_2_data$pace_min_km, na.rm = TRUE)
+hr_min <- min(run_2_data$hr_bpm, na.rm = TRUE)
+hr_max <- max(run_2_data$hr_bpm, na.rm = TRUE)
+alt_min <- min(run_2_data$altitude_m, na.rm = TRUE)
+alt_max <- max(run_2_data$altitude_m, na.rm = TRUE)
+
+alt_span <- alt_max - alt_min
+
+if (pace_max == pace_min) {
+  pace_max <- pace_min + 1
+}
+
+if (hr_max == hr_min) {
+  hr_max <- hr_min + 1
+}
+
+scale_altitude <- function(altitude, y_min, y_max) {
+  y_min + ((altitude - alt_min) / ifelse(alt_span == 0, 1, alt_span)) *
+    (y_max - y_min)
+}
+
+run_2_plot_data <- run_2_data |>
+  mutate(
+    altitude_scaled_hr = scale_altitude(altitude_m, hr_min, hr_max)
+  )
+
+pace_plot_start_secs <- run_2_plot_data |>
+  filter(pace_min_km <= 4) |>
+  summarise(start_secs = min(secs, na.rm = TRUE)) |>
+  pull(start_secs)
+
+run_2_pace_plot_data <- run_2_plot_data |>
+  filter(secs >= pace_plot_start_secs)
+
+pace_plot_min <- min(run_2_pace_plot_data$pace_min_km, na.rm = TRUE)
+pace_plot_max <- max(run_2_pace_plot_data$pace_min_km, na.rm = TRUE)
+
+if (pace_plot_max == pace_plot_min) {
+  pace_plot_max <- pace_plot_min + 1
+}
+
+run_2_pace_plot_data <- run_2_pace_plot_data |>
+  mutate(
+    altitude_scaled_pace = scale_altitude(altitude_m, pace_plot_min, pace_plot_max)
+  )
+
+ggplot(run_2_plot_data, aes(x = distance_km)) +
+  geom_ribbon(
+    aes(ymin = hr_min, ymax = altitude_scaled_hr),
+    fill = "grey55",
+    alpha = 0.25
+  ) +
+  geom_line(
+    aes(y = hr_bpm),
+    linewidth = 0.7,
+    color = "red",
+    na.rm = TRUE
+  ) +
+  scale_y_continuous(name = "HR [bpm]", limits = c(hr_min, hr_max)) +
+  labs(
+    x = "Distance [km]",
+    title = "Run 2 altitude and heart rate over distance"
+  ) +
+  theme_minimal(base_size = 11)
+
+ggplot(run_2_pace_plot_data, aes(x = distance_km)) +
+  geom_ribbon(
+    aes(ymin = pace_plot_min, ymax = altitude_scaled_pace),
+    fill = "grey55",
+    alpha = 0.25
+  ) +
+  geom_line(
+    aes(y = pace_min_km),
+    linewidth = 0.7,
+    color = "#1f4e79"
+  ) +
+  scale_y_continuous(
+    name = "Pace [min/km]",
+    limits = c(pace_plot_min, pace_plot_max)
+  ) +
+  labs(
+    x = "Distance [km]",
+    title = "Run 2 altitude and pace over distance"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+
+
+---
+
+## A Pleasant Surprise at the Finish
+
+When I crossed the line, I figured I might have sneaked into the top four
+in my category.
+
+Maybe.
+
+Instead, the results showed:
+
+* 9th Overall
+* 2nd Age Group
+
+That was a surprise.
+
+The winner of my category finished about 2:20 ahead of me, while I
+finished roughly 40 seconds ahead of third place.
+
+And third place turned out to be Daniel.
+
+The same Daniel who had been trying to remember where we knew each other
+from all morning.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+format_finish_time <- function(seconds) {
+  total_seconds <- round(as.numeric(seconds))
+  hours <- total_seconds %/% 3600
+  minutes <- (total_seconds %% 3600) %/% 60
+  secs <- total_seconds %% 60
+  sprintf("%d:%02d:%02d", hours, minutes, secs)
+}
+
+all_races <- read.csv(
+  "analysis_data/all_races.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+top_men_40_49 <- all_races |>
+  filter(CATEGORY == "Men40-49") |>
+  arrange(RANKING_CATEGORY) |>
+  slice_head(n = 3) |>
+  transmute(
+    Name = ATHLETE,
+    `Age Group Rank` = RANKING_CATEGORY,
+    `Overall Rank` = RANKING_OVERALL,
+    `Finishing Time` = format_finish_time(RESULT_FINAL)
+  )
+
+knitr::kable(top_men_40_49, align = c("l", "r", "r", "r"))
+```
+
+
+
+---
+
+## So... Did I Qualify?
+
+The short answer: I still have no idea.
+
+At the 2027 World Championships I would race in the **40–44 age group**
+since I'll be 44 at the end of next year.
+
+The challenge is that I don't know the ages of some of the athletes around
+me.
+
+One athlete from the younger category posted a faster time than I did. If
+he moves into the 40–44 category next year, he'll jump ahead of me in the
+qualification ranking.
+
+On the other hand, the athlete who beat me on race day may age out into the
+next category, which would move me up.
+
+And, of course, nobody really knows who has submitted an Expression of
+Interest until the federation publishes the qualification lists.
+
+So a second-place finish is encouraging, but it's far from a guarantee.
+
+For now, Edmonton remains a strong possibility rather than a certainty.
+
+---
+
+## Tech Failures
+
+No race report would be complete without a list of self-inflicted technology
+problems.
+
+This week's scorecard:
+
+✅ Forgot the Stryd pod
+
+✅ Forgot the Wahoo heart rate strap
+
+✅ Managed to confuse the watch during transition
+
+🤔 Maybe it's finally time to trust auto-transition mode?
+
+---
+
+## Final Thoughts
+
+A second-place age-group finish in my first duathlon in nine years is
+difficult to complain about.
+
+Was it perfect? No.
+
+Could I have raced parts of it more aggressively? Probably.
+
+But considering the long gap since my last duathlon, the challenging
+course, and the qualification stakes, I'll happily take this result.
+
+Now it's time to recover, analyze the data, and focus on the next
+opportunity.
+
+Because the next qualifier is only one week away: **Rose City Welland — June 28, 2026.**
+
+![Crowded podium phtoots with the winners for the M40-49 and the F40-49.](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/thumbnail/726576169_10175327597435268_1584635662403780368_n-2.jpg)
+
+
+------------------------------------------------------
+
+
+<!-- summary_race_date: 2026-06-21 -->
+{{< include summary_table.html >}}
+
+## Photo Gallery
+
+<style>
+.race-gallery__thumb {
+  display: block;
+  cursor: pointer;
+}
+
+.race-gallery__thumb img {
+  display: block;
+  width: 100px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.race-gallery-table {
+  border-collapse: separate;
+  border-spacing: 0.45rem;
+  margin: 1rem auto 0;
+}
+
+.race-gallery-table td {
+  border: 0;
+  padding: 0;
+}
+
+.race-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.88);
+  padding: 2rem;
+  z-index: 9999;
+}
+
+.race-lightbox.is-open {
+  display: flex;
+}
+
+.race-lightbox__image {
+  max-width: min(92vw, 1200px);
+  max-height: 88vh;
+  border-radius: 8px;
+}
+
+.race-lightbox__close,
+.race-lightbox__nav {
+  position: absolute;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.race-lightbox__close {
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.race-lightbox__nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.race-lightbox__nav--prev {
+  left: 1rem;
+}
+
+.race-lightbox__nav--next {
+  right: 1rem;
+}
+
+</style>
+
+<table class="race-gallery-table" id="race-gallery" role="presentation">
+  <tr>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/full/IMG_2748.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/thumbnail/IMG_2748.jpg" alt="Race photo 1">
+      </a>
+    </td>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/full/10548_007669_DIGITAL_HIGHRES-94256887.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/thumbnail/10548_007669_DIGITAL_HIGHRES-94256887.jpg" alt="Race photo 2">
+      </a>
+    </td>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/full/10548_008114_DIGITAL_HIGHRES-94256890.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/thumbnail/10548_008114_DIGITAL_HIGHRES-94256890.jpg" alt="Race photo 3">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/full/10548_010838_DIGITAL_HIGHRES-94256896.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/thumbnail/10548_010838_DIGITAL_HIGHRES-94256896.jpg" alt="Race photo 4">
+      </a>
+    </td>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/full/10548_004620_DIGITAL_HIGHRES-94256881.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/thumbnail/10548_004620_DIGITAL_HIGHRES-94256881.jpg" alt="Race photo 5">
+      </a>
+    </td>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/full/10548_004617_DIGITAL_HIGHRES-94256878.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/thumbnail/10548_004617_DIGITAL_HIGHRES-94256878.jpg" alt="Race photo 6">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/full/10548_000366_DIGITAL_HIGHRES-94256873.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/thumbnail/10548_000366_DIGITAL_HIGHRES-94256873.jpg" alt="Race photo 7">
+      </a>
+    </td>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/full/726576169_10175327597435268_1584635662403780368_n-2.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-21_GUELPH_1_SPRINT_DUATHLON/img/thumbnail/726576169_10175327597435268_1584635662403780368_n-2.jpg" alt="Race photo 8">
+      </a>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+<div class="race-lightbox" id="race-lightbox" aria-hidden="true">
+  <button class="race-lightbox__close" type="button" aria-label="Close gallery">&times;</button>
+  <button class="race-lightbox__nav race-lightbox__nav--prev" type="button" aria-label="Previous image">&#8249;</button>
+  <img class="race-lightbox__image" src="" alt="">
+  <button class="race-lightbox__nav race-lightbox__nav--next" type="button" aria-label="Next image">&#8250;</button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const gallery = document.getElementById("race-gallery");
+  const lightbox = document.getElementById("race-lightbox");
+  const image = lightbox.querySelector(".race-lightbox__image");
+  const closeButton = lightbox.querySelector(".race-lightbox__close");
+  const prevButton = lightbox.querySelector(".race-lightbox__nav--prev");
+  const nextButton = lightbox.querySelector(".race-lightbox__nav--next");
+  const thumbs = Array.from(gallery.querySelectorAll(".race-gallery__thumb"));
+  let activeIndex = 0;
+
+  function showImage(index) {
+    activeIndex = (index + thumbs.length) % thumbs.length;
+    const thumb = thumbs[activeIndex];
+    const thumbImage = thumb.querySelector("img");
+    image.src = thumb.dataset.full;
+    image.alt = thumbImage.alt;
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    image.src = "";
+    document.body.style.overflow = "";
+  }
+
+  thumbs.forEach(function (thumb, index) {
+    thumb.addEventListener("click", function (event) {
+      event.preventDefault();
+      showImage(index);
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+  prevButton.addEventListener("click", function () { showImage(activeIndex - 1); });
+  nextButton.addEventListener("click", function () { showImage(activeIndex + 1); });
+
+  lightbox.addEventListener("click", function (event) {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (!lightbox.classList.contains("is-open")) {
+      return;
+    }
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+    if (event.key === "ArrowLeft") {
+      showImage(activeIndex - 1);
+    }
+    if (event.key === "ArrowRight") {
+      showImage(activeIndex + 1);
+    }
+  });
+});
+</script>
