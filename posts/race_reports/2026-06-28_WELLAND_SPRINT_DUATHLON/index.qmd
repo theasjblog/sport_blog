@@ -5,8 +5,7 @@ author: "Adrian Joseph"
 race_id: "2026-06-28_VXBCX"
 image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_01-2635.jpg
 description: >-
-  Draft race report for the Welland Sprint Duathlon, following the structure
-  used for the Guelph 1 Sprint Duathlon report.
+  Second World Champs qualifier of the year, and second race on consecutive weekends.
 categories: [race_reports, duathlon]
 format: html
 lightbox:
