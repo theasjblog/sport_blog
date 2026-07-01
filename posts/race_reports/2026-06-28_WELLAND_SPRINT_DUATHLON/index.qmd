@@ -1,0 +1,815 @@
+---
+title: "Welland Sprint Duathlon"
+date: "2026-06-28"
+author: "Adrian Joseph"
+race_id: "2026-06-28_VXBCX"
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_01-2635.jpg
+description: >-
+  Draft race report for the Welland Sprint Duathlon, following the structure
+  used for the Guelph 1 Sprint Duathlon report.
+categories: [race_reports, duathlon]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_01-2635.jpg)
+
+## Back-to-Back Duathlon Weekends
+
+One week after Guelph, it was time to race again in Welland.
+
+Coming into this event, the main question was simple: after Guelph, could I
+still perform and still be competitive? Racing hard on consecutive weekends is
+always a good way to find out what is really there and what is still missing.
+
+Guelph had already taken a fair bit out of me. It was hilly, hard, and
+important from a qualification point of view. Welland looked flatter and more
+straightforward on paper, but that did not automatically mean easier. On a
+flatter course there is less hiding. If the legs are not there, it shows.
+
+---
+
+## The Qualification Picture
+
+Like Guelph, this race mattered for age-group qualification.
+
+The goal is still the same: win the age group, or at least finish close enough
+to give myself a realistic chance of qualifying for the World Championships.
+That is what gives these races a different feel. It is not just about placing
+well on the day. It is also about who is in the actual five-year age-group
+qualification category, who has submitted an expression of interest, and who
+will still matter once Triathlon Canada starts allocating spots.
+
+That uncertainty is part of the game. You can race well, finish on the podium,
+and still walk away not really knowing what it means yet.
+
+---
+
+## Race Morning
+
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_01-0024.jpg)
+
+I arrived early, got set up without any rush, and had time to look around and
+see a few familiar faces. What I did not see much of were calves marked
+`40-49`, which did not make the qualification picture any easier to read.
+
+The morning was calm for me, but transition itself had a bit of chaos. One
+athlete, clearly at their first race, turned up with a mountain bike and
+seemed entirely unconcerned by the fact that they were not even racking it
+properly, just leaning it against other athletes' racked bikes. That led to a
+fair amount of discussion with the referees before things were sorted out.
+
+Small details like that do not decide the race, but they definitely shape the
+feel of the morning.
+
+---
+
+## A Different Kind of Course
+
+The format here was `5/20/2.5`, which is the standard way to organise a sprint
+duathlon. Even so, it is still strange how every race seems to do this a bit
+differently. In Guelph the format was `2/20/5`, which changes the race quite a
+lot, and not just because of the missing 500 metres. A long first run and a
+short second run reward a very different type of pacing and a different type
+of patience.
+
+On paper, Welland looked like a course that should suit me better: flatter,
+more honest, and more about sustained effort than repeated changes of rhythm.
+That can be good news, but it also means you have to be ready to do the work.
+There is less terrain to save you.
+
+
+---
+
+## Run 1
+
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_02-0253.jpg)
+
+I started the first run trying to stay under control. That part went
+reasonably well, but even so I faded quite a bit toward the end. That was when
+I saw two athletes with `40-49` on their calves come past me.
+
+I was still close enough to them that the race did not feel gone, but it was
+clear I was in for a fight if I wanted to finish at least third. That was also
+assuming there was not someone else in the category even further ahead that I
+had simply not seen.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+activities_metadata <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+activities_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+)
+
+run_1_id <- activities_metadata |>
+  filter(EVENT_TYPE == "RUN") |>
+  distinct(ID) |>
+  slice(1) |>
+  pull(ID)
+
+run_1_data <- activities_data |>
+  filter(ID == run_1_id) |>
+  transmute(
+    secs = as.numeric(SECS),
+    distance_km = KM,
+    altitude_m = ALT,
+    pace_min_km = as.numeric(PACE),
+    hr_bpm = na_if(as.numeric(HR), 0),
+    power_w = na_if(as.numeric(WATTS), 0)
+  ) |>
+  filter(!is.na(pace_min_km))
+
+pace_min <- min(run_1_data$pace_min_km, na.rm = TRUE)
+pace_max <- max(run_1_data$pace_min_km, na.rm = TRUE)
+hr_min <- min(run_1_data$hr_bpm, na.rm = TRUE)
+hr_max <- max(run_1_data$hr_bpm, na.rm = TRUE)
+power_min <- min(run_1_data$power_w, na.rm = TRUE)
+power_max <- max(run_1_data$power_w, na.rm = TRUE)
+alt_min <- min(run_1_data$altitude_m, na.rm = TRUE)
+alt_max <- max(run_1_data$altitude_m, na.rm = TRUE)
+
+alt_span <- alt_max - alt_min
+
+if (pace_max == pace_min) {
+  pace_max <- pace_min + 1
+}
+
+if (hr_max == hr_min) {
+  hr_max <- hr_min + 1
+}
+
+if (power_max == power_min) {
+  power_max <- power_min + 1
+}
+
+scale_altitude <- function(altitude, y_min, y_max) {
+  y_min + ((altitude - alt_min) / ifelse(alt_span == 0, 1, alt_span)) *
+    (y_max - y_min)
+}
+
+scale_power_to_hr <- function(power) {
+  hr_min + ((power - power_min) / (power_max - power_min)) * (hr_max - hr_min)
+}
+
+scale_hr_to_power <- function(hr) {
+  power_min + ((hr - hr_min) / (hr_max - hr_min)) * (power_max - power_min)
+}
+
+run_1_plot_data <- run_1_data |>
+  mutate(
+    altitude_scaled_hr = scale_altitude(altitude_m, hr_min, hr_max),
+    power_scaled_hr = scale_power_to_hr(power_w)
+  )
+
+pace_plot_start_secs <- run_1_plot_data |>
+  filter(pace_min_km <= 4) |>
+  summarise(start_secs = min(secs, na.rm = TRUE)) |>
+  pull(start_secs)
+
+run_1_pace_plot_data <- run_1_plot_data |>
+  filter(secs >= pace_plot_start_secs)
+
+pace_plot_min <- min(run_1_pace_plot_data$pace_min_km, na.rm = TRUE)
+pace_plot_max <- max(run_1_pace_plot_data$pace_min_km, na.rm = TRUE)
+
+if (pace_plot_max == pace_plot_min) {
+  pace_plot_max <- pace_plot_min + 1
+}
+
+run_1_pace_plot_data <- run_1_pace_plot_data |>
+  mutate(
+    altitude_scaled_pace = scale_altitude(altitude_m, pace_plot_min, pace_plot_max)
+  )
+
+ggplot(run_1_plot_data, aes(x = distance_km)) +
+  geom_ribbon(
+    aes(ymin = hr_min, ymax = altitude_scaled_hr),
+    fill = "grey55",
+    alpha = 0.25
+  ) +
+  geom_line(
+    aes(y = hr_bpm),
+    linewidth = 0.7,
+    color = "red",
+    na.rm = TRUE
+  ) +
+  geom_line(
+    aes(y = power_scaled_hr),
+    linewidth = 0.7,
+    color = "#1f4e79",
+    na.rm = TRUE
+  ) +
+  scale_y_continuous(
+    name = "HR [bpm]",
+    limits = c(hr_min, hr_max),
+    sec.axis = sec_axis(~ scale_hr_to_power(.), name = "Power [W]")
+  ) +
+  labs(
+    x = "Distance [km]",
+    title = "Run 1 altitude, heart rate, and power over distance"
+  ) +
+  theme_minimal(base_size = 11)
+
+```
+
+---
+
+## Bike
+
+As always, I struggled a bit getting the left shoe on after the mount line.
+Not as badly as in Guelph, but still not clean. That was exactly when one of
+the two `40-49` athletes who had passed me on the run came past me again on
+the bike. So I had actually done the transition better overall, but the messy
+mount still cost me the position again.
+
+That only lasted about 500 metres. At the first turnaround he was right in
+front of me and had to stop with a puncture. Brutally unlucky. I would have
+been furious. We will never know whether I would have beaten him fairly in the
+race, but on this day that was the end of his race.
+
+After that I settled in on the bike and rode within myself. This is clearly my
+strongest discipline at the moment. A few riders passed me, but none were in
+my age group. Most of them were on fancy TT bikes as well, which does make me
+want one.
+
+At around kilometre 3, the other `40-49` athlete who had passed me earlier on
+the run came by as well. He was putting in a strong ride. I stayed with him
+until around kilometre 5, where there was a rise. I attacked there, and that
+was enough to break him. By the end of the bike I had put roughly two minutes
+into him.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+bike_id <- activities_metadata |>
+  filter(EVENT_TYPE == "BIKE") |>
+  distinct(ID) |>
+  slice(1) |>
+  pull(ID)
+
+rolling_time_avg <- function(values, secs, window_seconds = 10) {
+  vapply(seq_along(values), function(i) {
+    in_window <- secs >= (secs[i] - window_seconds) & secs <= secs[i]
+    mean(values[in_window], na.rm = TRUE)
+  }, numeric(1))
+}
+
+bike_data <- activities_data |>
+  filter(ID == bike_id) |>
+  transmute(
+    secs = as.numeric(SECS),
+    distance_km = KM,
+    altitude_m = ALT,
+    power_w = na_if(as.numeric(WATTS), 0),
+    hr_bpm = na_if(as.numeric(HR), 0)
+  ) |>
+  arrange(secs) |>
+  mutate(
+    power_10s_w = rolling_time_avg(power_w, secs),
+    hr_10s_bpm = rolling_time_avg(hr_bpm, secs)
+  ) |>
+  filter(!is.na(power_10s_w))
+
+power_min <- min(bike_data$power_10s_w, na.rm = TRUE)
+power_max <- max(bike_data$power_10s_w, na.rm = TRUE)
+hr_min <- min(bike_data$hr_10s_bpm, na.rm = TRUE)
+hr_max <- max(bike_data$hr_10s_bpm, na.rm = TRUE)
+alt_min <- min(bike_data$altitude_m, na.rm = TRUE)
+alt_max <- max(bike_data$altitude_m, na.rm = TRUE)
+
+hr_plot_min <- 140
+hr_plot_max <- hr_max
+alt_span <- alt_max - alt_min
+
+if (power_max == power_min) {
+  power_max <- power_min + 1
+}
+
+if (hr_plot_max == hr_plot_min) {
+  hr_plot_max <- hr_plot_min + 1
+}
+
+scale_altitude <- function(altitude, y_min, y_max) {
+  y_min + ((altitude - alt_min) / ifelse(alt_span == 0, 1, alt_span)) *
+    (y_max - y_min)
+}
+
+scale_power_to_hr <- function(power) {
+  hr_plot_min + ((power - power_min) / (power_max - power_min)) *
+    (hr_plot_max - hr_plot_min)
+}
+
+scale_hr_to_power <- function(hr) {
+  power_min + ((hr - hr_plot_min) / (hr_plot_max - hr_plot_min)) *
+    (power_max - power_min)
+}
+
+bike_plot_data <- bike_data |>
+  mutate(
+    altitude_scaled_hr = scale_altitude(altitude_m, hr_plot_min, hr_plot_max),
+    power_scaled_hr = scale_power_to_hr(power_10s_w)
+  )
+
+ggplot(bike_plot_data, aes(x = distance_km)) +
+  geom_ribbon(
+    aes(ymin = hr_plot_min, ymax = altitude_scaled_hr),
+    fill = "grey55",
+    alpha = 0.25
+  ) +
+  geom_line(
+    aes(y = hr_10s_bpm),
+    linewidth = 0.7,
+    color = "red",
+    na.rm = TRUE
+  ) +
+  geom_line(
+    aes(y = power_scaled_hr),
+    linewidth = 0.7,
+    color = "#1f4e79",
+    na.rm = TRUE
+  ) +
+  scale_y_continuous(
+    name = "HR [bpm]",
+    limits = c(hr_plot_min, hr_plot_max),
+    sec.axis = sec_axis(~ scale_hr_to_power(.), name = "Power [W]")
+  ) +
+  labs(
+    x = "Distance [km]",
+    title = "Bike altitude, heart rate, and power over distance"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+---
+
+## Run 2
+
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_FinishLine-0052.jpg)
+
+My main focus on the second run was simply to stay strong enough not to get
+passed again. I knew the guy I had dropped on the bike was probably a bit
+faster than me on the run, but I did not know exactly how far ahead I was or
+whether it was enough to hold him off.
+
+This was not a fun run. I started to struggle, with fatigue and maybe also the
+heat, and the pace dropped badly. At the same time I could not see anyone with
+`40-49` on their calves ahead of me, so I never had the visual target that
+might have helped me push harder. I was hoping I was racing for first, but in
+practice I was running defensively, trying at the very least not to let anyone
+come back to me.
+
+About 20 metres from the finish line I heard someone sprinting behind me.
+Not knowing who it was, I had no choice but to sprint as well in case it was
+the athlete from my category finally catching me. I managed to hold him off,
+only to find out afterwards that he was in the `20-29` category, so it would
+not have changed anything in my own race.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+run_2_id <- activities_metadata |>
+  filter(EVENT_TYPE == "RUN") |>
+  distinct(ID) |>
+  slice(2) |>
+  pull(ID)
+
+run_2_data <- activities_data |>
+  filter(ID == run_2_id) |>
+  transmute(
+    secs = as.numeric(SECS),
+    distance_km = KM,
+    altitude_m = ALT,
+    pace_min_km = as.numeric(PACE),
+    hr_bpm = na_if(as.numeric(HR), 0),
+    power_w = na_if(as.numeric(WATTS), 0)
+  ) |>
+  filter(!is.na(pace_min_km))
+
+pace_min <- min(run_2_data$pace_min_km, na.rm = TRUE)
+pace_max <- max(run_2_data$pace_min_km, na.rm = TRUE)
+hr_min <- min(run_2_data$hr_bpm, na.rm = TRUE)
+hr_max <- max(run_2_data$hr_bpm, na.rm = TRUE)
+has_run_2_power <- any(!is.na(run_2_data$power_w))
+power_min <- if (has_run_2_power) min(run_2_data$power_w, na.rm = TRUE) else NA_real_
+power_max <- if (has_run_2_power) max(run_2_data$power_w, na.rm = TRUE) else NA_real_
+alt_min <- min(run_2_data$altitude_m, na.rm = TRUE)
+alt_max <- max(run_2_data$altitude_m, na.rm = TRUE)
+
+alt_span <- alt_max - alt_min
+
+if (pace_max == pace_min) {
+  pace_max <- pace_min + 1
+}
+
+if (hr_max == hr_min) {
+  hr_max <- hr_min + 1
+}
+
+if (has_run_2_power && power_max == power_min) {
+  power_max <- power_min + 1
+}
+
+scale_altitude <- function(altitude, y_min, y_max) {
+  y_min + ((altitude - alt_min) / ifelse(alt_span == 0, 1, alt_span)) *
+    (y_max - y_min)
+}
+
+run_2_plot_data <- run_2_data |>
+  mutate(
+    altitude_scaled_hr = scale_altitude(altitude_m, hr_min, hr_max)
+  )
+
+if (has_run_2_power) {
+  scale_power_to_hr <- function(power) {
+    hr_min + ((power - power_min) / (power_max - power_min)) * (hr_max - hr_min)
+  }
+
+  scale_hr_to_power <- function(hr) {
+    power_min + ((hr - hr_min) / (hr_max - hr_min)) * (power_max - power_min)
+  }
+
+  run_2_plot_data <- run_2_plot_data |>
+    mutate(
+      power_scaled_hr = scale_power_to_hr(power_w)
+    )
+}
+
+run_2_pace_plot_data <- run_2_plot_data
+
+pace_plot_min <- min(run_2_pace_plot_data$pace_min_km, na.rm = TRUE)
+pace_plot_max <- max(run_2_pace_plot_data$pace_min_km, na.rm = TRUE)
+
+if (pace_plot_max == pace_plot_min) {
+  pace_plot_max <- pace_plot_min + 1
+}
+
+run_2_pace_plot_data <- run_2_pace_plot_data |>
+  mutate(
+    altitude_scaled_pace = scale_altitude(altitude_m, pace_plot_min, pace_plot_max)
+  )
+
+run_2_hr_power_plot <- ggplot(run_2_plot_data, aes(x = distance_km)) +
+  geom_ribbon(
+    aes(ymin = hr_min, ymax = altitude_scaled_hr),
+    fill = "grey55",
+    alpha = 0.25
+  ) +
+  geom_line(
+    aes(y = hr_bpm),
+    linewidth = 0.7,
+    color = "red",
+    na.rm = TRUE
+  ) +
+  labs(
+    x = "Distance [km]",
+    title = if (has_run_2_power) {
+      "Run 2 altitude, heart rate, and power over distance"
+    } else {
+      "Run 2 altitude and heart rate over distance"
+    }
+  ) +
+  theme_minimal(base_size = 11)
+
+if (has_run_2_power) {
+  run_2_hr_power_plot <- run_2_hr_power_plot +
+    geom_line(
+      aes(y = power_scaled_hr),
+      linewidth = 0.7,
+      color = "#1f4e79",
+      na.rm = TRUE
+    ) +
+    scale_y_continuous(
+      name = "HR [bpm]",
+      limits = c(hr_min, hr_max),
+      sec.axis = sec_axis(~ scale_hr_to_power(.), name = "Power [W]")
+    )
+} else {
+  run_2_hr_power_plot <- run_2_hr_power_plot +
+    scale_y_continuous(
+      name = "HR [bpm]",
+      limits = c(hr_min, hr_max)
+    )
+}
+
+run_2_hr_power_plot
+
+ggplot(run_2_pace_plot_data, aes(x = distance_km)) +
+  geom_ribbon(
+    aes(ymin = pace_plot_min, ymax = altitude_scaled_pace),
+    fill = "grey55",
+    alpha = 0.25
+  ) +
+  geom_line(
+    aes(y = pace_min_km),
+    linewidth = 0.7,
+    color = "#1f4e79"
+  ) +
+  scale_y_continuous(
+    name = "Pace [min/km]",
+    limits = c(pace_plot_min, pace_plot_max)
+  ) +
+  labs(
+    x = "Distance [km]",
+    title = "Run 2 altitude and pace over distance"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
+---
+
+## Result and What It Means
+
+The final result was third in category. That is a podium, which is never a bad
+thing, but I was still a bit disappointed. Realistically, this was not the
+best possible outcome for qualification chances. At the same time, it was a
+fair defeat. The two athletes ahead of me were simply too strong on the day.
+
+What happens next depends on details that are still outside my control: 
+the exact age of everyone next year and who submitted their EOI. As usual,
+ we now wait for the federation to do its homework and tell everyone where 
+ things actually stand.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+format_finish_time <- function(seconds) {
+  total_seconds <- round(as.numeric(seconds))
+  hours <- total_seconds %/% 3600
+  minutes <- (total_seconds %% 3600) %/% 60
+  secs <- total_seconds %% 60
+  sprintf("%d:%02d:%02d", hours, minutes, secs)
+}
+
+all_races <- read.csv(
+  "analysis_data/all_races.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+top_men_40_49 <- all_races |>
+  filter(CATEGORY == "Men40-49") |>
+  arrange(RANKING_CATEGORY) |>
+  slice_head(n = 3) |>
+  transmute(
+    Name = ATHLETE,
+    `Age Group Rank` = RANKING_CATEGORY,
+    `Overall Rank` = RANKING_OVERALL,
+    `Finishing Time` = format_finish_time(RESULT_FINAL)
+  )
+
+knitr::kable(top_men_40_49, align = c("l", "r", "r", "r"))
+```
+
+---
+
+## Final Thoughts
+
+Overall, mixed feelings. Third place is still a podium finish, and backing up
+Guelph with another competitive race one week later is not nothing. But it was
+also obvious that my run is still lagging behind where it needs to be. There
+is work to do there. I probably also need to lose a bit of weight. The bike is
+another possible limiter, although that is not something I can really solve
+immediately.
+
+There is still one more proper chance to qualify cleanly: Barrie on August 9.
+On paper that is another course that should suit me well because it is flat.
+At the same time, it is also a competitive race, so there will be no easy way
+through. Looking at last year's results, I could have won there, but last year
+it was not a qualifying event. This year it is, which will likely make it a
+very different race.
+
+
+<!-- summary_race_date: 2026-06-28 -->
+{{< include summary_table.html >}}
+
+## Photo Gallery
+
+<style>
+.race-gallery__thumb {
+  display: block;
+  cursor: pointer;
+}
+
+.race-gallery__thumb img {
+  display: block;
+  width: 100px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.race-gallery-table {
+  border-collapse: separate;
+  border-spacing: 0.45rem;
+  margin: 1rem auto 0;
+}
+
+.race-gallery-table td {
+  border: 0;
+  padding: 0;
+}
+
+.race-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.88);
+  padding: 2rem;
+  z-index: 9999;
+}
+
+.race-lightbox.is-open {
+  display: flex;
+}
+
+.race-lightbox__image {
+  max-width: min(92vw, 1200px);
+  max-height: 88vh;
+  border-radius: 8px;
+}
+
+.race-lightbox__close,
+.race-lightbox__nav {
+  position: absolute;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.race-lightbox__close {
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.race-lightbox__nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.race-lightbox__nav--prev {
+  left: 1rem;
+}
+
+.race-lightbox__nav--next {
+  right: 1rem;
+}
+
+</style>
+
+<table class="race-gallery-table" id="race-gallery" role="presentation">
+  <tr>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/full/260628_Welland_01-0024.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_01-0024.jpg" alt="Race photo 1">
+      </a>
+    </td>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/full/260628_Welland_03-0020.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_03-0020.jpg" alt="Race photo 2">
+      </a>
+    </td>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/full/260628_Welland_03-0046.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_03-0046.jpg" alt="Race photo 3">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/full/260628_Welland_02-0253.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_02-0253.jpg" alt="Race photo 4">
+      </a>
+    </td>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/full/260628_Welland_01-0662.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_01-0662.jpg" alt="Race photo 5">
+      </a>
+    </td>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/full/260628_Welland_01-0842.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_01-0842.jpg" alt="Race photo 6">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/full/260628_Welland_FinishLine-0052.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_FinishLine-0052.jpg" alt="Race photo 7">
+      </a>
+    </td>
+    <td>
+      <a class="race-gallery__thumb" data-full="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/full/260628_Welland_01-2635.jpg" href="#">
+        <img src="https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-06-28_WELLAND_SPRINT_DUATHLON/img/thumbnail/260628_Welland_01-2635.jpg" alt="Race photo 8">
+      </a>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+<div class="race-lightbox" id="race-lightbox" aria-hidden="true">
+  <button class="race-lightbox__close" type="button" aria-label="Close gallery">&times;</button>
+  <button class="race-lightbox__nav race-lightbox__nav--prev" type="button" aria-label="Previous image">&#8249;</button>
+  <img class="race-lightbox__image" src="" alt="">
+  <button class="race-lightbox__nav race-lightbox__nav--next" type="button" aria-label="Next image">&#8250;</button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const gallery = document.getElementById("race-gallery");
+  const lightbox = document.getElementById("race-lightbox");
+  const image = lightbox.querySelector(".race-lightbox__image");
+  const closeButton = lightbox.querySelector(".race-lightbox__close");
+  const prevButton = lightbox.querySelector(".race-lightbox__nav--prev");
+  const nextButton = lightbox.querySelector(".race-lightbox__nav--next");
+  const thumbs = Array.from(gallery.querySelectorAll(".race-gallery__thumb"));
+  let activeIndex = 0;
+
+  function showImage(index) {
+    activeIndex = (index + thumbs.length) % thumbs.length;
+    const thumb = thumbs[activeIndex];
+    const thumbImage = thumb.querySelector("img");
+    image.src = thumb.dataset.full;
+    image.alt = thumbImage.alt;
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    image.src = "";
+    document.body.style.overflow = "";
+  }
+
+  thumbs.forEach(function (thumb, index) {
+    thumb.addEventListener("click", function (event) {
+      event.preventDefault();
+      showImage(index);
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+  prevButton.addEventListener("click", function () { showImage(activeIndex - 1); });
+  nextButton.addEventListener("click", function () { showImage(activeIndex + 1); });
+
+  lightbox.addEventListener("click", function (event) {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (!lightbox.classList.contains("is-open")) {
+      return;
+    }
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+    if (event.key === "ArrowLeft") {
+      showImage(activeIndex - 1);
+    }
+    if (event.key === "ArrowRight") {
+      showImage(activeIndex + 1);
+    }
+  });
+});
+</script>
