@@ -1,0 +1,616 @@
+---
+title: "Barrie Sprint Duathlon"
+date: "2026-08-09"
+author: "Adrian Joseph"
+race_id: "2026-08-09_PBQVH"
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/thumbnail/IMG_3012.jpg
+description: "A return race after an ER visit and a build-up that made just getting to the start line feel uncertain."
+categories: [race_reports, duathlon]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/thumbnail/IMG_3012.jpg)
+
+## Pre-race
+
+This felt like a return race more than anything else.
+
+Three weeks earlier I was in ER with chest pain, and three days earlier I
+started blood pressure medication. For a while it was not even clear whether I
+would make it to this start -or the finish- line at all.
+
+The doctor said that, even if there was no sign of heart issues, it was
+probably a good idea to skip this one given how recently I had started the medication.
+I decided to race anyway. The obvious disclaimer applies here: don't be like me;
+if your doctor tells you not to race, listen.
+
+The main reason I was willing to take the risk was that this was a duathlon,
+not a triathlon. No swim. That matters, because swimming is notoriously where the vast majority
+of heart-related accidents happen. On the bike or the run,
+if I had felt anything concerning, I could simply have stopped and gotten
+assistance on land.
+
+Before even thinking about performance, the first objective was just to get to
+the line and finish safely.
+
+## A Tough Build-up
+
+I knew I was not ready for a good race.
+
+Between the ER visit and the mandatory period of taking things easy
+afterwards, I had missed exactly the kind of high-end work that gives you
+that sharp edge you need to be competitive. I was not coming into this race
+with the feeling that I could really push the top end. At best, I hoped I
+could manage the effort.
+
+Then, during race week, I found out this event was also the Ontario Provincial
+Championship for sprint duathlon. That was not ideal news for a supposedly "easy" return race.
+It meant the field was likely to be deeper and harder than usual.
+
+On top of that, I started taper week feeling completely drained. On Monday my
+Garmin training readiness was `1/100`, which is as low as it goes. That confirmed
+pretty clearly that the body was not in a great place.
+
+So the priority in the final days was simple: recovery first. I kept things
+easy, took single easy days seriously, and tried to arrive at the race feeling
+less depleted than I had at the start of the week. I did manage to recover
+enough that by race morning I felt functional again, which at that point was a
+meaningful win on its own.
+
+## Race morning
+
+During the warm-up I actually felt OK.
+
+Sure, I was getting out of breath easily, but I was expecting that. Still, I felt
+reasonably well.
+Not fitter, but a bit more settled. Given everything that had happened in the
+previous few weeks, that was enough to give me some confidence that I could at
+least get through the day.
+
+## Run 1
+
+I started the first run with the usual intention of controlling myself, and
+with the usual outcome of not really controlling myself at all.
+
+The target was around `4:20/km`. Instead, I went out at about `4:05/km`. That
+is just classic race-day stupidity from me at this point. Still, early on I
+felt OK. I was working, but not in a way that immediately felt destructive.
+
+The only athletes I could really see ahead of me at first looked older, which
+was a slightly mixed feeling. Not great for the overall race, but at least
+they did not look like direct competition for my age group.
+
+By the second lap, though, the lack of fitness started to come through. The
+pace drifted out beyond `4:20/km`, and that was when a couple of guys from my
+age group came past me. Not surprising, but still a clear reminder that I was
+racing without the engine I would normally want for this kind of event.
+
+### Performance review
+
+Let's dive a bit deeper into the numbers. Below is a graph of some key metrics over time.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+activities_metadata <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+activities_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+)
+
+run_1_id <- activities_metadata |>
+  filter(EVENT_TYPE == "RUN") |>
+  distinct(ID) |>
+  slice(1) |>
+  pull(ID)
+
+run_1_plot_data <- activities_data |>
+  filter(ID == run_1_id) |>
+  transmute(
+    time_min = as.numeric(SECS) / 60,
+    pace_min_km = as.numeric(PACE),
+    power_w = na_if(as.numeric(WATTS), 0),
+    cadence_spm = na_if(as.numeric(CAD), 0),
+    hr_bpm = na_if(as.numeric(HR), 0)
+  ) |>
+  tidyr::pivot_longer(
+    cols = c(pace_min_km, power_w, cadence_spm, hr_bpm),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = factor(
+      metric,
+      levels = c("pace_min_km", "power_w", "cadence_spm", "hr_bpm"),
+      labels = c("Pace [min/km]", "Power [W]", "Cadence [spm]", "HR [bpm]")
+    )
+  ) |>
+  filter(!is.na(value))
+
+format_pace <- function(pace_min_km) {
+  total_seconds <- round(pace_min_km * 60)
+  minutes <- total_seconds %/% 60
+  seconds <- total_seconds %% 60
+  sprintf("%d:%02d/km", minutes, seconds)
+}
+
+run_1_average_table <- run_1_plot_data |>
+  mutate(
+    period = case_when(
+      time_min >= 5 & time_min < 14 ~ "Before breaking point",
+      time_min >= 14 ~ "After breaking point",
+      TRUE ~ NA_character_
+    )
+  ) |>
+  filter(!is.na(period)) |>
+  group_by(metric, period) |>
+  summarise(value = mean(value, na.rm = TRUE), .groups = "drop") |>
+  mutate(
+    value = case_when(
+      metric == "Pace [min/km]" ~ format_pace(value),
+      TRUE ~ as.character(round(value))
+    )
+  ) |>
+  tidyr::pivot_wider(names_from = period, values_from = value) |>
+  select(metric, `Before breaking point`, `After breaking point`) |>
+  rename(Metric = metric)
+
+ggplot(run_1_plot_data, aes(x = time_min, y = value)) +
+  geom_line(linewidth = 0.5, color = "#1f4e79") +
+  geom_vline(xintercept = 14, color = "red", linewidth = 0.5) +
+  facet_wrap(~ metric, ncol = 1, scales = "free_y") +
+  labs(
+    x = "Time [min]",
+    y = NULL,
+    title = "Run 1 performance review"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    strip.text = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+I highlighted the breaking point with a red line. At around minute 14 my lack of fitness
+started to show. The cadence in particular exposes it mechanically. Fatigue sets in and I cannot
+keep the leg going anymore.
+
+Let's see how these metrics dropped before and after the breaking point.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+knitr::kable(run_1_average_table, align = c("l", "r", "r"))
+```
+
+Cadence and power dropped significantly, and as a consequence so did the pace. HR stayed
+relatively consistent. Not sure if that is a good sign (it did not give up) or a bad sign
+(I slowed down but still it stayed high).
+
+
+Finally, here is how the top 5 men in my category ran the first 5K of the race.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+format_min_sec <- function(total_seconds) {
+  total_seconds <- round(as.numeric(total_seconds))
+  minutes <- total_seconds %/% 60
+  seconds <- total_seconds %% 60
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+top_run_1_men_40_49 <- read.csv(
+  "analysis_data/all_races.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+) |>
+  filter(CATEGORY == "Men40-49") |>
+  arrange(RANKING_CATEGORY_SPORT_1) |>
+  slice_head(n = 5) |>
+  transmute(
+    Athlete = ATHLETE,
+    `Run time` = format_min_sec(RESULT_SPORT_1)
+  )
+
+kable(top_run_1_men_40_49, align = c("l", "r"))
+```
+
+
+## Bike
+
+Then onto the bike, where of course I immediately messed up the tech.
+
+I forgot to press the transition button, so part of the ride ended up being
+recorded as transition. Not ideal, but also very on brand.
+
+Still, the actual riding felt good.
+
+I was keeping things under control and riding mostly by feel rather than by
+chasing power numbers -of course I did not even have power numbers since my watch thought
+I was still in transition for half the ride...-. The idea was to sit at an effort that felt strong but
+not reckless, something that would not completely destroy the legs before the
+final run. For that kind of controlled ride, it actually went fairly well. I
+was moving through the field and passing people, including one of the
+athletes in my age group who had gone by me on the first run.
+
+Looking at the data afterwards, it was not an especially fast ride. On a very
+flat course like this, I know I can ride faster on a better day. But given the
+interrupted build-up, the medication change, and the basic goal of just
+getting through the race safely, it was an OK outcome.
+
+The more important issue came late in the bike leg, when the first real red
+flags of the day started to appear. Not cardiovascular red flags, thankfully,
+but cramps. Both lower legs started to threaten, which is never a great sign
+when you still have another run to do.
+
+### Performance review
+
+Because the watch stayed in transition for the start of the ride, the bike file
+does not begin at the true start of the bike leg. I joined T1 and bike data to get
+a fuller picture, but while that will give me speed and HR, it will not give me power
+or cadence for the whole ride.
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(jsonlite)
+
+activities_metadata <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+activities_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+)
+
+bike_id <- activities_metadata |>
+  filter(EVENT_TYPE == "BIKE") |>
+  distinct(ID) |>
+  slice(1) |>
+  pull(ID)
+
+t1_json_text <- readLines(
+  file("analysis_data/2026_08_09_08_21_18.json", encoding = "UTF-8-BOM"),
+  warn = FALSE
+)
+
+t1_raw_samples <- fromJSON(paste(t1_json_text, collapse = "\n"))$RIDE$SAMPLES |>
+  as_tibble() |>
+  transmute(
+    time_min = as.numeric(SECS) / 60,
+    speed_kph = as.numeric(KPH),
+    power_w = NA_real_,
+    hr_bpm = na_if(as.numeric(HR), 0)
+  )
+
+t1_duration_seconds <- max(t1_raw_samples$time_min, na.rm = TRUE) * 60
+
+bike_raw_data <- activities_data |>
+  filter(ID == bike_id) |>
+  transmute(
+    time_min = (as.numeric(SECS) + t1_duration_seconds) / 60,
+    speed_kph = as.numeric(KPH),
+    power_w = na_if(as.numeric(WATTS), 0),
+    hr_bpm = na_if(as.numeric(HR), 0)
+  ) |>
+  filter(time_min > max(t1_raw_samples$time_min, na.rm = TRUE))
+
+bike_plot_data <- bind_rows(t1_raw_samples, bike_raw_data) |>
+  tidyr::pivot_longer(
+    cols = c(speed_kph, power_w, hr_bpm),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = factor(
+      metric,
+      levels = c("speed_kph", "power_w", "hr_bpm"),
+      labels = c("Speed [km/h]", "Power [W]", "HR [bpm]")
+    )
+  ) |>
+  filter(!is.na(value))
+
+bike_average_table <- bike_plot_data |>
+  group_by(metric) |>
+  summarise(Average = round(mean(value, na.rm = TRUE)), .groups = "drop") |>
+  rename(Metric = metric)
+
+ggplot(bike_plot_data, aes(x = time_min, y = value)) +
+  geom_line(linewidth = 0.5, color = "#1f4e79") +
+  facet_wrap(~ metric, ncol = 1, scales = "free_y") +
+  labs(
+    x = "Time since T1 start [min]",
+    y = NULL,
+    title = "Bike performance review"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    strip.text = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+The data is telling us that it was a very even ride. Not too hard,
+as the HR went down from the run, and pretty consistent. If only I could run in the
+same way...
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+knitr::kable(bike_average_table, align = c("l", "r"))
+```
+
+Finally, here is how the top 5 men in my category rode the bike leg. I managed to
+take top spot today, but we were all very close: the top 3 only 16s apart.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+format_min_sec <- function(total_seconds) {
+  total_seconds <- round(as.numeric(total_seconds))
+  minutes <- total_seconds %/% 60
+  seconds <- total_seconds %% 60
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+top_bike_men_40_49 <- read.csv(
+  "analysis_data/all_races.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+) |>
+  filter(CATEGORY == "Men40-49", !is.na(RANKING_CATEGORY_SPORT_2)) |>
+  arrange(RANKING_CATEGORY_SPORT_2) |>
+  slice_head(n = 5) |>
+  transmute(
+    Athlete = ATHLETE,
+    `Bike time` = format_min_sec(RESULT_SPORT_2)
+  )
+
+kable(top_bike_men_40_49, align = c("l", "r"))
+```
+
+I did not know it at the time, but at this point I was running out of T2 in
+first place with 40s on Andrew Roberts. Would that be enough? 
+
+## Run 2
+
+I did get out onto the second run, but from the first steps it was obvious
+that this was no longer about racing hard.
+
+I had to keep the effort very controlled because even a small increase seemed
+to trigger cramps. And it was not just the calves. I was getting cramping in
+both lower and upper legs, and even between the shoulders.
+
+So the final run became an exercise in damage limitation. Keep moving, stay
+just below the point where everything locks up, and get to the finish line
+without the whole thing turning into a shuffle.
+
+With about `500m` to go, one guy in my age group came past me. Part of me
+wanted to go with him, just to see if I could hold on. But I was too aware of
+what the legs were threatening to do. Chasing him might have meant blowing up
+completely, and that did not feel worth it on a day like this. On top of that,
+his calf nuber was 46: he was in my age group for the race, but not for the 
+qualification spot at the World Championship.
+
+So I let him go and focused on bringing it home cleanly.
+
+
+### Performance review
+
+And here is how the second run went down.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+activities_metadata <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+activities_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+)
+
+run_2_id <- activities_metadata |>
+  filter(EVENT_TYPE == "RUN") |>
+  distinct(ID) |>
+  slice(2) |>
+  pull(ID)
+
+run_2_plot_data <- activities_data |>
+  filter(ID == run_2_id) |>
+  transmute(
+    time_min = as.numeric(SECS) / 60,
+    pace_min_km = as.numeric(PACE),
+    power_w = na_if(as.numeric(WATTS), 0),
+    cadence_spm = na_if(as.numeric(CAD), 0),
+    hr_bpm = na_if(as.numeric(HR), 0)
+  ) |>
+  tidyr::pivot_longer(
+    cols = c(pace_min_km, power_w, cadence_spm, hr_bpm),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = factor(
+      metric,
+      levels = c("pace_min_km", "power_w", "cadence_spm", "hr_bpm"),
+      labels = c("Pace [min/km]", "Power [W]", "Cadence [spm]", "HR [bpm]")
+    )
+  ) |>
+  filter(!is.na(value))
+
+format_pace <- function(pace_min_km) {
+  total_seconds <- round(pace_min_km * 60)
+  minutes <- total_seconds %/% 60
+  seconds <- total_seconds %% 60
+  sprintf("%d:%02d/km", minutes, seconds)
+}
+
+run_2_average_table <- run_2_plot_data |>
+  mutate(
+    period = case_when(
+      time_min >= 5 & time_min < 10 ~ "Before breaking point",
+      time_min >= 10 ~ "After breaking point",
+      TRUE ~ NA_character_
+    )
+  ) |>
+  filter(!is.na(period)) |>
+  group_by(metric, period) |>
+  summarise(value = mean(value, na.rm = TRUE), .groups = "drop") |>
+  mutate(
+    value = case_when(
+      metric == "Pace [min/km]" ~ format_pace(value),
+      TRUE ~ as.character(round(value))
+    )
+  ) |>
+  tidyr::pivot_wider(names_from = period, values_from = value) |>
+  select(metric, `Before breaking point`, `After breaking point`) |>
+  rename(Metric = metric)
+
+ggplot(run_2_plot_data, aes(x = time_min, y = value)) +
+  geom_line(linewidth = 0.5, color = "#1f4e79") +
+  #geom_vline(xintercept = 14, color = "red", linewidth = 0.5) +
+  facet_wrap(~ metric, ncol = 1, scales = "free_y") +
+  labs(
+    x = "Time [min]",
+    y = NULL,
+    title = "Run 2 performance review"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    strip.text = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+This time there was no clear breaking point. It was just a slow run. The cadence slowly
+dropped, but not too much. The legs were just heavy.
+
+Here is how the top 5 men in my category ran the last 2.5K of the race.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+format_min_sec <- function(total_seconds) {
+  total_seconds <- round(as.numeric(total_seconds))
+  minutes <- total_seconds %/% 60
+  seconds <- total_seconds %% 60
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+top_run_2_men_40_49 <- read.csv(
+  "analysis_data/all_races.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+) |>
+  filter(CATEGORY == "Men40-49") |>
+  arrange(RANKING_CATEGORY_SPORT_3) |>
+  slice_head(n = 5) |>
+  transmute(
+    Athlete = ATHLETE,
+    `Run time` = format_min_sec(RESULT_SPORT_3)
+  )
+
+kable(top_run_2_men_40_49, align = c("l", "r"))
+```
+
+And here is where I lost the lead. I lost 53s to Andrew Roberts, enough to give
+him the win for about 13s.
+
+## Results
+
+And then, finally, the finish line.
+
+I was not expecting much from this race, so ending up `2nd` in category felt
+better than I had any real right to expect. It was a bit bittersweet, because
+I do think that on a better day I could probably have won this one.
+
+Considering everything that happened in the lead-in to this race, I happily take this result.
+
+This race was also the last World Championship qualifier of the year, which
+adds another layer to it. 
+
+Maybe this was enough to secure the spot, if I had not already done enough
+earlier in the season. But qualification is never that simple. There were five
+guys in the `30-39` range who were faster than me, and if any of them submitted an EOI
+and age into `40-44` next year, they would move ahead in the official
+federation ranking. So for now it is still a waiting game. We should know more
+in the next few weeks.
+
+There is also the season ranking side of it. This result should put me `2nd`
+in the Multisport Canada duathlon standings, level on points with the guy who
+finished ahead of me today, and `25` points behind the leader, who now has two
+wins from two races. So there is still a realistic chance of finishing the
+season in the top three.
+
+
+
+<!-- summary_race_date: 2026-08-09 -->
+{{< include summary_table.html >}}
+
+## Gallery
+
+::: {.gallery cols=3}
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/thumbnail/IMG_3012.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/full/IMG_3012.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/thumbnail/A7V01241.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/full/A7V01241.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/thumbnail/BarrieAug9_FinishLine_-0458.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/full/BarrieAug9_FinishLine_-0458.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/thumbnail/A96I7257.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/full/A96I7257.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/thumbnail/IMG_3013.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-09_BARRIE_SPRINT_DUATHLON/img/full/IMG_3013.jpg)
+:::
