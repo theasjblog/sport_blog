@@ -1,0 +1,899 @@
+---
+title: "Wasaga Beach Sprint Duathlon"
+date: "2026-08-29"
+author: "Adrian Joseph"
+race_id: "2026-08-29_PVHBM"
+image: https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/00.jpg
+description: "A season-closing duathlon that turned into a small tactical battle and a bigger lesson in
+  paying attention to the course."
+categories: [race_reports, duathlon]
+format: html
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+---
+
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/00.jpg)
+
+## Pre-race
+
+This race had a slightly odd place in my season.
+
+On paper, it was not the biggest target. It was not a world qualifier, and by
+late August I was already at the point where the main work of the season was
+done. But it still mattered to me for two reasons.
+
+First, I wanted to finish the year properly. Second, there were still useful
+points available for the MultiSport Canada duathlon series. So even if this was
+more of a `B` race than an `A` race, I still wanted to race it well.
+
+I had also been here before, two years earlier, for the sprint triathlon. I did
+not enjoy that version of the event at all. The swim had one of those awkward
+long entries and exits through shallow water where it is too deep to run well
+and too shallow to swim properly.
+
+Still, a duathlon is a different story. No swim, no awkward water entry, and a
+course format that at least gave me a reason to give the place another chance.
+
+There was also a bit of self-imposed pressure in the background. Two years ago
+I finished `5th` overall here, albeit in a different event. And coming into
+this race I had already raced three times this season and finished `2nd`,
+`2nd`, and `3rd`. So the question in my head was fairly simple: could I make it
+four podiums from four starts?
+
+## A Better Build-up
+
+Compared with the build-up to Barrie, this one was much more normal.
+
+That may sound like a low bar, but after the ER visit and the blood pressure
+medication drama earlier in the month, "normal" was a meaningful upgrade.
+Training was not perfect, but it was uninterrupted, and I came into the race
+feeling more like an athlete preparing for a race and less like someone trying
+to improvise their way through damage control.
+
+I still would not say I felt especially sharp. It was late in the season, and
+there is a difference between being healthy enough to race and being truly
+primed to race. But I was in a much better place than I had been three weeks
+earlier.
+
+That changed the goal a bit. In Barrie, the first objective was just to race
+safely and get around. Here, the objective was to race properly.
+
+![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/00b.jpg)
+
+## Race morning
+
+The warm-up was fine, but not especially inspiring.
+
+I felt a bit sluggish, and the main thing I noticed was some tightness in the
+back of the legs. Not full cramping, not quite panic-inducing, but enough to
+put the thought in my head that this might become relevant later.
+
+On the start line I noticed a few guys who looked strong, plus Michael Shay,
+who had finished behind me in Barrie and ended up `3rd` in our category there.
+He had been almost six minutes behind me that day, but that does not mean much:
+you never know if somebody else is also going through a rough patch in their preparation.
+
+There were also a bunch of under-19 athletes at the front who started with the
+kind of enthusiasm that usually means one of two things: either they are very
+good, or they are about to have a difficult second half of the race.
+
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/07.jpg)](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/07.jpg)
+
+## Run 1
+
+I started, as usual, with the intention of being sensible.
+
+Also as usual, that intention lasted about five seconds.
+
+The plan had been to keep things around `4:20/km` early on and then reassess.
+Instead, the first look at the watch showed something like `3:45/km`. After
+that it settled more into the `4:05` to `4:10/km` range, but by then the damage
+was already being negotiated rather than avoided.
+
+Michael and I ran together for roughly the first half of the opening `5K`.
+Then he started to drift away. I could tell that matching him would cost me too
+much, so I let him go and focused on running my own race, confident that I had
+good biking legs.
+
+The closing part of the run was harder. The pace started to slip, more toward
+the `4:25` to `4:35/km` range, and I was already asking myself the familiar
+question of whether I will ever learn how not to overcook the first run of a
+duathlon.
+
+Even so, the damage was manageable. The final results show that I had the `3rd` fastest
+run in my category and `9th` overall, which kept me very much in the race. But I did
+not know that at the time, in part because it was a wave start.
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+activities_metadata <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+activities_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+)
+
+run_1_id <- activities_metadata |>
+  filter(EVENT_TYPE == "RUN") |>
+  distinct(ID) |>
+  slice(1) |>
+  pull(ID)
+
+run_1_plot_data <- activities_data |>
+  filter(ID == run_1_id) |>
+  transmute(
+    time_min = as.numeric(SECS) / 60,
+    pace_min_km = as.numeric(PACE),
+    power_w = na_if(as.numeric(WATTS), 0),
+    cadence_spm = na_if(as.numeric(CAD), 0),
+    hr_bpm = na_if(as.numeric(HR), 0)
+  ) |>
+  tidyr::pivot_longer(
+    cols = c(pace_min_km, power_w, cadence_spm, hr_bpm),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = factor(
+      metric,
+      levels = c("pace_min_km", "power_w", "cadence_spm", "hr_bpm"),
+      labels = c("Pace [min/km]", "Power [W]", "Cadence [spm]", "HR [bpm]")
+    )
+  ) |>
+  filter(!is.na(value))
+
+format_pace <- function(pace_min_km) {
+  total_seconds <- round(pace_min_km * 60)
+  minutes <- total_seconds %/% 60
+  seconds <- total_seconds %% 60
+  sprintf("%d:%02d/km", minutes, seconds)
+}
+
+run_1_average_table <- run_1_plot_data |>
+  mutate(
+    period = case_when(
+      time_min >= 5 & time_min < 14 ~ "Before breaking point",
+      time_min >= 14 ~ "After breaking point",
+      TRUE ~ NA_character_
+    )
+  ) |>
+  filter(!is.na(period)) |>
+  group_by(metric, period) |>
+  summarise(value = mean(value, na.rm = TRUE), .groups = "drop") |>
+  mutate(
+    value = case_when(
+      metric == "Pace [min/km]" ~ format_pace(value),
+      TRUE ~ as.character(round(value))
+    )
+  ) |>
+  tidyr::pivot_wider(names_from = period, values_from = value) |>
+  select(metric, `Before breaking point`, `After breaking point`) |>
+  rename(Metric = metric)
+
+ggplot(run_1_plot_data, aes(x = time_min, y = value)) +
+  geom_line(linewidth = 0.5, color = "#1f4e79") +
+  #geom_vline(xintercept = 14, color = "red", linewidth = 0.5) +
+  facet_wrap(~ metric, ncol = 1, scales = "free_y") +
+  labs(
+    x = "Time [min]",
+    y = NULL,
+    title = "Run 1 performance review"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    strip.text = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+This time there was no clear drop, except for run cadence after `15 min`.
+Rather, there was a constant decline. This was caused by a lack of race fitness,
+but also by me trying to control the pace.
+The drop in cadence is a bit concerning; I'll need to work on that.
+
+## T1
+
+This time, at least, transition did not turn into a comedy routine.
+
+Two years prior in Wasaga I lost over a minute hunting for my bib number like
+an idiot. Here, T1 was much cleaner. I still had the usual small struggle
+getting my feet into the shoes, but only the left one caused any real trouble,
+so by my standards that counts as efficient.
+
+The numbers back that up. I had the fastest `T1` in my category and the `2nd`
+fastest overall, which moved me from `3rd` to `2nd` in the `Men40-49` race. Again,
+I did not know this at the time, and this will come into play later.
+
+## Bike
+
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/17.jpg)](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/17.jpg)
+
+Once onto the bike, the race settled down.
+
+This is normally the leg where I feel most in control, and that was true again
+here. The goal was straightforward: ride strongly, reel in anyone available to
+reel in, and build enough of a gap that the final `2.5K` would become a matter
+of managing the advantage rather than trying to create it from scratch.
+
+What made the bike leg slightly confusing was that I did not have a great read
+on where my direct competition actually was.
+
+By the turnaround, I still had not seen another obvious rider from my category
+ahead of me. Before I reached the turnaround, I saw one of the duathletes in my
+category, too far ahead for me to catch, and a few of the younger guys
+who had gone out hard on the first run, but I had not seen Michael Shay, which
+was concerning. With only about `10K` left at that point, every minute matters,
+and I did not feel as though I had created much separation.
+
+Then, shortly after the turnaround, I saw him behind me.
+
+That was a surprise, because I am fairly sure I had not passed him on the road.
+The most likely explanation is that I got him in transition, which would also
+fit with what happened in Barrie, and the Sportstats numbers confirm this.
+Either way, it clarified the race. I knew I had someone I needed to stay ahead of,
+ and I knew the margin was not large enough to relax.
+
+So I pressed a bit more.
+
+I wanted at least `20` seconds, ideally more. In the end I came off the bike
+`2nd` in category and `3rd` overall, with a `1:38` advantage over Michael
+Shay and still with a real shot at the podium. I will repeat myself, but I did
+not know any of this. In my head Michael was just a few seconds behind me.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+activities_metadata <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+activities_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+)
+
+bike_id <- activities_metadata |>
+  filter(EVENT_TYPE == "BIKE") |>
+  distinct(ID) |>
+  slice(1) |>
+  pull(ID)
+
+bike_plot_data <- activities_data |>
+  filter(ID == bike_id) |>
+  transmute(
+    time_min = as.numeric(SECS) / 60,
+    speed_kph = as.numeric(KPH),
+    power_w = na_if(as.numeric(WATTS), 0),
+    hr_bpm = na_if(as.numeric(HR), 0)
+  ) |>
+  tidyr::pivot_longer(
+    cols = c(speed_kph, power_w, hr_bpm),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = factor(
+      metric,
+      levels = c("speed_kph", "power_w", "hr_bpm"),
+      labels = c("Speed [km/h]", "Power [W]", "HR [bpm]")
+    )
+  ) |>
+  filter(!is.na(value))
+
+bike_average_table <- bike_plot_data |>
+  group_by(metric) |>
+  summarise(Average = round(mean(value, na.rm = TRUE)), .groups = "drop") |>
+  rename(Metric = metric)
+
+ggplot(bike_plot_data, aes(x = time_min, y = value)) +
+  geom_line(linewidth = 0.5, color = "#1f4e79") +
+  facet_wrap(~ metric, ncol = 1, scales = "free_y") +
+  labs(
+    x = "Time [min]",
+    y = NULL,
+    title = "Bike performance review"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    strip.text = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+The data is telling us that it was a very even ride. Not too hard,
+as the HR went down from the run, and pretty consistent. If only I could run in the
+same way...
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+knitr::kable(bike_average_table, align = c("l", "r"))
+```
+
+## T2
+
+T2 was uneventful, which is exactly what you want.
+
+I got through cleanly, albeit a bit slowly, and started the final run still
+`2nd` in category. At
+that point the race had become very simple: hold the place if possible, and at
+the very least make anyone who wanted it work very hard for it.
+
+## Run 2
+
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/18.jpg)](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/18.jpg)
+
+
+From the start of the second run, I knew this was going to hurt.
+
+I could feel the lower legs threatening to cramp, and that made the whole thing
+more tactical than heroic. The effort was hard, but it also had to stay just
+controlled enough that the legs did not fully lock up.
+
+At the same time, I was laser-focused on course awareness.
+
+On the first run I had not really registered the turnaround properly, so this
+time I was actively hunting for it. I kept looking for the sign, checking the
+distance on the watch, and trying not to be the idiot who loses a race because
+he simply does not know where he is supposed to go.
+
+That turned out to be the right instinct.
+
+The turnaround came after a blind `90-degree` turn and then a short straight of
+roughly `200 m`, after which you turned around and came back through the same
+corner. It was not complicated once you knew it was there, but it was exactly
+the kind of detail you could miss if you were racing low on energy and oxygen.
+
+Coming back off that left-hand turn, I finally saw Michael again. He was moving
+well. I did the rough arithmetic in my head and figured I had about `40`
+seconds with something like `1K` to go. At my current pace, somewhere between
+`4:10` and `4:30/km`, that felt like enough if I stayed composed.
+
+One of the under-19 athletes I had passed on the bike also came back by me on
+the run, but that was irrelevant to my category race, so I let him go.
+
+The important thing was that I kept moving, kept the pace from falling apart,
+and got to the line still ahead of Michael.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+activities_metadata <- read.csv(
+  "analysis_data/activities_metadata.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+activities_data <- read.csv(
+  "analysis_data/activities_data.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", "")
+)
+
+run_2_id <- activities_metadata |>
+  filter(EVENT_TYPE == "RUN") |>
+  distinct(ID) |>
+  slice(2) |>
+  pull(ID)
+
+run_2_plot_data <- activities_data |>
+  filter(ID == run_2_id) |>
+  transmute(
+    time_min = as.numeric(SECS) / 60,
+    pace_min_km = as.numeric(PACE),
+    power_w = na_if(as.numeric(WATTS), 0),
+    cadence_spm = na_if(as.numeric(CAD), 0),
+    hr_bpm = na_if(as.numeric(HR), 0)
+  ) |>
+  tidyr::pivot_longer(
+    cols = c(pace_min_km, power_w, cadence_spm, hr_bpm),
+    names_to = "metric",
+    values_to = "value"
+  ) |>
+  mutate(
+    metric = factor(
+      metric,
+      levels = c("pace_min_km", "power_w", "cadence_spm", "hr_bpm"),
+      labels = c("Pace [min/km]", "Power [W]", "Cadence [spm]", "HR [bpm]")
+    )
+  ) |>
+  filter(!is.na(value))
+
+format_pace <- function(pace_min_km) {
+  total_seconds <- round(pace_min_km * 60)
+  minutes <- total_seconds %/% 60
+  seconds <- total_seconds %% 60
+  sprintf("%d:%02d/km", minutes, seconds)
+}
+
+run_2_average_table <- run_2_plot_data |>
+  mutate(
+    period = case_when(
+      time_min >= 5 & time_min < 10 ~ "Before breaking point",
+      time_min >= 10 ~ "After breaking point",
+      TRUE ~ NA_character_
+    )
+  ) |>
+  filter(!is.na(period)) |>
+  group_by(metric, period) |>
+  summarise(value = mean(value, na.rm = TRUE), .groups = "drop") |>
+  mutate(
+    value = case_when(
+      metric == "Pace [min/km]" ~ format_pace(value),
+      TRUE ~ as.character(round(value))
+    )
+  ) |>
+  tidyr::pivot_wider(names_from = period, values_from = value) |>
+  select(metric, `Before breaking point`, `After breaking point`) |>
+  rename(Metric = metric)
+
+ggplot(run_2_plot_data, aes(x = time_min, y = value)) +
+  geom_line(linewidth = 0.5, color = "#1f4e79") +
+  #geom_vline(xintercept = 14, color = "red", linewidth = 0.5) +
+  facet_wrap(~ metric, ncol = 1, scales = "free_y") +
+  labs(
+    x = "Time [min]",
+    y = NULL,
+    title = "Run 2 performance review"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    strip.text = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+It was not a particularly fast run by any stretch of the imagination, but at
+least it looks like I managed some sort of negative split. Probably the first one of my
+running career...
+
+## Results
+
+I crossed the line `3rd` overall and `2nd` in `Men40-49`, which made it four
+podiums from four races this season.
+
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/21.jpg)](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/21.jpg)
+
+That alone would have been a satisfying way to close the year. But the finish
+also came with a strange twist.
+
+After I finished, I expected Michael Shay to appear not long afterwards. He had
+looked close enough on the run that I assumed the final gap would be well under
+a minute.
+
+Instead, he never showed up.
+
+Eventually the results made it clear what had happened: he finished almost
+eight minutes behind me. There is no realistic way that gap comes from normal
+racing over the final `2.5K`. The only explanation that makes sense is that he
+missed the turnaround and ran significantly farther than he should have.
+
+That is rough. It obviously hurt his race, and selfishly it also makes my own
+result a bit harder to read because I would have liked a clean head-to-head
+finish. Still, that is part of racing too. You have to be fit enough to race
+hard, but you also have to pay attention to where the course actually goes.
+
+Looking at the full results afterwards, the race was not especially deep at the
+front, but a podium is a podium. Only two athletes in the category broke `1:10`, and I ended
+up just under that mark in `1:08:29`.
+
+So I will take it.
+
+It was not a perfect race. The first run was too aggressive, the legs were
+never far from cramping, and the course setup had some flaws. But it was also a
+proper race effort, a solid result, and a much better way to end the season
+than the uncertainty that hung over Barrie.
+
+Here is how my position evolved through the race.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+rankings_progression <- read.csv(
+  "analysis_data/all_races.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+) |>
+  filter(ATHLETE == "ADRIAN JOSEPH") |>
+  transmute(
+    `Run 1 overall` = RANKING_OVERALL_SPORT_1,
+    `T1 overall` = RANKING_OVERALL_AFTER_T_1,
+    `Bike overall` = RANKING_OVERALL_AFTER_SPORT_2,
+    `T2 overall` = RANKING_OVERALL_AFTER_T_2,
+    `Run 2 overall` = RANKING_OVERALL,
+    `Run 1 category` = RANKING_CATEGORY_SPORT_1,
+    `T1 category` = RANKING_CATEGORY_AFTER_T_1,
+    `Bike category` = RANKING_CATEGORY_AFTER_SPORT_2,
+    `T2 category` = RANKING_CATEGORY_AFTER_T_2,
+    `Run 2 category` = RANKING_CATEGORY
+  ) |>
+  pivot_longer(
+    cols = everything(),
+    names_to = c("leg", "ranking_type"),
+    names_pattern = "^(.*) (overall|category)$",
+    values_to = "ranking"
+  ) |>
+  mutate(
+    leg = factor(leg, levels = c("Run 1", "T1", "Bike", "T2", "Run 2")),
+    ranking_type = factor(
+      ranking_type,
+      levels = c("overall", "category"),
+      labels = c("Overall ranking", "Category ranking")
+    ),
+    ranking = as.numeric(ranking)
+  )
+
+ranking_limits <- rankings_progression |>
+  group_by(ranking_type) |>
+  summarise(
+    ranking = c(min(ranking, na.rm = TRUE) - 1, max(ranking, na.rm = TRUE) + 1),
+    .groups = "drop"
+  )
+
+ggplot(rankings_progression, aes(x = leg, y = ranking, group = 1)) +
+  geom_blank(data = ranking_limits, aes(y = ranking), inherit.aes = FALSE) +
+  geom_line(linewidth = 0.6, color = "#1f4e79") +
+  geom_point(size = 2, color = "#1f4e79") +
+  geom_text(aes(label = ranking), vjust = -0.8, size = 3.2) +
+  scale_y_continuous(
+    breaks = function(x) {
+      seq(floor(min(x, na.rm = TRUE)), ceiling(max(x, na.rm = TRUE)), by = 1)
+    },
+    labels = function(x) as.integer(x)
+  ) +
+  facet_wrap(~ ranking_type, ncol = 1, scales = "free_y") +
+  labs(
+    x = NULL,
+    y = "Position",
+    title = "Ranking progression through the race"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    strip.text = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+
+And this is how I compared to other athletes in each leg.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+leg_rankings <- read.csv(
+  "analysis_data/all_races.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+) |>
+  filter(ATHLETE == "ADRIAN JOSEPH") |>
+  transmute(
+    `Run 1 overall` = RANKING_OVERALL_SPORT_1,
+    `T1 overall` = RANKING_OVERALL_T_1,
+    `Bike overall` = RANKING_OVERALL_SPORT_2,
+    `T2 overall` = RANKING_OVERALL_T_2,
+    `Run 2 overall` = RANKING_OVERALL_SPORT_3,
+    `Run 1 category` = RANKING_CATEGORY_SPORT_1,
+    `T1 category` = RANKING_CATEGORY_T_1,
+    `Bike category` = RANKING_CATEGORY_SPORT_2,
+    `T2 category` = RANKING_CATEGORY_T_2,
+    `Run 2 category` = RANKING_CATEGORY_SPORT_3
+  ) |>
+  pivot_longer(
+    cols = everything(),
+    names_to = c("leg", "ranking_type"),
+    names_pattern = "^(.*) (overall|category)$",
+    values_to = "ranking"
+  ) |>
+  mutate(
+    leg = factor(leg, levels = c("Run 1", "T1", "Bike", "T2", "Run 2")),
+    ranking_type = factor(
+      ranking_type,
+      levels = c("overall", "category"),
+      labels = c("Overall ranking", "Category ranking")
+    ),
+    ranking = as.numeric(ranking)
+  )
+
+leg_ranking_limits <- leg_rankings |>
+  group_by(ranking_type) |>
+  summarise(
+    ranking = c(min(ranking, na.rm = TRUE) - 1, max(ranking, na.rm = TRUE) + 1),
+    .groups = "drop"
+  )
+
+ggplot(leg_rankings, aes(x = leg, y = ranking)) +
+  geom_blank(data = leg_ranking_limits, aes(y = ranking), inherit.aes = FALSE) +
+  geom_col(fill = "#1f4e79", width = 0.7) +
+  geom_text(aes(label = ranking), vjust = -0.4, size = 3.2) +
+  scale_y_continuous(
+    breaks = function(x) {
+      seq(floor(min(x, na.rm = TRUE)), ceiling(max(x, na.rm = TRUE)), by = 1)
+    },
+    labels = function(x) as.integer(x)
+  ) +
+  facet_wrap(~ ranking_type, ncol = 1, scales = "free_y") +
+  labs(
+    x = NULL,
+    y = "Position",
+    title = "Ranking by race leg"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    strip.text = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+This chart tells the race in a way that feels much closer to how it actually
+unfolded in my head.
+
+The zero line is my race. Anyone below it was up the road from me at that
+point. Anyone above it was behind. So what matters is not just where each line
+sits, but how it moves from one leg to the next. When a line climbs, I am
+bringing that athlete back. When it drops, the gap is opening against me.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+format_min_sec <- function(total_seconds) {
+  total_seconds <- round(as.numeric(total_seconds))
+  minutes <- total_seconds %/% 60
+  seconds <- total_seconds %% 60
+  sprintf("%d:%02d", minutes, seconds)
+}
+
+all_races <- read.csv(
+  "analysis_data/all_races.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+my_category <- all_races |>
+  filter(ATHLETE == "ADRIAN JOSEPH") |>
+  pull(CATEGORY)
+
+cumulative_times <- function(data) {
+  data |>
+    transmute(
+      athlete = ATHLETE,
+      `Run 1` = as.numeric(RESULT_SPORT_1),
+      `T1` = as.numeric(RESULT_SPORT_1) + as.numeric(RESULT_T_1),
+      `Bike` = as.numeric(RESULT_SPORT_1) + as.numeric(RESULT_T_1) +
+        as.numeric(RESULT_SPORT_2),
+      `T2` = as.numeric(RESULT_SPORT_1) + as.numeric(RESULT_T_1) +
+        as.numeric(RESULT_SPORT_2) + as.numeric(RESULT_T_2),
+      `Run 2` = as.numeric(RESULT_FINAL)
+    ) |>
+    pivot_longer(
+      cols = c(`Run 1`, `T1`, `Bike`, `T2`, `Run 2`),
+      names_to = "leg",
+      values_to = "cumulative_time"
+    )
+}
+
+podium_progression <- bind_rows(
+  all_races |>
+    filter(as.numeric(RANKING_OVERALL) %in% c(1, 2, 3)) |>
+    cumulative_times() |>
+    mutate(ranking_type = "Overall ranking"),
+  all_races |>
+    filter(CATEGORY == my_category, as.numeric(RANKING_CATEGORY) %in% c(1, 2, 3)) |>
+    cumulative_times() |>
+    mutate(ranking_type = "Category ranking")
+) |>
+  mutate(athlete = tools::toTitleCase(tolower(athlete))) |>
+  mutate(
+    ranking_type = factor(
+      ranking_type,
+      levels = c("Overall ranking", "Category ranking")
+    ),
+    leg = factor(leg, levels = c("Run 1", "T1", "Bike", "T2", "Run 2"))
+  )
+
+gap_to_adrian <- podium_progression |>
+  group_by(ranking_type, leg) |>
+  mutate(
+    adrian_time = cumulative_time[athlete == "Adrian Joseph"][1],
+    gap_seconds = cumulative_time - adrian_time
+  ) |>
+  ungroup()
+
+gap_to_adrian_limits <- gap_to_adrian |>
+  group_by(ranking_type) |>
+  summarise(
+    gap_seconds = c(
+      floor(min(gap_seconds, na.rm = TRUE)) - 10,
+      ceiling(max(gap_seconds, na.rm = TRUE)) + 10
+    ),
+    .groups = "drop"
+  )
+
+ggplot(
+  gap_to_adrian,
+  aes(x = leg, y = gap_seconds, color = athlete, group = athlete)
+) +
+  geom_blank(data = gap_to_adrian_limits, aes(y = gap_seconds), inherit.aes = FALSE) +
+  geom_hline(yintercept = 0, linewidth = 0.4, color = "black") +
+  geom_line(linewidth = 0.7) +
+  geom_point(size = 2) +
+  scale_color_manual(values = c(
+    "Mark Danyluk" = "#7f8c8d",
+    "Noah Lengyel" = "#d95f02",
+    "Adrian Joseph" = "#1f4e79",
+    "Michael Shay" = "#4daf4a"
+  )) +
+  scale_y_continuous(labels = function(x) {
+    prefix <- ifelse(x > 0, "+", "")
+    paste0(prefix, format_min_sec(abs(x)))
+  }) +
+  facet_wrap(~ ranking_type, ncol = 1, scales = "free_y") +
+  labs(
+    x = NULL,
+    y = "Gap to Adrian Joseph",
+    title = "Gap to Adrian Joseph by leg",
+    color = NULL
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position = "top",
+    panel.grid.minor = element_blank()
+  )
+```
+
+## Duathlon series standings
+
+This race mattered a bit beyond the single-day result because it also changed
+the `Men40-49` standings in the MultiSport Canada duathlon series.
+
+Coming out of Wasaga, I moved to the top of the category with `265` points from
+`3` races. That puts me `10` points ahead of Robert Cardie and `30` ahead of
+Michael Shay.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(knitr)
+
+series_points <- read.csv(
+  "analysis_data/final_table_adrian_category.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+) |>
+  mutate(
+    category = toupper(category),
+    names = tools::toTitleCase(tolower(names)),
+    tot_points = as.numeric(tot_points),
+    n_races = as.numeric(n_races)
+  ) |>
+  filter(category == "M40-49") |>
+  arrange(desc(tot_points), desc(n_races), names) |>
+  transmute(
+    Rank = row_number(),
+    Athlete = names,
+    `Total points` = tot_points,
+    `Races counted` = n_races
+  )
+
+knitr::kable(series_points |> slice_head(n = 10), align = c("r", "l", "r", "r"))
+```
+
+Because I am not doing the final race, my total is locked at `265`. That means
+the only question is how many other athletes can still get past that number
+with one more score.
+
+The realistic danger comes from three people:
+
+- Robert Cardie needs `3rd` or better.
+- Romuald Le Calonnec needs `6th` or better.
+- Andrew Roberts needs `1st` or `2nd`; `2nd` would tie me on points, but he
+  holds the Barrie tiebreak.
+
+Michael Shay can still pass me too, but only by winning, which looks less
+likely on sprint form.
+
+Looking at the previous sprint results, the only really plausible way I fall
+off the podium is if Romuald wins, Andrew finishes `2nd`, and Robert finishes
+`3rd`. That is the cleanest scenario consistent with the form each of them has
+shown this season.
+
+Interestingly, Michael Shay probably helps me more than he hurts me if he shows
+up. Unless he wins, he does not pass me in the series, but he could still take
+that crucial `3rd` place away from Robert. If that happens, Robert stays behind
+me in the standings, and I likely hold on to `3rd`.
+
+## Venue review
+
+I still do not think this is a venue I would choose just for its own sake.
+
+Removing the swim made it much more appealing than the triathlon version, but
+there were still some course-design details that felt rough around the edges.
+The main one was on the bike, where athletes entering and exiting transition
+were sharing the same lane late in the leg. In practice that created something
+close to a mandatory no-pass zone with mixed speeds and mixed handling ability,
+which felt messy and unnecessarily risky.
+
+Michael was also not the only athlete to miss the turnaround on the final run.
+Looking through the results afterwards, I found about a dozen athletes whose
+second run was inconsistently longer than half of their first run, which makes
+it very likely that the same thing happened to them as well.
+
+It is true that the rules clearly state that athletes are responsible for
+knowing the course. That part is not really debatable. Still, I think
+MultiSport Canada should consider stationing a volunteer at that turnaround
+point. It feels like a simple fix that would avoid the issue altogether.
+
+So my view is more positive than it was two years ago, but only to a point. As
+a duathlon, it works well enough. As a polished race venue, I still think there
+is room for improvement.
+
+<!-- summary_race_date: 2026-08-29 -->
+{{< include summary_table.html >}}
+
+## Gallery
+
+::: {.gallery cols=3}
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/00.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/00.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/00b.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/00b.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/07.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/07.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/08.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/08.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/17.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/17.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/18.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/18.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/21.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/21.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/24.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/24.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/IMG_3051.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/IMG_3051.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/IMG_3052.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/IMG_3052.jpg)
+[![](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/thumbnail/IMG_3053.jpg){width="100" group="hi"}](https://storage.googleapis.com/blogs_josa/sport/blog_assets/2026-08-29_WASAGA_BEACH_SPRINT_DUATHLON/img/full/IMG_3053.jpg)
+:::
