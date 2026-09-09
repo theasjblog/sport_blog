@@ -1,6 +1,6 @@
 ---
 title: "Race Finder"
-description: "Search the race archive by date, type, distance, and report availability."
+description: "Find races by name, date, type, or distance, and explore the reports and results."
 page-layout: full
 title-block-banner: false
 execute:
@@ -11,7 +11,7 @@ execute:
 ::: {.utility-intro}
 ## Find a race quickly
 
-This is the structured archive view of the site. Use it when you want to jump straight to a race report or the deeper race-analysis app without browsing the narrative archive page by page.
+Looking for a particular race? Search by name, date, type, or distance, then follow the links to read the race report or take a closer look at the results.
 :::
 
 ::: {.utility-panel}

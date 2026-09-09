@@ -15,5 +15,5 @@ feed: true
 ---
 
 ::: {.archive-intro}
-Recent race reports, older races worth revisiting, and the full competitive timeline in one place. The latest reports increasingly tie back to the structured race-review workflow in `training_automation`, where pre-race objectives and post-race coach review now live together rather than as disconnected notes.
+Recent race reports, older races worth revisiting, and the full competitive timeline in one place.
 :::

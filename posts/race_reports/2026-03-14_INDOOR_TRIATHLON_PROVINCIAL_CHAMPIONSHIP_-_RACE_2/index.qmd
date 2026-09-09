@@ -286,8 +286,6 @@ knitr::kable(adrian_series_points)
 
 ## Results
 
-Add the race result, age-group placement, and any series implications here.
-
 ### Race 2: M40-49 standings
 
 This table shows the results from Race 2 only for the `Men40-49` category. It includes the final score plus the points collected in each discipline: swim, bike, and run.
